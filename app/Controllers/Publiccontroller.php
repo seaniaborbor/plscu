@@ -160,6 +160,11 @@ class Publiccontroller extends BaseController{
     }
 
 
-   
+   // ========== login page =============
+
+    public function login()
+    {
+        return view('login');
+    }
 
 }

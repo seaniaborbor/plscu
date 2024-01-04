@@ -1,57 +1,35 @@
-<!doctype html>
-<!-- 
-* Bootstrap Simple Admin Template
-* Version: 2.1
-* Author: Alexis Luna
-* Website: https://github.com/alexis-luna/bootstrap-simple-admin-template
--->
-<html lang="en">
+<?php $this->extend('public/partials/layout')?>
 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Login | Bootstrap Simple Admin Template</title>
-    <link href="dashboard_assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="dashboard_assets/css/auth.css" rel="stylesheet">
-</head>
+<?=$this->section('main')?>
+<main id="main">
 
-<body>
-    <div class="wrapper">
-        <div class="auth-content">
-            <div class="card">
-                <div class="card-body text-center">
-                    <div class="mb-4">
-                        <img class="brand" src="assets/img/bootstraper-logo.png" alt="bootstraper logo">
-                    </div>
-                    <h6 class="mb-4 text-muted">Login to your account</h6>
-                    <form action="" method="">
-                        <div class="mb-3 text-start">
-                            <label for="email" class="form-label">Email adress</label>
-                            <input type="email" class="form-control" placeholder="Enter Email" required>
-                        </div>
-                        <div class="mb-3 text-start">
-                            <label for="password" class="form-label">Password</label>
-                            <input type="password" class="form-control" placeholder="Password" required>
-                        </div>
-                        <div class="mb-3 text-start">
-                            <div class="form-check">
-                              <input class="form-check-input" name="remember" type="checkbox" value="" id="check1">
-                              <label class="form-check-label" for="check1">
-                                Remember me on this device
-                              </label>
-                            </div>
-                        </div>
-                        <button class="btn btn-primary shadow-2 mb-4">Login</button>
-                    </form>
-                    <p class="mb-2 text-muted">Forgot password? <a href="forgot-password.html">Reset</a></p>
-                    <p class="mb-0 text-muted">Don't have account yet? <a href="signup.html">Signup</a></p>
+    <section id="blog" class="blog">
+      <div class="container">
+        <div class="row py-5 rounded">
+          <div class="col-md-6 h-100 ">
+            <img src="https://cdni.iconscout.com/illustration/premium/thumb/login-3305943-2757111.png?f=webp" class="img-fluid w-100">
+          </div>
+          <div class="col-md-6 py-5">
+            <div class="card border-0">
+              <div class="card-body text-center">
+                <h2 class="mb-5 ">Login To Continue</h2>
+                <div class="form-group mb-4 text-center ">
+                  <label>Email</label>
+                  <input type="email" name="email" class="form-control form-control-lg py-3 rounded-pill">
                 </div>
+                <div class="form-group mb-3 text-center">
+                  <label>Email</label>
+                  <input type="email" name="email" class="form-control form-control-lg py-3 rounded-pill">
+                </div>
+                <div class="text-center ">
+                  <button class="btn rounded-pill text-white py-3 w-100 btn-lg" style="background: #008374 !important; " type="submit">Send Message</button>
+                </div>
+              </div>
             </div>
+          </div>
         </div>
-    </div>
-    <script src="dashboard_assets/vendor/jquery/jquery.min.js"></script>
-    <script src="dashboard_assets/vendor/bootstrap/js/bootstrap.min.js"></script>
-</body>
+      </div>
+    </section>
 
-</html>
+  </main><!-- End #main -->
+<?=$this->endSection()?>
