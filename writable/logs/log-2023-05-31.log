@@ -1,0 +1,21 @@
+CRITICAL - 2023-05-31 15:14:17 --> syntax error, unexpected 'class' (T_CLASS), expecting '{'
+in APPPATH\Controllers\Admin.php on line 3.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\eventry\\app\\Controllers\\Admin.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Admin')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Admin')
+ 4 [internal function]: spl_autoload_call('App\\Controllers\\Admin')
+ 5 SYSTEMPATH\CodeIgniter.php(892): class_exists('\\App\\Controllers\\Admin', true)
+ 6 SYSTEMPATH\CodeIgniter.php(486): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-31 15:17:47 --> Undefined variable: posts
+in APPPATH\Views\dashboard\index.php on line 15.
+ 1 APPPATH\Views\dashboard\index.php(15): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: posts', 'C:\\xampp\\htdocs\\eventry\\app\\Views\\dashboard\\index.php', 15, [])
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\eventry\\app\\Views\\dashboard\\index.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('dashboard/index', [], true)
+ 5 APPPATH\Controllers\Admin.php(5): view('dashboard/index')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

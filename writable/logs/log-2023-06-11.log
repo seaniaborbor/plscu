@@ -1,0 +1,46 @@
+CRITICAL - 2023-06-11 22:28:29 --> syntax error, unexpected '}', expecting ';'
+in APPPATH\Controllers\Deliveryapi.php on line 48.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\eventry\\app\\Controllers\\Deliveryapi.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Deliveryapi')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Deliveryapi')
+ 4 [internal function]: spl_autoload_call('App\\Controllers\\Deliveryapi')
+ 5 SYSTEMPATH\CodeIgniter.php(892): class_exists('\\App\\Controllers\\Deliveryapi', true)
+ 6 SYSTEMPATH\CodeIgniter.php(486): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-11 22:29:01 --> Class 'App\Controllers\ResourceController' not found
+in APPPATH\Controllers\Deliveryapi.php on line 9.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(312): include_once()
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\eventry\\app\\Controllers\\Deliveryapi.php')
+ 3 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Deliveryapi')
+ 4 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Deliveryapi')
+ 5 [internal function]: spl_autoload_call('App\\Controllers\\Deliveryapi')
+ 6 SYSTEMPATH\CodeIgniter.php(892): class_exists('\\App\\Controllers\\Deliveryapi', true)
+ 7 SYSTEMPATH\CodeIgniter.php(486): CodeIgniter\CodeIgniter->startController()
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-11 22:29:52 --> Undefined variable: hasError
+in APPPATH\Controllers\Deliveryapi.php on line 48.
+ 1 APPPATH\Controllers\Deliveryapi.php(48): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: hasError', 'C:\\xampp\\htdocs\\eventry\\app\\Controllers\\Deliveryapi.php', 48, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Deliveryapi->create()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Deliveryapi))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-11 22:32:22 --> Call to a member function hasError() on null
+in APPPATH\Controllers\Deliveryapi.php on line 48.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Deliveryapi->create()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Deliveryapi))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-11 22:32:58 --> Call to a member function hasError() on null
+in APPPATH\Controllers\Deliveryapi.php on line 48.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Deliveryapi->create()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Deliveryapi))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-11 22:39:39 --> Call to a member function hasError() on null
+in APPPATH\Controllers\Deliveryapi.php on line 48.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Deliveryapi->create()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Deliveryapi))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

@@ -1,0 +1,679 @@
+CRITICAL - 2023-06-05 10:43:25 --> Undefined variable: order
+in APPPATH\Controllers\Orderapi.php on line 54.
+ 1 APPPATH\Controllers\Orderapi.php(54): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: order', 'C:\\xampp\\htdocs\\eventry\\app\\Controllers\\Orderapi.php', 54, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Orderapi->show('41')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Orderapi))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-05 11:02:20 --> Declaration of App\Controllers\Orderapi::show($id) should be compatible with CodeIgniter\RESTful\ResourceController::show($id = NULL)
+in APPPATH\Controllers\Orderapi.php on line 48.
+ 1 APPPATH\Controllers\Orderapi.php(10): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Declaration of App\\Controllers\\Orderapi::show($id) should be compatible with CodeIgniter\\RESTful\\ResourceController::show($id = NULL)', 'C:\\xampp\\htdocs\\eventry\\app\\Controllers\\Orderapi.php', 48, [...])
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(312): include_once('C:\\xampp\\htdocs\\eventry\\app\\Controllers\\Orderapi.php')
+ 3 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\eventry\\app\\Controllers\\Orderapi.php')
+ 4 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Orderapi')
+ 5 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Orderapi')
+ 6 [internal function]: spl_autoload_call('App\\Controllers\\Orderapi')
+ 7 SYSTEMPATH\CodeIgniter.php(892): class_exists('\\App\\Controllers\\Orderapi', true)
+ 8 SYSTEMPATH\CodeIgniter.php(486): CodeIgniter\CodeIgniter->startController()
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-05 11:05:02 --> syntax error, unexpected '->' (T_OBJECT_OPERATOR)
+in APPPATH\Models\TablesModel.php on line 27.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\eventry\\app\\Models\\TablesModel.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Models\\TablesModel')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Models\\TablesModel')
+ 4 APPPATH\Controllers\Orderapi.php(51): spl_autoload_call('App\\Models\\TablesModel')
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Orderapi->show('22')
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Orderapi))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-05 11:08:30 --> syntax error, unexpected '->' (T_OBJECT_OPERATOR)
+in APPPATH\Models\TablesModel.php on line 28.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\eventry\\app\\Models\\TablesModel.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Models\\TablesModel')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Models\\TablesModel')
+ 4 APPPATH\Controllers\Orderapi.php(51): spl_autoload_call('App\\Models\\TablesModel')
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Orderapi->show('22')
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Orderapi))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-05 11:10:50 --> syntax error, unexpected '->' (T_OBJECT_OPERATOR)
+in APPPATH\Models\TablesModel.php on line 27.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\eventry\\app\\Models\\TablesModel.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Models\\TablesModel')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Models\\TablesModel')
+ 4 APPPATH\Controllers\Orderapi.php(51): spl_autoload_call('App\\Models\\TablesModel')
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Orderapi->show('22')
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Orderapi))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-05 11:11:06 --> syntax error, unexpected '$post' (T_VARIABLE)
+in APPPATH\Models\TablesModel.php on line 29.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\eventry\\app\\Models\\TablesModel.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Models\\TablesModel')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Models\\TablesModel')
+ 4 APPPATH\Controllers\Orderapi.php(51): spl_autoload_call('App\\Models\\TablesModel')
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Orderapi->show('22')
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Orderapi))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-05 11:25:13 --> Undefined variable: numberString
+in APPPATH\Controllers\Orderapi.php on line 50.
+ 1 APPPATH\Controllers\Orderapi.php(50): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: numberString', 'C:\\xampp\\htdocs\\eventry\\app\\Controllers\\Orderapi.php', 50, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Orderapi->show('42')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Orderapi))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-05 12:05:47 --> Undefined property: App\Controllers\Orderapi::$db
+in APPPATH\Controllers\Orderapi.php on line 53.
+ 1 APPPATH\Controllers\Orderapi.php(53): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: App\\Controllers\\Orderapi::$db', 'C:\\xampp\\htdocs\\eventry\\app\\Controllers\\Orderapi.php', 53, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Orderapi->show('42')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Orderapi))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-05 12:07:20 --> Undefined property: App\Controllers\Orderapi::$db
+in APPPATH\Controllers\Orderapi.php on line 53.
+ 1 APPPATH\Controllers\Orderapi.php(53): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: App\\Controllers\\Orderapi::$db', 'C:\\xampp\\htdocs\\eventry\\app\\Controllers\\Orderapi.php', 53, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Orderapi->show('42')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Orderapi))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-05 13:24:47 --> Undefined property: App\Controllers\Orderapi::$db
+in APPPATH\Controllers\Orderapi.php on line 53.
+ 1 APPPATH\Controllers\Orderapi.php(53): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: App\\Controllers\\Orderapi::$db', 'C:\\xampp\\htdocs\\eventry\\app\\Controllers\\Orderapi.php', 53, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Orderapi->show('42')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Orderapi))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-05 13:29:00 --> Undefined variable: post
+in APPPATH\Controllers\Orderapi.php on line 56.
+ 1 APPPATH\Controllers\Orderapi.php(56): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: post', 'C:\\xampp\\htdocs\\eventry\\app\\Controllers\\Orderapi.php', 56, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Orderapi->show('42')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Orderapi))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-06-05 13:31:53 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ':0:
+AND 1 = :1:' at line 3 in C:\xampp\htdocs\eventry\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\eventry\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\eventry\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\eventry\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\eventry\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\eventry\app\Models\TablesModel.php(30): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\eventry\app\Controllers\Orderapi.php(53): App\Models\TablesModel->get_single_order('42')
+#6 C:\xampp\htdocs\eventry\system\CodeIgniter.php(934): App\Controllers\Orderapi->show('42')
+#7 C:\xampp\htdocs\eventry\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Orderapi))
+#8 C:\xampp\htdocs\eventry\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\eventry\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-06-05 13:31:53 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ':0:
+AND 1 = :1:' at line 3
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *
+FROM `order_log`
+WHERE 0 = :0:
+AND 1 = :1:', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `order_log`
+WHERE 0 = :0:
+AND 1 = :1:')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `order_log`
+WHERE 0 = :0:
+AND 1 = :1:')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `order_log`
+WHERE 0 = :0:
+AND 1 = :1:', [...], false)
+ 5 APPPATH\Models\TablesModel.php(30): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Orderapi.php(53): App\Models\TablesModel->get_single_order('42')
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Orderapi->show('42')
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Orderapi))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-06-05 13:35:36 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ':0:
+AND 1 = :1:' at line 3 in C:\xampp\htdocs\eventry\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\eventry\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\eventry\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\eventry\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\eventry\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\eventry\app\Models\TablesModel.php(30): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\eventry\app\Controllers\Orderapi.php(53): App\Models\TablesModel->get_single_order('42')
+#6 C:\xampp\htdocs\eventry\system\CodeIgniter.php(934): App\Controllers\Orderapi->show('42')
+#7 C:\xampp\htdocs\eventry\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Orderapi))
+#8 C:\xampp\htdocs\eventry\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\eventry\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-06-05 13:35:36 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ':0:
+AND 1 = :1:' at line 3
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *
+FROM `order_log`
+WHERE 0 = :0:
+AND 1 = :1:', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `order_log`
+WHERE 0 = :0:
+AND 1 = :1:')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `order_log`
+WHERE 0 = :0:
+AND 1 = :1:')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `order_log`
+WHERE 0 = :0:
+AND 1 = :1:', [...], false)
+ 5 APPPATH\Models\TablesModel.php(30): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Orderapi.php(53): App\Models\TablesModel->get_single_order('42')
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Orderapi->show('42')
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Orderapi))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-06-05 13:35:50 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ':0:
+AND 1 = :1:' at line 3 in C:\xampp\htdocs\eventry\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\eventry\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\eventry\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\eventry\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\eventry\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\eventry\app\Models\TablesModel.php(30): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\eventry\app\Controllers\Orderapi.php(53): App\Models\TablesModel->get_single_order('42')
+#6 C:\xampp\htdocs\eventry\system\CodeIgniter.php(934): App\Controllers\Orderapi->show('42')
+#7 C:\xampp\htdocs\eventry\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Orderapi))
+#8 C:\xampp\htdocs\eventry\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\eventry\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-06-05 13:35:50 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ':0:
+AND 1 = :1:' at line 3
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *
+FROM `order_log`
+WHERE 0 = :0:
+AND 1 = :1:', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `order_log`
+WHERE 0 = :0:
+AND 1 = :1:')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `order_log`
+WHERE 0 = :0:
+AND 1 = :1:')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `order_log`
+WHERE 0 = :0:
+AND 1 = :1:', [...], false)
+ 5 APPPATH\Models\TablesModel.php(30): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Orderapi.php(53): App\Models\TablesModel->get_single_order('42')
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Orderapi->show('42')
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Orderapi))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-06-05 13:39:00 --> mysqli_sql_exception: Unknown column 'order.id' in 'where clause' in C:\xampp\htdocs\eventry\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\eventry\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\eventry\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\eventry\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\eventry\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\eventry\app\Models\TablesModel.php(30): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\eventry\app\Controllers\Orderapi.php(53): App\Models\TablesModel->get_single_order('42')
+#6 C:\xampp\htdocs\eventry\system\CodeIgniter.php(934): App\Controllers\Orderapi->show('42')
+#7 C:\xampp\htdocs\eventry\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Orderapi))
+#8 C:\xampp\htdocs\eventry\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\eventry\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-06-05 13:39:00 --> Unknown column 'order.id' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *
+FROM `order_log`
+WHERE `order`.`id` = 42', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `order_log`
+WHERE `order`.`id` = 42')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `order_log`
+WHERE `order`.`id` = 42')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `order_log`
+WHERE `order`.`id` = :order.id:', [...], false)
+ 5 APPPATH\Models\TablesModel.php(30): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Orderapi.php(53): App\Models\TablesModel->get_single_order('42')
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Orderapi->show('42')
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Orderapi))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-05 17:52:58 --> syntax error, unexpected '$builder' (T_VARIABLE)
+in APPPATH\Models\TablesModel.php on line 27.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\eventry\\app\\Models\\TablesModel.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Models\\TablesModel')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Models\\TablesModel')
+ 4 APPPATH\Controllers\Orderapi.php(52): spl_autoload_call('App\\Models\\TablesModel')
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Orderapi->show('42')
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Orderapi))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-05 21:35:47 --> syntax error, unexpected '$builder' (T_VARIABLE)
+in APPPATH\Models\TablesModel.php on line 27.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\eventry\\app\\Models\\TablesModel.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Models\\TablesModel')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Models\\TablesModel')
+ 4 APPPATH\Controllers\Orderapi.php(52): spl_autoload_call('App\\Models\\TablesModel')
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Orderapi->show('42')
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Orderapi))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-05 21:36:14 --> syntax error, unexpected '$builder' (T_VARIABLE)
+in APPPATH\Models\TablesModel.php on line 27.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\eventry\\app\\Models\\TablesModel.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Models\\TablesModel')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Models\\TablesModel')
+ 4 APPPATH\Controllers\Orderapi.php(52): spl_autoload_call('App\\Models\\TablesModel')
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Orderapi->show('42')
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Orderapi))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-05 21:36:42 --> Too few arguments to function CodeIgniter\Database\BaseBuilder::join(), 1 passed in C:\xampp\htdocs\eventry\app\Models\TablesModel.php on line 27 and at least 2 expected
+in SYSTEMPATH\Database\BaseBuilder.php on line 617.
+ 1 APPPATH\Models\TablesModel.php(27): CodeIgniter\Database\BaseBuilder->join('stock.id = order_log.product')
+ 2 APPPATH\Controllers\Orderapi.php(53): App\Models\TablesModel->get_single_order('42')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Orderapi->show('42')
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Orderapi))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-05 21:37:10 --> syntax error, unexpected '=', expecting ')'
+in APPPATH\Models\TablesModel.php on line 27.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\eventry\\app\\Models\\TablesModel.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Models\\TablesModel')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Models\\TablesModel')
+ 4 APPPATH\Controllers\Orderapi.php(52): spl_autoload_call('App\\Models\\TablesModel')
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Orderapi->show('42')
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Orderapi))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-06-05 21:37:27 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '.`product`)
+WHERE 0 = :0:
+AND 1 = :1:' at line 3 in C:\xampp\htdocs\eventry\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\eventry\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\eventry\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\eventry\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\eventry\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\eventry\app\Models\TablesModel.php(30): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\eventry\app\Controllers\Orderapi.php(53): App\Models\TablesModel->get_single_order('42')
+#6 C:\xampp\htdocs\eventry\system\CodeIgniter.php(934): App\Controllers\Orderapi->show('42')
+#7 C:\xampp\htdocs\eventry\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Orderapi))
+#8 C:\xampp\htdocs\eventry\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\eventry\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-06-05 21:37:27 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '.`product`)
+WHERE 0 = :0:
+AND 1 = :1:' at line 3
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *
+FROM `order_log`
+JOIN `stock`.`id` USING (`order_log`.`product`)
+WHERE 0 = :0:
+AND 1 = :1:', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `order_log`
+JOIN `stock`.`id` USING (`order_log`.`product`)
+WHERE 0 = :0:
+AND 1 = :1:')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `order_log`
+JOIN `stock`.`id` USING (`order_log`.`product`)
+WHERE 0 = :0:
+AND 1 = :1:')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `order_log`
+JOIN `stock`.`id` USING (`order_log`.`product`)
+WHERE 0 = :0:
+AND 1 = :1:', [...], false)
+ 5 APPPATH\Models\TablesModel.php(30): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Orderapi.php(53): App\Models\TablesModel->get_single_order('42')
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Orderapi->show('42')
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Orderapi))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-06-05 21:38:09 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ':0:
+AND 1 = :1:' at line 3 in C:\xampp\htdocs\eventry\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\eventry\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\eventry\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\eventry\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\eventry\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\eventry\app\Models\TablesModel.php(29): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\eventry\app\Controllers\Orderapi.php(53): App\Models\TablesModel->get_single_order('42')
+#6 C:\xampp\htdocs\eventry\system\CodeIgniter.php(934): App\Controllers\Orderapi->show('42')
+#7 C:\xampp\htdocs\eventry\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Orderapi))
+#8 C:\xampp\htdocs\eventry\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\eventry\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-06-05 21:38:09 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ':0:
+AND 1 = :1:' at line 3
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *
+FROM `order_log`
+WHERE 0 = :0:
+AND 1 = :1:', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `order_log`
+WHERE 0 = :0:
+AND 1 = :1:')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `order_log`
+WHERE 0 = :0:
+AND 1 = :1:')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `order_log`
+WHERE 0 = :0:
+AND 1 = :1:', [...], false)
+ 5 APPPATH\Models\TablesModel.php(29): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Orderapi.php(53): App\Models\TablesModel->get_single_order('42')
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Orderapi->show('42')
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Orderapi))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-06-05 21:38:27 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ':0:
+AND 1 = :1:' at line 3 in C:\xampp\htdocs\eventry\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\eventry\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\eventry\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\eventry\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\eventry\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\eventry\app\Models\TablesModel.php(29): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\eventry\app\Controllers\Orderapi.php(53): App\Models\TablesModel->get_single_order('42')
+#6 C:\xampp\htdocs\eventry\system\CodeIgniter.php(934): App\Controllers\Orderapi->show('42')
+#7 C:\xampp\htdocs\eventry\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Orderapi))
+#8 C:\xampp\htdocs\eventry\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\eventry\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-06-05 21:38:27 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ':0:
+AND 1 = :1:' at line 3
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *
+FROM `order_log`
+WHERE 0 = :0:
+AND 1 = :1:', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `order_log`
+WHERE 0 = :0:
+AND 1 = :1:')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `order_log`
+WHERE 0 = :0:
+AND 1 = :1:')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `order_log`
+WHERE 0 = :0:
+AND 1 = :1:', [...], false)
+ 5 APPPATH\Models\TablesModel.php(29): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Orderapi.php(53): App\Models\TablesModel->get_single_order('42')
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Orderapi->show('42')
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Orderapi))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-05 21:43:41 --> Undefined variable: builder
+in APPPATH\Models\TablesModel.php on line 27.
+ 1 APPPATH\Models\TablesModel.php(27): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: builder', 'C:\\xampp\\htdocs\\eventry\\app\\Models\\TablesModel.php', 27, [...])
+ 2 APPPATH\Controllers\Orderapi.php(53): App\Models\TablesModel->get_single_order('42')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Orderapi->show('42')
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Orderapi))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-05 21:44:14 --> Undefined variable: builder
+in APPPATH\Models\TablesModel.php on line 27.
+ 1 APPPATH\Models\TablesModel.php(27): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: builder', 'C:\\xampp\\htdocs\\eventry\\app\\Models\\TablesModel.php', 27, [...])
+ 2 APPPATH\Controllers\Orderapi.php(53): App\Models\TablesModel->get_single_order('42')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Orderapi->show('42')
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Orderapi))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-05 21:44:40 --> Undefined variable: builder
+in APPPATH\Models\TablesModel.php on line 27.
+ 1 APPPATH\Models\TablesModel.php(27): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: builder', 'C:\\xampp\\htdocs\\eventry\\app\\Models\\TablesModel.php', 27, [...])
+ 2 APPPATH\Controllers\Orderapi.php(53): App\Models\TablesModel->get_single_order('42')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Orderapi->show('42')
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Orderapi))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-05 21:46:48 --> syntax error, unexpected '->' (T_OBJECT_OPERATOR)
+in APPPATH\Models\TablesModel.php on line 27.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\eventry\\app\\Models\\TablesModel.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Models\\TablesModel')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Models\\TablesModel')
+ 4 APPPATH\Controllers\Orderapi.php(52): spl_autoload_call('App\\Models\\TablesModel')
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Orderapi->show('42')
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Orderapi))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-06-05 21:53:06 --> mysqli_sql_exception: Column 'id' in where clause is ambiguous in C:\xampp\htdocs\eventry\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\eventry\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\eventry\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\eventry\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\eventry\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\eventry\app\Models\TablesModel.php(31): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\eventry\app\Controllers\Orderapi.php(53): App\Models\TablesModel->get_single_order('22')
+#6 C:\xampp\htdocs\eventry\system\CodeIgniter.php(934): App\Controllers\Orderapi->show('22')
+#7 C:\xampp\htdocs\eventry\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Orderapi))
+#8 C:\xampp\htdocs\eventry\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\eventry\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-06-05 21:53:06 --> Column 'id' in where clause is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *
+FROM `order_log`
+JOIN `stock` ON `stock`.`id` = `order_log`.`product`
+JOIN `users` ON `users`.`rfc` = `order_log`.`rfc`
+WHERE `id` = 42', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `order_log`
+JOIN `stock` ON `stock`.`id` = `order_log`.`product`
+JOIN `users` ON `users`.`rfc` = `order_log`.`rfc`
+WHERE `id` = 42')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `order_log`
+JOIN `stock` ON `stock`.`id` = `order_log`.`product`
+JOIN `users` ON `users`.`rfc` = `order_log`.`rfc`
+WHERE `id` = 42')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `order_log`
+JOIN `stock` ON `stock`.`id` = `order_log`.`product`
+JOIN `users` ON `users`.`rfc` = `order_log`.`rfc`
+WHERE `id` = :id:', [...], false)
+ 5 APPPATH\Models\TablesModel.php(31): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Orderapi.php(53): App\Models\TablesModel->get_single_order('22')
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Orderapi->show('22')
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Orderapi))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-06-05 21:58:42 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ':0:
+AND 1 = :1:' at line 5 in C:\xampp\htdocs\eventry\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\eventry\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\eventry\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\eventry\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\eventry\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\eventry\app\Models\TablesModel.php(31): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\eventry\app\Controllers\Orderapi.php(53): App\Models\TablesModel->get_single_order('22')
+#6 C:\xampp\htdocs\eventry\system\CodeIgniter.php(934): App\Controllers\Orderapi->show('22')
+#7 C:\xampp\htdocs\eventry\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Orderapi))
+#8 C:\xampp\htdocs\eventry\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\eventry\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-06-05 21:58:42 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ':0:
+AND 1 = :1:' at line 5
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *
+FROM `order_log`
+JOIN `stock` ON `stock`.`id` = `order_log`.`product`
+JOIN `users` ON `users`.`rfc` = `order_log`.`rfc`
+WHERE 0 = :0:
+AND 1 = :1:', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `order_log`
+JOIN `stock` ON `stock`.`id` = `order_log`.`product`
+JOIN `users` ON `users`.`rfc` = `order_log`.`rfc`
+WHERE 0 = :0:
+AND 1 = :1:')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `order_log`
+JOIN `stock` ON `stock`.`id` = `order_log`.`product`
+JOIN `users` ON `users`.`rfc` = `order_log`.`rfc`
+WHERE 0 = :0:
+AND 1 = :1:')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `order_log`
+JOIN `stock` ON `stock`.`id` = `order_log`.`product`
+JOIN `users` ON `users`.`rfc` = `order_log`.`rfc`
+WHERE 0 = :0:
+AND 1 = :1:', [...], false)
+ 5 APPPATH\Models\TablesModel.php(31): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Orderapi.php(53): App\Models\TablesModel->get_single_order('22')
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Orderapi->show('22')
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Orderapi))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-06-05 22:10:06 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ':0:
+AND 1 = :1:' at line 5 in C:\xampp\htdocs\eventry\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\eventry\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\eventry\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\eventry\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\eventry\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\eventry\app\Models\TablesModel.php(31): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\eventry\app\Controllers\Orderapi.php(52): App\Models\TablesModel->get_single_order('22')
+#6 C:\xampp\htdocs\eventry\system\CodeIgniter.php(934): App\Controllers\Orderapi->show('22')
+#7 C:\xampp\htdocs\eventry\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Orderapi))
+#8 C:\xampp\htdocs\eventry\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\eventry\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-06-05 22:10:06 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ':0:
+AND 1 = :1:' at line 5
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *
+FROM `order_log`
+JOIN `stock` ON `stock`.`id` = `order_log`.`product`
+JOIN `users` ON `users`.`rfc` = `order_log`.`rfc`
+WHERE 0 = :0:
+AND 1 = :1:', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `order_log`
+JOIN `stock` ON `stock`.`id` = `order_log`.`product`
+JOIN `users` ON `users`.`rfc` = `order_log`.`rfc`
+WHERE 0 = :0:
+AND 1 = :1:')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `order_log`
+JOIN `stock` ON `stock`.`id` = `order_log`.`product`
+JOIN `users` ON `users`.`rfc` = `order_log`.`rfc`
+WHERE 0 = :0:
+AND 1 = :1:')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `order_log`
+JOIN `stock` ON `stock`.`id` = `order_log`.`product`
+JOIN `users` ON `users`.`rfc` = `order_log`.`rfc`
+WHERE 0 = :0:
+AND 1 = :1:', [...], false)
+ 5 APPPATH\Models\TablesModel.php(31): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Orderapi.php(52): App\Models\TablesModel->get_single_order('22')
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Orderapi->show('22')
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Orderapi))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-05 22:15:09 --> syntax error, unexpected '$employee' (T_VARIABLE)
+in APPPATH\Models\TablesModel.php on line 27.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\eventry\\app\\Models\\TablesModel.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Models\\TablesModel')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Models\\TablesModel')
+ 4 APPPATH\Controllers\Orderapi.php(51): spl_autoload_call('App\\Models\\TablesModel')
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Orderapi->show('22')
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Orderapi))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-05 22:15:24 --> Call to undefined function App\Models\getResult()
+in APPPATH\Models\TablesModel.php on line 29.
+ 1 APPPATH\Controllers\Orderapi.php(52): App\Models\TablesModel->get_single_order('22')
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Orderapi->show('22')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Orderapi))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-05 22:15:36 --> Call to undefined function App\Models\getResult()
+in APPPATH\Models\TablesModel.php on line 29.
+ 1 APPPATH\Controllers\Orderapi.php(52): App\Models\TablesModel->get_single_order('22')
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Orderapi->show('22')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Orderapi))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-05 22:18:12 --> Call to undefined function App\Controllers\print_()
+in APPPATH\Controllers\Orderapi.php on line 53.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Orderapi->show('42')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Orderapi))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-06-05 22:21:55 --> mysqli_sql_exception: Column 'id' in where clause is ambiguous in C:\xampp\htdocs\eventry\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\eventry\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\eventry\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\eventry\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\eventry\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\eventry\app\Models\TablesModel.php(29): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\eventry\app\Controllers\Orderapi.php(52): App\Models\TablesModel->get_single_order('100')
+#6 C:\xampp\htdocs\eventry\system\CodeIgniter.php(934): App\Controllers\Orderapi->show('100')
+#7 C:\xampp\htdocs\eventry\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Orderapi))
+#8 C:\xampp\htdocs\eventry\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\eventry\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-06-05 22:21:55 --> Column 'id' in where clause is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *
+FROM `order_log`
+JOIN `users` ON `users`.`rfc` = `order_log`.`rfc`
+WHERE `id` = \'100\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `order_log`
+JOIN `users` ON `users`.`rfc` = `order_log`.`rfc`
+WHERE `id` = \'100\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `order_log`
+JOIN `users` ON `users`.`rfc` = `order_log`.`rfc`
+WHERE `id` = \'100\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `order_log`
+JOIN `users` ON `users`.`rfc` = `order_log`.`rfc`
+WHERE `id` = :id:', [...], false)
+ 5 APPPATH\Models\TablesModel.php(29): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Orderapi.php(52): App\Models\TablesModel->get_single_order('100')
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Orderapi->show('100')
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Orderapi))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-05 22:26:01 --> syntax error, unexpected '->' (T_OBJECT_OPERATOR)
+in APPPATH\Models\TablesModel.php on line 29.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\eventry\\app\\Models\\TablesModel.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Models\\TablesModel')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Models\\TablesModel')
+ 4 APPPATH\Controllers\Orderapi.php(51): spl_autoload_call('App\\Models\\TablesModel')
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Orderapi->show('109')
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Orderapi))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-05 22:49:57 --> Undefined variable: totalTime
+in SYSTEMPATH\Debug\Toolbar\Views\toolbar.tpl.php on line 40.
+ 1 SYSTEMPATH\Debug\Toolbar\Views\toolbar.tpl.php(40): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: totalTime', 'C:\\xampp\\htdocs\\eventry\\system\\Debug\\Toolbar\\Views\\toolbar.tpl.php', 40, [...])
+ 2 SYSTEMPATH\Debug\Toolbar.php(511): include('C:\\xampp\\htdocs\\eventry\\system\\Debug\\Toolbar\\Views\\toolbar.tpl.php')
+ 3 SYSTEMPATH\Debug\Toolbar.php(474): CodeIgniter\Debug\Toolbar->format([...], 'html')
+ 4 APPPATH\Config\Events.php(46): CodeIgniter\Debug\Toolbar->respond()
+ 5 SYSTEMPATH\Events\Events.php(149): CodeIgniter\Events\Events::Config\{closure}()
+ 6 SYSTEMPATH\CodeIgniter.php(350): CodeIgniter\Events\Events::trigger('pre_system')
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-05 23:12:56 --> Undefined variable: totalTime
+in SYSTEMPATH\Debug\Toolbar\Views\toolbar.tpl.php on line 40.
+ 1 SYSTEMPATH\Debug\Toolbar\Views\toolbar.tpl.php(40): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: totalTime', 'C:\\xampp\\htdocs\\eventry\\system\\Debug\\Toolbar\\Views\\toolbar.tpl.php', 40, [...])
+ 2 SYSTEMPATH\Debug\Toolbar.php(511): include('C:\\xampp\\htdocs\\eventry\\system\\Debug\\Toolbar\\Views\\toolbar.tpl.php')
+ 3 SYSTEMPATH\Debug\Toolbar.php(474): CodeIgniter\Debug\Toolbar->format([...], 'html')
+ 4 APPPATH\Config\Events.php(46): CodeIgniter\Debug\Toolbar->respond()
+ 5 SYSTEMPATH\Events\Events.php(149): CodeIgniter\Events\Events::Config\{closure}()
+ 6 SYSTEMPATH\CodeIgniter.php(350): CodeIgniter\Events\Events::trigger('pre_system')
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

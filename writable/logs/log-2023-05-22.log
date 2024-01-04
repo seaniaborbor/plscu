@@ -1,0 +1,40 @@
+INFO - 2023-05-22 18:07:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-22 18:07:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-22 18:15:38 --> Invalid file: "dashboard/poste_post.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('dashboard/poste_post.php')
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('dashboard/poste_post', [], true)
+ 3 APPPATH\Controllers\Dashboard.php(58): view('dashboard/poste_post')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Dashboard->createpost()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-22 18:15:43 --> Invalid file: "dashboard/poste_post.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('dashboard/poste_post.php')
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('dashboard/poste_post', [], true)
+ 3 APPPATH\Controllers\Dashboard.php(58): view('dashboard/poste_post')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Dashboard->createpost()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-22 18:21:42 --> Call to undefined method CodeIgniter\View\View::end_section()
+in APPPATH\Views\dashboard\create_post.php on line 9.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('dashboard/create_post', [], true)
+ 4 APPPATH\Controllers\Dashboard.php(58): view('dashboard/create_post')
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Dashboard->createpost()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-22 18:21:58 --> Invalid file: "layout.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('layout.php')
+ 2 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->render('layout', [], true)
+ 3 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('dashboard/create_post', [], true)
+ 4 APPPATH\Controllers\Dashboard.php(58): view('dashboard/create_post')
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Dashboard->createpost()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

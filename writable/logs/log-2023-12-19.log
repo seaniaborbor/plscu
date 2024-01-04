@@ -1,0 +1,406 @@
+CRITICAL - 2023-12-19 17:29:30 --> syntax error, unexpected '$shceenshoti_newname' (T_VARIABLE)
+in APPPATH\Controllers\PortfolioController.php on line 38.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\mysite\\app\\Controllers\\PortfolioController.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\PortfolioController')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\PortfolioController')
+ 4 [internal function]: spl_autoload_call('App\\Controllers\\PortfolioController')
+ 5 SYSTEMPATH\CodeIgniter.php(892): class_exists('\\App\\Controllers\\PortfolioController', true)
+ 6 SYSTEMPATH\CodeIgniter.php(486): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-19 17:30:07 --> Cannot use empty array elements in arrays
+in APPPATH\Controllers\PortfolioController.php on line 19.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2023-12-19 18:22:52 --> Call to undefined method CodeIgniter\HTTP\IncomingRequest::validate()
+in APPPATH\Controllers\PortfolioController.php on line 31.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PortfolioController->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PortfolioController))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-12-19 18:23:27 --> mysqli_sql_exception: Table 'gibsononlinestore.portfolio' doesn't exist in C:\xampp\htdocs\mysite\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\mysite\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT 1\nFROM `...', 0)
+#1 C:\xampp\htdocs\mysite\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 1\nFROM `...')
+#2 C:\xampp\htdocs\mysite\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 1\nFROM `...')
+#3 C:\xampp\htdocs\mysite\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\mysite\system\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\mysite\system\Validation\Validation.php(312): CodeIgniter\Validation\StrictRules\Rules->is_unique('test', 'title', Array, NULL, 'title')
+#6 C:\xampp\htdocs\mysite\system\Validation\Validation.php(170): CodeIgniter\Validation\Validation->processRules('title', 'title', 'test', Array, Array)
+#7 C:\xampp\htdocs\mysite\system\Controller.php(140): CodeIgniter\Validation\Validation->run()
+#8 C:\xampp\htdocs\mysite\app\Controllers\PortfolioController.php(31): CodeIgniter\Controller->validate(Array)
+#9 C:\xampp\htdocs\mysite\system\CodeIgniter.php(934): App\Controllers\PortfolioController->index()
+#10 C:\xampp\htdocs\mysite\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PortfolioController))
+#11 C:\xampp\htdocs\mysite\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\mysite\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2023-12-19 18:23:27 --> Table 'gibsononlinestore.portfolio' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT 1
+FROM `portfolio`
+WHERE `title` = \'test\'
+ LIMIT 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 1
+FROM `portfolio`
+WHERE `title` = \'test\'
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 1
+FROM `portfolio`
+WHERE `title` = \'test\'
+ LIMIT 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `portfolio`
+WHERE `title` = :title:
+ LIMIT 1', [...], false)
+ 5 SYSTEMPATH\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\Validation\Validation.php(312): CodeIgniter\Validation\StrictRules\Rules->is_unique('test', 'title', [...], null, 'title')
+ 7 SYSTEMPATH\Validation\Validation.php(170): CodeIgniter\Validation\Validation->processRules('title', 'title', 'test', [...], [...])
+ 8 SYSTEMPATH\Controller.php(140): CodeIgniter\Validation\Validation->run()
+ 9 APPPATH\Controllers\PortfolioController.php(31): CodeIgniter\Controller->validate([...])
+10 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PortfolioController->index()
+11 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PortfolioController))
+12 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-12-19 18:23:29 --> mysqli_sql_exception: Table 'gibsononlinestore.portfolio' doesn't exist in C:\xampp\htdocs\mysite\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\mysite\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT 1\nFROM `...', 0)
+#1 C:\xampp\htdocs\mysite\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 1\nFROM `...')
+#2 C:\xampp\htdocs\mysite\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 1\nFROM `...')
+#3 C:\xampp\htdocs\mysite\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\mysite\system\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\mysite\system\Validation\Validation.php(312): CodeIgniter\Validation\StrictRules\Rules->is_unique('test', 'title', Array, NULL, 'title')
+#6 C:\xampp\htdocs\mysite\system\Validation\Validation.php(170): CodeIgniter\Validation\Validation->processRules('title', 'title', 'test', Array, Array)
+#7 C:\xampp\htdocs\mysite\system\Controller.php(140): CodeIgniter\Validation\Validation->run()
+#8 C:\xampp\htdocs\mysite\app\Controllers\PortfolioController.php(31): CodeIgniter\Controller->validate(Array)
+#9 C:\xampp\htdocs\mysite\system\CodeIgniter.php(934): App\Controllers\PortfolioController->index()
+#10 C:\xampp\htdocs\mysite\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PortfolioController))
+#11 C:\xampp\htdocs\mysite\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\mysite\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2023-12-19 18:23:29 --> Table 'gibsononlinestore.portfolio' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT 1
+FROM `portfolio`
+WHERE `title` = \'test\'
+ LIMIT 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 1
+FROM `portfolio`
+WHERE `title` = \'test\'
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 1
+FROM `portfolio`
+WHERE `title` = \'test\'
+ LIMIT 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `portfolio`
+WHERE `title` = :title:
+ LIMIT 1', [...], false)
+ 5 SYSTEMPATH\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\Validation\Validation.php(312): CodeIgniter\Validation\StrictRules\Rules->is_unique('test', 'title', [...], null, 'title')
+ 7 SYSTEMPATH\Validation\Validation.php(170): CodeIgniter\Validation\Validation->processRules('title', 'title', 'test', [...], [...])
+ 8 SYSTEMPATH\Controller.php(140): CodeIgniter\Validation\Validation->run()
+ 9 APPPATH\Controllers\PortfolioController.php(31): CodeIgniter\Controller->validate([...])
+10 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PortfolioController->index()
+11 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PortfolioController))
+12 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-12-19 18:24:17 --> mysqli_sql_exception: Column 'shceenshoti' cannot be null in C:\xampp\htdocs\mysite\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\mysite\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `po...', 0)
+#1 C:\xampp\htdocs\mysite\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `po...')
+#2 C:\xampp\htdocs\mysite\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `po...')
+#3 C:\xampp\htdocs\mysite\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `po...', Array, false)
+#4 C:\xampp\htdocs\mysite\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\mysite\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\mysite\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\xampp\htdocs\mysite\system\BaseModel.php(692): CodeIgniter\Model->insert(Array, false)
+#8 C:\xampp\htdocs\mysite\app\Controllers\PortfolioController.php(79): CodeIgniter\BaseModel->save(Array)
+#9 C:\xampp\htdocs\mysite\system\CodeIgniter.php(934): App\Controllers\PortfolioController->index()
+#10 C:\xampp\htdocs\mysite\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PortfolioController))
+#11 C:\xampp\htdocs\mysite\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\mysite\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2023-12-19 18:24:17 --> Column 'shceenshoti' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `portfolio` (`title`, `shceenshoti`, `shceenshotii`, `shceenshotiii`, `snippet`, `postbody`, `category`, `client`, `url`) VALUES (\'test\', NULL, NULL, NULL, \'test\', \'dfdfdfd\', \'1\', \'fdfdf\', \'http://www.test.com\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `portfolio` (`title`, `shceenshoti`, `shceenshotii`, `shceenshotiii`, `snippet`, `postbody`, `category`, `client`, `url`) VALUES (\'test\', NULL, NULL, NULL, \'test\', \'dfdfdfd\', \'1\', \'fdfdf\', \'http://www.test.com\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `portfolio` (`title`, `shceenshoti`, `shceenshotii`, `shceenshotiii`, `snippet`, `postbody`, `category`, `client`, `url`) VALUES (\'test\', NULL, NULL, NULL, \'test\', \'dfdfdfd\', \'1\', \'fdfdf\', \'http://www.test.com\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `portfolio` (`title`, `shceenshoti`, `shceenshotii`, `shceenshotiii`, `snippet`, `postbody`, `category`, `client`, `url`) VALUES (:title:, :shceenshoti:, :shceenshotii:, :shceenshotiii:, :snippet:, :postbody:, :category:, :client:, :url:)', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], false)
+ 8 SYSTEMPATH\BaseModel.php(692): CodeIgniter\Model->insert([...], false)
+ 9 APPPATH\Controllers\PortfolioController.php(79): CodeIgniter\BaseModel->save([...])
+10 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PortfolioController->index()
+11 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PortfolioController))
+12 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-12-19 18:27:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-12-19 19:35:53 --> mysqli_sql_exception: Table 'diverse_media.category' doesn't exist in C:\xampp\htdocs\mysite\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\mysite\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT 1\nFROM `...', 0)
+#1 C:\xampp\htdocs\mysite\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 1\nFROM `...')
+#2 C:\xampp\htdocs\mysite\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 1\nFROM `...')
+#3 C:\xampp\htdocs\mysite\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\mysite\system\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\mysite\system\Validation\Validation.php(312): CodeIgniter\Validation\StrictRules\Rules->is_unique('Codeigniter4', 'title', Array, NULL, 'post_category')
+#6 C:\xampp\htdocs\mysite\system\Validation\Validation.php(170): CodeIgniter\Validation\Validation->processRules('post_category', 'post_category', 'Codeigniter4', Array, Array)
+#7 C:\xampp\htdocs\mysite\system\Controller.php(140): CodeIgniter\Validation\Validation->run()
+#8 C:\xampp\htdocs\mysite\app\Controllers\CategoryController.php(26): CodeIgniter\Controller->validate(Array)
+#9 C:\xampp\htdocs\mysite\system\CodeIgniter.php(934): App\Controllers\CategoryController->index()
+#10 C:\xampp\htdocs\mysite\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoryController))
+#11 C:\xampp\htdocs\mysite\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\mysite\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2023-12-19 19:35:53 --> Table 'diverse_media.category' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT 1
+FROM `category`
+WHERE `title` = \'Codeigniter4\'
+ LIMIT 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 1
+FROM `category`
+WHERE `title` = \'Codeigniter4\'
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 1
+FROM `category`
+WHERE `title` = \'Codeigniter4\'
+ LIMIT 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `category`
+WHERE `title` = :title:
+ LIMIT 1', [...], false)
+ 5 SYSTEMPATH\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\Validation\Validation.php(312): CodeIgniter\Validation\StrictRules\Rules->is_unique('Codeigniter4', 'title', [...], null, 'post_category')
+ 7 SYSTEMPATH\Validation\Validation.php(170): CodeIgniter\Validation\Validation->processRules('post_category', 'post_category', 'Codeigniter4', [...], [...])
+ 8 SYSTEMPATH\Controller.php(140): CodeIgniter\Validation\Validation->run()
+ 9 APPPATH\Controllers\CategoryController.php(26): CodeIgniter\Controller->validate([...])
+10 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\CategoryController->index()
+11 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoryController))
+12 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-12-19 19:36:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-19 19:41:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-12-19 19:46:20 --> syntax error, unexpected '[', expecting identifier (T_STRING) or variable (T_VARIABLE) or '{' or '$'
+in APPPATH\Views\dashboard\partials\forms\add_to_porfolio_form.php on line 38.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('dashboard/portfolio', [], true)
+ 4 APPPATH\Controllers\PortfolioController.php(98): view('dashboard/portfolio', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PortfolioController->index()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PortfolioController))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-19 19:47:30 --> syntax error, unexpected ''post_category'' (T_CONSTANT_ENCAPSED_STRING), expecting identifier (T_STRING) or variable (T_VARIABLE) or '{' or '$'
+in APPPATH\Views\dashboard\partials\forms\add_to_porfolio_form.php on line 38.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('dashboard/portfolio', [], true)
+ 4 APPPATH\Controllers\PortfolioController.php(98): view('dashboard/portfolio', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PortfolioController->index()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PortfolioController))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-19 19:47:53 --> Trying to get property 'post_category' of non-object
+in APPPATH\Views\dashboard\partials\forms\add_to_porfolio_form.php on line 38.
+ 1 APPPATH\Views\dashboard\partials\forms\add_to_porfolio_form.php(38): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'post_category\' of non-object', 'C:\\xampp\\htdocs\\mysite\\app\\Views\\dashboard\\partials\\forms\\add_to_porfolio_form.php', 38, [...])
+ 2 APPPATH\Views\dashboard\portfolio.php(23): include('C:\\xampp\\htdocs\\mysite\\app\\Views\\dashboard\\partials\\forms\\add_to_porfolio_form.php')
+ 3 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\mysite\\app\\Views\\dashboard\\portfolio.php')
+ 4 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('dashboard/portfolio', [], true)
+ 6 APPPATH\Controllers\PortfolioController.php(98): view('dashboard/portfolio', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PortfolioController->index()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PortfolioController))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-12-19 19:50:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-12-19 20:15:03 --> Undefined property: App\Controllers\PortfolioController::$validation
+in APPPATH\Controllers\PortfolioController.php on line 94.
+ 1 APPPATH\Controllers\PortfolioController.php(94): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: App\\Controllers\\PortfolioController::$validation', 'C:\\xampp\\htdocs\\mysite\\app\\Controllers\\PortfolioController.php', 94, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PortfolioController->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PortfolioController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-19 20:16:36 --> Undefined property: App\Controllers\PortfolioController::$validation
+in APPPATH\Controllers\PortfolioController.php on line 99.
+ 1 APPPATH\Controllers\PortfolioController.php(99): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: App\\Controllers\\PortfolioController::$validation', 'C:\\xampp\\htdocs\\mysite\\app\\Controllers\\PortfolioController.php', 99, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PortfolioController->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PortfolioController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-19 20:47:36 --> Call to undefined function set_value()
+in APPPATH\Views\dashboard\partials\forms\add_category_form.php on line 19.
+ 1 APPPATH\Views\dashboard\portfolio.php(39): include()
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\mysite\\app\\Views\\dashboard\\portfolio.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('dashboard/portfolio', [], true)
+ 5 APPPATH\Controllers\CategoryController.php(60): view('dashboard/portfolio', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\CategoryController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoryController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-19 21:02:09 --> Argument 2 passed to set_select() must be of the type string, array given, called in C:\xampp\htdocs\mysite\app\Views\dashboard\partials\forms\add_to_porfolio_form.php on line 56
+in SYSTEMPATH\Helpers\form_helper.php on line 572.
+ 1 APPPATH\Views\dashboard\partials\forms\add_to_porfolio_form.php(56): set_select('category', [...])
+ 2 APPPATH\Views\dashboard\portfolio.php(38): include('C:\\xampp\\htdocs\\mysite\\app\\Views\\dashboard\\partials\\forms\\add_to_porfolio_form.php')
+ 3 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\mysite\\app\\Views\\dashboard\\portfolio.php')
+ 4 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('dashboard/portfolio', [], true)
+ 6 APPPATH\Controllers\CategoryController.php(64): view('dashboard/portfolio', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\CategoryController->index()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoryController))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-19 21:02:19 --> Argument 2 passed to set_select() must be of the type string, array given, called in C:\xampp\htdocs\mysite\app\Views\dashboard\partials\forms\add_to_porfolio_form.php on line 56
+in SYSTEMPATH\Helpers\form_helper.php on line 572.
+ 1 APPPATH\Views\dashboard\partials\forms\add_to_porfolio_form.php(56): set_select('category', [...])
+ 2 APPPATH\Views\dashboard\portfolio.php(38): include('C:\\xampp\\htdocs\\mysite\\app\\Views\\dashboard\\partials\\forms\\add_to_porfolio_form.php')
+ 3 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\mysite\\app\\Views\\dashboard\\portfolio.php')
+ 4 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('dashboard/portfolio', [], true)
+ 6 APPPATH\Controllers\CategoryController.php(64): view('dashboard/portfolio', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\CategoryController->index()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoryController))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-12-19 21:13:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-19 21:35:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-12-19 22:03:27 --> syntax error, unexpected '->' (T_OBJECT_OPERATOR), expecting ';'
+in APPPATH\Controllers\PortfolioController.php on line 115.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\mysite\\app\\Controllers\\PortfolioController.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\PortfolioController')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\PortfolioController')
+ 4 [internal function]: spl_autoload_call('App\\Controllers\\PortfolioController')
+ 5 SYSTEMPATH\CodeIgniter.php(892): class_exists('\\App\\Controllers\\PortfolioController', true)
+ 6 SYSTEMPATH\CodeIgniter.php(486): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-19 22:28:24 --> Undefined index: screenshoti
+in APPPATH\Views\dashboard\edit_portfolio_post.php on line 31.
+ 1 APPPATH\Views\dashboard\edit_portfolio_post.php(31): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: screenshoti', 'C:\\xampp\\htdocs\\mysite\\app\\Views\\dashboard\\edit_portfolio_post.php', 31, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\mysite\\app\\Views\\dashboard\\edit_portfolio_post.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('dashboard/edit_portfolio_post', [], true)
+ 5 APPPATH\Controllers\PortfolioController.php(209): view('dashboard/edit_portfolio_post', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PortfolioController->edit('2')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PortfolioController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-19 22:30:00 --> Undefined index: screenshoti
+in APPPATH\Views\dashboard\edit_portfolio_post.php on line 31.
+ 1 APPPATH\Views\dashboard\edit_portfolio_post.php(31): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: screenshoti', 'C:\\xampp\\htdocs\\mysite\\app\\Views\\dashboard\\edit_portfolio_post.php', 31, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\mysite\\app\\Views\\dashboard\\edit_portfolio_post.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('dashboard/edit_portfolio_post', [], true)
+ 5 APPPATH\Controllers\PortfolioController.php(209): view('dashboard/edit_portfolio_post', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PortfolioController->edit('2')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PortfolioController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-19 22:50:33 --> syntax error, unexpected ','
+in APPPATH\Controllers\PortfolioController.php on line 139.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\mysite\\app\\Controllers\\PortfolioController.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\PortfolioController')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\PortfolioController')
+ 4 [internal function]: spl_autoload_call('App\\Controllers\\PortfolioController')
+ 5 SYSTEMPATH\CodeIgniter.php(892): class_exists('\\App\\Controllers\\PortfolioController', true)
+ 6 SYSTEMPATH\CodeIgniter.php(486): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-19 22:51:24 --> Trying to access array offset on value of type null
+in APPPATH\Views\dashboard\edit_portfolio_post.php on line 10.
+ 1 APPPATH\Views\dashboard\edit_portfolio_post.php(10): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to access array offset on value of type null', 'C:\\xampp\\htdocs\\mysite\\app\\Views\\dashboard\\edit_portfolio_post.php', 10, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\mysite\\app\\Views\\dashboard\\edit_portfolio_post.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('dashboard/edit_portfolio_post', [], true)
+ 5 APPPATH\Controllers\PortfolioController.php(222): view('dashboard/edit_portfolio_post', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PortfolioController->edit('Anti Document Frudery QrCode System')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PortfolioController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-19 22:53:06 --> Invalid file: "dashboard/edit_portfolio_post/Anti Document Frudery QrCode System.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('dashboard/edit_portfolio_post/Anti Document Frudery QrCode System.php')
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('dashboard/edit_portfolio_post/Anti Document Frudery QrCode System', [], true)
+ 3 APPPATH\Controllers\PortfolioController.php(222): view('dashboard/edit_portfolio_post/Anti Document Frudery QrCode System', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PortfolioController->edit('Anti Document Frudery QrCode System')
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PortfolioController))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-19 22:58:45 --> Invalid file: "dashboard/edit_portfolio_post/.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('dashboard/edit_portfolio_post/.php')
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('dashboard/edit_portfolio_post/', [], true)
+ 3 APPPATH\Controllers\PortfolioController.php(225): view('dashboard/edit_portfolio_post/', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PortfolioController->edit('Anti Document Frudery QrCode System')
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PortfolioController))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-19 22:59:58 --> Trying to access array offset on value of type null
+in APPPATH\Views\dashboard\edit_portfolio_post.php on line 10.
+ 1 APPPATH\Views\dashboard\edit_portfolio_post.php(10): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to access array offset on value of type null', 'C:\\xampp\\htdocs\\mysite\\app\\Views\\dashboard\\edit_portfolio_post.php', 10, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\mysite\\app\\Views\\dashboard\\edit_portfolio_post.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('dashboard/edit_portfolio_post', [], true)
+ 5 APPPATH\Controllers\PortfolioController.php(225): view('dashboard/edit_portfolio_post', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PortfolioController->edit('Anti Document Frudery QrCode System')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PortfolioController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-19 23:01:30 --> Trying to access array offset on value of type null
+in APPPATH\Views\dashboard\edit_portfolio_post.php on line 10.
+ 1 APPPATH\Views\dashboard\edit_portfolio_post.php(10): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to access array offset on value of type null', 'C:\\xampp\\htdocs\\mysite\\app\\Views\\dashboard\\edit_portfolio_post.php', 10, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\mysite\\app\\Views\\dashboard\\edit_portfolio_post.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('dashboard/edit_portfolio_post', [], true)
+ 5 APPPATH\Controllers\PortfolioController.php(227): view('dashboard/edit_portfolio_post', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PortfolioController->edit('Anti Document Frudery QrCode System')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PortfolioController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-19 23:01:47 --> Trying to access array offset on value of type null
+in APPPATH\Views\dashboard\edit_portfolio_post.php on line 10.
+ 1 APPPATH\Views\dashboard\edit_portfolio_post.php(10): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to access array offset on value of type null', 'C:\\xampp\\htdocs\\mysite\\app\\Views\\dashboard\\edit_portfolio_post.php', 10, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\mysite\\app\\Views\\dashboard\\edit_portfolio_post.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('dashboard/edit_portfolio_post', [], true)
+ 5 APPPATH\Controllers\PortfolioController.php(227): view('dashboard/edit_portfolio_post', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PortfolioController->edit('Anti Document Frudery QrCode System')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PortfolioController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-19 23:13:39 --> The original file is not a valid file.
+in SYSTEMPATH\HTTP\Files\UploadedFile.php on line 137.
+ 1 SYSTEMPATH\HTTP\Files\UploadedFile.php(137): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidFile()
+ 2 APPPATH\Controllers\PortfolioController.php(171): CodeIgniter\HTTP\Files\UploadedFile->move('public/uploads/', '1703027619_67a7705216702a0de5bc')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PortfolioController->edit('3')
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PortfolioController))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-19 23:19:50 --> There is no data to update.
+in SYSTEMPATH\BaseModel.php on line 1680.
+ 1 SYSTEMPATH\BaseModel.php(1680): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\BaseModel.php(910): CodeIgniter\BaseModel->transformDataToArray([], 'update')
+ 3 SYSTEMPATH\Model.php(756): CodeIgniter\BaseModel->update([...], [])
+ 4 APPPATH\Controllers\PortfolioController.php(222): CodeIgniter\Model->update('3', [])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PortfolioController->edit('3')
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PortfolioController))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-19 23:21:46 --> Undefined variable: portfolio_data
+in APPPATH\Controllers\PortfolioController.php on line 222.
+ 1 APPPATH\Controllers\PortfolioController.php(222): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: portfolio_data', 'C:\\xampp\\htdocs\\mysite\\app\\Controllers\\PortfolioController.php', 222, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PortfolioController->edit('3')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PortfolioController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-12-19 23:22:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-12-19 23:22:16 --> Call to a member function isValid() on null
+in APPPATH\Controllers\PortfolioController.php on line 141.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PortfolioController->edit('2')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PortfolioController))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-12-19 23:25:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-19 23:26:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-19 23:26:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-19 23:27:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

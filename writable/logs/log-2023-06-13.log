@@ -1,0 +1,171 @@
+INFO - 2023-06-13 01:07:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-13 01:15:59 --> syntax error, unexpected '?'
+in APPPATH\Views\dashboard\manage-orders.php on line 110.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('dashboard/manage-orders', [], true)
+ 3 APPPATH\Controllers\Admin.php(39): view('dashboard/manage-orders', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin->manage_orders()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-13 01:18:21 --> Trying to get property 'id' of non-object
+in APPPATH\Views\dashboard\manage-orders.php on line 111.
+ 1 APPPATH\Views\dashboard\manage-orders.php(111): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'id\' of non-object', 'C:\\xampp\\htdocs\\eventry\\app\\Views\\dashboard\\manage-orders.php', 111, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\eventry\\app\\Views\\dashboard\\manage-orders.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('dashboard/manage-orders', [], true)
+ 5 APPPATH\Controllers\Admin.php(39): view('dashboard/manage-orders', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin->manage_orders()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-13 01:19:07 --> Trying to get property 'userName' of non-object
+in APPPATH\Views\dashboard\manage-orders.php on line 111.
+ 1 APPPATH\Views\dashboard\manage-orders.php(111): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'userName\' of non-object', 'C:\\xampp\\htdocs\\eventry\\app\\Views\\dashboard\\manage-orders.php', 111, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\eventry\\app\\Views\\dashboard\\manage-orders.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('dashboard/manage-orders', [], true)
+ 5 APPPATH\Controllers\Admin.php(39): view('dashboard/manage-orders', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin->manage_orders()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-13 01:34:26 --> Undefined index: productName
+in APPPATH\Views\dashboard\manage-orders.php on line 106.
+ 1 APPPATH\Views\dashboard\manage-orders.php(106): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: productName', 'C:\\xampp\\htdocs\\eventry\\app\\Views\\dashboard\\manage-orders.php', 106, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\eventry\\app\\Views\\dashboard\\manage-orders.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('dashboard/manage-orders', [], true)
+ 5 APPPATH\Controllers\Admin.php(44): view('dashboard/manage-orders', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin->manage_orders()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-13 01:35:04 --> Undefined index: productName
+in APPPATH\Views\dashboard\manage-orders.php on line 106.
+ 1 APPPATH\Views\dashboard\manage-orders.php(106): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: productName', 'C:\\xampp\\htdocs\\eventry\\app\\Views\\dashboard\\manage-orders.php', 106, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\eventry\\app\\Views\\dashboard\\manage-orders.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('dashboard/manage-orders', [], true)
+ 5 APPPATH\Controllers\Admin.php(44): view('dashboard/manage-orders', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin->manage_orders()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-13 01:35:06 --> Undefined index: productName
+in APPPATH\Views\dashboard\manage-orders.php on line 106.
+ 1 APPPATH\Views\dashboard\manage-orders.php(106): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: productName', 'C:\\xampp\\htdocs\\eventry\\app\\Views\\dashboard\\manage-orders.php', 106, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\eventry\\app\\Views\\dashboard\\manage-orders.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('dashboard/manage-orders', [], true)
+ 5 APPPATH\Controllers\Admin.php(44): view('dashboard/manage-orders', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin->manage_orders()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-13 01:36:00 --> Undefined index: productName
+in APPPATH\Views\dashboard\manage-orders.php on line 106.
+ 1 APPPATH\Views\dashboard\manage-orders.php(106): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: productName', 'C:\\xampp\\htdocs\\eventry\\app\\Views\\dashboard\\manage-orders.php', 106, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\eventry\\app\\Views\\dashboard\\manage-orders.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('dashboard/manage-orders', [], true)
+ 5 APPPATH\Controllers\Admin.php(44): view('dashboard/manage-orders', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin->manage_orders()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-13 01:38:02 --> Undefined index: productName
+in APPPATH\Views\dashboard\manage-orders.php on line 106.
+ 1 APPPATH\Views\dashboard\manage-orders.php(106): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: productName', 'C:\\xampp\\htdocs\\eventry\\app\\Views\\dashboard\\manage-orders.php', 106, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\eventry\\app\\Views\\dashboard\\manage-orders.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('dashboard/manage-orders', [], true)
+ 5 APPPATH\Controllers\Admin.php(44): view('dashboard/manage-orders', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin->manage_orders()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-13 01:40:22 --> syntax error, unexpected '<', expecting end of file
+in APPPATH\Views\dashboard\manage-orders.php on line 110.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('dashboard/manage-orders', [], true)
+ 3 APPPATH\Controllers\Admin.php(44): view('dashboard/manage-orders', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin->manage_orders()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-13 01:40:48 --> syntax error, unexpected '<', expecting end of file
+in APPPATH\Views\dashboard\manage-orders.php on line 110.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('dashboard/manage-orders', [], true)
+ 3 APPPATH\Controllers\Admin.php(44): view('dashboard/manage-orders', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin->manage_orders()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-13 01:43:32 --> Undefined index: username
+in APPPATH\Views\dashboard\manage-orders.php on line 107.
+ 1 APPPATH\Views\dashboard\manage-orders.php(107): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: username', 'C:\\xampp\\htdocs\\eventry\\app\\Views\\dashboard\\manage-orders.php', 107, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\eventry\\app\\Views\\dashboard\\manage-orders.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('dashboard/manage-orders', [], true)
+ 5 APPPATH\Controllers\Admin.php(44): view('dashboard/manage-orders', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin->manage_orders()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-13 01:48:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-13 02:25:00 --> Undefined offset: 0
+in APPPATH\Views\dashboard\log_sale.php on line 20.
+ 1 APPPATH\Views\dashboard\log_sale.php(20): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined offset: 0', 'C:\\xampp\\htdocs\\eventry\\app\\Views\\dashboard\\log_sale.php', 20, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\eventry\\app\\Views\\dashboard\\log_sale.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('dashboard/log_sale', [], true)
+ 5 APPPATH\Controllers\Admin.php(73): view('dashboard/log_sale', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin->log_sale('3')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-13 09:55:49 --> Undefined variable: orderData
+in APPPATH\Views\dashboard\manage-orders.php on line 43.
+ 1 APPPATH\Views\dashboard\manage-orders.php(43): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: orderData', 'C:\\xampp\\htdocs\\eventry\\app\\Views\\dashboard\\manage-orders.php', 43, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\eventry\\app\\Views\\dashboard\\manage-orders.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('dashboard/manage-orders', [], true)
+ 5 APPPATH\Controllers\Orderapi.php(55): view('dashboard/manage-orders', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Orderapi->create()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Orderapi))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-13 09:56:51 --> Argument 2 passed to CodeIgniter\HTTP\RedirectResponse::to() must be of the type int or null, array given, called in C:\xampp\htdocs\eventry\app\Controllers\Orderapi.php on line 55
+in SYSTEMPATH\HTTP\RedirectResponse.php on line 32.
+ 1 APPPATH\Controllers\Orderapi.php(55): CodeIgniter\HTTP\RedirectResponse->to('dashboard/manage-orders', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Orderapi->create()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Orderapi))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-13 15:37:41 --> Undefined variable: products
+in APPPATH\Views\dashboard\manageorders.php on line 86.
+ 1 APPPATH\Views\dashboard\manageorders.php(86): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: products', 'C:\\xampp\\htdocs\\eventry\\app\\Views\\dashboard\\manageorders.php', 86, [])
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\eventry\\app\\Views\\dashboard\\manageorders.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('dashboard/manageorders', [], true)
+ 5 APPPATH\Controllers\Manageorders.php(15): view('dashboard/manageorders')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Manageorders->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Manageorders))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-13 17:29:06 --> Cannot redeclare App\Controllers\Manageorders::index()
+in APPPATH\Controllers\Manageorders.php on line 18.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2023-06-13 20:34:06 --> Undefined variable: deliveries_data
+in APPPATH\Views\dashboard\managedelivery.php on line 15.
+ 1 APPPATH\Views\dashboard\managedelivery.php(15): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: deliveries_data', 'C:\\xampp\\htdocs\\eventry\\app\\Views\\dashboard\\managedelivery.php', 15, [])
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\eventry\\app\\Views\\dashboard\\managedelivery.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('dashboard/managedelivery', [], true)
+ 5 APPPATH\Controllers\Managedelivery.php(15): view('dashboard/managedelivery')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Managedelivery->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Managedelivery))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

@@ -1,0 +1,266 @@
+INFO - 2023-07-28 00:41:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-28 00:41:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-28 00:41:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-28 00:41:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-28 00:42:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-28 00:43:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-28 00:43:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-28 00:43:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-28 00:43:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-28 00:43:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-28 00:43:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-28 00:44:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-28 00:48:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-28 00:49:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-28 00:49:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-28 00:49:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-28 00:50:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-28 00:50:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-28 00:50:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-28 00:50:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-28 00:51:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-28 00:51:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-28 00:51:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-28 00:51:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-28 00:52:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-28 00:53:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-28 00:53:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-28 00:53:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-28 00:54:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-28 00:54:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-28 00:54:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-28 01:02:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-28 01:03:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-28 01:06:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-28 01:06:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-28 01:08:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-28 01:08:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-28 01:09:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-28 01:09:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-28 01:09:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-28 01:10:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-28 02:21:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-28 02:21:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-28 02:21:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-28 02:21:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-28 02:21:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-07-28 02:21:55 --> Call to undefined method App\Models\OrderModel::ordersummary
+in SYSTEMPATH\Model.php on line 842.
+ 1 APPPATH\Controllers\Admin.php(18): CodeIgniter\Model->__call('ordersummary', [])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-07-28 02:22:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-07-28 02:22:34 --> mysqli_sql_exception: Unknown column 'stock.name' in 'field list' in C:\xampp\htdocs\eventry\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\eventry\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `stock`....', 0)
+#1 C:\xampp\htdocs\eventry\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `stock`....')
+#2 C:\xampp\htdocs\eventry\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `stock`....')
+#3 C:\xampp\htdocs\eventry\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `stock`....', Array, false)
+#4 C:\xampp\htdocs\eventry\app\Models\StockModel.php(86): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\eventry\app\Controllers\Admin.php(18): App\Models\StockModel->ordersummary()
+#6 C:\xampp\htdocs\eventry\system\CodeIgniter.php(934): App\Controllers\Admin->index()
+#7 C:\xampp\htdocs\eventry\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#8 C:\xampp\htdocs\eventry\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\eventry\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-07-28 02:22:34 --> Unknown column 'stock.name' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `stock`.`name` as `product`, SUM(order_log.quantity) as total_orders
+FROM `order_log`
+JOIN `stock` ON `order_log`.`product` = `stock`.`id`
+GROUP BY `stock`.`name`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `stock`.`name` as `product`, SUM(order_log.quantity) as total_orders
+FROM `order_log`
+JOIN `stock` ON `order_log`.`product` = `stock`.`id`
+GROUP BY `stock`.`name`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `stock`.`name` as `product`, SUM(order_log.quantity) as total_orders
+FROM `order_log`
+JOIN `stock` ON `order_log`.`product` = `stock`.`id`
+GROUP BY `stock`.`name`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `stock`.`name` as `product`, SUM(order_log.quantity) as total_orders
+FROM `order_log`
+JOIN `stock` ON `order_log`.`product` = `stock`.`id`
+GROUP BY `stock`.`name`', [], false)
+ 5 APPPATH\Models\StockModel.php(86): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Admin.php(18): App\Models\StockModel->ordersummary()
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin->index()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-07-28 02:23:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-07-28 02:23:15 --> mysqli_sql_exception: Unknown column 'order_log.quantity' in 'field list' in C:\xampp\htdocs\eventry\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\eventry\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `stock`....', 0)
+#1 C:\xampp\htdocs\eventry\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `stock`....')
+#2 C:\xampp\htdocs\eventry\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `stock`....')
+#3 C:\xampp\htdocs\eventry\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `stock`....', Array, false)
+#4 C:\xampp\htdocs\eventry\app\Models\StockModel.php(86): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\eventry\app\Controllers\Admin.php(18): App\Models\StockModel->ordersummary()
+#6 C:\xampp\htdocs\eventry\system\CodeIgniter.php(934): App\Controllers\Admin->index()
+#7 C:\xampp\htdocs\eventry\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#8 C:\xampp\htdocs\eventry\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\eventry\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-07-28 02:23:15 --> Unknown column 'order_log.quantity' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `stock`.`productName` as `product`, SUM(order_log.quantity) as total_orders
+FROM `order_log`
+JOIN `stock` ON `order_log`.`product` = `stock`.`id`
+GROUP BY `stock`.`productName`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `stock`.`productName` as `product`, SUM(order_log.quantity) as total_orders
+FROM `order_log`
+JOIN `stock` ON `order_log`.`product` = `stock`.`id`
+GROUP BY `stock`.`productName`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `stock`.`productName` as `product`, SUM(order_log.quantity) as total_orders
+FROM `order_log`
+JOIN `stock` ON `order_log`.`product` = `stock`.`id`
+GROUP BY `stock`.`productName`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `stock`.`productName` as `product`, SUM(order_log.quantity) as total_orders
+FROM `order_log`
+JOIN `stock` ON `order_log`.`product` = `stock`.`id`
+GROUP BY `stock`.`productName`', [], false)
+ 5 APPPATH\Models\StockModel.php(86): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Admin.php(18): App\Models\StockModel->ordersummary()
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin->index()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-07-28 02:24:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-28 02:28:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-28 02:31:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-28 02:33:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-28 02:33:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-28 02:35:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-28 02:39:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-28 02:40:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-28 03:12:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-28 03:12:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-28 03:12:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-28 03:12:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-28 03:13:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-28 03:13:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-28 03:13:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-28 03:13:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-28 03:13:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-28 03:46:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-07-28 03:46:50 --> mysqli_sql_exception: Not unique table/alias: 'order_log' in C:\xampp\htdocs\eventry\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\eventry\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `stock`....', 0)
+#1 C:\xampp\htdocs\eventry\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `stock`....')
+#2 C:\xampp\htdocs\eventry\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `stock`....')
+#3 C:\xampp\htdocs\eventry\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `stock`....', Array, false)
+#4 C:\xampp\htdocs\eventry\app\Models\StockModel.php(100): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\eventry\app\Controllers\Admin.php(20): App\Models\StockModel->delivery_summary()
+#6 C:\xampp\htdocs\eventry\system\CodeIgniter.php(934): App\Controllers\Admin->index()
+#7 C:\xampp\htdocs\eventry\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#8 C:\xampp\htdocs\eventry\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\eventry\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-07-28 03:46:50 --> Not unique table/alias: 'order_log'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `stock`.`category` as `category`, SUM(deliveries.amoutPaid) as total
+FROM `deliveries`
+JOIN `order_log` ON `deliveries`.`order_id` = `order_log`.`id`
+JOIN `order_log` ON `deliveries`.`order_id` = `stock`.`id`
+GROUP BY `stock`.`category`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `stock`.`category` as `category`, SUM(deliveries.amoutPaid) as total
+FROM `deliveries`
+JOIN `order_log` ON `deliveries`.`order_id` = `order_log`.`id`
+JOIN `order_log` ON `deliveries`.`order_id` = `stock`.`id`
+GROUP BY `stock`.`category`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `stock`.`category` as `category`, SUM(deliveries.amoutPaid) as total
+FROM `deliveries`
+JOIN `order_log` ON `deliveries`.`order_id` = `order_log`.`id`
+JOIN `order_log` ON `deliveries`.`order_id` = `stock`.`id`
+GROUP BY `stock`.`category`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `stock`.`category` as `category`, SUM(deliveries.amoutPaid) as total
+FROM `deliveries`
+JOIN `order_log` ON `deliveries`.`order_id` = `order_log`.`id`
+JOIN `order_log` ON `deliveries`.`order_id` = `stock`.`id`
+GROUP BY `stock`.`category`', [], false)
+ 5 APPPATH\Models\StockModel.php(100): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Admin.php(20): App\Models\StockModel->delivery_summary()
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin->index()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-07-28 03:51:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-07-28 03:51:04 --> mysqli_sql_exception: Unknown column 'deliveries.amountPaid' in 'field list' in C:\xampp\htdocs\eventry\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\eventry\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `stock`....', 0)
+#1 C:\xampp\htdocs\eventry\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `stock`....')
+#2 C:\xampp\htdocs\eventry\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `stock`....')
+#3 C:\xampp\htdocs\eventry\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `stock`....', Array, false)
+#4 C:\xampp\htdocs\eventry\app\Models\StockModel.php(100): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\eventry\app\Controllers\Admin.php(20): App\Models\StockModel->delivery_summary()
+#6 C:\xampp\htdocs\eventry\system\CodeIgniter.php(934): App\Controllers\Admin->index()
+#7 C:\xampp\htdocs\eventry\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#8 C:\xampp\htdocs\eventry\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\eventry\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-07-28 03:51:04 --> Unknown column 'deliveries.amountPaid' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `stock`.`category` as `category`, SUM(deliveries.amountPaid) as total
+FROM `deliveries`
+JOIN `order_log` ON `deliveries`.`order_id` = `order_log`.`id`
+JOIN `stock` ON `order_log`.`product` = `stock`.`id`
+GROUP BY `stock`.`category`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `stock`.`category` as `category`, SUM(deliveries.amountPaid) as total
+FROM `deliveries`
+JOIN `order_log` ON `deliveries`.`order_id` = `order_log`.`id`
+JOIN `stock` ON `order_log`.`product` = `stock`.`id`
+GROUP BY `stock`.`category`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `stock`.`category` as `category`, SUM(deliveries.amountPaid) as total
+FROM `deliveries`
+JOIN `order_log` ON `deliveries`.`order_id` = `order_log`.`id`
+JOIN `stock` ON `order_log`.`product` = `stock`.`id`
+GROUP BY `stock`.`category`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `stock`.`category` as `category`, SUM(deliveries.amountPaid) as total
+FROM `deliveries`
+JOIN `order_log` ON `deliveries`.`order_id` = `order_log`.`id`
+JOIN `stock` ON `order_log`.`product` = `stock`.`id`
+GROUP BY `stock`.`category`', [], false)
+ 5 APPPATH\Models\StockModel.php(100): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Admin.php(20): App\Models\StockModel->delivery_summary()
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin->index()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-07-28 03:51:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-28 03:55:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-07-28 03:55:09 --> Undefined property: stdClass::$total_orders
+in APPPATH\Views\dashboard\index.php on line 195.
+ 1 APPPATH\Views\dashboard\index.php(195): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: stdClass::$total_orders', 'C:\\xampp\\htdocs\\eventry\\app\\Views\\dashboard\\index.php', 195, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\eventry\\app\\Views\\dashboard\\index.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('dashboard/index', [], true)
+ 5 APPPATH\Controllers\Admin.php(24): view('dashboard/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-07-28 03:55:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-28 03:56:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-28 03:58:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-28 04:01:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-28 04:01:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-28 04:09:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-28 04:09:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-28 04:09:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-28 04:09:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-28 04:10:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-28 04:10:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-28 04:10:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-28 04:10:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-28 04:11:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-28 04:11:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-28 04:12:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-28 04:12:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-28 04:12:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-28 04:20:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-28 04:23:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-28 04:24:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-28 04:26:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-28 04:30:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

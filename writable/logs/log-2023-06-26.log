@@ -1,0 +1,437 @@
+CRITICAL - 2023-06-26 12:01:41 --> Undefined variable: totalTime
+in SYSTEMPATH\Debug\Toolbar\Views\toolbar.tpl.php on line 40.
+ 1 SYSTEMPATH\Debug\Toolbar\Views\toolbar.tpl.php(40): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: totalTime', 'C:\\xampp\\htdocs\\eventry\\system\\Debug\\Toolbar\\Views\\toolbar.tpl.php', 40, [...])
+ 2 SYSTEMPATH\Debug\Toolbar.php(511): include('C:\\xampp\\htdocs\\eventry\\system\\Debug\\Toolbar\\Views\\toolbar.tpl.php')
+ 3 SYSTEMPATH\Debug\Toolbar.php(474): CodeIgniter\Debug\Toolbar->format([...], 'html')
+ 4 APPPATH\Config\Events.php(46): CodeIgniter\Debug\Toolbar->respond()
+ 5 SYSTEMPATH\Events\Events.php(149): CodeIgniter\Events\Events::Config\{closure}()
+ 6 SYSTEMPATH\CodeIgniter.php(350): CodeIgniter\Events\Events::trigger('pre_system')
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-26 12:14:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-26 12:14:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-26 12:14:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-26 12:15:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-26 12:22:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-26 12:34:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-26 12:35:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-26 12:35:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-26 12:35:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-26 12:35:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-26 12:35:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-26 12:38:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-26 12:38:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-26 12:38:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-26 12:38:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-26 12:38:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-26 12:39:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-26 12:41:26 --> Trying to get property 'featureImg' of non-object
+in APPPATH\Views\public\index.php on line 85.
+ 1 APPPATH\Views\public\index.php(85): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'featureImg\' of non-object', 'C:\\xampp\\htdocs\\eventry\\app\\Views\\public\\index.php', 85, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\eventry\\app\\Views\\public\\index.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('public/index', [], true)
+ 5 APPPATH\Controllers\Publiccontroller.php(12): view('public/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Publiccontroller->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Publiccontroller))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-26 20:03:27 --> Invalid argument supplied for foreach()
+in APPPATH\Views\public\index.php on line 110.
+ 1 APPPATH\Views\public\index.php(110): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Invalid argument supplied for foreach()', 'C:\\xampp\\htdocs\\eventry\\app\\Views\\public\\index.php', 110, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\eventry\\app\\Views\\public\\index.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('public/index', [], true)
+ 5 APPPATH\Controllers\Publiccontroller.php(13): view('public/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Publiccontroller->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Publiccontroller))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-06-26 20:04:29 --> mysqli_sql_exception: Unknown column 'category' in 'where clause' in C:\xampp\htdocs\eventry\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\eventry\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT COUNT(*)...', 0)
+#1 C:\xampp\htdocs\eventry\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*)...')
+#2 C:\xampp\htdocs\eventry\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*)...')
+#3 C:\xampp\htdocs\eventry\system\Database\BaseBuilder.php(1700): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#4 C:\xampp\htdocs\eventry\app\Models\StockModel.php(26): CodeIgniter\Database\BaseBuilder->countAllResults()
+#5 C:\xampp\htdocs\eventry\app\Controllers\Publiccontroller.php(10): App\Models\StockModel->findBycategory('laptop')
+#6 C:\xampp\htdocs\eventry\system\CodeIgniter.php(934): App\Controllers\Publiccontroller->index()
+#7 C:\xampp\htdocs\eventry\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Publiccontroller))
+#8 C:\xampp\htdocs\eventry\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\eventry\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-06-26 20:04:29 --> Unknown column 'category' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT COUNT(*) AS `numrows`
+FROM `order_log`
+WHERE `category` = \'laptop\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*) AS `numrows`
+FROM `order_log`
+WHERE `category` = \'laptop\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*) AS `numrows`
+FROM `order_log`
+WHERE `category` = \'laptop\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1700): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `order_log`
+WHERE `category` = :category:', [...], false)
+ 5 APPPATH\Models\StockModel.php(26): CodeIgniter\Database\BaseBuilder->countAllResults()
+ 6 APPPATH\Controllers\Publiccontroller.php(10): App\Models\StockModel->findBycategory('laptop')
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Publiccontroller->index()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Publiccontroller))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-26 20:04:56 --> Invalid argument supplied for foreach()
+in APPPATH\Views\public\index.php on line 110.
+ 1 APPPATH\Views\public\index.php(110): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Invalid argument supplied for foreach()', 'C:\\xampp\\htdocs\\eventry\\app\\Views\\public\\index.php', 110, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\eventry\\app\\Views\\public\\index.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('public/index', [], true)
+ 5 APPPATH\Controllers\Publiccontroller.php(13): view('public/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Publiccontroller->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Publiccontroller))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-26 20:07:34 --> Undefined variable: laptops
+in APPPATH\Views\public\index.php on line 146.
+ 1 APPPATH\Views\public\index.php(146): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: laptops', 'C:\\xampp\\htdocs\\eventry\\app\\Views\\public\\index.php', 146, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\eventry\\app\\Views\\public\\index.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('public/index', [], true)
+ 5 APPPATH\Controllers\Publiccontroller.php(13): view('public/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Publiccontroller->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Publiccontroller))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-26 20:12:03 --> Undefined variable: laptops
+in APPPATH\Views\public\index.php on line 146.
+ 1 APPPATH\Views\public\index.php(146): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: laptops', 'C:\\xampp\\htdocs\\eventry\\app\\Views\\public\\index.php', 146, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\eventry\\app\\Views\\public\\index.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('public/index', [], true)
+ 5 APPPATH\Controllers\Publiccontroller.php(13): view('public/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Publiccontroller->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Publiccontroller))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-26 20:15:27 --> Undefined variable: laptops
+in APPPATH\Views\public\index.php on line 146.
+ 1 APPPATH\Views\public\index.php(146): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: laptops', 'C:\\xampp\\htdocs\\eventry\\app\\Views\\public\\index.php', 146, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\eventry\\app\\Views\\public\\index.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('public/index', [], true)
+ 5 APPPATH\Controllers\Publiccontroller.php(13): view('public/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Publiccontroller->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Publiccontroller))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-26 20:18:14 --> Undefined variable: laptops
+in APPPATH\Views\public\index.php on line 146.
+ 1 APPPATH\Views\public\index.php(146): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: laptops', 'C:\\xampp\\htdocs\\eventry\\app\\Views\\public\\index.php', 146, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\eventry\\app\\Views\\public\\index.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('public/index', [], true)
+ 5 APPPATH\Controllers\Publiccontroller.php(13): view('public/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Publiccontroller->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Publiccontroller))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-26 20:19:56 --> Undefined variable: laptops
+in APPPATH\Views\public\index.php on line 146.
+ 1 APPPATH\Views\public\index.php(146): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: laptops', 'C:\\xampp\\htdocs\\eventry\\app\\Views\\public\\index.php', 146, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\eventry\\app\\Views\\public\\index.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('public/index', [], true)
+ 5 APPPATH\Controllers\Publiccontroller.php(13): view('public/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Publiccontroller->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Publiccontroller))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-26 20:35:08 --> Undefined variable: phones
+in APPPATH\Views\public\index.php on line 146.
+ 1 APPPATH\Views\public\index.php(146): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: phones', 'C:\\xampp\\htdocs\\eventry\\app\\Views\\public\\index.php', 146, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\eventry\\app\\Views\\public\\index.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('public/index', [], true)
+ 5 APPPATH\Controllers\Publiccontroller.php(15): view('public/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Publiccontroller->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Publiccontroller))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-26 20:35:58 --> Undefined variable: monitor
+in APPPATH\Views\public\index.php on line 146.
+ 1 APPPATH\Views\public\index.php(146): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: monitor', 'C:\\xampp\\htdocs\\eventry\\app\\Views\\public\\index.php', 146, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\eventry\\app\\Views\\public\\index.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('public/index', [], true)
+ 5 APPPATH\Controllers\Publiccontroller.php(15): view('public/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Publiccontroller->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Publiccontroller))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-26 20:36:30 --> Cannot use object of type stdClass as array
+in APPPATH\Views\public\index.php on line 154.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('public/index', [], true)
+ 4 APPPATH\Controllers\Publiccontroller.php(15): view('public/index', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Publiccontroller->index()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Publiccontroller))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-26 20:39:34 --> Cannot use object of type stdClass as array
+in APPPATH\Views\public\index.php on line 154.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('public/index', [], true)
+ 4 APPPATH\Controllers\Publiccontroller.php(15): view('public/index', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Publiccontroller->index()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Publiccontroller))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-26 20:39:36 --> Cannot use object of type stdClass as array
+in APPPATH\Views\public\index.php on line 154.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('public/index', [], true)
+ 4 APPPATH\Controllers\Publiccontroller.php(15): view('public/index', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Publiccontroller->index()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Publiccontroller))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-26 20:44:57 --> Cannot use object of type stdClass as array
+in APPPATH\Views\public\index.php on line 154.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('public/index', [], true)
+ 4 APPPATH\Controllers\Publiccontroller.php(15): view('public/index', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Publiccontroller->index()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Publiccontroller))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-26 20:46:38 --> Cannot use object of type stdClass as array
+in APPPATH\Views\public\index.php on line 154.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('public/index', [], true)
+ 4 APPPATH\Controllers\Publiccontroller.php(15): view('public/index', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Publiccontroller->index()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Publiccontroller))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-26 20:50:59 --> Trying to get property 'tagPrice' of non-object
+in APPPATH\Views\public\index.php on line 82.
+ 1 APPPATH\Views\public\index.php(82): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'tagPrice\' of non-object', 'C:\\xampp\\htdocs\\eventry\\app\\Views\\public\\index.php', 82, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\eventry\\app\\Views\\public\\index.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('public/index', [], true)
+ 5 APPPATH\Controllers\Publiccontroller.php(15): view('public/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Publiccontroller->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Publiccontroller))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-26 20:57:54 --> Trying to get property 'tagPrice' of non-object
+in APPPATH\Views\public\index.php on line 82.
+ 1 APPPATH\Views\public\index.php(82): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'tagPrice\' of non-object', 'C:\\xampp\\htdocs\\eventry\\app\\Views\\public\\index.php', 82, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\eventry\\app\\Views\\public\\index.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('public/index', [], true)
+ 5 APPPATH\Controllers\Publiccontroller.php(16): view('public/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Publiccontroller->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Publiccontroller))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-26 20:57:57 --> Trying to get property 'tagPrice' of non-object
+in APPPATH\Views\public\index.php on line 82.
+ 1 APPPATH\Views\public\index.php(82): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'tagPrice\' of non-object', 'C:\\xampp\\htdocs\\eventry\\app\\Views\\public\\index.php', 82, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\eventry\\app\\Views\\public\\index.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('public/index', [], true)
+ 5 APPPATH\Controllers\Publiccontroller.php(16): view('public/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Publiccontroller->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Publiccontroller))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-26 20:57:58 --> Trying to get property 'tagPrice' of non-object
+in APPPATH\Views\public\index.php on line 82.
+ 1 APPPATH\Views\public\index.php(82): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'tagPrice\' of non-object', 'C:\\xampp\\htdocs\\eventry\\app\\Views\\public\\index.php', 82, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\eventry\\app\\Views\\public\\index.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('public/index', [], true)
+ 5 APPPATH\Controllers\Publiccontroller.php(16): view('public/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Publiccontroller->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Publiccontroller))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-26 20:58:58 --> Trying to get property 'tagPrice' of non-object
+in APPPATH\Views\public\index.php on line 82.
+ 1 APPPATH\Views\public\index.php(82): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'tagPrice\' of non-object', 'C:\\xampp\\htdocs\\eventry\\app\\Views\\public\\index.php', 82, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\eventry\\app\\Views\\public\\index.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('public/index', [], true)
+ 5 APPPATH\Controllers\Publiccontroller.php(16): view('public/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Publiccontroller->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Publiccontroller))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-26 20:59:00 --> Trying to get property 'tagPrice' of non-object
+in APPPATH\Views\public\index.php on line 82.
+ 1 APPPATH\Views\public\index.php(82): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'tagPrice\' of non-object', 'C:\\xampp\\htdocs\\eventry\\app\\Views\\public\\index.php', 82, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\eventry\\app\\Views\\public\\index.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('public/index', [], true)
+ 5 APPPATH\Controllers\Publiccontroller.php(16): view('public/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Publiccontroller->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Publiccontroller))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-26 20:59:01 --> Trying to get property 'tagPrice' of non-object
+in APPPATH\Views\public\index.php on line 82.
+ 1 APPPATH\Views\public\index.php(82): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'tagPrice\' of non-object', 'C:\\xampp\\htdocs\\eventry\\app\\Views\\public\\index.php', 82, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\eventry\\app\\Views\\public\\index.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('public/index', [], true)
+ 5 APPPATH\Controllers\Publiccontroller.php(16): view('public/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Publiccontroller->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Publiccontroller))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-26 20:59:02 --> Trying to get property 'tagPrice' of non-object
+in APPPATH\Views\public\index.php on line 82.
+ 1 APPPATH\Views\public\index.php(82): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'tagPrice\' of non-object', 'C:\\xampp\\htdocs\\eventry\\app\\Views\\public\\index.php', 82, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\eventry\\app\\Views\\public\\index.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('public/index', [], true)
+ 5 APPPATH\Controllers\Publiccontroller.php(16): view('public/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Publiccontroller->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Publiccontroller))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-06-26 21:00:00 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '* = 'laptops'' at line 3 in C:\xampp\htdocs\eventry\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\eventry\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\eventry\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\eventry\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\eventry\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\eventry\app\Models\StockModel.php(26): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\eventry\app\Controllers\Publiccontroller.php(13): App\Models\StockModel->findBycategory('laptops')
+#6 C:\xampp\htdocs\eventry\system\CodeIgniter.php(934): App\Controllers\Publiccontroller->index()
+#7 C:\xampp\htdocs\eventry\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Publiccontroller))
+#8 C:\xampp\htdocs\eventry\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\eventry\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-06-26 21:00:00 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '* = 'laptops'' at line 3
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *
+FROM `stock`
+WHERE `stock`.* = \'laptops\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `stock`
+WHERE `stock`.* = \'laptops\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `stock`
+WHERE `stock`.* = \'laptops\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `stock`
+WHERE `stock`.* = :stock.*:', [...], false)
+ 5 APPPATH\Models\StockModel.php(26): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Publiccontroller.php(13): App\Models\StockModel->findBycategory('laptops')
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Publiccontroller->index()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Publiccontroller))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-06-26 21:01:35 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '* = 'laptops'' at line 3 in C:\xampp\htdocs\eventry\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\eventry\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\eventry\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\eventry\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\eventry\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\eventry\app\Models\StockModel.php(26): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\eventry\app\Controllers\Publiccontroller.php(13): App\Models\StockModel->findBycategory('laptops')
+#6 C:\xampp\htdocs\eventry\system\CodeIgniter.php(934): App\Controllers\Publiccontroller->index()
+#7 C:\xampp\htdocs\eventry\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Publiccontroller))
+#8 C:\xampp\htdocs\eventry\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\eventry\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-06-26 21:01:35 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '* = 'laptops'' at line 3
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *
+FROM `stock`
+WHERE `stock`.* = \'laptops\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `stock`
+WHERE `stock`.* = \'laptops\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `stock`
+WHERE `stock`.* = \'laptops\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `stock`
+WHERE `stock`.* = :stock.*:', [...], false)
+ 5 APPPATH\Models\StockModel.php(26): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Publiccontroller.php(13): App\Models\StockModel->findBycategory('laptops')
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Publiccontroller->index()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Publiccontroller))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-06-26 21:01:38 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '* = 'laptops'' at line 3 in C:\xampp\htdocs\eventry\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\eventry\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\eventry\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\eventry\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\eventry\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\eventry\app\Models\StockModel.php(26): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\eventry\app\Controllers\Publiccontroller.php(13): App\Models\StockModel->findBycategory('laptops')
+#6 C:\xampp\htdocs\eventry\system\CodeIgniter.php(934): App\Controllers\Publiccontroller->index()
+#7 C:\xampp\htdocs\eventry\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Publiccontroller))
+#8 C:\xampp\htdocs\eventry\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\eventry\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-06-26 21:01:38 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '* = 'laptops'' at line 3
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *
+FROM `stock`
+WHERE `stock`.* = \'laptops\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `stock`
+WHERE `stock`.* = \'laptops\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `stock`
+WHERE `stock`.* = \'laptops\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `stock`
+WHERE `stock`.* = :stock.*:', [...], false)
+ 5 APPPATH\Models\StockModel.php(26): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Publiccontroller.php(13): App\Models\StockModel->findBycategory('laptops')
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Publiccontroller->index()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Publiccontroller))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-26 21:04:00 --> Trying to get property 'tagPrice' of non-object
+in APPPATH\Views\public\index.php on line 82.
+ 1 APPPATH\Views\public\index.php(82): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'tagPrice\' of non-object', 'C:\\xampp\\htdocs\\eventry\\app\\Views\\public\\index.php', 82, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\eventry\\app\\Views\\public\\index.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('public/index', [], true)
+ 5 APPPATH\Controllers\Publiccontroller.php(16): view('public/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Publiccontroller->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Publiccontroller))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-26 21:09:44 --> syntax error, unexpected ';'
+in APPPATH\Views\public\index.php on line 82.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('public/index', [], true)
+ 3 APPPATH\Controllers\Publiccontroller.php(16): view('public/index', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Publiccontroller->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Publiccontroller))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-26 21:10:19 --> Trying to get property 'featureImg' of non-object
+in APPPATH\Views\public\index.php on line 87.
+ 1 APPPATH\Views\public\index.php(87): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'featureImg\' of non-object', 'C:\\xampp\\htdocs\\eventry\\app\\Views\\public\\index.php', 87, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\eventry\\app\\Views\\public\\index.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('public/index', [], true)
+ 5 APPPATH\Controllers\Publiccontroller.php(16): view('public/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Publiccontroller->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Publiccontroller))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

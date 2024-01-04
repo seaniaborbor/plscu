@@ -1,0 +1,1692 @@
+INFO - 2023-12-30 06:56:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-12-30 07:12:34 --> Call to undefined method App\Models\LoanApplicantModel::get_payment_summary
+in SYSTEMPATH\Model.php on line 842.
+ 1 APPPATH\Controllers\LoanPaymentController.php(25): CodeIgniter\Model->__call('get_payment_summary', [])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\LoanPaymentController->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoanPaymentController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-12-30 07:13:37 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'as `total_pmt`) AS `amount as total_pmt`
+FROM `loan_pmt_log`
+JOIN `loan_appli...' at line 1 in C:\xampp\htdocs\plscu\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\plscu\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT SUM(`pmt...', 0)
+#1 C:\xampp\htdocs\plscu\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT SUM(`pmt...')
+#2 C:\xampp\htdocs\plscu\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT SUM(`pmt...')
+#3 C:\xampp\htdocs\plscu\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT SUM(`pmt...', Array, false)
+#4 C:\xampp\htdocs\plscu\app\Models\LoanLogModel.php(36): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\plscu\app\Controllers\LoanPaymentController.php(25): App\Models\LoanLogModel->get_payment_summary()
+#6 C:\xampp\htdocs\plscu\system\CodeIgniter.php(934): App\Controllers\LoanPaymentController->index()
+#7 C:\xampp\htdocs\plscu\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoanPaymentController))
+#8 C:\xampp\htdocs\plscu\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\plscu\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-12-30 07:13:37 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'as `total_pmt`) AS `amount as total_pmt`
+FROM `loan_pmt_log`
+JOIN `loan_appli...' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT SUM(`pmt_log`.`amount` as `total_pmt`) AS `amount as total_pmt`
+FROM `loan_pmt_log`
+JOIN `loan_application` ON `pmt_log`.`serial_num` = `loan_application`.`serial_num`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT SUM(`pmt_log`.`amount` as `total_pmt`) AS `amount as total_pmt`
+FROM `loan_pmt_log`
+JOIN `loan_application` ON `pmt_log`.`serial_num` = `loan_application`.`serial_num`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT SUM(`pmt_log`.`amount` as `total_pmt`) AS `amount as total_pmt`
+FROM `loan_pmt_log`
+JOIN `loan_application` ON `pmt_log`.`serial_num` = `loan_application`.`serial_num`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT SUM(`pmt_log`.`amount` as `total_pmt`) AS `amount as total_pmt`
+FROM `loan_pmt_log`
+JOIN `loan_application` ON `pmt_log`.`serial_num` = `loan_application`.`serial_num`', [], false)
+ 5 APPPATH\Models\LoanLogModel.php(36): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\LoanPaymentController.php(25): App\Models\LoanLogModel->get_payment_summary()
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\LoanPaymentController->index()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoanPaymentController))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-12-30 07:14:36 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'as `total_pmt`) AS `amount as total_pmt`
+FROM `loan_pmt_log`
+JOIN `loan_appli...' at line 1 in C:\xampp\htdocs\plscu\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\plscu\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT SUM(`loa...', 0)
+#1 C:\xampp\htdocs\plscu\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT SUM(`loa...')
+#2 C:\xampp\htdocs\plscu\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT SUM(`loa...')
+#3 C:\xampp\htdocs\plscu\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT SUM(`loa...', Array, false)
+#4 C:\xampp\htdocs\plscu\app\Models\LoanLogModel.php(36): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\plscu\app\Controllers\LoanPaymentController.php(25): App\Models\LoanLogModel->get_payment_summary()
+#6 C:\xampp\htdocs\plscu\system\CodeIgniter.php(934): App\Controllers\LoanPaymentController->index()
+#7 C:\xampp\htdocs\plscu\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoanPaymentController))
+#8 C:\xampp\htdocs\plscu\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\plscu\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-12-30 07:14:36 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'as `total_pmt`) AS `amount as total_pmt`
+FROM `loan_pmt_log`
+JOIN `loan_appli...' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT SUM(`loan_pmt_log`.`amount` as `total_pmt`) AS `amount as total_pmt`
+FROM `loan_pmt_log`
+JOIN `loan_application` ON `loan_pmt_log`.`serial_num` = `loan_application`.`serial_num`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT SUM(`loan_pmt_log`.`amount` as `total_pmt`) AS `amount as total_pmt`
+FROM `loan_pmt_log`
+JOIN `loan_application` ON `loan_pmt_log`.`serial_num` = `loan_application`.`serial_num`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT SUM(`loan_pmt_log`.`amount` as `total_pmt`) AS `amount as total_pmt`
+FROM `loan_pmt_log`
+JOIN `loan_application` ON `loan_pmt_log`.`serial_num` = `loan_application`.`serial_num`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT SUM(`loan_pmt_log`.`amount` as `total_pmt`) AS `amount as total_pmt`
+FROM `loan_pmt_log`
+JOIN `loan_application` ON `loan_pmt_log`.`serial_num` = `loan_application`.`serial_num`', [], false)
+ 5 APPPATH\Models\LoanLogModel.php(36): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\LoanPaymentController.php(25): App\Models\LoanLogModel->get_payment_summary()
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\LoanPaymentController->index()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoanPaymentController))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-12-30 07:15:07 --> mysqli_sql_exception: Unknown column 'loan_pmt_log.serial_num' in 'on clause' in C:\xampp\htdocs\plscu\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\plscu\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT SUM(`loa...', 0)
+#1 C:\xampp\htdocs\plscu\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT SUM(`loa...')
+#2 C:\xampp\htdocs\plscu\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT SUM(`loa...')
+#3 C:\xampp\htdocs\plscu\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT SUM(`loa...', Array, false)
+#4 C:\xampp\htdocs\plscu\app\Models\LoanLogModel.php(36): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\plscu\app\Controllers\LoanPaymentController.php(25): App\Models\LoanLogModel->get_payment_summary()
+#6 C:\xampp\htdocs\plscu\system\CodeIgniter.php(934): App\Controllers\LoanPaymentController->index()
+#7 C:\xampp\htdocs\plscu\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoanPaymentController))
+#8 C:\xampp\htdocs\plscu\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\plscu\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-12-30 07:15:07 --> Unknown column 'loan_pmt_log.serial_num' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT SUM(`loan_pmt_log`.`amount`) AS `amount`
+FROM `loan_pmt_log`
+JOIN `loan_application` ON `loan_pmt_log`.`serial_num` = `loan_application`.`serial_num`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT SUM(`loan_pmt_log`.`amount`) AS `amount`
+FROM `loan_pmt_log`
+JOIN `loan_application` ON `loan_pmt_log`.`serial_num` = `loan_application`.`serial_num`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT SUM(`loan_pmt_log`.`amount`) AS `amount`
+FROM `loan_pmt_log`
+JOIN `loan_application` ON `loan_pmt_log`.`serial_num` = `loan_application`.`serial_num`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT SUM(`loan_pmt_log`.`amount`) AS `amount`
+FROM `loan_pmt_log`
+JOIN `loan_application` ON `loan_pmt_log`.`serial_num` = `loan_application`.`serial_num`', [], false)
+ 5 APPPATH\Models\LoanLogModel.php(36): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\LoanPaymentController.php(25): App\Models\LoanLogModel->get_payment_summary()
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\LoanPaymentController->index()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoanPaymentController))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-12-30 07:16:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 07:18:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 07:19:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 07:20:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 07:22:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 07:26:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 07:29:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 07:33:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 07:52:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-12-30 07:54:04 --> syntax error, unexpected '?>'
+in APPPATH\Views\dashboard\partials\tables\loan_payment_summary_table.php on line 29.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('dashboard/club_loan_manager', [], true)
+ 4 APPPATH\Controllers\LoanApplicantController.php(202): view('dashboard/club_loan_manager', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\LoanApplicantController->index()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoanApplicantController))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-12-30 07:54:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 07:57:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 08:02:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 08:07:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 08:09:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 08:09:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 08:12:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 08:17:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 08:18:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 08:20:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 08:20:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 08:21:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 08:21:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 08:23:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 08:24:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 08:24:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 08:25:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 09:38:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-12-30 09:39:01 --> syntax error, unexpected '=>' (T_DOUBLE_ARROW)
+in APPPATH\Controllers\LoanPaymentController.php on line 178.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\plscu\\app\\Controllers\\LoanPaymentController.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\LoanPaymentController')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\LoanPaymentController')
+ 4 [internal function]: spl_autoload_call('App\\Controllers\\LoanPaymentController')
+ 5 SYSTEMPATH\CodeIgniter.php(892): class_exists('\\App\\Controllers\\LoanPaymentController', true)
+ 6 SYSTEMPATH\CodeIgniter.php(486): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-30 09:39:27 --> syntax error, unexpected '=>' (T_DOUBLE_ARROW)
+in APPPATH\Controllers\LoanPaymentController.php on line 178.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\plscu\\app\\Controllers\\LoanPaymentController.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\LoanPaymentController')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\LoanPaymentController')
+ 4 [internal function]: spl_autoload_call('App\\Controllers\\LoanPaymentController')
+ 5 SYSTEMPATH\CodeIgniter.php(892): class_exists('\\App\\Controllers\\LoanPaymentController', true)
+ 6 SYSTEMPATH\CodeIgniter.php(486): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-12-30 09:39:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 09:39:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 09:40:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 09:40:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-12-30 09:41:37 --> Invalid file: "dashboard/edit_loan_record.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('dashboard/edit_loan_record.php')
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('dashboard/edit_loan_record', [], true)
+ 3 APPPATH\Controllers\LoanPaymentController.php(195): view('dashboard/edit_loan_record', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\LoanPaymentController->edit('1')
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoanPaymentController))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-12-30 09:42:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 09:43:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 09:46:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 09:46:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 09:47:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 09:48:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-12-30 09:49:21 --> Undefined variable: data_to_edit
+in APPPATH\Views\dashboard\edit_loan_log.php on line 14.
+ 1 APPPATH\Views\dashboard\edit_loan_log.php(14): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: data_to_edit', 'C:\\xampp\\htdocs\\plscu\\app\\Views\\dashboard\\edit_loan_log.php', 14, [])
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\plscu\\app\\Views\\dashboard\\edit_loan_log.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('dashboard/edit_loan_log', [], true)
+ 5 APPPATH\Controllers\LoanPaymentController.php(190): view('dashboard/edit_loan_log', [])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\LoanPaymentController->edit('6')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoanPaymentController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-12-30 09:50:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-12-30 09:52:52 --> syntax error, unexpected ')', expecting ';' or ','
+in APPPATH\Views\dashboard\edit_loan_log.php on line 35.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('dashboard/edit_loan_log', [], true)
+ 3 APPPATH\Controllers\LoanPaymentController.php(191): view('dashboard/edit_loan_log', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\LoanPaymentController->edit('6')
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoanPaymentController))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-30 09:53:09 --> Undefined index: mount
+in APPPATH\Views\dashboard\edit_loan_log.php on line 23.
+ 1 APPPATH\Views\dashboard\edit_loan_log.php(23): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: mount', 'C:\\xampp\\htdocs\\plscu\\app\\Views\\dashboard\\edit_loan_log.php', 23, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\plscu\\app\\Views\\dashboard\\edit_loan_log.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('dashboard/edit_loan_log', [], true)
+ 5 APPPATH\Controllers\LoanPaymentController.php(191): view('dashboard/edit_loan_log', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\LoanPaymentController->edit('6')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoanPaymentController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-12-30 09:54:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-12-30 10:02:43 --> mysqli_sql_exception: Unknown column 'QFBmqk' in 'on clause' in C:\xampp\htdocs\plscu\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\plscu\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *, `loan...', 0)
+#1 C:\xampp\htdocs\plscu\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *, `loan...')
+#2 C:\xampp\htdocs\plscu\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *, `loan...')
+#3 C:\xampp\htdocs\plscu\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *, `loan...', Array, false)
+#4 C:\xampp\htdocs\plscu\app\Models\LoanLogModel.php(53): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\plscu\app\Controllers\LoanPaymentController.php(124): App\Models\LoanLogModel->get_single_loan_log('QFBmqk')
+#6 C:\xampp\htdocs\plscu\system\CodeIgniter.php(934): App\Controllers\LoanPaymentController->edit('6')
+#7 C:\xampp\htdocs\plscu\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoanPaymentController))
+#8 C:\xampp\htdocs\plscu\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\plscu\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-12-30 10:02:43 --> Unknown column 'QFBmqk' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *, `loan_application`.`fullName` as `payBy`, `loan_pmt_log`.`id` as `payment_id`
+FROM `loan_pmt_log`
+JOIN `loan_application` ON `loan_application`.`serial_no` = `QFBmqk`
+JOIN `team` ON `loan_pmt_log`.`loggedBy` = `team`.`id`
+ORDER BY `loan_pmt_log`.`loggedDate` DESC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *, `loan_application`.`fullName` as `payBy`, `loan_pmt_log`.`id` as `payment_id`
+FROM `loan_pmt_log`
+JOIN `loan_application` ON `loan_application`.`serial_no` = `QFBmqk`
+JOIN `team` ON `loan_pmt_log`.`loggedBy` = `team`.`id`
+ORDER BY `loan_pmt_log`.`loggedDate` DESC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *, `loan_application`.`fullName` as `payBy`, `loan_pmt_log`.`id` as `payment_id`
+FROM `loan_pmt_log`
+JOIN `loan_application` ON `loan_application`.`serial_no` = `QFBmqk`
+JOIN `team` ON `loan_pmt_log`.`loggedBy` = `team`.`id`
+ORDER BY `loan_pmt_log`.`loggedDate` DESC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *, `loan_application`.`fullName` as `payBy`, `loan_pmt_log`.`id` as `payment_id`
+FROM `loan_pmt_log`
+JOIN `loan_application` ON `loan_application`.`serial_no` = `QFBmqk`
+JOIN `team` ON `loan_pmt_log`.`loggedBy` = `team`.`id`
+ORDER BY `loan_pmt_log`.`loggedDate` DESC', [], false)
+ 5 APPPATH\Models\LoanLogModel.php(53): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\LoanPaymentController.php(124): App\Models\LoanLogModel->get_single_loan_log('QFBmqk')
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\LoanPaymentController->edit('6')
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoanPaymentController))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-12-30 10:05:18 --> mysqli_sql_exception: Unknown column 'QFBmqk' in 'where clause' in C:\xampp\htdocs\plscu\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\plscu\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *, `loan...', 0)
+#1 C:\xampp\htdocs\plscu\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *, `loan...')
+#2 C:\xampp\htdocs\plscu\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *, `loan...')
+#3 C:\xampp\htdocs\plscu\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *, `loan...', Array, false)
+#4 C:\xampp\htdocs\plscu\app\Models\LoanLogModel.php(54): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\plscu\app\Controllers\LoanPaymentController.php(124): App\Models\LoanLogModel->get_single_loan_log('QFBmqk')
+#6 C:\xampp\htdocs\plscu\system\CodeIgniter.php(934): App\Controllers\LoanPaymentController->edit('6')
+#7 C:\xampp\htdocs\plscu\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoanPaymentController))
+#8 C:\xampp\htdocs\plscu\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\plscu\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-12-30 10:05:18 --> Unknown column 'QFBmqk' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *, `loan_application`.`fullName` as `payBy`, `loan_pmt_log`.`id` as `payment_id`
+FROM `loan_pmt_log`
+JOIN `loan_application` ON `loan_application`.`serial_no` = `loan_pmt_log`.`serial_no`
+JOIN `team` ON `loan_pmt_log`.`loggedBy` = `team`.`id`
+WHERE `loan_application`.`serial_no` = QFBmqk
+ORDER BY `loan_pmt_log`.`loggedDate` DESC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *, `loan_application`.`fullName` as `payBy`, `loan_pmt_log`.`id` as `payment_id`
+FROM `loan_pmt_log`
+JOIN `loan_application` ON `loan_application`.`serial_no` = `loan_pmt_log`.`serial_no`
+JOIN `team` ON `loan_pmt_log`.`loggedBy` = `team`.`id`
+WHERE `loan_application`.`serial_no` = QFBmqk
+ORDER BY `loan_pmt_log`.`loggedDate` DESC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *, `loan_application`.`fullName` as `payBy`, `loan_pmt_log`.`id` as `payment_id`
+FROM `loan_pmt_log`
+JOIN `loan_application` ON `loan_application`.`serial_no` = `loan_pmt_log`.`serial_no`
+JOIN `team` ON `loan_pmt_log`.`loggedBy` = `team`.`id`
+WHERE `loan_application`.`serial_no` = QFBmqk
+ORDER BY `loan_pmt_log`.`loggedDate` DESC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *, `loan_application`.`fullName` as `payBy`, `loan_pmt_log`.`id` as `payment_id`
+FROM `loan_pmt_log`
+JOIN `loan_application` ON `loan_application`.`serial_no` = `loan_pmt_log`.`serial_no`
+JOIN `team` ON `loan_pmt_log`.`loggedBy` = `team`.`id`
+WHERE `loan_application`.`serial_no` = QFBmqk
+ORDER BY `loan_pmt_log`.`loggedDate` DESC', [], false)
+ 5 APPPATH\Models\LoanLogModel.php(54): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\LoanPaymentController.php(124): App\Models\LoanLogModel->get_single_loan_log('QFBmqk')
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\LoanPaymentController->edit('6')
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoanPaymentController))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-12-30 10:06:03 --> mysqli_sql_exception: Unknown column 'QFBmqk' in 'where clause' in C:\xampp\htdocs\plscu\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\plscu\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *, `loan...', 0)
+#1 C:\xampp\htdocs\plscu\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *, `loan...')
+#2 C:\xampp\htdocs\plscu\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *, `loan...')
+#3 C:\xampp\htdocs\plscu\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *, `loan...', Array, false)
+#4 C:\xampp\htdocs\plscu\app\Models\LoanLogModel.php(54): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\plscu\app\Controllers\LoanPaymentController.php(124): App\Models\LoanLogModel->get_single_loan_log('QFBmqk')
+#6 C:\xampp\htdocs\plscu\system\CodeIgniter.php(934): App\Controllers\LoanPaymentController->edit('6')
+#7 C:\xampp\htdocs\plscu\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoanPaymentController))
+#8 C:\xampp\htdocs\plscu\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\plscu\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-12-30 10:06:03 --> Unknown column 'QFBmqk' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *, `loan_application`.`fullName` as `payBy`, `loan_pmt_log`.`id` as `payment_id`
+FROM `loan_pmt_log`
+JOIN `loan_application` ON `loan_application`.`serial_no` = `loan_pmt_log`.`serial_no`
+JOIN `team` ON `loan_pmt_log`.`loggedBy` = `team`.`id`
+WHERE `loan_application`.`serial_no` = QFBmqk
+ORDER BY `loan_pmt_log`.`loggedDate` DESC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *, `loan_application`.`fullName` as `payBy`, `loan_pmt_log`.`id` as `payment_id`
+FROM `loan_pmt_log`
+JOIN `loan_application` ON `loan_application`.`serial_no` = `loan_pmt_log`.`serial_no`
+JOIN `team` ON `loan_pmt_log`.`loggedBy` = `team`.`id`
+WHERE `loan_application`.`serial_no` = QFBmqk
+ORDER BY `loan_pmt_log`.`loggedDate` DESC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *, `loan_application`.`fullName` as `payBy`, `loan_pmt_log`.`id` as `payment_id`
+FROM `loan_pmt_log`
+JOIN `loan_application` ON `loan_application`.`serial_no` = `loan_pmt_log`.`serial_no`
+JOIN `team` ON `loan_pmt_log`.`loggedBy` = `team`.`id`
+WHERE `loan_application`.`serial_no` = QFBmqk
+ORDER BY `loan_pmt_log`.`loggedDate` DESC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *, `loan_application`.`fullName` as `payBy`, `loan_pmt_log`.`id` as `payment_id`
+FROM `loan_pmt_log`
+JOIN `loan_application` ON `loan_application`.`serial_no` = `loan_pmt_log`.`serial_no`
+JOIN `team` ON `loan_pmt_log`.`loggedBy` = `team`.`id`
+WHERE `loan_application`.`serial_no` = QFBmqk
+ORDER BY `loan_pmt_log`.`loggedDate` DESC', [], false)
+ 5 APPPATH\Models\LoanLogModel.php(54): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\LoanPaymentController.php(124): App\Models\LoanLogModel->get_single_loan_log('QFBmqk')
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\LoanPaymentController->edit('6')
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoanPaymentController))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-12-30 10:07:08 --> mysqli_sql_exception: Unknown column 'team.team_name' in 'field list' in C:\xampp\htdocs\plscu\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\plscu\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `loan_pm...', 0)
+#1 C:\xampp\htdocs\plscu\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `loan_pm...')
+#2 C:\xampp\htdocs\plscu\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `loan_pm...')
+#3 C:\xampp\htdocs\plscu\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `loan_pm...', Array, false)
+#4 C:\xampp\htdocs\plscu\app\Models\LoanLogModel.php(54): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\plscu\app\Controllers\LoanPaymentController.php(124): App\Models\LoanLogModel->get_single_loan_log('QFBmqk')
+#6 C:\xampp\htdocs\plscu\system\CodeIgniter.php(934): App\Controllers\LoanPaymentController->edit('6')
+#7 C:\xampp\htdocs\plscu\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoanPaymentController))
+#8 C:\xampp\htdocs\plscu\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\plscu\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-12-30 10:07:08 --> Unknown column 'team.team_name' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `loan_pmt_log`.*, `loan_application`.`fullName` as `payBy`, `loan_pmt_log`.`id` as `payment_id`, `team`.`team_name` as `loggedByTeam`
+FROM `loan_pmt_log`
+JOIN `loan_application` ON `loan_application`.`serial_no` = `loan_pmt_log`.`serial_no`
+JOIN `team` ON `loan_pmt_log`.`loggedBy` = `team`.`id`
+WHERE `loan_application`.`serial_no` = \'QFBmqk\'
+ORDER BY `loan_pmt_log`.`loggedDate` DESC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `loan_pmt_log`.*, `loan_application`.`fullName` as `payBy`, `loan_pmt_log`.`id` as `payment_id`, `team`.`team_name` as `loggedByTeam`
+FROM `loan_pmt_log`
+JOIN `loan_application` ON `loan_application`.`serial_no` = `loan_pmt_log`.`serial_no`
+JOIN `team` ON `loan_pmt_log`.`loggedBy` = `team`.`id`
+WHERE `loan_application`.`serial_no` = \'QFBmqk\'
+ORDER BY `loan_pmt_log`.`loggedDate` DESC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `loan_pmt_log`.*, `loan_application`.`fullName` as `payBy`, `loan_pmt_log`.`id` as `payment_id`, `team`.`team_name` as `loggedByTeam`
+FROM `loan_pmt_log`
+JOIN `loan_application` ON `loan_application`.`serial_no` = `loan_pmt_log`.`serial_no`
+JOIN `team` ON `loan_pmt_log`.`loggedBy` = `team`.`id`
+WHERE `loan_application`.`serial_no` = \'QFBmqk\'
+ORDER BY `loan_pmt_log`.`loggedDate` DESC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `loan_pmt_log`.*, `loan_application`.`fullName` as `payBy`, `loan_pmt_log`.`id` as `payment_id`, `team`.`team_name` as `loggedByTeam`
+FROM `loan_pmt_log`
+JOIN `loan_application` ON `loan_application`.`serial_no` = `loan_pmt_log`.`serial_no`
+JOIN `team` ON `loan_pmt_log`.`loggedBy` = `team`.`id`
+WHERE `loan_application`.`serial_no` = :loan_application.serial_no:
+ORDER BY `loan_pmt_log`.`loggedDate` DESC', [...], false)
+ 5 APPPATH\Models\LoanLogModel.php(54): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\LoanPaymentController.php(124): App\Models\LoanLogModel->get_single_loan_log('QFBmqk')
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\LoanPaymentController->edit('6')
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoanPaymentController))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-12-30 10:07:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 10:08:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 10:08:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 10:08:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 10:11:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 10:11:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 10:11:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 10:11:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 10:11:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 10:12:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 10:13:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 10:13:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 10:15:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 10:18:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 10:18:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 10:18:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 10:18:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 10:18:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 10:18:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 10:19:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 10:19:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 10:19:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 10:19:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 10:20:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 10:20:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 10:20:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 10:20:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-12-30 10:24:35 --> Undefined index: applicantId
+in APPPATH\Controllers\LoanPaymentController.php on line 125.
+ 1 APPPATH\Controllers\LoanPaymentController.php(125): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: applicantId', 'C:\\xampp\\htdocs\\plscu\\app\\Controllers\\LoanPaymentController.php', 125, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\LoanPaymentController->edit('1')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoanPaymentController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-30 10:26:44 --> Call to undefined method App\Models\LoanApplicantModel::getResult
+in SYSTEMPATH\Model.php on line 842.
+ 1 APPPATH\Controllers\LoanPaymentController.php(125): CodeIgniter\Model->__call('getResult', [])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\LoanPaymentController->edit('1')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoanPaymentController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-12-30 10:27:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 10:28:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 10:28:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-12-30 10:38:56 --> Undefined variable: serial_no
+in APPPATH\Models\LoanApplicantModel.php on line 46.
+ 1 APPPATH\Models\LoanApplicantModel.php(46): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: serial_no', 'C:\\xampp\\htdocs\\plscu\\app\\Models\\LoanApplicantModel.php', 46, [...])
+ 2 APPPATH\Controllers\LoanPaymentController.php(125): App\Models\LoanApplicantModel->get_an_applicant_profile('QFBmqk')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\LoanPaymentController->edit('1')
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoanPaymentController))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-12-30 10:39:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-12-30 10:45:04 --> Undefined property: stdClass::$payBy
+in APPPATH\Views\dashboard\edit_loan_log.php on line 52.
+ 1 APPPATH\Views\dashboard\edit_loan_log.php(52): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: stdClass::$payBy', 'C:\\xampp\\htdocs\\plscu\\app\\Views\\dashboard\\edit_loan_log.php', 52, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\plscu\\app\\Views\\dashboard\\edit_loan_log.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('dashboard/edit_loan_log', [], true)
+ 5 APPPATH\Controllers\LoanPaymentController.php(197): view('dashboard/edit_loan_log', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\LoanPaymentController->edit('1')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoanPaymentController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-12-30 10:45:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 10:46:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 10:47:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-12-30 10:50:31 --> syntax error, unexpected '}', expecting ';' or ','
+in APPPATH\Views\dashboard\edit_loan_log.php on line 68.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('dashboard/edit_loan_log', [], true)
+ 3 APPPATH\Controllers\LoanPaymentController.php(197): view('dashboard/edit_loan_log', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\LoanPaymentController->edit('2')
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoanPaymentController))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-12-30 10:50:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 10:51:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 10:52:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 10:52:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 10:52:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 10:53:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 10:53:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 10:53:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 10:53:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 10:54:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 10:56:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 10:56:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 10:56:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 10:57:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 10:58:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 10:58:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 10:58:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 10:59:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 10:59:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 10:59:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 11:00:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 11:00:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 11:07:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 11:07:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 11:45:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 11:45:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 11:46:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 11:49:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 11:49:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 11:50:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 11:57:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 11:57:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 11:57:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 12:02:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 12:03:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 12:04:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 12:11:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 12:11:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 12:12:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 12:12:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 12:12:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 12:12:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 12:15:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 12:15:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 12:16:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 12:17:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 12:17:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 12:18:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 12:19:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 12:19:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 12:19:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 12:20:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 12:23:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 12:23:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 12:23:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 12:25:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 12:25:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 12:25:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 12:25:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 12:25:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 12:25:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 12:25:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-12-30 12:28:59 --> include(partials/form/edit_loan_applicant_form.php): failed to open stream: No such file or directory
+in APPPATH\Views\dashboard\edit_loan_log.php on line 102.
+ 1 APPPATH\Views\dashboard\edit_loan_log.php(102): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(partials/form/edit_loan_applicant_form.php): failed to open stream: No such file or directory', 'C:\\xampp\\htdocs\\plscu\\app\\Views\\dashboard\\edit_loan_log.php', 102, [...])
+ 2 APPPATH\Views\dashboard\edit_loan_log.php(102): include()
+ 3 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\plscu\\app\\Views\\dashboard\\edit_loan_log.php')
+ 4 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('dashboard/edit_loan_log', [], true)
+ 6 APPPATH\Controllers\LoanPaymentController.php(197): view('dashboard/edit_loan_log', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\LoanPaymentController->edit('7')
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoanPaymentController))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-12-30 12:29:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 12:29:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 12:30:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 12:33:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 12:34:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 11:46:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 11:50:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 11:51:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 15:27:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 15:31:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 15:32:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 15:35:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 15:35:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 15:37:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 15:37:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 15:37:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-12-30 16:00:28 --> Array to string conversion
+in APPPATH\Views\dashboard\partials\forms\edit_loan_applicant_form.php on line 1.
+ 1 APPPATH\Views\dashboard\partials\forms\edit_loan_applicant_form.php(1): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Array to string conversion', 'C:\\xampp\\htdocs\\plscu\\app\\Views\\dashboard\\partials\\forms\\edit_loan_applicant_form.php', 1, [...])
+ 2 APPPATH\Views\dashboard\edit_loan_log.php(102): include('C:\\xampp\\htdocs\\plscu\\app\\Views\\dashboard\\partials\\forms\\edit_loan_applicant_form.php')
+ 3 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\plscu\\app\\Views\\dashboard\\edit_loan_log.php')
+ 4 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('dashboard/edit_loan_log', [], true)
+ 6 APPPATH\Controllers\LoanPaymentController.php(197): view('dashboard/edit_loan_log', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\LoanPaymentController->edit('4')
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoanPaymentController))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-12-30 16:02:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-12-30 16:02:53 --> Undefined index: id
+in APPPATH\Controllers\LoanApplicantController.php on line 267.
+ 1 APPPATH\Controllers\LoanApplicantController.php(267): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: id', 'C:\\xampp\\htdocs\\plscu\\app\\Controllers\\LoanApplicantController.php', 267, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\LoanApplicantController->edit('QFBmqk')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoanApplicantController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-30 16:04:13 --> Trying to get property 'id' of non-object
+in APPPATH\Controllers\LoanApplicantController.php on line 267.
+ 1 APPPATH\Controllers\LoanApplicantController.php(267): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'id\' of non-object', 'C:\\xampp\\htdocs\\plscu\\app\\Controllers\\LoanApplicantController.php', 267, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\LoanApplicantController->edit('QFBmqk')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoanApplicantController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-30 16:04:45 --> Undefined index: fullName
+in APPPATH\Controllers\LoanApplicantController.php on line 269.
+ 1 APPPATH\Controllers\LoanApplicantController.php(269): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: fullName', 'C:\\xampp\\htdocs\\plscu\\app\\Controllers\\LoanApplicantController.php', 269, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\LoanApplicantController->edit('QFBmqk')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoanApplicantController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-30 16:05:17 --> Undefined offset: 1
+in APPPATH\Controllers\LoanApplicantController.php on line 269.
+ 1 APPPATH\Controllers\LoanApplicantController.php(269): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined offset: 1', 'C:\\xampp\\htdocs\\plscu\\app\\Controllers\\LoanApplicantController.php', 269, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\LoanApplicantController->edit('QFBmqk')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoanApplicantController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-12-30 16:07:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 16:07:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 16:07:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 16:08:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 16:08:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 16:08:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 16:09:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 16:12:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 16:14:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 16:15:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 16:15:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 16:35:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 16:35:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 16:37:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 16:37:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 16:37:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 11:47:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 11:49:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 18:21:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 18:22:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 18:28:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 18:30:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-12-30 18:31:54 --> syntax error, unexpected '?>'
+in APPPATH\Views\dashboard\edit_loan_log.php on line 9.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('dashboard/edit_loan_log', [], true)
+ 3 APPPATH\Controllers\LoanPaymentController.php(197): view('dashboard/edit_loan_log', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\LoanPaymentController->edit('1')
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoanPaymentController))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-12-30 18:32:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 18:33:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 18:33:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 18:34:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 18:35:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 18:36:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 18:36:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 18:36:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 18:36:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 18:37:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 18:38:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 18:38:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 18:38:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 18:38:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 18:38:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 18:38:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 18:38:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 18:38:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 18:38:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 19:00:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-12-30 19:01:54 --> syntax error, unexpected ')', expecting ';' or ','
+in APPPATH\Views\dashboard\partials\loan_applicant_profile.php on line 2.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('dashboard/edit_loan_log', [], true)
+ 4 APPPATH\Controllers\LoanPaymentController.php(197): view('dashboard/edit_loan_log', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\LoanPaymentController->edit('1')
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoanPaymentController))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-12-30 19:02:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 19:02:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 19:04:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 19:04:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 19:05:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 19:06:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 19:07:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 19:11:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 19:12:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 19:12:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 19:12:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 19:12:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 19:12:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 19:12:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 19:12:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 19:12:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 19:12:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 19:15:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 19:16:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 19:18:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 19:18:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 19:18:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 19:18:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 19:18:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 19:18:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-12-30 19:20:51 --> Object of class stdClass could not be converted to string
+in APPPATH\Views\dashboard\partials\loan_applicant_profile.php on line 6.
+ 1 APPPATH\Views\dashboard\edit_loan_log.php(72): include()
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\plscu\\app\\Views\\dashboard\\edit_loan_log.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('dashboard/edit_loan_log', [], true)
+ 5 APPPATH\Controllers\LoanPaymentController.php(197): view('dashboard/edit_loan_log', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\LoanPaymentController->edit('1')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoanPaymentController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-12-30 19:21:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 19:22:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 19:22:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 19:22:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 19:22:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 19:25:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 19:25:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 19:25:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 19:25:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 19:26:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 19:26:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 19:29:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 19:29:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 19:31:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 19:31:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 19:33:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 19:33:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 19:35:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 19:35:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 19:39:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 19:39:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 19:40:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 19:40:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 19:41:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 19:42:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 19:42:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 19:42:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 19:42:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 19:51:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 19:51:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 19:52:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 19:52:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 19:53:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 19:53:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 19:57:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 20:01:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 20:01:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 20:01:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 20:03:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 20:03:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 20:03:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 20:03:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 20:03:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 20:05:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 20:07:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 20:08:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 20:10:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 20:12:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 20:21:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 20:21:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 20:27:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 20:30:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 20:30:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 20:31:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-12-30 20:33:58 --> Undefined property: stdClass::$applicantId
+in APPPATH\Views\dashboard\partials\tables\loan_applicants_table.php on line 27.
+ 1 APPPATH\Views\dashboard\partials\tables\loan_applicants_table.php(27): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: stdClass::$applicantId', 'C:\\xampp\\htdocs\\plscu\\app\\Views\\dashboard\\partials\\tables\\loan_applicants_table.php', 27, [...])
+ 2 APPPATH\Views\dashboard\club_loan_manager.php(80): include('C:\\xampp\\htdocs\\plscu\\app\\Views\\dashboard\\partials\\tables\\loan_applicants_table.php')
+ 3 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\plscu\\app\\Views\\dashboard\\club_loan_manager.php')
+ 4 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('dashboard/club_loan_manager', [], true)
+ 6 APPPATH\Controllers\LoanApplicantController.php(202): view('dashboard/club_loan_manager', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\LoanApplicantController->index()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoanApplicantController))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-30 20:35:26 --> Undefined property: stdClass::$applicantId
+in APPPATH\Views\dashboard\partials\tables\loan_applicants_table.php on line 27.
+ 1 APPPATH\Views\dashboard\partials\tables\loan_applicants_table.php(27): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: stdClass::$applicantId', 'C:\\xampp\\htdocs\\plscu\\app\\Views\\dashboard\\partials\\tables\\loan_applicants_table.php', 27, [...])
+ 2 APPPATH\Views\dashboard\club_loan_manager.php(80): include('C:\\xampp\\htdocs\\plscu\\app\\Views\\dashboard\\partials\\tables\\loan_applicants_table.php')
+ 3 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\plscu\\app\\Views\\dashboard\\club_loan_manager.php')
+ 4 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('dashboard/club_loan_manager', [], true)
+ 6 APPPATH\Controllers\LoanApplicantController.php(202): view('dashboard/club_loan_manager', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\LoanApplicantController->index()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoanApplicantController))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-30 20:36:15 --> Undefined property: stdClass::$applicantId
+in APPPATH\Views\dashboard\partials\tables\loan_applicants_table.php on line 27.
+ 1 APPPATH\Views\dashboard\partials\tables\loan_applicants_table.php(27): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: stdClass::$applicantId', 'C:\\xampp\\htdocs\\plscu\\app\\Views\\dashboard\\partials\\tables\\loan_applicants_table.php', 27, [...])
+ 2 APPPATH\Views\dashboard\club_loan_manager.php(80): include('C:\\xampp\\htdocs\\plscu\\app\\Views\\dashboard\\partials\\tables\\loan_applicants_table.php')
+ 3 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\plscu\\app\\Views\\dashboard\\club_loan_manager.php')
+ 4 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('dashboard/club_loan_manager', [], true)
+ 6 APPPATH\Controllers\LoanApplicantController.php(202): view('dashboard/club_loan_manager', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\LoanApplicantController->index()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoanApplicantController))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-12-30 20:38:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 20:38:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-12-30 20:48:31 --> mysqli_sql_exception: Unknown column 'loan_application.id =' in 'field list' in C:\xampp\htdocs\plscu\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\plscu\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *, `loan...', 0)
+#1 C:\xampp\htdocs\plscu\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *, `loan...')
+#2 C:\xampp\htdocs\plscu\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *, `loan...')
+#3 C:\xampp\htdocs\plscu\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *, `loan...', Array, false)
+#4 C:\xampp\htdocs\plscu\app\Models\LoanApplicantModel.php(37): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\plscu\app\Controllers\LoanApplicantController.php(22): App\Models\LoanApplicantModel->get_loan_applicants_log()
+#6 C:\xampp\htdocs\plscu\system\CodeIgniter.php(934): App\Controllers\LoanApplicantController->index()
+#7 C:\xampp\htdocs\plscu\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoanApplicantController))
+#8 C:\xampp\htdocs\plscu\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\plscu\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-12-30 20:48:31 --> Unknown column 'loan_application.id =' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *, `loan_application`.`fullName` as `applicantName`, `loan_application`.`id =` `applicant_id`
+FROM `loan_application`
+JOIN `team` ON `team`.`id` = `loan_application`.`regBy`
+ORDER BY `loan_application`.`lstEdited` DESC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *, `loan_application`.`fullName` as `applicantName`, `loan_application`.`id =` `applicant_id`
+FROM `loan_application`
+JOIN `team` ON `team`.`id` = `loan_application`.`regBy`
+ORDER BY `loan_application`.`lstEdited` DESC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *, `loan_application`.`fullName` as `applicantName`, `loan_application`.`id =` `applicant_id`
+FROM `loan_application`
+JOIN `team` ON `team`.`id` = `loan_application`.`regBy`
+ORDER BY `loan_application`.`lstEdited` DESC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *, `loan_application`.`fullName` as `applicantName`, `loan_application`.`id =` `applicant_id`
+FROM `loan_application`
+JOIN `team` ON `team`.`id` = `loan_application`.`regBy`
+ORDER BY `loan_application`.`lstEdited` DESC', [], false)
+ 5 APPPATH\Models\LoanApplicantModel.php(37): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\LoanApplicantController.php(22): App\Models\LoanApplicantModel->get_loan_applicants_log()
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\LoanApplicantController->index()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoanApplicantController))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-12-30 20:49:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 20:50:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 20:52:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 20:52:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 20:56:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 20:56:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 20:56:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 20:56:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 20:58:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 20:58:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 20:58:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 20:58:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 20:58:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 20:59:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 20:59:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 20:59:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 20:59:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 21:02:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-12-30 21:02:22 --> Undefined variable: client_profile
+in APPPATH\Views\dashboard\partials\tables\loan_applicants_table.php on line 27.
+ 1 APPPATH\Views\dashboard\partials\tables\loan_applicants_table.php(27): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: client_profile', 'C:\\xampp\\htdocs\\plscu\\app\\Views\\dashboard\\partials\\tables\\loan_applicants_table.php', 27, [...])
+ 2 APPPATH\Views\dashboard\club_loan_manager.php(80): include('C:\\xampp\\htdocs\\plscu\\app\\Views\\dashboard\\partials\\tables\\loan_applicants_table.php')
+ 3 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\plscu\\app\\Views\\dashboard\\club_loan_manager.php')
+ 4 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('dashboard/club_loan_manager', [], true)
+ 6 APPPATH\Controllers\LoanApplicantController.php(202): view('dashboard/club_loan_manager', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\LoanApplicantController->index()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoanApplicantController))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-12-30 21:03:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 21:07:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 21:08:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 21:11:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 21:19:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 21:19:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-12-30 21:20:21 --> Too few arguments to function App\Controllers\LoanApplicantController::view_profile(), 0 passed in C:\xampp\htdocs\plscu\system\CodeIgniter.php on line 934 and exactly 1 expected
+in APPPATH\Controllers\LoanApplicantController.php on line 312.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\LoanApplicantController->view_profile()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoanApplicantController))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-12-30 21:22:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 21:22:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 21:23:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 21:23:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 21:23:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 21:23:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 21:24:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 21:24:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 21:24:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 21:24:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 21:24:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 21:24:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 21:29:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-12-30 21:32:30 --> Undefined variable: client_profile
+in APPPATH\Views\dashboard\vies_loan_applicant_profile.php on line 9.
+ 1 APPPATH\Views\dashboard\vies_loan_applicant_profile.php(9): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: client_profile', 'C:\\xampp\\htdocs\\plscu\\app\\Views\\dashboard\\vies_loan_applicant_profile.php', 9, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\plscu\\app\\Views\\dashboard\\vies_loan_applicant_profile.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('dashboard/vies_loan_applicant_profile', [], true)
+ 5 APPPATH\Controllers\LoanApplicantController.php(326): view('dashboard/vies_loan_applicant_profile', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\LoanApplicantController->view_profile('1')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoanApplicantController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-12-30 21:32:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 21:32:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 21:36:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 21:36:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 21:37:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 21:37:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-12-30 21:37:12 --> Trying to get property 'applicantName' of non-object
+in APPPATH\Views\dashboard\vies_loan_applicant_profile.php on line 9.
+ 1 APPPATH\Views\dashboard\vies_loan_applicant_profile.php(9): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'applicantName\' of non-object', 'C:\\xampp\\htdocs\\plscu\\app\\Views\\dashboard\\vies_loan_applicant_profile.php', 9, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\plscu\\app\\Views\\dashboard\\vies_loan_applicant_profile.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('dashboard/vies_loan_applicant_profile', [], true)
+ 5 APPPATH\Controllers\LoanApplicantController.php(329): view('dashboard/vies_loan_applicant_profile', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\LoanApplicantController->view_profile('1')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoanApplicantController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-30 21:38:02 --> Undefined property: stdClass::$applicantName
+in APPPATH\Views\dashboard\vies_loan_applicant_profile.php on line 9.
+ 1 APPPATH\Views\dashboard\vies_loan_applicant_profile.php(9): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: stdClass::$applicantName', 'C:\\xampp\\htdocs\\plscu\\app\\Views\\dashboard\\vies_loan_applicant_profile.php', 9, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\plscu\\app\\Views\\dashboard\\vies_loan_applicant_profile.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('dashboard/vies_loan_applicant_profile', [], true)
+ 5 APPPATH\Controllers\LoanApplicantController.php(329): view('dashboard/vies_loan_applicant_profile', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\LoanApplicantController->view_profile('1')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoanApplicantController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-30 21:38:07 --> Undefined property: stdClass::$applicantName
+in APPPATH\Views\dashboard\vies_loan_applicant_profile.php on line 9.
+ 1 APPPATH\Views\dashboard\vies_loan_applicant_profile.php(9): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: stdClass::$applicantName', 'C:\\xampp\\htdocs\\plscu\\app\\Views\\dashboard\\vies_loan_applicant_profile.php', 9, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\plscu\\app\\Views\\dashboard\\vies_loan_applicant_profile.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('dashboard/vies_loan_applicant_profile', [], true)
+ 5 APPPATH\Controllers\LoanApplicantController.php(329): view('dashboard/vies_loan_applicant_profile', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\LoanApplicantController->view_profile('1')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoanApplicantController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-30 21:38:56 --> Undefined offset: 0
+in APPPATH\Views\dashboard\vies_loan_applicant_profile.php on line 9.
+ 1 APPPATH\Views\dashboard\vies_loan_applicant_profile.php(9): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined offset: 0', 'C:\\xampp\\htdocs\\plscu\\app\\Views\\dashboard\\vies_loan_applicant_profile.php', 9, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\plscu\\app\\Views\\dashboard\\vies_loan_applicant_profile.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('dashboard/vies_loan_applicant_profile', [], true)
+ 5 APPPATH\Controllers\LoanApplicantController.php(329): view('dashboard/vies_loan_applicant_profile', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\LoanApplicantController->view_profile('1')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoanApplicantController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-30 21:41:21 --> Trying to get property 'applicantName' of non-object
+in APPPATH\Views\dashboard\vies_loan_applicant_profile.php on line 9.
+ 1 APPPATH\Views\dashboard\vies_loan_applicant_profile.php(9): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'applicantName\' of non-object', 'C:\\xampp\\htdocs\\plscu\\app\\Views\\dashboard\\vies_loan_applicant_profile.php', 9, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\plscu\\app\\Views\\dashboard\\vies_loan_applicant_profile.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('dashboard/vies_loan_applicant_profile', [], true)
+ 5 APPPATH\Controllers\LoanApplicantController.php(330): view('dashboard/vies_loan_applicant_profile', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\LoanApplicantController->view_profile('1')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoanApplicantController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-30 21:42:32 --> Trying to get property 'fullName' of non-object
+in APPPATH\Views\dashboard\vies_loan_applicant_profile.php on line 9.
+ 1 APPPATH\Views\dashboard\vies_loan_applicant_profile.php(9): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'fullName\' of non-object', 'C:\\xampp\\htdocs\\plscu\\app\\Views\\dashboard\\vies_loan_applicant_profile.php', 9, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\plscu\\app\\Views\\dashboard\\vies_loan_applicant_profile.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('dashboard/vies_loan_applicant_profile', [], true)
+ 5 APPPATH\Controllers\LoanApplicantController.php(330): view('dashboard/vies_loan_applicant_profile', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\LoanApplicantController->view_profile('1')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoanApplicantController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-30 21:43:21 --> Undefined index: fullName
+in APPPATH\Views\dashboard\vies_loan_applicant_profile.php on line 9.
+ 1 APPPATH\Views\dashboard\vies_loan_applicant_profile.php(9): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: fullName', 'C:\\xampp\\htdocs\\plscu\\app\\Views\\dashboard\\vies_loan_applicant_profile.php', 9, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\plscu\\app\\Views\\dashboard\\vies_loan_applicant_profile.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('dashboard/vies_loan_applicant_profile', [], true)
+ 5 APPPATH\Controllers\LoanApplicantController.php(330): view('dashboard/vies_loan_applicant_profile', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\LoanApplicantController->view_profile('1')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoanApplicantController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-30 21:44:45 --> Undefined index: fullName
+in APPPATH\Views\dashboard\vies_loan_applicant_profile.php on line 9.
+ 1 APPPATH\Views\dashboard\vies_loan_applicant_profile.php(9): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: fullName', 'C:\\xampp\\htdocs\\plscu\\app\\Views\\dashboard\\vies_loan_applicant_profile.php', 9, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\plscu\\app\\Views\\dashboard\\vies_loan_applicant_profile.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('dashboard/vies_loan_applicant_profile', [], true)
+ 5 APPPATH\Controllers\LoanApplicantController.php(330): view('dashboard/vies_loan_applicant_profile', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\LoanApplicantController->view_profile('1')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoanApplicantController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-30 21:45:17 --> Trying to get property 'applicantName' of non-object
+in APPPATH\Views\dashboard\partials\loan_applicant_profile.php on line 2.
+ 1 APPPATH\Views\dashboard\partials\loan_applicant_profile.php(2): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'applicantName\' of non-object', 'C:\\xampp\\htdocs\\plscu\\app\\Views\\dashboard\\partials\\loan_applicant_profile.php', 2, [...])
+ 2 APPPATH\Views\dashboard\vies_loan_applicant_profile.php(33): include('C:\\xampp\\htdocs\\plscu\\app\\Views\\dashboard\\partials\\loan_applicant_profile.php')
+ 3 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\plscu\\app\\Views\\dashboard\\vies_loan_applicant_profile.php')
+ 4 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('dashboard/vies_loan_applicant_profile', [], true)
+ 6 APPPATH\Controllers\LoanApplicantController.php(330): view('dashboard/vies_loan_applicant_profile', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\LoanApplicantController->view_profile('1')
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoanApplicantController))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-30 21:47:23 --> Undefined property: stdClass::$applicantName
+in APPPATH\Views\dashboard\partials\loan_applicant_profile.php on line 2.
+ 1 APPPATH\Views\dashboard\partials\loan_applicant_profile.php(2): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: stdClass::$applicantName', 'C:\\xampp\\htdocs\\plscu\\app\\Views\\dashboard\\partials\\loan_applicant_profile.php', 2, [...])
+ 2 APPPATH\Views\dashboard\vies_loan_applicant_profile.php(33): include('C:\\xampp\\htdocs\\plscu\\app\\Views\\dashboard\\partials\\loan_applicant_profile.php')
+ 3 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\plscu\\app\\Views\\dashboard\\vies_loan_applicant_profile.php')
+ 4 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('dashboard/vies_loan_applicant_profile', [], true)
+ 6 APPPATH\Controllers\LoanApplicantController.php(330): view('dashboard/vies_loan_applicant_profile', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\LoanApplicantController->view_profile('1')
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoanApplicantController))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-12-30 21:49:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-12-30 21:50:25 --> Undefined property: stdClass::$applicantName
+in APPPATH\Views\dashboard\partials\loan_applicant_profile.php on line 2.
+ 1 APPPATH\Views\dashboard\partials\loan_applicant_profile.php(2): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: stdClass::$applicantName', 'C:\\xampp\\htdocs\\plscu\\app\\Views\\dashboard\\partials\\loan_applicant_profile.php', 2, [...])
+ 2 APPPATH\Views\dashboard\vies_loan_applicant_profile.php(33): include('C:\\xampp\\htdocs\\plscu\\app\\Views\\dashboard\\partials\\loan_applicant_profile.php')
+ 3 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\plscu\\app\\Views\\dashboard\\vies_loan_applicant_profile.php')
+ 4 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('dashboard/vies_loan_applicant_profile', [], true)
+ 6 APPPATH\Controllers\LoanApplicantController.php(332): view('dashboard/vies_loan_applicant_profile', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\LoanApplicantController->view_profile('1')
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoanApplicantController))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-30 21:51:09 --> syntax error, unexpected 'find' (T_STRING)
+in APPPATH\Controllers\LoanApplicantController.php on line 327.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\plscu\\app\\Controllers\\LoanApplicantController.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\LoanApplicantController')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\LoanApplicantController')
+ 4 [internal function]: spl_autoload_call('App\\Controllers\\LoanApplicantController')
+ 5 SYSTEMPATH\CodeIgniter.php(892): class_exists('\\App\\Controllers\\LoanApplicantController', true)
+ 6 SYSTEMPATH\CodeIgniter.php(486): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-30 21:52:11 --> Trying to get property 'applicantName' of non-object
+in APPPATH\Views\dashboard\partials\loan_applicant_profile.php on line 2.
+ 1 APPPATH\Views\dashboard\partials\loan_applicant_profile.php(2): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'applicantName\' of non-object', 'C:\\xampp\\htdocs\\plscu\\app\\Views\\dashboard\\partials\\loan_applicant_profile.php', 2, [...])
+ 2 APPPATH\Views\dashboard\vies_loan_applicant_profile.php(33): include('C:\\xampp\\htdocs\\plscu\\app\\Views\\dashboard\\partials\\loan_applicant_profile.php')
+ 3 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\plscu\\app\\Views\\dashboard\\vies_loan_applicant_profile.php')
+ 4 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('dashboard/vies_loan_applicant_profile', [], true)
+ 6 APPPATH\Controllers\LoanApplicantController.php(332): view('dashboard/vies_loan_applicant_profile', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\LoanApplicantController->view_profile('1')
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoanApplicantController))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-30 21:53:10 --> Trying to get property 'applicantName' of non-object
+in APPPATH\Views\dashboard\partials\loan_applicant_profile.php on line 2.
+ 1 APPPATH\Views\dashboard\partials\loan_applicant_profile.php(2): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'applicantName\' of non-object', 'C:\\xampp\\htdocs\\plscu\\app\\Views\\dashboard\\partials\\loan_applicant_profile.php', 2, [...])
+ 2 APPPATH\Views\dashboard\vies_loan_applicant_profile.php(33): include('C:\\xampp\\htdocs\\plscu\\app\\Views\\dashboard\\partials\\loan_applicant_profile.php')
+ 3 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\plscu\\app\\Views\\dashboard\\vies_loan_applicant_profile.php')
+ 4 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('dashboard/vies_loan_applicant_profile', [], true)
+ 6 APPPATH\Controllers\LoanApplicantController.php(332): view('dashboard/vies_loan_applicant_profile', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\LoanApplicantController->view_profile('1')
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoanApplicantController))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-30 21:54:59 --> Trying to get property 'applicantName' of non-object
+in APPPATH\Views\dashboard\partials\loan_applicant_profile.php on line 2.
+ 1 APPPATH\Views\dashboard\partials\loan_applicant_profile.php(2): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'applicantName\' of non-object', 'C:\\xampp\\htdocs\\plscu\\app\\Views\\dashboard\\partials\\loan_applicant_profile.php', 2, [...])
+ 2 APPPATH\Views\dashboard\vies_loan_applicant_profile.php(33): include('C:\\xampp\\htdocs\\plscu\\app\\Views\\dashboard\\partials\\loan_applicant_profile.php')
+ 3 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\plscu\\app\\Views\\dashboard\\vies_loan_applicant_profile.php')
+ 4 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('dashboard/vies_loan_applicant_profile', [], true)
+ 6 APPPATH\Controllers\LoanApplicantController.php(336): view('dashboard/vies_loan_applicant_profile', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\LoanApplicantController->view_profile('1')
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoanApplicantController))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-30 21:55:26 --> Undefined offset: 0
+in APPPATH\Views\dashboard\partials\loan_applicant_profile.php on line 2.
+ 1 APPPATH\Views\dashboard\partials\loan_applicant_profile.php(2): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined offset: 0', 'C:\\xampp\\htdocs\\plscu\\app\\Views\\dashboard\\partials\\loan_applicant_profile.php', 2, [...])
+ 2 APPPATH\Views\dashboard\vies_loan_applicant_profile.php(33): include('C:\\xampp\\htdocs\\plscu\\app\\Views\\dashboard\\partials\\loan_applicant_profile.php')
+ 3 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\plscu\\app\\Views\\dashboard\\vies_loan_applicant_profile.php')
+ 4 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('dashboard/vies_loan_applicant_profile', [], true)
+ 6 APPPATH\Controllers\LoanApplicantController.php(336): view('dashboard/vies_loan_applicant_profile', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\LoanApplicantController->view_profile('1')
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoanApplicantController))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-30 21:56:39 --> Undefined offset: 0
+in APPPATH\Controllers\LoanApplicantController.php on line 333.
+ 1 APPPATH\Controllers\LoanApplicantController.php(333): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined offset: 0', 'C:\\xampp\\htdocs\\plscu\\app\\Controllers\\LoanApplicantController.php', 333, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\LoanApplicantController->view_profile('1')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoanApplicantController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-30 21:56:58 --> Undefined offset: 0
+in APPPATH\Controllers\LoanApplicantController.php on line 333.
+ 1 APPPATH\Controllers\LoanApplicantController.php(333): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined offset: 0', 'C:\\xampp\\htdocs\\plscu\\app\\Controllers\\LoanApplicantController.php', 333, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\LoanApplicantController->view_profile('1')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoanApplicantController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-30 21:56:59 --> Undefined offset: 0
+in APPPATH\Controllers\LoanApplicantController.php on line 333.
+ 1 APPPATH\Controllers\LoanApplicantController.php(333): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined offset: 0', 'C:\\xampp\\htdocs\\plscu\\app\\Controllers\\LoanApplicantController.php', 333, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\LoanApplicantController->view_profile('1')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoanApplicantController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-30 21:57:20 --> Undefined offset: 0
+in APPPATH\Controllers\LoanApplicantController.php on line 333.
+ 1 APPPATH\Controllers\LoanApplicantController.php(333): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined offset: 0', 'C:\\xampp\\htdocs\\plscu\\app\\Controllers\\LoanApplicantController.php', 333, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\LoanApplicantController->view_profile('1')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoanApplicantController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-30 21:57:22 --> Undefined offset: 0
+in APPPATH\Controllers\LoanApplicantController.php on line 333.
+ 1 APPPATH\Controllers\LoanApplicantController.php(333): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined offset: 0', 'C:\\xampp\\htdocs\\plscu\\app\\Controllers\\LoanApplicantController.php', 333, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\LoanApplicantController->view_profile('1')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoanApplicantController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-30 21:57:38 --> Undefined offset: 0
+in APPPATH\Controllers\LoanApplicantController.php on line 333.
+ 1 APPPATH\Controllers\LoanApplicantController.php(333): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined offset: 0', 'C:\\xampp\\htdocs\\plscu\\app\\Controllers\\LoanApplicantController.php', 333, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\LoanApplicantController->view_profile('1')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoanApplicantController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-30 21:57:42 --> Undefined offset: 0
+in APPPATH\Controllers\LoanApplicantController.php on line 333.
+ 1 APPPATH\Controllers\LoanApplicantController.php(333): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined offset: 0', 'C:\\xampp\\htdocs\\plscu\\app\\Controllers\\LoanApplicantController.php', 333, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\LoanApplicantController->view_profile('1')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoanApplicantController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-30 22:00:28 --> Cannot use object of type App\Models\LoanApplicantModel as array
+in APPPATH\Controllers\LoanApplicantController.php on line 336.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\LoanApplicantController->view_profile('1')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoanApplicantController))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-30 22:01:20 --> Cannot use object of type App\Models\LoanApplicantModel as array
+in APPPATH\Controllers\LoanApplicantController.php on line 339.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\LoanApplicantController->view_profile('1')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoanApplicantController))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-30 22:04:53 --> Trying to get property 'applicantName' of non-object
+in APPPATH\Views\dashboard\partials\loan_applicant_profile.php on line 2.
+ 1 APPPATH\Views\dashboard\partials\loan_applicant_profile.php(2): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'applicantName\' of non-object', 'C:\\xampp\\htdocs\\plscu\\app\\Views\\dashboard\\partials\\loan_applicant_profile.php', 2, [...])
+ 2 APPPATH\Views\dashboard\vies_loan_applicant_profile.php(33): include('C:\\xampp\\htdocs\\plscu\\app\\Views\\dashboard\\partials\\loan_applicant_profile.php')
+ 3 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\plscu\\app\\Views\\dashboard\\vies_loan_applicant_profile.php')
+ 4 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('dashboard/vies_loan_applicant_profile', [], true)
+ 6 APPPATH\Controllers\LoanApplicantController.php(344): view('dashboard/vies_loan_applicant_profile', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\LoanApplicantController->view_profile('1')
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoanApplicantController))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-30 22:06:52 --> Trying to get property 'applicantName' of non-object
+in APPPATH\Views\dashboard\partials\loan_applicant_profile.php on line 2.
+ 1 APPPATH\Views\dashboard\partials\loan_applicant_profile.php(2): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'applicantName\' of non-object', 'C:\\xampp\\htdocs\\plscu\\app\\Views\\dashboard\\partials\\loan_applicant_profile.php', 2, [...])
+ 2 APPPATH\Views\dashboard\vies_loan_applicant_profile.php(33): include('C:\\xampp\\htdocs\\plscu\\app\\Views\\dashboard\\partials\\loan_applicant_profile.php')
+ 3 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\plscu\\app\\Views\\dashboard\\vies_loan_applicant_profile.php')
+ 4 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('dashboard/vies_loan_applicant_profile', [], true)
+ 6 APPPATH\Controllers\LoanApplicantController.php(344): view('dashboard/vies_loan_applicant_profile', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\LoanApplicantController->view_profile('1')
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoanApplicantController))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-30 22:08:57 --> Trying to get property 'applicantName' of non-object
+in APPPATH\Views\dashboard\partials\loan_applicant_profile.php on line 2.
+ 1 APPPATH\Views\dashboard\partials\loan_applicant_profile.php(2): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'applicantName\' of non-object', 'C:\\xampp\\htdocs\\plscu\\app\\Views\\dashboard\\partials\\loan_applicant_profile.php', 2, [...])
+ 2 APPPATH\Views\dashboard\vies_loan_applicant_profile.php(33): include('C:\\xampp\\htdocs\\plscu\\app\\Views\\dashboard\\partials\\loan_applicant_profile.php')
+ 3 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\plscu\\app\\Views\\dashboard\\vies_loan_applicant_profile.php')
+ 4 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('dashboard/vies_loan_applicant_profile', [], true)
+ 6 APPPATH\Controllers\LoanApplicantController.php(344): view('dashboard/vies_loan_applicant_profile', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\LoanApplicantController->view_profile('1')
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoanApplicantController))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-12-30 22:09:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 22:10:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 22:10:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 22:12:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 22:14:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 22:18:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-12-30 22:23:13 --> Undefined variable: data_to_edit
+in APPPATH\Views\dashboard\partials\tables\single_loan_member_log.php on line 15.
+ 1 APPPATH\Views\dashboard\partials\tables\single_loan_member_log.php(15): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: data_to_edit', 'C:\\xampp\\htdocs\\plscu\\app\\Views\\dashboard\\partials\\tables\\single_loan_member_log.php', 15, [...])
+ 2 APPPATH\Views\dashboard\vies_loan_applicant_profile.php(36): include('C:\\xampp\\htdocs\\plscu\\app\\Views\\dashboard\\partials\\tables\\single_loan_member_log.php')
+ 3 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\plscu\\app\\Views\\dashboard\\vies_loan_applicant_profile.php')
+ 4 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('dashboard/vies_loan_applicant_profile', [], true)
+ 6 APPPATH\Controllers\LoanApplicantController.php(340): view('dashboard/vies_loan_applicant_profile', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\LoanApplicantController->view_profile('1')
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoanApplicantController))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-12-30 22:25:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 22:25:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 22:26:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 22:26:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 22:27:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 22:27:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 22:27:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 22:27:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 22:28:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 22:28:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 22:28:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 22:29:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 22:29:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 22:30:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 22:32:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 22:32:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 22:34:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 22:35:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-12-30 22:36:20 --> Undefined property: stdClass::$applicantId
+in APPPATH\Views\dashboard\partials\tables\loan_payment_summary_table.php on line 36.
+ 1 APPPATH\Views\dashboard\partials\tables\loan_payment_summary_table.php(36): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: stdClass::$applicantId', 'C:\\xampp\\htdocs\\plscu\\app\\Views\\dashboard\\partials\\tables\\loan_payment_summary_table.php', 36, [...])
+ 2 APPPATH\Views\dashboard\club_loan_manager.php(90): include('C:\\xampp\\htdocs\\plscu\\app\\Views\\dashboard\\partials\\tables\\loan_payment_summary_table.php')
+ 3 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\plscu\\app\\Views\\dashboard\\club_loan_manager.php')
+ 4 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('dashboard/club_loan_manager', [], true)
+ 6 APPPATH\Controllers\LoanApplicantController.php(202): view('dashboard/club_loan_manager', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\LoanApplicantController->index()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoanApplicantController))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-12-30 22:36:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 22:38:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 22:38:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 22:40:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 22:40:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 22:40:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 22:40:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 22:40:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 22:42:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 22:44:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 22:45:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 22:50:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-12-30 22:57:22 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'as totalPaid
+FROM `loan_pmt_log`
+WHERE `loan_pmt_log`.`serial_no` = 'lYbZGv'' at line 1 in C:\xampp\htdocs\plscu\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\plscu\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT SUM(loan...', 0)
+#1 C:\xampp\htdocs\plscu\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT SUM(loan...')
+#2 C:\xampp\htdocs\plscu\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT SUM(loan...')
+#3 C:\xampp\htdocs\plscu\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT SUM(loan...', Array, false)
+#4 C:\xampp\htdocs\plscu\system\Model.php(840): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\plscu\app\Controllers\LoanApplicantController.php(343): CodeIgniter\Model->__call('get', Array)
+#6 C:\xampp\htdocs\plscu\system\CodeIgniter.php(934): App\Controllers\LoanApplicantController->view_profile('1')
+#7 C:\xampp\htdocs\plscu\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoanApplicantController))
+#8 C:\xampp\htdocs\plscu\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\plscu\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-12-30 22:57:22 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'as totalPaid
+FROM `loan_pmt_log`
+WHERE `loan_pmt_log`.`serial_no` = 'lYbZGv'' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT SUM(loan_pmt_log.amount as totalPaid
+FROM `loan_pmt_log`
+WHERE `loan_pmt_log`.`serial_no` = \'lYbZGv\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT SUM(loan_pmt_log.amount as totalPaid
+FROM `loan_pmt_log`
+WHERE `loan_pmt_log`.`serial_no` = \'lYbZGv\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT SUM(loan_pmt_log.amount as totalPaid
+FROM `loan_pmt_log`
+WHERE `loan_pmt_log`.`serial_no` = \'lYbZGv\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT SUM(loan_pmt_log.amount as totalPaid
+FROM `loan_pmt_log`
+WHERE `loan_pmt_log`.`serial_no` = :loan_pmt_log.serial_no:', [...], false)
+ 5 SYSTEMPATH\Model.php(840): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\LoanApplicantController.php(343): CodeIgniter\Model->__call('get', [])
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\LoanApplicantController->view_profile('1')
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoanApplicantController))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-30 22:59:52 --> Undefined variable: serial_no
+in APPPATH\Controllers\LoanApplicantController.php on line 340.
+ 1 APPPATH\Controllers\LoanApplicantController.php(340): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: serial_no', 'C:\\xampp\\htdocs\\plscu\\app\\Controllers\\LoanApplicantController.php', 340, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\LoanApplicantController->view_profile('1')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoanApplicantController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-12-30 23:00:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-12-30 23:02:20 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'as total_paid
+FROM `loan_pmt_log`
+WHERE `loan_application`.`serial_no` = 'lYb...' at line 1 in C:\xampp\htdocs\plscu\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\plscu\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *, sum(l...', 0)
+#1 C:\xampp\htdocs\plscu\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *, sum(l...')
+#2 C:\xampp\htdocs\plscu\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *, sum(l...')
+#3 C:\xampp\htdocs\plscu\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *, sum(l...', Array, false)
+#4 C:\xampp\htdocs\plscu\app\Models\LoanLogModel.php(65): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\plscu\app\Controllers\LoanApplicantController.php(340): App\Models\LoanLogModel->total_loan_paid_by_applicant('lYbZGv')
+#6 C:\xampp\htdocs\plscu\system\CodeIgniter.php(934): App\Controllers\LoanApplicantController->view_profile('1')
+#7 C:\xampp\htdocs\plscu\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoanApplicantController))
+#8 C:\xampp\htdocs\plscu\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\plscu\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-12-30 23:02:20 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'as total_paid
+FROM `loan_pmt_log`
+WHERE `loan_application`.`serial_no` = 'lYb...' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *, sum(loan_application.amount as total_paid
+FROM `loan_pmt_log`
+WHERE `loan_application`.`serial_no` = \'lYbZGv\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *, sum(loan_application.amount as total_paid
+FROM `loan_pmt_log`
+WHERE `loan_application`.`serial_no` = \'lYbZGv\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *, sum(loan_application.amount as total_paid
+FROM `loan_pmt_log`
+WHERE `loan_application`.`serial_no` = \'lYbZGv\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *, sum(loan_application.amount as total_paid
+FROM `loan_pmt_log`
+WHERE `loan_application`.`serial_no` = :loan_application.serial_no:', [...], false)
+ 5 APPPATH\Models\LoanLogModel.php(65): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\LoanApplicantController.php(340): App\Models\LoanLogModel->total_loan_paid_by_applicant('lYbZGv')
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\LoanApplicantController->view_profile('1')
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoanApplicantController))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-12-30 23:02:55 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'as total_paid
+FROM `loan_pmt_log`
+WHERE `loan_pmt_log`.`serial_no` = 'lYbZGv'' at line 1 in C:\xampp\htdocs\plscu\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\plscu\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *, sum(l...', 0)
+#1 C:\xampp\htdocs\plscu\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *, sum(l...')
+#2 C:\xampp\htdocs\plscu\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *, sum(l...')
+#3 C:\xampp\htdocs\plscu\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *, sum(l...', Array, false)
+#4 C:\xampp\htdocs\plscu\app\Models\LoanLogModel.php(65): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\plscu\app\Controllers\LoanApplicantController.php(340): App\Models\LoanLogModel->total_loan_paid_by_applicant('lYbZGv')
+#6 C:\xampp\htdocs\plscu\system\CodeIgniter.php(934): App\Controllers\LoanApplicantController->view_profile('1')
+#7 C:\xampp\htdocs\plscu\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoanApplicantController))
+#8 C:\xampp\htdocs\plscu\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\plscu\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-12-30 23:02:55 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'as total_paid
+FROM `loan_pmt_log`
+WHERE `loan_pmt_log`.`serial_no` = 'lYbZGv'' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *, sum(loan_pmt_log.amount as total_paid
+FROM `loan_pmt_log`
+WHERE `loan_pmt_log`.`serial_no` = \'lYbZGv\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *, sum(loan_pmt_log.amount as total_paid
+FROM `loan_pmt_log`
+WHERE `loan_pmt_log`.`serial_no` = \'lYbZGv\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *, sum(loan_pmt_log.amount as total_paid
+FROM `loan_pmt_log`
+WHERE `loan_pmt_log`.`serial_no` = \'lYbZGv\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *, sum(loan_pmt_log.amount as total_paid
+FROM `loan_pmt_log`
+WHERE `loan_pmt_log`.`serial_no` = :loan_pmt_log.serial_no:', [...], false)
+ 5 APPPATH\Models\LoanLogModel.php(65): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\LoanApplicantController.php(340): App\Models\LoanLogModel->total_loan_paid_by_applicant('lYbZGv')
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\LoanApplicantController->view_profile('1')
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoanApplicantController))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-12-30 23:04:44 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'as total_paid
+FROM `loan_pmt_log`
+WHERE `loan_pmt_log`.`serial_no` = 'lYbZGv'' at line 1 in C:\xampp\htdocs\plscu\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\plscu\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *, sum(l...', 0)
+#1 C:\xampp\htdocs\plscu\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *, sum(l...')
+#2 C:\xampp\htdocs\plscu\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *, sum(l...')
+#3 C:\xampp\htdocs\plscu\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *, sum(l...', Array, false)
+#4 C:\xampp\htdocs\plscu\app\Models\LoanLogModel.php(65): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\plscu\app\Controllers\LoanApplicantController.php(340): App\Models\LoanLogModel->total_loan_paid_by_applicant('lYbZGv')
+#6 C:\xampp\htdocs\plscu\system\CodeIgniter.php(934): App\Controllers\LoanApplicantController->view_profile('1')
+#7 C:\xampp\htdocs\plscu\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoanApplicantController))
+#8 C:\xampp\htdocs\plscu\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\plscu\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-12-30 23:04:44 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'as total_paid
+FROM `loan_pmt_log`
+WHERE `loan_pmt_log`.`serial_no` = 'lYbZGv'' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *, sum(loan_pmt_log.amount as total_paid
+FROM `loan_pmt_log`
+WHERE `loan_pmt_log`.`serial_no` = \'lYbZGv\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *, sum(loan_pmt_log.amount as total_paid
+FROM `loan_pmt_log`
+WHERE `loan_pmt_log`.`serial_no` = \'lYbZGv\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *, sum(loan_pmt_log.amount as total_paid
+FROM `loan_pmt_log`
+WHERE `loan_pmt_log`.`serial_no` = \'lYbZGv\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *, sum(loan_pmt_log.amount as total_paid
+FROM `loan_pmt_log`
+WHERE `loan_pmt_log`.`serial_no` = :loan_pmt_log.serial_no:', [...], false)
+ 5 APPPATH\Models\LoanLogModel.php(65): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\LoanApplicantController.php(340): App\Models\LoanLogModel->total_loan_paid_by_applicant('lYbZGv')
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\LoanApplicantController->view_profile('1')
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoanApplicantController))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-12-30 23:05:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-12-30 23:06:33 --> Array to string conversion
+in APPPATH\Views\dashboard\vies_loan_applicant_profile.php on line 41.
+ 1 APPPATH\Views\dashboard\vies_loan_applicant_profile.php(41): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Array to string conversion', 'C:\\xampp\\htdocs\\plscu\\app\\Views\\dashboard\\vies_loan_applicant_profile.php', 41, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\plscu\\app\\Views\\dashboard\\vies_loan_applicant_profile.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('dashboard/vies_loan_applicant_profile', [], true)
+ 5 APPPATH\Controllers\LoanApplicantController.php(343): view('dashboard/vies_loan_applicant_profile', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\LoanApplicantController->view_profile('1')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoanApplicantController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-30 23:07:22 --> Undefined index: total_paid
+in APPPATH\Views\dashboard\vies_loan_applicant_profile.php on line 41.
+ 1 APPPATH\Views\dashboard\vies_loan_applicant_profile.php(41): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: total_paid', 'C:\\xampp\\htdocs\\plscu\\app\\Views\\dashboard\\vies_loan_applicant_profile.php', 41, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\plscu\\app\\Views\\dashboard\\vies_loan_applicant_profile.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('dashboard/vies_loan_applicant_profile', [], true)
+ 5 APPPATH\Controllers\LoanApplicantController.php(343): view('dashboard/vies_loan_applicant_profile', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\LoanApplicantController->view_profile('1')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoanApplicantController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-30 23:07:37 --> Cannot use object of type stdClass as array
+in APPPATH\Views\dashboard\vies_loan_applicant_profile.php on line 41.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('dashboard/vies_loan_applicant_profile', [], true)
+ 4 APPPATH\Controllers\LoanApplicantController.php(343): view('dashboard/vies_loan_applicant_profile', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\LoanApplicantController->view_profile('1')
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoanApplicantController))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-30 23:08:10 --> Undefined variable: Total
+in APPPATH\Views\dashboard\vies_loan_applicant_profile.php on line 39.
+ 1 APPPATH\Views\dashboard\vies_loan_applicant_profile.php(39): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: Total', 'C:\\xampp\\htdocs\\plscu\\app\\Views\\dashboard\\vies_loan_applicant_profile.php', 39, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\plscu\\app\\Views\\dashboard\\vies_loan_applicant_profile.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('dashboard/vies_loan_applicant_profile', [], true)
+ 5 APPPATH\Controllers\LoanApplicantController.php(343): view('dashboard/vies_loan_applicant_profile', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\LoanApplicantController->view_profile('1')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoanApplicantController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-12-30 23:08:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-12-30 23:09:01 --> Cannot use object of type stdClass as array
+in APPPATH\Views\dashboard\vies_loan_applicant_profile.php on line 42.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('dashboard/vies_loan_applicant_profile', [], true)
+ 4 APPPATH\Controllers\LoanApplicantController.php(343): view('dashboard/vies_loan_applicant_profile', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\LoanApplicantController->view_profile('1')
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoanApplicantController))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-12-30 23:09:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-12-30 23:11:53 --> syntax error, unexpected '/'
+in APPPATH\Views\dashboard\vies_loan_applicant_profile.php on line 48.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('dashboard/vies_loan_applicant_profile', [], true)
+ 3 APPPATH\Controllers\LoanApplicantController.php(343): view('dashboard/vies_loan_applicant_profile', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\LoanApplicantController->view_profile('1')
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoanApplicantController))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-12-30 23:12:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 23:12:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 23:12:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 23:16:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 23:16:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 23:17:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 23:17:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 23:22:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 23:22:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 23:25:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-12-30 23:26:25 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'as total_paid
+FROM `loan_pmt_log`
+WHERE `loan_pmt_log`.`serial_no` = '2Il23F'' at line 1 in C:\xampp\htdocs\plscu\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\plscu\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *, sum(l...', 0)
+#1 C:\xampp\htdocs\plscu\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *, sum(l...')
+#2 C:\xampp\htdocs\plscu\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *, sum(l...')
+#3 C:\xampp\htdocs\plscu\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *, sum(l...', Array, false)
+#4 C:\xampp\htdocs\plscu\app\Models\LoanLogModel.php(65): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\plscu\app\Controllers\LoanApplicantController.php(340): App\Models\LoanLogModel->total_loan_paid_by_applicant('2Il23F')
+#6 C:\xampp\htdocs\plscu\system\CodeIgniter.php(934): App\Controllers\LoanApplicantController->view_profile('2')
+#7 C:\xampp\htdocs\plscu\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoanApplicantController))
+#8 C:\xampp\htdocs\plscu\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\plscu\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-12-30 23:26:25 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'as total_paid
+FROM `loan_pmt_log`
+WHERE `loan_pmt_log`.`serial_no` = '2Il23F'' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *, sum(loan_pmt_log.amount as total_paid
+FROM `loan_pmt_log`
+WHERE `loan_pmt_log`.`serial_no` = \'2Il23F\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *, sum(loan_pmt_log.amount as total_paid
+FROM `loan_pmt_log`
+WHERE `loan_pmt_log`.`serial_no` = \'2Il23F\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *, sum(loan_pmt_log.amount as total_paid
+FROM `loan_pmt_log`
+WHERE `loan_pmt_log`.`serial_no` = \'2Il23F\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *, sum(loan_pmt_log.amount as total_paid
+FROM `loan_pmt_log`
+WHERE `loan_pmt_log`.`serial_no` = :loan_pmt_log.serial_no:', [...], false)
+ 5 APPPATH\Models\LoanLogModel.php(65): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\LoanApplicantController.php(340): App\Models\LoanLogModel->total_loan_paid_by_applicant('2Il23F')
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\LoanApplicantController->view_profile('2')
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoanApplicantController))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-12-30 23:26:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 23:29:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 23:30:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-12-30 23:31:31 --> Trying to get property 'total_paid' of non-object
+in APPPATH\Views\dashboard\vies_loan_applicant_profile.php on line 42.
+ 1 APPPATH\Views\dashboard\vies_loan_applicant_profile.php(42): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'total_paid\' of non-object', 'C:\\xampp\\htdocs\\plscu\\app\\Views\\dashboard\\vies_loan_applicant_profile.php', 42, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\plscu\\app\\Views\\dashboard\\vies_loan_applicant_profile.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('dashboard/vies_loan_applicant_profile', [], true)
+ 5 APPPATH\Controllers\LoanApplicantController.php(343): view('dashboard/vies_loan_applicant_profile', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\LoanApplicantController->view_profile('2')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoanApplicantController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-30 23:31:50 --> Undefined index: total_paid
+in APPPATH\Views\dashboard\vies_loan_applicant_profile.php on line 42.
+ 1 APPPATH\Views\dashboard\vies_loan_applicant_profile.php(42): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: total_paid', 'C:\\xampp\\htdocs\\plscu\\app\\Views\\dashboard\\vies_loan_applicant_profile.php', 42, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\plscu\\app\\Views\\dashboard\\vies_loan_applicant_profile.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('dashboard/vies_loan_applicant_profile', [], true)
+ 5 APPPATH\Controllers\LoanApplicantController.php(343): view('dashboard/vies_loan_applicant_profile', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\LoanApplicantController->view_profile('2')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoanApplicantController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-30 23:32:44 --> Cannot use object of type stdClass as array
+in APPPATH\Views\dashboard\vies_loan_applicant_profile.php on line 42.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('dashboard/vies_loan_applicant_profile', [], true)
+ 4 APPPATH\Controllers\LoanApplicantController.php(343): view('dashboard/vies_loan_applicant_profile', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\LoanApplicantController->view_profile('2')
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoanApplicantController))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-30 23:33:03 --> Undefined index: total_paid
+in APPPATH\Views\dashboard\vies_loan_applicant_profile.php on line 42.
+ 1 APPPATH\Views\dashboard\vies_loan_applicant_profile.php(42): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: total_paid', 'C:\\xampp\\htdocs\\plscu\\app\\Views\\dashboard\\vies_loan_applicant_profile.php', 42, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\plscu\\app\\Views\\dashboard\\vies_loan_applicant_profile.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('dashboard/vies_loan_applicant_profile', [], true)
+ 5 APPPATH\Controllers\LoanApplicantController.php(343): view('dashboard/vies_loan_applicant_profile', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\LoanApplicantController->view_profile('2')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoanApplicantController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-30 23:33:27 --> Trying to get property 'total_paid' of non-object
+in APPPATH\Views\dashboard\vies_loan_applicant_profile.php on line 42.
+ 1 APPPATH\Views\dashboard\vies_loan_applicant_profile.php(42): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'total_paid\' of non-object', 'C:\\xampp\\htdocs\\plscu\\app\\Views\\dashboard\\vies_loan_applicant_profile.php', 42, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\plscu\\app\\Views\\dashboard\\vies_loan_applicant_profile.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('dashboard/vies_loan_applicant_profile', [], true)
+ 5 APPPATH\Controllers\LoanApplicantController.php(343): view('dashboard/vies_loan_applicant_profile', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\LoanApplicantController->view_profile('2')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoanApplicantController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-30 23:41:12 --> Trying to get property 'total_paid' of non-object
+in APPPATH\Views\dashboard\vies_loan_applicant_profile.php on line 42.
+ 1 APPPATH\Views\dashboard\vies_loan_applicant_profile.php(42): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'total_paid\' of non-object', 'C:\\xampp\\htdocs\\plscu\\app\\Views\\dashboard\\vies_loan_applicant_profile.php', 42, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\plscu\\app\\Views\\dashboard\\vies_loan_applicant_profile.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('dashboard/vies_loan_applicant_profile', [], true)
+ 5 APPPATH\Controllers\LoanApplicantController.php(343): view('dashboard/vies_loan_applicant_profile', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\LoanApplicantController->view_profile('2')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoanApplicantController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-30 23:41:59 --> Undefined index: total_paid
+in APPPATH\Views\dashboard\vies_loan_applicant_profile.php on line 42.
+ 1 APPPATH\Views\dashboard\vies_loan_applicant_profile.php(42): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: total_paid', 'C:\\xampp\\htdocs\\plscu\\app\\Views\\dashboard\\vies_loan_applicant_profile.php', 42, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\plscu\\app\\Views\\dashboard\\vies_loan_applicant_profile.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('dashboard/vies_loan_applicant_profile', [], true)
+ 5 APPPATH\Controllers\LoanApplicantController.php(343): view('dashboard/vies_loan_applicant_profile', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\LoanApplicantController->view_profile('2')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoanApplicantController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-30 23:45:53 --> Undefined index: total_paid
+in APPPATH\Views\dashboard\vies_loan_applicant_profile.php on line 42.
+ 1 APPPATH\Views\dashboard\vies_loan_applicant_profile.php(42): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: total_paid', 'C:\\xampp\\htdocs\\plscu\\app\\Views\\dashboard\\vies_loan_applicant_profile.php', 42, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\plscu\\app\\Views\\dashboard\\vies_loan_applicant_profile.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('dashboard/vies_loan_applicant_profile', [], true)
+ 5 APPPATH\Controllers\LoanApplicantController.php(343): view('dashboard/vies_loan_applicant_profile', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\LoanApplicantController->view_profile('2')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoanApplicantController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-30 23:47:13 --> Cannot use object of type stdClass as array
+in APPPATH\Views\dashboard\vies_loan_applicant_profile.php on line 42.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('dashboard/vies_loan_applicant_profile', [], true)
+ 4 APPPATH\Controllers\LoanApplicantController.php(343): view('dashboard/vies_loan_applicant_profile', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\LoanApplicantController->view_profile('2')
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoanApplicantController))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-12-30 23:47:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-12-30 23:48:18 --> Cannot use object of type stdClass as array
+in APPPATH\Views\dashboard\vies_loan_applicant_profile.php on line 42.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('dashboard/vies_loan_applicant_profile', [], true)
+ 4 APPPATH\Controllers\LoanApplicantController.php(343): view('dashboard/vies_loan_applicant_profile', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\LoanApplicantController->view_profile('2')
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoanApplicantController))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-30 23:48:41 --> Cannot use object of type stdClass as array
+in APPPATH\Views\dashboard\vies_loan_applicant_profile.php on line 42.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('dashboard/vies_loan_applicant_profile', [], true)
+ 4 APPPATH\Controllers\LoanApplicantController.php(343): view('dashboard/vies_loan_applicant_profile', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\LoanApplicantController->view_profile('2')
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoanApplicantController))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-30 23:48:57 --> Cannot use object of type stdClass as array
+in APPPATH\Views\dashboard\vies_loan_applicant_profile.php on line 42.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('dashboard/vies_loan_applicant_profile', [], true)
+ 4 APPPATH\Controllers\LoanApplicantController.php(343): view('dashboard/vies_loan_applicant_profile', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\LoanApplicantController->view_profile('2')
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoanApplicantController))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-30 23:49:27 --> Cannot use object of type stdClass as array
+in APPPATH\Views\dashboard\vies_loan_applicant_profile.php on line 42.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('dashboard/vies_loan_applicant_profile', [], true)
+ 4 APPPATH\Controllers\LoanApplicantController.php(343): view('dashboard/vies_loan_applicant_profile', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\LoanApplicantController->view_profile('2')
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoanApplicantController))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-30 23:52:05 --> Undefined variable: total_pmt_per_aplicnt
+in APPPATH\Controllers\LoanApplicantController.php on line 341.
+ 1 APPPATH\Controllers\LoanApplicantController.php(341): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: total_pmt_per_aplicnt', 'C:\\xampp\\htdocs\\plscu\\app\\Controllers\\LoanApplicantController.php', 341, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\LoanApplicantController->view_profile('2')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoanApplicantController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-30 23:52:26 --> Cannot use object of type stdClass as array
+in APPPATH\Views\dashboard\vies_loan_applicant_profile.php on line 42.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('dashboard/vies_loan_applicant_profile', [], true)
+ 4 APPPATH\Controllers\LoanApplicantController.php(343): view('dashboard/vies_loan_applicant_profile', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\LoanApplicantController->view_profile('2')
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoanApplicantController))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-12-30 23:53:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 23:53:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 23:54:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 23:54:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 23:55:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 23:55:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 23:55:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 23:55:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 23:56:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 23:56:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 23:56:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 23:58:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 23:59:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 23:59:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 23:59:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 11:47:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 11:47:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 11:50:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 11:57:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 12:02:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-30 12:02:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

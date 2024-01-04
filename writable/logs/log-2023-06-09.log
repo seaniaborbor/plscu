@@ -1,0 +1,37 @@
+ERROR - 2023-06-09 00:17:52 --> mysqli_sql_exception: Unknown column 'order_rfc.id' in 'on clause' in C:\xampp\htdocs\eventry\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\eventry\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\eventry\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\eventry\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\eventry\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\eventry\app\Models\TablesModel.php(43): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\eventry\app\Controllers\Admin.php(41): App\Models\TablesModel->get_all_deliveries()
+#6 C:\xampp\htdocs\eventry\system\CodeIgniter.php(934): App\Controllers\Admin->manage_delivery()
+#7 C:\xampp\htdocs\eventry\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#8 C:\xampp\htdocs\eventry\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\eventry\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-06-09 00:17:53 --> Unknown column 'order_rfc.id' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *
+FROM `deliveries`
+JOIN `order_log` ON `deliveries`.`order_id` = `order_rfc`.`id`
+JOIN `users` ON `order_log`.`rfc` = `users`.`rfc`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `deliveries`
+JOIN `order_log` ON `deliveries`.`order_id` = `order_rfc`.`id`
+JOIN `users` ON `order_log`.`rfc` = `users`.`rfc`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `deliveries`
+JOIN `order_log` ON `deliveries`.`order_id` = `order_rfc`.`id`
+JOIN `users` ON `order_log`.`rfc` = `users`.`rfc`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `deliveries`
+JOIN `order_log` ON `deliveries`.`order_id` = `order_rfc`.`id`
+JOIN `users` ON `order_log`.`rfc` = `users`.`rfc`', [], false)
+ 5 APPPATH\Models\TablesModel.php(43): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Admin.php(41): App\Models\TablesModel->get_all_deliveries()
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin->manage_delivery()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
