@@ -21,9 +21,8 @@ public function index()
       $LoanApplicantModel = new LoanApplicantModel();
       $LoanLogModel = new LoanLogModel();
 
-      $data['loan_payment_log'] = $LoanLogModel->get_loan_log();
-      $data['loan_applicant_log'] = $LoanApplicantModel->get_loan_applicants_log();
-      $data['total_pmt_per_aplicnt'] = $LoanLogModel->get_payment_summary();
+      $data['pending_loan_applicants'] = $LoanApplicantModel->get_loan_applicants_log('Pending');
+      $data['approved_loan_applicants'] = $LoanApplicantModel->get_loan_applicants_log('Approved');
 
 
         $validationRules = [
@@ -202,7 +201,7 @@ public function index()
               
         }
 
-      return view('dashboard/club_loan_manager', $data);
+      return view('dashboard/loan_applicants', $data);
     }
 
 

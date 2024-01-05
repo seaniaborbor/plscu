@@ -25,14 +25,16 @@ class LoanApplicantModel extends Model
         'regBy',
         'lstEdited',
         'pmtStatus',
-        'serial_no'
+        'serial_no',
+        'approv_status'
     ];
 
     // get all loan applicants 
-    public function get_loan_applicants_log(){
+    public function get_loan_applicants_log($approv_status){
         return $this->db->table('loan_application')
                 ->select('*, loan_application.fullName as applicantName, loan_application.id as applicant_id')
                 ->join('team', 'team.id = loan_application.regBy')
+                ->where('loan_application.approv_status', $approv_status)
                 ->orderBy('loan_application.lstEdited', 'desc')
                 ->get()
                 ->getResult();

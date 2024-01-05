@@ -1,3 +1,6 @@
+<div class="text-dark">
+        <?php //print_r($due_payment_pending_log); exit(); ?>
+    </div>
 <div class="table-responsive">
     <table id="example2" class="table table-striped">
     <thead>
@@ -14,9 +17,7 @@
             <th>Delete</th>
         </tr>
     </thead>
-    <div class="text-dark">
-        <?php //print_r($due_payment_pending_log); exit(); ?>
-    </div>
+    
     <tbody>
 
        

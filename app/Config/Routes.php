@@ -106,8 +106,8 @@ $routes->get('/dashboard/approve/membership/(:any)', 'ClubMembershipController::
 
 
 // loan  member manager controllers 
-$routes->get('/dashboard/loanmanager', 'LoanApplicantController::index');
-$routes->post('/dashboard/loanmanager', 'LoanApplicantController::index');
+$routes->get('/dashboard/loan_membership', 'LoanApplicantController::index');
+$routes->post('/dashboard/loan_membership', 'LoanApplicantController::index');
 $routes->get('/dashboard/loanmanager/view_profile/(:any)', 'LoanApplicantController::view_profile/$1');
 $routes->post('/dashboard/edit/loanmanager/(:any)', 'LoanApplicantController::edit/$1');
 $routes->get('/dashboard/update_status/(:any)', 'LoanApplicantController::edit/$1');

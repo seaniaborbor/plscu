@@ -73,9 +73,11 @@
 
                 <a href="<?=base_url('/dashboard/membership')?>" class="<?=mark_active('clubmembership', $passLink)?> bg-transparent list-group-item list-group-item-action  second-text fw-bold"><i class="bi  bi-suit-club-fill me-2"></i>Club Membership</a>
 
-                <a href="<?=base_url('/dashboard/club_due_management')?>" class="<?=mark_active('club_due_management', $passLink)?> list-group-item list-group-item-action bg-transparent second-text fw-bold"><i class="bi  bi-bank me-2"></i>Club Dues</a>
+                <a href="<?=base_url('/dashboard/club_due_management')?>" class="<?=mark_active('club_due_management', $passLink)?> list-group-item list-group-item-action bg-transparent second-text fw-bold"><i class="bi  bi-bank me-2"></i>Club Dues/Payments</a>
 
-                <a href="<?=base_url('/dashboard/loanmanager')?>" class="<?=mark_active('loanmanager', $passLink)?> list-group-item list-group-item-action bg-transparent second-text fw-bold"><i class="bi  bi-cash-coin me-2"></i>Loan Manager</a>
+                <a href="<?=base_url('/dashboard/loan_membership')?>" class="<?=mark_active('loanmanager', $passLink)?> list-group-item list-group-item-action bg-transparent second-text fw-bold"><i class="bi  bi-cash-coin me-2"></i>Loan Membership</a>
+
+                 <a href="<?=base_url('/dashboard/loanmanager')?>" class="<?=mark_active('loanmanagers', $passLink)?> list-group-item list-group-item-action bg-transparent second-text fw-bold"><i class="bi  bi-cash-coin me-2"></i>Loan Payments</a>
 
                 <a href="<?=base_url('/dashboard/portfolio')?>" class="list-group-item list-group-item-action bg-transparent second-text fw-bold"><i class="bi  bi-graph-up me-2"></i>Generate Report</a>
 
