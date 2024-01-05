@@ -95,7 +95,7 @@
                         class="bi bi-quora me-2"></i>FAQ</a>
                 <a href="<?=base_url('/dashboard/faq')?>" class="list-group-item list-group-item-action bg-transparent second-text fw-bold"><i
                         class="bi bi-clipboard-check me-2"></i>Certifications</a>
-                <a href="#" class="list-group-item list-group-item-action bg-transparent text-danger fw-bold"><i
+                <a href="<?=base_url('/logout')?>" class="list-group-item list-group-item-action bg-transparent text-danger fw-bold"><i
                         class="fas fa-power-off me-2"></i>Logout</a>
             </div>
         </div>
@@ -125,7 +125,7 @@
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <li><a class="dropdown-item" href="#">Profile</a></li>
                                 <li><a class="dropdown-item" href="#">Settings</a></li>
-                                <li><a class="dropdown-item" href="#">Logout</a></li>
+                                <li><a class="dropdown-item" href="<?=base_url('logout')?>">Logout</a></li>
                             </ul>
                         </li>
                     </ul>
