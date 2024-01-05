@@ -175,8 +175,8 @@ class ClubMembershipController extends BaseController{
             'memberSerialNo' => random_string('alnum', 6),
             'regFees' => $this->request->getPost('regFees'),
             'regFeesStatus' => $this->request->getPost('regFeesStatus'),
-            'accountStatus' => $this->request->getPost('accountStatus'),
-            'registeredBy' => $userData->id,
+            'accountStatus' => 'Pending',
+            'registeredBy' => $data['userData']['id'],
             'profileImg' => $profileImg_newname,
         ];
 
@@ -193,7 +193,7 @@ class ClubMembershipController extends BaseController{
 
 
       return view('dashboard/club_membership', $data);
-    }
+}
 
 
     //============== VIEW THE PROFILE OF A CLUB MEMBER ================
@@ -230,6 +230,40 @@ class ClubMembershipController extends BaseController{
         // exit();
 
     return view('dashboard/view_club_member_profile', $data);
+  }
+
+// =========== APPROVE MEMBERSHIP APPLICATION  ======== 
+  public function approve_mem_acc($serial)
+  {
+        if(empty($serial)){
+            return redirect()->to('/dashboard/membership')->with('error', 'Unknown Error');
+            exit();
+         }
+
+         $data['userData'] = session()->get('userData');
+         $ClubMembershipModel = new ClubMembershipModel();
+         $mem_to_approve = $ClubMembershipModel->where('memberSerialNo',$serial)->first();
+
+         if(!$mem_to_approve){
+            return redirect()->to('/dashboard/membership')->with('error', 'The application you want to approve no longer exists');
+            exit();
+          }
+
+           if(!($data['userData']['userRole'] == "SUDO")){
+            return redirect()->to('/dashboard/membership')->with('error', 'You dont have previllage to execute this action');
+            exit();
+          }
+
+          
+          $mem_to_approve['accountStatus'] = "Approved";
+          $id = $mem_to_approve['id'];
+
+          if($ClubMembershipModel->update($id, $mem_to_approve))
+          {
+            return redirect()->to('/dashboard/membership')->with('success', 'You approved an account successfully');
+          }
+
+
   }
 
 

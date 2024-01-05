@@ -5,7 +5,9 @@
 
 	<div class="col-md-4 text-center">
 		<img src="<?=base_url('uploads/'.$member_profile[0]->profileImg)?>" class="w-100 rounded-circle img-thumbnail img-fluid">
-		<a href="" class="btn btn-light shadow-lg w-100  border-secondary rounded-pill btn-lg mt-2 ">Approve Account</a>
+		 <?php if($userData['userRole'] == "SUDO") : ?>
+				<a href="<?=base_url('dashboard/approve/membership/'.$member_profile[0]->memberSerialNo)?>" class="btn btn-light shadow-lg w-100  border-secondary rounded-pill btn-lg mt-2 ">Approve Account</a>
+		 <?php endif; ?>
 	</div>
 	<div class="col-md-8">
 		<table class="table">

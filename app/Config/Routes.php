@@ -101,6 +101,7 @@ $routes->get('/dashboard/membership', 'ClubMembershipController::index');
 $routes->post('/dashboard/membership', 'ClubMembershipController::index');
 $routes->get('/dashboard/profile/membership/(:any)', 'ClubMembershipController::profile/$1');
 $routes->post('/dashboard/profile/membership/(:any)', 'ClubMembershipController::profile/$1');
+$routes->get('/dashboard/approve/membership/(:any)', 'ClubMembershipController::approve_mem_acc/$1');
 
 
 
