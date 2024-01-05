@@ -7,6 +7,9 @@
             <th>Logged By</th>
             <th>Date</th>
             <th>Status</th>
+            <?php if($userData['userRole'] == "SUDO"): ?>
+                <th>Approve</th>
+            <?php endif;?>
             <th>Edit</th>
             <th>Delete</th>
         </tr>
@@ -27,11 +30,12 @@
                         <td><?=$pending_lg->teamMemName?></td>
                         <td><?=$pending_lg->recordedDate?></td>
                         <td>
-                                <button class="btn btn-success btn-sm" type="button" disabled>
-                                  <span class="spinner-border spinner-border-sm" aria-hidden="true"></span>
-                                  <span role="status"><?=$pending_lg->approved_status?>...</span>
-                                </button>
+                            <span class="spinner-border text-danger spinner-border-sm" aria-hidden="true"></span>
+                            <span class="text-dark"><?=$pending_lg->approved_status?>...</span>
                         </td>
+                         <?php if($userData['userRole'] == "SUDO"): ?>
+                         <td><a href="<?=base_url('dashboard/approve/club_due_management/'.$pending_lg->paymentId)?>"  class="btn btn-sm btn-primary"><i class="bi bi-person"></i> Approve</a></td>
+                         <?php endif;?>
                          <td><a href="<?=base_url('dashboard/edit/club_due_management/'.$pending_lg->paymentId)?>"  class="btn btn-sm btn-success"><i class="bi bi-person"></i> Edit</a></td>
                         <td><a href="<?=base_url('dashboard/del/club_due_management/'.$pending_lg->paymentId)?>"  class="btn btn-sm btn-danger"><i class="bi bi-trash"></i> Delete</a></td>
                     </tr>

@@ -189,7 +189,7 @@ class DueController extends BaseController{
     }
 
 
-
+//=========== delete a log from the saving db or table 
     public function delete($id){
 
         if(empty($id) || !is_numeric($id)){
@@ -218,5 +218,38 @@ class DueController extends BaseController{
           }
     }
 
+
+// approve a log from the db by admin 
+    public function approve_payment($id)
+    {
+       if(empty($id) || !is_numeric($id)){
+              return redirect()->to('/dashboard/club_due_management')->with('error', 'Dumps dont hack');
+              exit();
+        }
+
+          $ClubDueLogModel = new ClubDueLogModel();
+          $data['userData'] = session()->get('userData');
+
+          // check if the person trying to delete this is sudo user or creator of it. 
+          $data_to_approve = $ClubDueLogModel->find($id);
+          if(!$data_to_approve){
+             return redirect()->to('/dashboard/club_due_management')->with('error', 'Data no longer exists');
+                  exit();
+          }
+
+          if(($data['userData']['userRole'] == 'SUDO')){
+              $data_to_approve['approved_status'] = 'Approved';
+              if($ClubDueLogModel->update($id, $data_to_approve)){
+                return redirect()->to('/dashboard/club_due_management')->with('success', 'A due payment was successfully Approved');
+                  exit();
+              }else{
+                return redirect()->to('/dashboard/club_due_management')->with('error', 'Failed to approve for unknown reason');
+                  exit();
+              }
+          }else{
+            return redirect()->to('/dashboard/club_due_management')->with('error', 'Invalid Request - your account dont have the right to do this!');
+                  exit();
+          }
+    }
 
 }
