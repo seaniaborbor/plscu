@@ -162,26 +162,6 @@
       </div>
     </div>
 
-  </footer><!-- End Footer -->
-  <!-- End Footer -->
-
-  <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-
-  <div id="preloader"></div>
-
-  <!-- Vendor JS Files -->
-  <script src="<?=base_url('assets/vendor/bootstrap/js/bootstrap.bundle.min.js')?>"></script>
-  <script src="<?=base_url('assets/vendor/aos/aos.js')?>"></script>
-  <script src="<?=base_url('assets/vendor/glightbox/js/glightbox.min.js')?>"></script>
-  <script src="<?=base_url('assets/vendor/purecounter/purecounter_vanilla.js')?>"></script>
-  <script src="<?=base_url('assets/vendor/swiper/swiper-bundle.min.js')?>"></script>
-  <script src="<?=base_url('assets/vendor/isotope-layout/isotope.pkgd.min.js')?>"></script>
-  <script src="<?=base_url('assets/vendor/php-email-form/validate.js')?>"></script>
-
-  <!-- Template Main JS File -->
-  <script src="<?=base_url('assets/js/main.js')?>"></script>
-
-
 
 
   
@@ -194,7 +174,8 @@
                 <!-- Modal body -->
                 <div class="modal-body py-5 text-center">
                     <h2 class="display-1 text-success"><i class="bi bi-check2-circle"></i></h2>
-                    <h3 class="text-success"><?= session()->getFlashdata('success') ?></h3>
+                    <h3 class="text-success"><?php session()->getFlashdata('error') ? session()->getFlashdata('error') : "You've Got Some Error.<br> Fix them and proceed"; ?>
+</h3>
                 </div>
 
                 <!-- Modal footer -->
@@ -221,7 +202,7 @@
                 <div class="modal-body py-5 text-center">
                     <h2 class="display-1 text-danger"><i class="bi bi-exclamation-diamond"></i></h2>
                     <h3 class="text-danger">
-                        <?= session()->getFlashdata('error') ?: "You've Got Some Error.<br> Fix them and proceed"; ?>
+                        <?php session()->getFlashdata('error') ?: "You've Got Some Error.<br> Fix them and proceed"; ?>
                     </h3>
                 </div>
 
@@ -241,6 +222,31 @@
         });
     </script>
 <?php endif; ?>
+
+
+  </footer><!-- End Footer -->
+  <!-- End Footer -->
+
+  <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="<?=base_url('assets/vendor/bootstrap/js/bootstrap.bundle.min.js')?>"></script>
+  <script src="<?=base_url('assets/vendor/aos/aos.js')?>"></script>
+  <script src="<?=base_url('assets/vendor/glightbox/js/glightbox.min.js')?>"></script>
+  <script src="<?=base_url('assets/vendor/purecounter/purecounter_vanilla.js')?>"></script>
+  <script src="<?=base_url('assets/vendor/swiper/swiper-bundle.min.js')?>"></script>
+  <script src="<?=base_url('assets/vendor/isotope-layout/isotope.pkgd.min.js')?>"></script>
+  <script src="<?=base_url('assets/vendor/php-email-form/validate.js')?>"></script>
+
+  <!-- Template Main JS File -->
+  <script src="<?=base_url('assets/js/main.js')?>"></script>
+
+
+
+
+
 
 </body>
 

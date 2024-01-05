@@ -13,17 +13,25 @@
             <div class="card border-0">
               <div class="card-body text-center">
                 <h2 class="mb-5 ">Login To Continue</h2>
-                <div class="form-group mb-4 text-center ">
+                  <form method="post" action="<?=base_url('/auth')?>">
+                    <div class="form-group mb-4 text-center ">
                   <label>Email</label>
                   <input type="email" name="email" class="form-control form-control-lg py-3 rounded-pill">
+                    <?php if(isset($validation) && $validation->hasError('email')) : ?>
+                       <div class="text-danger"><?=$validation->getError('email')?></div>
+                    <?php endif; ?>
                 </div>
                 <div class="form-group mb-3 text-center">
-                  <label>Email</label>
-                  <input type="email" name="email" class="form-control form-control-lg py-3 rounded-pill">
+                  <label>Password</label>
+                  <input type="email" name="password" class="form-control form-control-lg py-3 rounded-pill">
+                    <?php if(isset($validation) && $validation->hasError('password')) : ?>
+                       <div class="text-danger"><?=$validation->getError('password')?></div>
+                    <?php endif; ?>
                 </div>
                 <div class="text-center ">
                   <button class="btn rounded-pill text-white py-3 w-100 btn-lg" style="background: #008374 !important; " type="submit">Send Message</button>
                 </div>
+                  </form>
               </div>
             </div>
           </div>

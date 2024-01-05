@@ -11,8 +11,8 @@ class AgentProtector implements FilterInterface
     public function before(RequestInterface $request, $arguments = null)
     {
         // Filter logic before the controller runs
-        if(!session()->has("agentLogin")){
-            return redirect()->to('/login')->with('error', ['You must login to continue']);
+        if(!session()->has("isLoggedIn")){
+            return redirect()->to('/auth')->with('error', ['You must login to continue']);
         }
     }
 

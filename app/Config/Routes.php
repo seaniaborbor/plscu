@@ -30,7 +30,8 @@ $routes->set404Override();
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
 $routes->get('/', 'Publiccontroller::index');
-$routes->get('/login', 'Publiccontroller::login');
+$routes->get('/auth', 'AuthController::index');
+$routes->post('/auth', 'AuthController::index');
 
 $routes->get('/portfolio-details/(:any)', 'Publiccontroller::portfolio_details/$1');
 
@@ -41,6 +42,8 @@ $routes->get('/blog/(:any)', 'Publiccontroller::blog/$1');
 
 
 // ========== ADMIN ACCESS ONLY ==========
+
+$routes->group("", ['filter'=>'agentProtector'], function($routes){
 
 // dashboard home 
 $routes->get('/dashboard/', 'Dashboard::index');
@@ -125,6 +128,7 @@ $routes->get('/category/(:any)', 'Publiccontroller::category_search/$1');
 
 
 
+});
 /*
  * --------------------------------------------------------------------
  * Additional Routing
