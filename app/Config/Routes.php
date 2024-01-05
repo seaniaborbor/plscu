@@ -125,6 +125,7 @@ $routes->get('/dashboard/club_due_management', 'DueController::index');
 $routes->post('/dashboard/club_due_management', 'DueController::index');
 $routes->get('/dashboard/edit/club_due_management/(:any)', 'DueController::edit/$1');
 $routes->post('/dashboard/edit/club_due_management/(:any)', 'DueController::edit/$1');
+$routes->get('/dashboard/del/club_due_management/(:any)', 'DueController::delete/$1');
 
 $routes->get('/category/(:any)', 'Publiccontroller::category_search/$1');
 

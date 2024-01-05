@@ -190,7 +190,33 @@ class DueController extends BaseController{
 
 
 
+    public function delete($id){
 
+        if(empty($id) || !is_numeric($id)){
+              return redirect()->to('/dashboard/club_due_management')->with('error', 'Dumps dont hack');
+              exit();
+        }
+
+          $ClubDueLogModel = new ClubDueLogModel();
+          $data['userData'] = session()->get('userData');
+
+          // check if the person trying to delete this is sudo user or creator of it. 
+          $data_to_delete = $ClubDueLogModel->find($id);
+          if(!$data_to_delete){
+             return redirect()->to('/dashboard/club_due_management')->with('error', 'Data no longer exists');
+                  exit();
+          }
+
+          if(($data_to_delete['recordedBy'] == $data['userData']['id']) || ($data['userData']['userRole'] == 'SUDO')){
+              if($ClubDueLogModel->delete($id)){
+                return redirect()->to('/dashboard/club_due_management')->with('success', 'A due payment was successfully deleted');
+                  exit();
+              }else{
+                return redirect()->to('/dashboard/club_due_management')->with('error', 'Failed to delete for unknown reason');
+                  exit();
+              }
+          }
+    }
 
 
 }
