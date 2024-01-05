@@ -15,6 +15,8 @@ public function index()
     {
       $data = [];
        $data['passLink'] = "loanmanager";
+        $data['userData'] = session()->get('userData');
+
 
       $LoanApplicantModel = new LoanApplicantModel();
       $LoanLogModel = new LoanLogModel();
@@ -209,6 +211,8 @@ public function index()
     public function edit($serial){
         $data = [];
          $data['passLink'] = "clubmembership";
+        $data['userData'] = session()->get('userData');
+
 
         if(empty($serial)){
           return redirect()->to('/dashboard/loanmanager')->with('error', 'Unknown Error. Just try again');
@@ -283,8 +287,11 @@ public function index()
 
   // ================ MARK LOAN APPLICANT AS COMPLETE PAYMENT ===================
   public function update_applicant_status($serial) {
-         $data = [];
-          $data['passLink'] = "clubmembership";
+        
+        $data = [];
+        $data['passLink'] = "clubmembership";
+        $data['userData'] = session()->get('userData');
+
 
         if(empty($serial)){
           return redirect()->to('/dashboard/loanmanager')->with('error', 'Unknown Error. Just try again');
@@ -315,8 +322,10 @@ public function index()
 public function view_profile($id)
     {
         
-          $data = [];
-           $data['passLink'] = "clubmembership";
+        $data = [];
+        $data['passLink'] = "clubmembership";
+        $data['userData'] = session()->get('userData');
+
 
           $LoanApplicantModel = new LoanApplicantModel();
           $LoanLogModel = new LoanLogModel();

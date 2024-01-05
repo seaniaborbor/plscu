@@ -15,6 +15,8 @@ class ClubMembershipController extends BaseController{
     public function index(){
         $data = [];
         $data['passLink'] = "clubmembership";
+        $data['userData'] = session()->get('userData');
+
 
     $ClubDueLogModel = new ClubDueLogModel();
     $ClubMembershipModel = new ClubMembershipModel();
@@ -200,6 +202,8 @@ class ClubMembershipController extends BaseController{
        // check if the serial is null
         $data = [];
          $data['passLink'] = "clubmembership";
+        $data['userData'] = session()->get('userData');
+         
 
         if(empty($serial)){
             return redirect()->to('/dashboard/membership')->with('error', 'Unknown Error');

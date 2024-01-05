@@ -19,21 +19,23 @@
        
         <?php if(isset($a_member_payment_pending_log)) : ?>
             <?php foreach ($a_member_payment_pending_log as $pending_lg) : ?>
-                <tr>
-                    <!-- Add a data-bs-toggle attribute with value "popover" -->
-                    <td ><?=$pending_lg->memberFullName?></td>
-                    <td><?=$pending_lg->due_amount?></td>
-                    <td><?=$pending_lg->teamMemName?></td>
-                    <td><?=$pending_lg->recordedDate?></td>
-                    <td>
-                            <button class="btn btn-success btn-sm" type="button" disabled>
-                              <span class="spinner-border spinner-border-sm" aria-hidden="true"></span>
-                              <span role="status"><?=$pending_lg->approved_status?>...</span>
-                            </button>
-                    </td>
-                     <td><a href="#"  class="btn btn-sm btn-success"><i class="bi bi-person"></i> Edit</a></td>
-                    <td><a href="#"  class="btn btn-sm btn-danger"><i class="bi bi-trash"></i> Delete</a></td>
-                </tr>
+                 <?php if($userData['id'] == $pending_lg->last_edited_by || $userData['userRole'] == "SUDO") : ?>
+                    <tr>
+                        <!-- Add a data-bs-toggle attribute with value "popover" -->
+                        <td ><?=$pending_lg->memberFullName?></td>
+                        <td><?=$pending_lg->due_amount?></td>
+                        <td><?=$pending_lg->teamMemName?></td>
+                        <td><?=$pending_lg->recordedDate?></td>
+                        <td>
+                                <button class="btn btn-success btn-sm" type="button" disabled>
+                                  <span class="spinner-border spinner-border-sm" aria-hidden="true"></span>
+                                  <span role="status"><?=$pending_lg->approved_status?>...</span>
+                                </button>
+                        </td>
+                         <td><a href="#"  class="btn btn-sm btn-success"><i class="bi bi-person"></i> Edit</a></td>
+                        <td><a href="#"  class="btn btn-sm btn-danger"><i class="bi bi-trash"></i> Delete</a></td>
+                    </tr>
+                <?php endif; ?>
             <?php endforeach; ?>
         <?php endif; ?>
     </tbody>

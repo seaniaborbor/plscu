@@ -12,6 +12,8 @@ class DueController extends BaseController{
    
     public function index(){
         $data = [];
+        $data['userData'] = session()->get('userData');
+
          $data['passLink'] = "club_due_management";
 
          $ClubMembershipModel = new ClubMembershipModel();
@@ -78,9 +80,9 @@ class DueController extends BaseController{
                 'due_amount' => $this->request->getPost('due_amount'),
                 'mem_serial_no' => $this->request->getPost('mem_serial_no'),
                 'due_currency' => $this->request->getPost('due_currency'),
-                'recordedBy' => 1,
+                'recordedBy' => session()->get('userData')['id'],
                 'last_edited_date' => date('Y-m-d'),
-                'last_edited_by' => 1,
+                'last_edited_by' => session()->get('userData')['id'],
                 'approved_status' => 'Pending'
               ];
 
@@ -107,6 +109,8 @@ class DueController extends BaseController{
     {
         $data = [];
         $data['passLink'] = "club_due_management";
+        $data['userData'] = session()->get('userData');
+        
         
         // if id not correct
         if(empty($id) || !is_numeric($id)){
@@ -167,7 +171,7 @@ class DueController extends BaseController{
             if($this->validate($validationRules))
             {
                 $data['data_to_edit']['due_amount'] = $this->request->getPost('due_amount');
-                $data['data_to_edit']['last_edited_by'] = 1;
+                $data['data_to_edit']['last_edited_by'] = session()->get('userData')['id'];
                 $data['data_to_edit']['last_edited_date'] = date('Y-m-d');
                 $data['data_to_edit']['approved_status'] = 'Pending';
 

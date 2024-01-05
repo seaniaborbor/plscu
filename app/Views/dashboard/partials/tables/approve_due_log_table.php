@@ -1,3 +1,5 @@
+
+
 <div class="table-responsive">
     <table id="example2" class="table table-striped">
     <thead>
@@ -11,15 +13,13 @@
             <th>Delete</th>
         </tr>
     </thead>
-    <div class="text-dark">
-        <?php //print_r($due_payment_approved_log); exit(); ?>
-    </div>
     <tbody>
 
-       
+
         <?php if(isset($due_payment_approved_log)) : ?>
             <?php foreach ($due_payment_approved_log as $pending_lg) : ?>
-                <tr>
+                <?php if($userData['id'] == $pending_lg->recordedBy || $userData['userRole'] == "SUDO") : ?>
+                    <tr>
                     <!-- Add a data-bs-toggle attribute with value "popover" -->
                     <td ><?=$pending_lg->memberFullName?></td>
                     <td><?=$pending_lg->due_amount?></td>
@@ -33,6 +33,7 @@
                     <td><a href="#"  class="btn btn-sm btn-success"><i class="bi bi-person"></i> Edit</a></td>
                     <td><a href="#"  class="btn btn-sm btn-danger"><i class="bi bi-trash"></i> Delete</a></td>
                 </tr>
+                <?php endif; ?>
             <?php endforeach; ?>
         <?php endif; ?>
     </tbody>

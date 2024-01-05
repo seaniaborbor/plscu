@@ -7,6 +7,8 @@ class Dashboard extends BaseController{
     // home page route 
     public function index(){
          $data['passLink'] = "clubmembership";
+        $data['userData'] = session()->get('userData');
+
          
         return view("dashboard/index", $data);
     }
@@ -16,6 +18,8 @@ class Dashboard extends BaseController{
     {
         $data = [];
         return view('dashboard/portfolio', $data);
+        $data['userData'] = session()->get('userData');
+        
     }
 
     // blog details method 

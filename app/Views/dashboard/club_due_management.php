@@ -1,6 +1,7 @@
 <?php $this->extend('dashboard/partials/layout')?>
 
 <?=$this->section('main')?>
+
 	<div class="row">
 
 		<div class="col-md-8 pt-2">
