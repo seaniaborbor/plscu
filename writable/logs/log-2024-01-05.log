@@ -802,3 +802,251 @@ INFO - 2024-01-05 20:44:09 --> Session: Class initialized using 'CodeIgniter\Ses
 INFO - 2024-01-05 20:44:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2024-01-05 20:45:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2024-01-05 21:00:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-05 21:36:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-05 21:37:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-05 21:38:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-05 21:40:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-01-05 21:40:55 --> Too few arguments to function App\Models\LoanApplicantModel::get_loan_applicants_log(), 0 passed in C:\xampp\htdocs\plscu\app\Controllers\LoanPaymentController.php on line 24 and exactly 1 expected
+in APPPATH\Models\LoanApplicantModel.php on line 33.
+ 1 APPPATH\Controllers\LoanPaymentController.php(24): App\Models\LoanApplicantModel->get_loan_applicants_log()
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\LoanPaymentController->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoanPaymentController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2024-01-05 21:42:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-01-05 21:42:32 --> Invalid file: "dashboard/club_loan_manager.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('dashboard/club_loan_manager.php')
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('dashboard/club_loan_manager', [], true)
+ 3 APPPATH\Controllers\LoanPaymentController.php(94): view('dashboard/club_loan_manager', [])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\LoanPaymentController->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoanPaymentController))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2024-01-05 21:44:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-01-05 21:44:19 --> Invalid file: "dashboard/loan_payment.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('dashboard/loan_payment.php')
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('dashboard/loan_payment', [], true)
+ 3 APPPATH\Controllers\LoanPaymentController.php(94): view('dashboard/loan_payment', [])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\LoanPaymentController->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoanPaymentController))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2024-01-05 21:44:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-01-05 21:44:41 --> Undefined variable: passLink
+in APPPATH\Views\dashboard\partials\layout.php on line 74.
+ 1 APPPATH\Views\dashboard\partials\layout.php(74): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: passLink', 'C:\\xampp\\htdocs\\plscu\\app\\Views\\dashboard\\partials\\layout.php', 74, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\plscu\\app\\Views\\dashboard\\partials\\layout.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->render('dashboard/partials/layout', [], true)
+ 5 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('dashboard/loan_payments', [], true)
+ 6 APPPATH\Controllers\LoanPaymentController.php(94): view('dashboard/loan_payments', [])
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\LoanPaymentController->index()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoanPaymentController))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2024-01-05 21:45:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-05 21:47:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-05 21:49:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-05 21:49:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-05 21:49:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-05 21:50:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-05 21:50:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-05 21:50:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-05 21:50:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-05 21:50:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-05 21:50:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-05 21:50:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-05 21:51:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-05 21:51:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-05 21:51:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-05 21:52:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-05 21:52:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-05 21:53:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-05 21:53:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-05 21:58:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-05 21:58:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-05 21:59:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-05 21:59:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-05 21:59:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-05 22:00:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-05 22:01:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-05 22:01:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-05 22:01:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-05 22:01:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-05 22:04:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-05 22:04:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-05 22:04:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-05 22:04:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-05 22:04:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-05 22:04:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-05 22:08:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-05 22:23:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-05 22:24:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-05 22:25:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-05 22:26:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-05 22:36:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-05 22:37:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-01-05 22:37:43 --> include(partials/tables/all_pending_loan_payments_log): failed to open stream: No such file or directory
+in APPPATH\Views\dashboard\loan_payments.php on line 24.
+ 1 APPPATH\Views\dashboard\loan_payments.php(24): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(partials/tables/all_pending_loan_payments_log): failed to open stream: No such file or directory', 'C:\\xampp\\htdocs\\plscu\\app\\Views\\dashboard\\loan_payments.php', 24, [...])
+ 2 APPPATH\Views\dashboard\loan_payments.php(24): include()
+ 3 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\plscu\\app\\Views\\dashboard\\loan_payments.php')
+ 4 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('dashboard/loan_payments', [], true)
+ 6 APPPATH\Controllers\LoanPaymentController.php(97): view('dashboard/loan_payments', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\LoanPaymentController->index()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoanPaymentController))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2024-01-05 22:38:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-01-05 22:38:01 --> Undefined variable: clb_mdm
+in APPPATH\Views\dashboard\partials\tables\all_pending_loan_payments_log.php on line 21.
+ 1 APPPATH\Views\dashboard\partials\tables\all_pending_loan_payments_log.php(21): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: clb_mdm', 'C:\\xampp\\htdocs\\plscu\\app\\Views\\dashboard\\partials\\tables\\all_pending_loan_payments_log.php', 21, [...])
+ 2 APPPATH\Views\dashboard\loan_payments.php(24): include('C:\\xampp\\htdocs\\plscu\\app\\Views\\dashboard\\partials\\tables\\all_pending_loan_payments_log.php')
+ 3 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\plscu\\app\\Views\\dashboard\\loan_payments.php')
+ 4 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('dashboard/loan_payments', [], true)
+ 6 APPPATH\Controllers\LoanPaymentController.php(97): view('dashboard/loan_payments', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\LoanPaymentController->index()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoanPaymentController))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2024-01-05 22:38:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-01-05 22:38:24 --> Undefined property: stdClass::$memBerpic
+in APPPATH\Views\dashboard\partials\tables\all_pending_loan_payments_log.php on line 21.
+ 1 APPPATH\Views\dashboard\partials\tables\all_pending_loan_payments_log.php(21): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: stdClass::$memBerpic', 'C:\\xampp\\htdocs\\plscu\\app\\Views\\dashboard\\partials\\tables\\all_pending_loan_payments_log.php', 21, [...])
+ 2 APPPATH\Views\dashboard\loan_payments.php(24): include('C:\\xampp\\htdocs\\plscu\\app\\Views\\dashboard\\partials\\tables\\all_pending_loan_payments_log.php')
+ 3 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\plscu\\app\\Views\\dashboard\\loan_payments.php')
+ 4 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('dashboard/loan_payments', [], true)
+ 6 APPPATH\Controllers\LoanPaymentController.php(97): view('dashboard/loan_payments', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\LoanPaymentController->index()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoanPaymentController))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2024-01-05 22:39:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-05 22:41:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-01-05 22:41:38 --> Undefined property: stdClass::$memBerpic
+in APPPATH\Views\dashboard\partials\tables\all_pending_loan_payments_log.php on line 21.
+ 1 APPPATH\Views\dashboard\partials\tables\all_pending_loan_payments_log.php(21): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: stdClass::$memBerpic', 'C:\\xampp\\htdocs\\plscu\\app\\Views\\dashboard\\partials\\tables\\all_pending_loan_payments_log.php', 21, [...])
+ 2 APPPATH\Views\dashboard\loan_payments.php(24): include('C:\\xampp\\htdocs\\plscu\\app\\Views\\dashboard\\partials\\tables\\all_pending_loan_payments_log.php')
+ 3 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\plscu\\app\\Views\\dashboard\\loan_payments.php')
+ 4 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('dashboard/loan_payments', [], true)
+ 6 APPPATH\Controllers\LoanPaymentController.php(97): view('dashboard/loan_payments', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\LoanPaymentController->index()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoanPaymentController))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2024-01-05 22:41:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-05 22:43:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-05 22:46:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-05 22:48:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-05 22:49:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-05 22:50:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-05 22:51:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-05 22:51:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-05 22:53:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-05 22:53:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-05 22:53:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-05 22:54:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-05 22:54:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-05 22:54:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-05 22:54:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-05 22:54:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-05 22:54:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-05 22:59:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-05 22:59:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-05 22:59:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-05 22:59:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-05 23:36:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-05 23:40:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-01-05 23:40:12 --> Undefined variable: pending_lg
+in APPPATH\Views\dashboard\partials\tables\all_pending_loan_payments_log.php on line 20.
+ 1 APPPATH\Views\dashboard\partials\tables\all_pending_loan_payments_log.php(20): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: pending_lg', 'C:\\xampp\\htdocs\\plscu\\app\\Views\\dashboard\\partials\\tables\\all_pending_loan_payments_log.php', 20, [...])
+ 2 APPPATH\Views\dashboard\loan_payments.php(24): include('C:\\xampp\\htdocs\\plscu\\app\\Views\\dashboard\\partials\\tables\\all_pending_loan_payments_log.php')
+ 3 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\plscu\\app\\Views\\dashboard\\loan_payments.php')
+ 4 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('dashboard/loan_payments', [], true)
+ 6 APPPATH\Controllers\LoanPaymentController.php(98): view('dashboard/loan_payments', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\LoanPaymentController->index()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoanPaymentController))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2024-01-05 23:40:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-01-05 23:40:33 --> Undefined property: stdClass::$last_edited_by
+in APPPATH\Views\dashboard\partials\tables\all_pending_loan_payments_log.php on line 20.
+ 1 APPPATH\Views\dashboard\partials\tables\all_pending_loan_payments_log.php(20): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: stdClass::$last_edited_by', 'C:\\xampp\\htdocs\\plscu\\app\\Views\\dashboard\\partials\\tables\\all_pending_loan_payments_log.php', 20, [...])
+ 2 APPPATH\Views\dashboard\loan_payments.php(24): include('C:\\xampp\\htdocs\\plscu\\app\\Views\\dashboard\\partials\\tables\\all_pending_loan_payments_log.php')
+ 3 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\plscu\\app\\Views\\dashboard\\loan_payments.php')
+ 4 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('dashboard/loan_payments', [], true)
+ 6 APPPATH\Controllers\LoanPaymentController.php(98): view('dashboard/loan_payments', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\LoanPaymentController->index()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoanPaymentController))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2024-01-05 23:41:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-05 23:41:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-05 23:42:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-05 23:42:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-05 23:44:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-01-05 23:44:51 --> Undefined variable: clb_mdm
+in APPPATH\Views\dashboard\partials\tables\all_pending_loan_payments_log.php on line 31.
+ 1 APPPATH\Views\dashboard\partials\tables\all_pending_loan_payments_log.php(31): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: clb_mdm', 'C:\\xampp\\htdocs\\plscu\\app\\Views\\dashboard\\partials\\tables\\all_pending_loan_payments_log.php', 31, [...])
+ 2 APPPATH\Views\dashboard\loan_payments.php(24): include('C:\\xampp\\htdocs\\plscu\\app\\Views\\dashboard\\partials\\tables\\all_pending_loan_payments_log.php')
+ 3 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\plscu\\app\\Views\\dashboard\\loan_payments.php')
+ 4 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('dashboard/loan_payments', [], true)
+ 6 APPPATH\Controllers\LoanPaymentController.php(98): view('dashboard/loan_payments', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\LoanPaymentController->index()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoanPaymentController))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2024-01-05 23:45:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-01-05 23:45:19 --> Undefined property: stdClass::$memberSerialNo
+in APPPATH\Views\dashboard\partials\tables\all_pending_loan_payments_log.php on line 31.
+ 1 APPPATH\Views\dashboard\partials\tables\all_pending_loan_payments_log.php(31): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: stdClass::$memberSerialNo', 'C:\\xampp\\htdocs\\plscu\\app\\Views\\dashboard\\partials\\tables\\all_pending_loan_payments_log.php', 31, [...])
+ 2 APPPATH\Views\dashboard\loan_payments.php(24): include('C:\\xampp\\htdocs\\plscu\\app\\Views\\dashboard\\partials\\tables\\all_pending_loan_payments_log.php')
+ 3 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\plscu\\app\\Views\\dashboard\\loan_payments.php')
+ 4 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('dashboard/loan_payments', [], true)
+ 6 APPPATH\Controllers\LoanPaymentController.php(98): view('dashboard/loan_payments', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\LoanPaymentController->index()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoanPaymentController))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2024-01-05 23:45:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-05 23:47:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-05 23:49:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-01-05 23:49:53 --> Undefined variable: pending_lg
+in APPPATH\Views\dashboard\partials\tables\all_pending_loan_payments_log.php on line 34.
+ 1 APPPATH\Views\dashboard\partials\tables\all_pending_loan_payments_log.php(34): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: pending_lg', 'C:\\xampp\\htdocs\\plscu\\app\\Views\\dashboard\\partials\\tables\\all_pending_loan_payments_log.php', 34, [...])
+ 2 APPPATH\Views\dashboard\loan_payments.php(24): include('C:\\xampp\\htdocs\\plscu\\app\\Views\\dashboard\\partials\\tables\\all_pending_loan_payments_log.php')
+ 3 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\plscu\\app\\Views\\dashboard\\loan_payments.php')
+ 4 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('dashboard/loan_payments', [], true)
+ 6 APPPATH\Controllers\LoanPaymentController.php(98): view('dashboard/loan_payments', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\LoanPaymentController->index()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoanPaymentController))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2024-01-05 23:50:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-01-05 23:50:15 --> Undefined property: stdClass::$paymentId
+in APPPATH\Views\dashboard\partials\tables\all_pending_loan_payments_log.php on line 34.
+ 1 APPPATH\Views\dashboard\partials\tables\all_pending_loan_payments_log.php(34): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: stdClass::$paymentId', 'C:\\xampp\\htdocs\\plscu\\app\\Views\\dashboard\\partials\\tables\\all_pending_loan_payments_log.php', 34, [...])
+ 2 APPPATH\Views\dashboard\loan_payments.php(24): include('C:\\xampp\\htdocs\\plscu\\app\\Views\\dashboard\\partials\\tables\\all_pending_loan_payments_log.php')
+ 3 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\plscu\\app\\Views\\dashboard\\loan_payments.php')
+ 4 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('dashboard/loan_payments', [], true)
+ 6 APPPATH\Controllers\LoanPaymentController.php(98): view('dashboard/loan_payments', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\LoanPaymentController->index()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoanPaymentController))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2024-01-05 23:50:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-05 23:51:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-05 23:52:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-05 23:52:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

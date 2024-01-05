@@ -115,7 +115,8 @@ $routes->get('/dashboard/edit/update_status/(:any)', 'LoanApplicantController::u
 
 
 // saving & editing a lone record 
-$routes->post('/dashboard/log_loan_payment', 'LoanPaymentController::index');
+$routes->get('/dashboard/loan_payments', 'LoanPaymentController::index');
+$routes->post('/dashboard/loan_payments', 'LoanPaymentController::index');
 $routes->get('/dashboard/edit/log_loan_payment/(:any)', 'LoanPaymentController::edit/$1');
 $routes->get('/dashboard/edit/log_loan_payment/(:any)', 'LoanPaymentController::edit/$1');
 $routes->post('/dashboard/edit/log_loan_payment/(:any)', 'LoanPaymentController::edit/$1');
@@ -130,7 +131,7 @@ $routes->get('/dashboard/approve/club_due_management/(:any)', 'DueController::ap
 
 $routes->get('/category/(:any)', 'Publiccontroller::category_search/$1');
 
-//4212935681
+//4212935681 
 
 });
 /*

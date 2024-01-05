@@ -16,14 +16,15 @@ class LoanPaymentController extends BaseController{
     public function index(){
       
      $data = [];
+       $data['passLink'] = "loan_payments";
+        $data['userData'] = session()->get('userData');
 
       $LoanApplicantModel = new LoanApplicantModel();
       $LoanLogModel = new LoanLogModel();
 
-      $data['loan_payment_log'] = $LoanLogModel->get_loan_log();
-      $data['loan_applicant_log'] = $LoanApplicantModel->get_loan_applicants_log();
-      $data['total_pmt_per_aplicnt'] = $LoanLogModel->get_payment_summary();
-
+      
+      $data['all_pending_loan_payments'] = $LoanLogModel->all_pending_loan_payments('Pending');
+      $data['all_approved_loan_payments'] = $LoanLogModel->all_pending_loan_payments('Approved');
 
 
      $validationRules = [
@@ -38,9 +39,9 @@ class LoanPaymentController extends BaseController{
 
             'mount' => [
                 'rules' => 'required',
-                'label' => 'Amount the client is paying',
+                'label' => 'Amount ',
                 'errors' => [
-                    'required' => 'Please enter the amount the client'
+                    'required' => 'Please enter the amount the client is paying'
                 ]
             ],
 
@@ -65,27 +66,28 @@ class LoanPaymentController extends BaseController{
                                     ->find();
             // check if there's data 
             if(!$accountData){
-                return redirect()->to('/dashboard/loanmanager')->with('error', 'Invalid Loan Serial Number. Try Again');
+                return redirect()->to('/dashboard/loan_payments')->with('error', 'Invalid Loan Serial Number. Try Again');
                 
               }
 
             // check if the currenciesy match 
               if(!($accountData[0]['currency'] === $this->request->getPost('pmtCurrency'))){
-                return redirect()->to('/dashboard/loanmanager')->with('error', 'Invalid Loan currency. The loan was taken in '.$accountData[0]['currency']);
+                return redirect()->to('/dashboard/loan_payments')->with('error', 'Invalid Loan currency. The loan was taken in '.$accountData[0]['currency']);
               }
 
               //loggedBy    loggedDate  
               $formData = [
-                'loggedBy' => 1,
+                'loggedBy' => $data['userData']['id'],
                 'serial_no' => $this->request->getPost('serial_no'),
                 'amount' => $this->request->getPost('mount'),
                 'pmtCurrency' => $this->request->getPost('pmtCurrency'),
+                'isApproved' => 'Pending',
               ];
 
               if($LoanLogModel->save($formData)){
-                return redirect()->to('/dashboard/loanmanager')->with('success', 'Loan payment recoded successfully');
+                return redirect()->to('/dashboard/loan_payments')->with('success', 'Loan payment recoded successfully');
               }else{
-                return redirect()->to('/dashboard/loanmanager')->with('error', 'Unknown Error. Just try again');
+                return redirect()->to('/dashboard/loan_payments')->with('error', 'Unknown Error. Just try again');
               }
 
         }else{
@@ -93,7 +95,7 @@ class LoanPaymentController extends BaseController{
         }
     }
 
-      return view('dashboard/club_loan_manager', $data);
+      return view('dashboard/loan_payments', $data);
   }
 
 //============ EDIT A LOAN PAYMENT METHOD =============

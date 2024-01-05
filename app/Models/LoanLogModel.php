@@ -12,19 +12,20 @@ class LoanLogModel extends Model
         'serial_no',
         'amount',
         'pmtCurrency',
-        'loggedBy',  
+        'loggedBy',
+        'isApproved' 
     ];
 
 // get the payment of all creditors 
-   public function get_loan_log(){
-
+   public function all_pending_loan_payments($isApproved){
    		$data = $this->db->table('loan_pmt_log')
    				->select('*, loan_application.fullName as payBy, loan_pmt_log.id as payment_id')
    				->join('loan_application', 'loan_application.serial_no = loan_pmt_log.serial_no')
    				->join('team', 'loan_pmt_log.loggedBy = team.id')
+          ->where('loan_pmt_log.isApproved', $isApproved)
    				->orderBy('loan_pmt_log.loggedDate', 'desc')
-                ->get()
-                ->getResult();
+          ->get()
+          ->getResult();
         return $data;
    }
 
