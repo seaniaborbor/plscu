@@ -32,6 +32,7 @@ $routes->set404Override();
 $routes->get('/', 'Publiccontroller::index');
 $routes->get('/auth', 'AuthController::index');
 $routes->post('/auth', 'AuthController::index');
+$routes->get('/logout', 'AuthController::logout');
 
 $routes->get('/portfolio-details/(:any)', 'Publiccontroller::portfolio_details/$1');
 

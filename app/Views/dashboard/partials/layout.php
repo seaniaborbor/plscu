@@ -1,6 +1,8 @@
 <?php 
     $userData = session()->get('userData');
-    print_r($userData);
+    //print_r($userData);
+    /* Array ( [id] => 4 [fullName] => Deddeh H. Kollie [email] => fake@gmail.com [passwd] => $2y$10$w6gXy41pYWIpiurglirfpebCtR86ahAUPPFvzwXrYLmUj2rlEfAYe [profession] => Member, Board of Directors [fbHandle] => http://facebook.com/tarnuevvefd [xHandle] => [linkinHandle] => [profileImg] => 1703993164_6a5e0959fbb2d83ca446.png [createdAt] => 2023-12-24 15:45:49 )
+    */
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -118,7 +120,7 @@
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle second-text fw-bold" href="#" id="navbarDropdown"
                                 role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                <i class="fas fa-user me-2"></i>John Doe
+                                <i class="fas fa-user me-2"></i><?=$userData['fullName']?>
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <li><a class="dropdown-item" href="#">Profile</a></li>

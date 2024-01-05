@@ -14,6 +14,10 @@ class AuthController extends BaseController
     // load the home page
     public function index()
     {
+        if(session()->has("isLoggedIn") && session()->has('userData')){
+            return redirect()->to("/dashboard")->withInput()->with('success', "Welcome to the dashboard");
+        }
+
         $db = new TeamModel();
         
         $data = [];
@@ -61,7 +65,7 @@ class AuthController extends BaseController
                     return redirect()->to('dashboard')->with('success', "Welcome to the dashboard");
                 } else {
                     // Password does not match, redirect to 'auth' page with error message
-                    return redirect()->to('auth')->with('failed', "Wrong Password");
+                    return redirect()->to('auth')->with('error', "Wrong Password");
                 }
                 
             } else {
@@ -69,5 +73,18 @@ class AuthController extends BaseController
             }
         }
         return view('auth', $data);
+    }
+
+
+
+
+      public function logout(){
+
+        if(session()->has("isLoggedIn")){
+            session()->remove('isLoggedIn');
+            session()->remove('userData');
+            return redirect()->to("/auth")->withInput()->with('success', "You're  logged out");
+        }
+
     }
 }
