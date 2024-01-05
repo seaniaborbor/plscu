@@ -9,7 +9,6 @@
             <th>Logged By</th>
             <th>Date</th>
             <th>Status</th>
-            <th>Edit</th>
             <?php if($userData['userRole'] == "SUDO") : ?>
             <th>Delete</th>
             <?php endif; ?>

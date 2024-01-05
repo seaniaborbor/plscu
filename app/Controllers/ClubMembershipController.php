@@ -223,10 +223,12 @@ class ClubMembershipController extends BaseController{
         
         $data['a_member_payment_pending_log'] = $ClubDueLogModel->a_member_payment_log("Pending", $serial);
         $data['a_member_payment_approvide_log'] = $ClubDueLogModel->a_member_payment_log("Approved", $serial);
+        $data['a_member_total_pending_amt'] = $ClubDueLogModel->get_a_mem_due_total($serial, "Pending");
+        $data['a_member_total_approved_amt'] = $ClubDueLogModel->get_a_mem_due_total($serial, "Approved");
 
-        // print_r($data['a_member_payment_pending_log']);
+        // print_r($data['a_member_total_pending_amt']);
         // echo "<br><br><hr>";
-        // print_r($data['a_member_payment_approvide_log']);
+        // print_r($data['a_member_total_approved_amt']);
         // exit();
 
     return view('dashboard/view_club_member_profile', $data);

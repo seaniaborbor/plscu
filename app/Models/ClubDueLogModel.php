@@ -49,5 +49,19 @@ class ClubDueLogModel extends Model
     }
 
 
+// get the total amount saved by member 
+
+public function get_a_mem_due_total($serial, $approved_status)
+{
+     $data = $this->db->table('due_pmt_log')
+        ->select('*, SUM(due_pmt_log.due_amount) as total_paid')
+        ->where('due_pmt_log.mem_serial_no', $serial)
+        ->where('due_pmt_log.approved_status', $approved_status)
+        ->get()
+        ->getRow();
+        return $data;
+}
+
+
 
 }

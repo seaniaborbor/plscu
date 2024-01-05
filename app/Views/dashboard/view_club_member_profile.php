@@ -34,31 +34,43 @@
 			<?php if(isset($member_profile) && !empty($member_profile) && $member_profile[0]->accountStatus == 'Approved'){
 				?>
 
-				<div class="card mb-3">
-				<div class="card-body">
-					<div class="row">
-						<div class="col-md-4">
-							<div class="alert alert-primary">
-								<h1>00</h1>
-								<h3>Total Paid</h3>
+					<div class="row mb-4">
+						<div class="col-md-6">
+							<div class="card rounded-0 shadow-lg">
+								<div class="card-body mb-0 p-0">
+									<div class="row align-item-center">
+									<div class="col-4 text-center">
+										<div class="alert alert-success mb-0">
+											<h1 class="display-1 text-success"><i class="bi bi-currency-dollar"></i></h1>
+										</div>
+									</div>
+									<div class="col-8">
+										<h1><?=$a_member_total_approved_amt->total_paid?></h1>
+										<h3>Total Amount Saved</h3>
+									</div>
+									</div>
+								</div>
 							</div>
 						</div>
 						<?php //print_r($member_profile); exit(); ?>
-						<div class="col-md-4">
-							<div class="alert alert-success">
-								<h1>00</h1>
-								<h3>Total Loan Paid</h3>
-							</div>
-						</div>
-						<div class="col-md-4">
-							<div class="alert alert-warning">
-								<h1></h1>
-								<h3>Some thing </h3>
+						<div class="col-md-6">
+							<div class="card border-2 rounded-0 shadow-lg">
+								<div class="card-body mb-0 p-0">
+									<div class="row align-item-center">
+									<div class="col-4 text-center">
+										<div class="alert alert-danger mb-0">
+											<h1 class="display-1 "><i class="bi bi-currency-dollar"></i></h1>
+										</div>
+									</div>
+									<div class="col-8">
+										<h1><?=$a_member_total_pending_amt->total_paid?></h1>
+										<h3 >Total Amount Pending <br> <span class="text-danger spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span> <span class="spinner-grow spinner-grow-sm text-danger" role="status" aria-hidden="true"></span></h3>
+									</div>
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>
-				</div>
-			</div>
 
 			<div class="card shadow-lg">
 				<div class="card-header">
