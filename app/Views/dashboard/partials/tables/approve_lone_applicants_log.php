@@ -34,7 +34,7 @@
                         <td><?=$pending_lg->interestRate?>%</td>
                         <td><?=$pending_lg->fullName?></td>
                         <td>
-                            <span class="spinner-border text-danger spinner-border-sm" aria-hidden="true"></span>
+                            <i class="bi bi-check2-square"></i>
                             <span class="text-dark"><?=$pending_lg->approv_status?>...</span>
                         </td>
                          <?php if($userData['userRole'] == "SUDO"): ?>
