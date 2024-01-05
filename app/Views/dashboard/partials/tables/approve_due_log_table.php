@@ -10,7 +10,9 @@
             <th>Date</th>
             <th>Status</th>
             <th>Edit</th>
+            <?php if($userData['userRole'] == "SUDO") : ?>
             <th>Delete</th>
+            <?php endif; ?>
         </tr>
     </thead>
     <tbody>
@@ -30,8 +32,9 @@
                               <i class="bi bi-check2-square"></i> <?=$pending_lg->approved_status?></span>
                             </button>
                     </td>
-                    <td><a href="#"  class="btn btn-sm btn-success"><i class="bi bi-person"></i> Edit</a></td>
-                    <td><a href="#"  class="btn btn-sm btn-danger"><i class="bi bi-trash"></i> Delete</a></td>
+                     <?php if($userData['userRole'] == "SUDO") : ?>
+                        <td><a href="#"  class="btn btn-sm btn-danger"><i class="bi bi-trash"></i> Delete</a></td>
+                    <?php endif; ?>
                 </tr>
                 <?php endif; ?>
             <?php endforeach; ?>

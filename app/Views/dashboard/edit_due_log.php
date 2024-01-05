@@ -75,7 +75,7 @@
 					  	<?php include('partials/tables/single_club_member_pending_due_log.php')?>
 					  </div>
 					  <div class="tab-pane text-dark fade" id="pills-profilek" role="tabpanel" aria-labelledby="pills-profile-tab2">
-					  	<?php include('partials/tables/club_member_approve_table.php')?>
+					  	<?php include('partials/tables/single_club_member_approved_due_log.php')?>
 					  </div>
 					</div>
 				</div>

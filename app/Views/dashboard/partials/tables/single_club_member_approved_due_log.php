@@ -1,3 +1,6 @@
+ <div class="text-dark">
+        <?php //print_r($due_payment_pending_log); exit(); ?>
+    </div>
 <div class="table-responsive">
     <table id="example2" class="table table-striped">
     <thead>
@@ -8,15 +11,11 @@
             <th>Date</th>
             <th>Status</th>
             <?php if($userData['userRole'] == "SUDO") : ?>
-                <th>Edit</th>
                 <th>Delete</th>
             <?php endif; ?>
             
         </tr>
     </thead>
-    <div class="text-dark">
-        <?php //print_r($due_payment_pending_log); exit(); ?>
-    </div>
     <tbody>
 
        
@@ -29,13 +28,11 @@
                     <td><?=$approve_lg->teamMemName?></td>
                     <td><?=$approve_lg->recordedDate?></td>
                     <td>
-                            <button class="btn btn-success btn-sm" type="button" disabled>
-                              <span class="spinner-border spinner-border-sm" aria-hidden="true"></span>
-                              <span role="status"><?=$approve_lg->approved_status?>...</span>
+                            <button class="btn btn-primary btn-sm" type="button" disabled>
+                              <i class="bi bi-check"></i> <?=$approve_lg->approved_status?>...</span>
                             </button>
                     </td>
                     <?php if($userData['userRole'] == "SUDO") : ?>
-                         <td><a href="#"  class="btn btn-sm btn-success"><i class="bi bi-person"></i> Edit</a></td>
                         <td><a href="#"  class="btn btn-sm btn-danger"><i class="bi bi-trash"></i> Delete</a></td>
                     <?php endif; ?>
                 </tr>

@@ -120,7 +120,10 @@
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle second-text fw-bold" href="#" id="navbarDropdown"
                                 role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                <i class="fas fa-user me-2"></i><?=$userData['fullName']?>
+                                <span class="p-3 px-4 rounded-circle" 
+                                style="background-image: url(<?=base_url('/uploads/'.$userData['profileImg'])?>);
+                                background-size: cover; background-position: top;">
+                                    </span><?=$userData['fullName']?>
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <li><a class="dropdown-item" href="#">Profile</a></li>
