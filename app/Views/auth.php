@@ -23,7 +23,7 @@
                 </div>
                 <div class="form-group mb-3 text-center">
                   <label>Password</label>
-                  <input type="email" name="password" class="form-control form-control-lg py-3 rounded-pill">
+                  <input type="password" name="password" class="form-control form-control-lg py-3 rounded-pill">
                     <?php if(isset($validation) && $validation->hasError('password')) : ?>
                        <div class="text-danger"><?=$validation->getError('password')?></div>
                     <?php endif; ?>

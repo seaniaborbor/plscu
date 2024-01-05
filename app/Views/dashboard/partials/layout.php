@@ -1,3 +1,7 @@
+<?php 
+    $userData = session()->get('userData');
+    print_r($userData);
+?>
 <!DOCTYPE html>
 <html lang="en">
 

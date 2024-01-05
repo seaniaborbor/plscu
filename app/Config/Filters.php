@@ -22,7 +22,6 @@ class Filters extends BaseConfig
         'honeypot'      => Honeypot::class,
         'invalidchars'  => InvalidChars::class,
         'secureheaders' => SecureHeaders::class,
-        'protector'     => \App\Filters\ProtectorFilter::class,
         'agentProtector'     => \App\Filters\AgentProtector::class,
     ];
 

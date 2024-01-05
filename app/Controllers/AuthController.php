@@ -52,11 +52,6 @@ class AuthController extends BaseController
                     return redirect()->to('auth')->with('error', "Wrong Email");
                 }
                 
-                // Validate that $password contains the actual password input from the user
-                if (empty($password)) {
-                    // If password is empty, redirect to 'auth' page with error message
-                    return redirect()->to('auth')->with('error', "Password is empty");
-                }
                 
                 if (password_verify($password, $user['passwd'])) {
                     // Password matches, redirect to 'dashboard' with success message

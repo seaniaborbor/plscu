@@ -174,7 +174,7 @@ class ClubMembershipController extends BaseController{
             'regFees' => $this->request->getPost('regFees'),
             'regFeesStatus' => $this->request->getPost('regFeesStatus'),
             'accountStatus' => $this->request->getPost('accountStatus'),
-            'registeredBy' => 1,
+            'registeredBy' => $userData->id,
             'profileImg' => $profileImg_newname,
         ];
 
