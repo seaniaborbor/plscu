@@ -147,7 +147,7 @@ public function index()
             $profileImg = $this->request->getFile('applicantImg');
             $profileImg_newname = $profileImg->getRandomName(); // random image name
             if (!$profileImg->move('uploads/', $profileImg_newname)) {
-                return redirect()->to('/dashboard/loanmanager')->with('error', 'Error uploading the profile image');
+                return redirect()->to('/dashboard/loan_membership')->with('error', 'Error uploading the profile image');
             }
         }
 
@@ -160,7 +160,7 @@ public function index()
             $file = $this->request->getFile('loan_aggrement_form');
             $loan_aggrement_form = $file->getRandomName(); // random image name
                 if(!$file->move('uploads/', $loan_aggrement_form)) {
-                return redirect()->to('/dashboard/loanmanager')->with('error', 'Error uploading the application form');
+                return redirect()->to('/dashboard/loan_membership')->with('error', 'Error uploading the application form');
             }
         }
 
@@ -209,7 +209,7 @@ public function index()
 
     public function edit($serial){
         $data = [];
-         $data['passLink'] = "clubmembership";
+         $data['passLink'] = "loanmanager";
         $data['userData'] = session()->get('userData');
 
 
@@ -288,7 +288,7 @@ public function index()
   public function update_applicant_status($serial) {
         
         $data = [];
-        $data['passLink'] = "clubmembership";
+        $data['passLink'] = "loanmanager";
         $data['userData'] = session()->get('userData');
 
 
@@ -311,46 +311,43 @@ public function index()
 
         if($LoanApplicantModel->update($data['client_profile'][0]['id'],$data['client_profile']))
             {
-                return redirect()->to('/dashboard/loanmanager')->with('success', 'You marked '.$data['client_profile'][0]['fullName'].' as complete in term of lone payment.');
+                return redirect()->to('/dashboard/loan_membership')->with('success', 'You marked '.$data['client_profile'][0]['fullName'].' as complete in term of lone payment.');
             }else{
-                return redirect()->to('/dashboard/loanmanager')->with('error', 'Failed to mark '.$data['client_profile'][0]['fullName'.' as complete']);
+                return redirect()->to('/dashboard/loan_membership')->with('error', 'Failed to mark '.$data['client_profile'][0]['fullName'.' as complete']);
             }
   }
 
 
 public function view_profile($id)
     {
-        
+        if(empty($id) || !is_numeric($id)){
+          return redirect()->to('/dashboard/loan_membership')->with('error', 'Sorr we expected a number in your request');
+          exit();
+        }
+
         $data = [];
-        $data['passLink'] = "clubmembership";
+        $data['passLink'] = "loanmanager";
         $data['userData'] = session()->get('userData');
 
 
           $LoanApplicantModel = new LoanApplicantModel();
           $LoanLogModel = new LoanLogModel();
 
-          $data['loan_payment_log'] = $LoanLogModel->get_loan_log();
-          $data['loan_applicant_log'] = $LoanApplicantModel->get_loan_applicants_log();
-          $data['total_pmt_per_aplicnt'] = $LoanLogModel->get_payment_summary();
+          $data['applicant_data'] = $LoanApplicantModel->get_an_applicant_profile_by_id($id);
 
+          if(!$data['applicant_data']){
+          return redirect()->to('/dashboard/loan_membership')->with('error', 'That applicant no longer exist, sorr!');
+          exit();
+        }
 
-           
+        // print_r($data['applicant_data'][0]);
+        // exit();
 
+        $serial = $data['applicant_data'][0]->mem_serial;
 
-          $data['client'] =  $LoanApplicantModel->find($id);
+          $data['applicant_pending_loan_log'] = $LoanLogModel->get_loan_applicants_log($serial, 'Pending');
+          $data['applicant_approved_loan_log'] = $LoanLogModel->get_loan_applicants_log($serial, 'Approved');
 
-          if(!$data['client']){
-            return redirect()->to('/dashboard/loanmanager')->with('error', 'Loan Client Record no longer exists');
-            exit();
-         }
-          // get the lone log to edit
-         $serialNum = $data['client']['serial_no'];
-         $data['client_profile'] =  $LoanApplicantModel->get_an_applicant_profile_by_id($id);
-
-         $data['payment_history'] = $LoanLogModel->get_single_loan_log($serialNum);
-
-         $total_loan_paid_by_applicant = $LoanLogModel->total_loan_paid_by_applicant($serialNum);
-        $data['total_loan_paid_by_applicant'] = $total_loan_paid_by_applicant;
 
         return view('dashboard/vies_loan_applicant_profile', $data);
 

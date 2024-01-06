@@ -16,13 +16,13 @@ class LoanLogModel extends Model
         'isApproved' 
     ];
 
-// get the payment of all creditors 
-   public function all_pending_loan_payments($isApproved){
+// get the log that is pending or not pending/approved 
+   public function all_pending_loan_payments($approveStatus){
    		$data = $this->db->table('loan_pmt_log')
    				->select('*, loan_application.fullName as payBy, loan_pmt_log.id as payment_id')
    				->join('loan_application', 'loan_application.serial_no = loan_pmt_log.serial_no')
    				->join('team', 'loan_pmt_log.loggedBy = team.id')
-          ->where('loan_pmt_log.isApproved', $isApproved)
+          ->where('loan_pmt_log.isApproved', $approveStatus)
    				->orderBy('loan_pmt_log.loggedDate', 'desc')
           ->get()
           ->getResult();
@@ -43,13 +43,14 @@ class LoanLogModel extends Model
 	  	return $data;
   }
 
-// get the lone log payment for single client 
-    public function get_single_loan_log($serial){
+// get the long log of a single member by serialNo and status(pending or approved)
+    public function get_loan_applicants_log($serial, $approveStatus){
 
       $data = $this->db->table('loan_pmt_log')
           ->select('*, loan_application.fullName as payBy, loan_pmt_log.id as payment_id, loan_application.id as applicantId')
           ->join('loan_application', 'loan_application.serial_no = loan_pmt_log.serial_no')
           ->where("loan_application.serial_no",$serial)
+          ->where('loan_pmt_log.isApproved', $approveStatus)
           ->join('team', 'loan_pmt_log.loggedBy = team.id')
           ->orderBy('loan_pmt_log.loggedDate', 'desc')
           ->get()

@@ -1,0 +1,159 @@
+INFO - 2024-01-06 20:52:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-06 20:53:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-06 20:53:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-06 20:53:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-06 20:53:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-06 20:55:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-06 20:55:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-06 20:55:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-06 20:55:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-06 20:57:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-06 20:57:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-06 20:57:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-06 20:58:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-06 20:59:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-06 20:59:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-06 21:01:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-01-06 21:01:08 --> Call to undefined method App\Models\LoanLogModel::get_loan_log
+in SYSTEMPATH\Model.php on line 842.
+ 1 APPPATH\Controllers\LoanApplicantController.php(332): CodeIgniter\Model->__call('get_loan_log', [])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\LoanApplicantController->view_profile('4')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoanApplicantController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2024-01-06 21:01:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-06 21:02:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-06 21:03:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-01-06 21:03:02 --> Call to undefined method App\Models\LoanLogModel::get_loan_log
+in SYSTEMPATH\Model.php on line 842.
+ 1 APPPATH\Controllers\LoanApplicantController.php(332): CodeIgniter\Model->__call('get_loan_log', [])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\LoanApplicantController->view_profile('3')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoanApplicantController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2024-01-06 21:03:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-06 21:13:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-06 21:13:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-06 21:14:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-06 21:14:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-06 21:15:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-06 21:16:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-01-06 21:16:07 --> Array to string conversion
+in APPPATH\Controllers\LoanApplicantController.php on line 336.
+ 1 APPPATH\Controllers\LoanApplicantController.php(336): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Array to string conversion', 'C:\\xampp\\htdocs\\plscu\\app\\Controllers\\LoanApplicantController.php', 336, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\LoanApplicantController->view_profile('3')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoanApplicantController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2024-01-06 21:16:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-01-06 21:16:55 --> Array to string conversion
+in APPPATH\Controllers\LoanApplicantController.php on line 336.
+ 1 APPPATH\Controllers\LoanApplicantController.php(336): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Array to string conversion', 'C:\\xampp\\htdocs\\plscu\\app\\Controllers\\LoanApplicantController.php', 336, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\LoanApplicantController->view_profile('3')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoanApplicantController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2024-01-06 21:17:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-01-06 21:17:09 --> Undefined variable: serial
+in APPPATH\Controllers\LoanApplicantController.php on line 343.
+ 1 APPPATH\Controllers\LoanApplicantController.php(343): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: serial', 'C:\\xampp\\htdocs\\plscu\\app\\Controllers\\LoanApplicantController.php', 343, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\LoanApplicantController->view_profile('3')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoanApplicantController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2024-01-06 21:18:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-01-06 21:18:38 --> Undefined index: serial_no
+in APPPATH\Controllers\LoanApplicantController.php on line 343.
+ 1 APPPATH\Controllers\LoanApplicantController.php(343): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: serial_no', 'C:\\xampp\\htdocs\\plscu\\app\\Controllers\\LoanApplicantController.php', 343, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\LoanApplicantController->view_profile('3')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoanApplicantController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2024-01-06 21:19:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-01-06 21:19:20 --> Undefined variable: serial
+in APPPATH\Controllers\LoanApplicantController.php on line 343.
+ 1 APPPATH\Controllers\LoanApplicantController.php(343): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: serial', 'C:\\xampp\\htdocs\\plscu\\app\\Controllers\\LoanApplicantController.php', 343, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\LoanApplicantController->view_profile('3')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoanApplicantController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2024-01-06 21:19:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-06 21:25:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-01-06 21:25:52 --> syntax error, unexpected ';', expecting function (T_FUNCTION) or const (T_CONST)
+in APPPATH\Models\LoanLogModel.php on line 45.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\plscu\\app\\Models\\LoanLogModel.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Models\\LoanLogModel')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Models\\LoanLogModel')
+ 4 APPPATH\Controllers\LoanApplicantController.php(334): spl_autoload_call('App\\Models\\LoanLogModel')
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\LoanApplicantController->view_profile('3')
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoanApplicantController))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2024-01-06 21:26:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-01-06 21:26:11 --> Undefined index: mem_serial
+in APPPATH\Controllers\LoanApplicantController.php on line 346.
+ 1 APPPATH\Controllers\LoanApplicantController.php(346): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: mem_serial', 'C:\\xampp\\htdocs\\plscu\\app\\Controllers\\LoanApplicantController.php', 346, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\LoanApplicantController->view_profile('3')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoanApplicantController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2024-01-06 21:27:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-01-06 21:27:31 --> Undefined index: serial_no
+in APPPATH\Controllers\LoanApplicantController.php on line 346.
+ 1 APPPATH\Controllers\LoanApplicantController.php(346): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: serial_no', 'C:\\xampp\\htdocs\\plscu\\app\\Controllers\\LoanApplicantController.php', 346, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\LoanApplicantController->view_profile('3')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoanApplicantController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2024-01-06 21:27:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-06 21:28:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-01-06 21:28:19 --> Undefined index: mem_serial
+in APPPATH\Controllers\LoanApplicantController.php on line 346.
+ 1 APPPATH\Controllers\LoanApplicantController.php(346): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: mem_serial', 'C:\\xampp\\htdocs\\plscu\\app\\Controllers\\LoanApplicantController.php', 346, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\LoanApplicantController->view_profile('3')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoanApplicantController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2024-01-06 21:29:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-06 21:29:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-06 21:29:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-01-06 21:29:32 --> Trying to get property 'mem_serial' of non-object
+in APPPATH\Controllers\LoanApplicantController.php on line 346.
+ 1 APPPATH\Controllers\LoanApplicantController.php(346): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'mem_serial\' of non-object', 'C:\\xampp\\htdocs\\plscu\\app\\Controllers\\LoanApplicantController.php', 346, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\LoanApplicantController->view_profile('3')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoanApplicantController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2024-01-06 21:30:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-01-06 21:30:03 --> Cannot use object of type stdClass as array
+in APPPATH\Controllers\LoanApplicantController.php on line 346.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\LoanApplicantController->view_profile('3')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoanApplicantController))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2024-01-06 21:30:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-06 21:30:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-06 21:31:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-01-06 21:31:22 --> Undefined variable: client_profile
+in APPPATH\Views\dashboard\vies_loan_applicant_profile.php on line 57.
+ 1 APPPATH\Views\dashboard\vies_loan_applicant_profile.php(57): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: client_profile', 'C:\\xampp\\htdocs\\plscu\\app\\Views\\dashboard\\vies_loan_applicant_profile.php', 57, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\plscu\\app\\Views\\dashboard\\vies_loan_applicant_profile.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('dashboard/vies_loan_applicant_profile', [], true)
+ 5 APPPATH\Controllers\LoanApplicantController.php(352): view('dashboard/vies_loan_applicant_profile', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\LoanApplicantController->view_profile('3')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoanApplicantController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2024-01-06 21:31:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-06 21:34:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-06 21:35:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-06 21:37:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-06 21:38:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-06 21:38:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-06 21:39:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-06 21:42:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-06 21:45:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-06 21:45:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-06 21:45:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-06 21:45:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

@@ -1,49 +1,49 @@
 <div class="row text-dark">
-	<h2 class="text-success">Profile of <?=$client_profile[0]->applicantName?> </h2><hr>
+	<h2 class="text-success">Profile of <?=$applicant_data[0]->applicantName?> </h2><hr>
 	<div class="col-md-4">
-		<img src="<?=base_url('uploads/'.$client_profile[0]->applicantImg)?>" class="img-fluid">
-		<a href="<?=base_url('dashboard/edit/update_status/'.$client_profile[0]->serial_no)?>" class="btn btn-success shadow-sm mt-2 ">Mak As Complete </a>
+		<img src="<?=base_url('uploads/'.$applicant_data[0]->applicantImg)?>" class="img-fluid w-100">
+		<a href="<?=base_url('dashboard/edit/update_status/'.$applicant_data[0]->serial_no)?>" class="btn btn-success shadow-sm mt-2 ">Approve Application </a>
 
 	</div>
 	<div class="col-md-8">
 		<table class="table">
 			<tr>
 				<td>Full Name</td>
-				<td><?=$client_profile[0]->applicantName?></td>
+				<td><?=$applicant_data[0]->applicantName?></td>
 			</tr>
 			<tr>
 				<td>Applicant Serial </td>
-				<td><?=$client_profile[0]->serial_no?></td>
+				<td><?=$applicant_data[0]->serial_no?></td>
 			</tr>
 			<tr>
 				<td>Loan Amount</td>
-				<td><?=$client_profile[0]->loanAmount?></td>
+				<td><?=$applicant_data[0]->loanAmount?></td>
 			</tr>
 			<tr>
 				<td>Interest Rate</td>
-				<td><?=$client_profile[0]->interestRate?></td>
+				<td><?=$applicant_data[0]->interestRate?></td>
 			</tr>
 			<tr>
 				<td>Loan Taken Date</td>
-				<td><?=$client_profile[0]->loanStartDate?></td>
+				<td><?=$applicant_data[0]->loanStartDate?></td>
 			</tr>
 			<tr>
 				<td>Payment Deadline</td>
-				<td><?=$client_profile[0]->loanEndDate?></td>
+				<td><?=$applicant_data[0]->loanEndDate?></td>
 			</tr>
 			<tr>
 				<td>Profile Last Edited By</td>
-				<td><?=$client_profile[0]->fullName?></td>
+				<td><?=$applicant_data[0]->fullName?></td>
 			</tr>
 			<tr>
 				<td>Payment Status</td>
-				<td><?=$client_profile[0]->pmtStatus?></td>
+				<td><?=$applicant_data[0]->pmtStatus?></td>
 			</tr>
 
 		</table>
 	</div>
 	<div class="col-md-12">
-		<a href="<?=base_url('uploads/'.$client_profile[0]->loan_aggrement_form)?>" class="btn btn-outline-success  btn-sm">View Applicant Form</a>
+		<a href="<?=base_url('uploads/'.$applicant_data[0]->loan_aggrement_form)?>" class="btn btn-outline-success  btn-sm">View Applicant Form</a>
 		<a href="#" class=" btn-sm btn btn-outline-danger rounded">Delete This Applicant</a>
 	</div>
 	<div class="col-md-12 p-3">
