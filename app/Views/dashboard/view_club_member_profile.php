@@ -109,13 +109,17 @@
 				<div class="card-body">
 					<div class="tab-content" id="pills-tabContent">
 					  <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
-					  	<?php include("partials/club_member_profile.php"); ?>
+					  	<div class="card ">
+					  		<div class="card-header text-dark">
+			  					<h5 class="text-dark shadow-sm">Club Member Profile</h5>
+					  		</div>
+					  		<div class="card-body">
+							  	<?php include("partials/club_member_profile.php"); ?>					  			
+					  		</div>
+					  	</div>
 					  </div>
 					  <div class="tab-pane text-dark fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
-					  	<?php //include('partials/forms/edit_club_member_form.php')?>
-					  	<div class="alert alert-warning">
-					  		<h1>Editing of Profile Functionality is not available in this version</h1>
-					  	</div>
+					  	<?php include('partials/forms/approve_club_member_form.php')?>
 					  </div>
 					</div>
 				</div>

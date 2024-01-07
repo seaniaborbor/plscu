@@ -102,30 +102,6 @@ class ClubMembershipController extends BaseController{
         ]
     ], 
 
-    'accountStatus' => [
-        'rules' => 'required',
-        'label' => 'Account Status',
-        'errors' => [
-            'required' => 'Indicate if this account is active or not.'
-        ]
-    ], 
-
-    'regFeesStatus' => [
-        'rules' => 'required',
-        'label' => 'Account Registration Fees Status',
-        'errors' => [
-            'required' => 'Indicate whether the registration requirement fees are paid in full.'
-        ]
-    ], 
-
-    'regFees' => [
-        'rules' => 'required',
-        'label' => 'Registration Fees Payment',
-        'errors' => [
-            'required' => 'Enter the amount to be paid for registration requirement.'
-        ]
-    ], 
-
     'email' => [
         'rules' => 'required|min_length[10]',
         'label' => 'Club Member Email',
@@ -256,15 +232,57 @@ class ClubMembershipController extends BaseController{
             exit();
           }
 
+          $validationRules = [
+
+                'accountStatus' => [
+                    'rules' => 'required',
+                    'label' => 'Account Status',
+                    'errors' => [
+                        'required' => 'Indicate if this account is active or not.'
+                    ]
+                ], 
+
+                'regFeesStatus' => [
+                    'rules' => 'required',
+                    'label' => 'Account Registration Fees Status',
+                    'errors' => [
+                        'required' => 'Indicate whether the registration requirement fees are paid in full.'
+                    ]
+                ], 
+
+                'regFees' => [
+                    'rules' => 'required',
+                    'label' => 'Registration Fees Payment',
+                    'errors' => [
+                        'required' => 'Enter the amount to be paid for registration requirement.'
+                    ]
+                ], 
+          ];
+
+          if($this->request->getMethod() == 'post'){
+                if($this->validate($validationRules)){
+
+                    $id = $mem_to_approve['id'];
+
+                    $mem_to_approve['accountStatus'] = $this->request->getPost('accountStatus');
+                    $mem_to_approve['regFeesStatus'] = $this->request->getPost('regFeesStatus');
+                    $mem_to_approve['regFees'] = $this->request->getPost('regFees');
+
+                    if($ClubMembershipModel->update($id,$mem_to_approve))
+                      {
+                        return redirect()->to('/dashboard/membership')->with('success', 'You updated the membership status of an account successfully');
+                      }else{
+                        return redirect()->to('/dashboard/membership')->with('error', 'Failed to update membership status');
+                      }
+                }
+
+              }else{
+                        return redirect()->to('/dashboard/membership')->with('error', 'From somewhere unknown... Dude!');
+
+              }
           
-          $mem_to_approve['accountStatus'] = "Approved";
-          $id = $mem_to_approve['id'];
 
-          if($ClubMembershipModel->update($id, $mem_to_approve))
-          {
-            return redirect()->to('/dashboard/membership')->with('success', 'You approved an account successfully');
-          }
-
+          
 
   }
 

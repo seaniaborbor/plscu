@@ -1,5 +1,4 @@
 <div class="row text-dark">
-	<h2 class="text-success">Profile of <?=$applicant_data[0]->applicantName?> </h2><hr>
 	<div class="col-md-4">
 		<img src="<?=base_url('uploads/'.$applicant_data[0]->applicantImg)?>" class="img-fluid w-100">
 

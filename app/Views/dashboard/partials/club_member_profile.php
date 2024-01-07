@@ -1,8 +1,5 @@
 
 <div class="row text-dark">
-	<div class="card-header">
-		<h2 class="text-success shadow-sm">Club Member Profile</h2>
-	</div>
 <?php //print_r($member_profile); ?>
 
 	<div class="col-md-4 text-center">
@@ -56,13 +53,9 @@
 			</tr>
 		</table>
 		<br>
-
-		<!-- 
-			Array ( [0] => stdClass Object ( [id] => 3 [fullName] => Mark Angel [email] => working@gmail.com [passwd] => $2y$10$hHnWv2QTGSFLkhTCvGfIduhsmyT30egxSeLZF6YfCPMi1D8lTZ7Vu [profession] => Chairman, Board of Director [fbHandle] => http://facebook.com/tarnuea [xHandle] => [linkinHandle] => [profileImg] => 1704101935_228b8ba3f32acda05118.jpg [createdAt] => 2023-12-24 15:36:34 [gender] => Male [dob] => 2024-01-18 [membership_category] => OSM [memberSerialNo] => EHPq30 [phone] => 0775588736 [address] => clara Town Monrovia Liberia [deposite_unit] => 40000.00 [currency] => LRD [regFees] => 45000.00 [regFeesStatus] => Incomplete [accountStatus] => Pending [saving_year] => 2024-01-01 [updated_at] => 2024-01-01 01:39:18 [registeredBy] => 1 [agentName] => Tamba Bundor [memBerpic] => 1704101935_228b8ba3f32acda05118.jpg ) )
-		-->
-		<a href="" class="btn btn-success  btn-sm">View Applicant Form</a>
-		<a href="#" class=" btn-sm btn btn-danger rounded">Delete Application</a>
-		<div class=" alert alert-warning rounded  shadow-sm">
+		<a href="" class="btn border-secondary rounded-pill ">View Applicant Form</a>
+		<a href="#" class="btn border-secondary rounded-pill">Delete Application</a>
+		<div class=" mt-3 alert alert-warning rounded  shadow-sm">
 			<p>Deleting this user will hide and affect all the financial records associated with it. <span class="text-danger">This process is illrevertable</span></p>
 		</div>
 	</div>

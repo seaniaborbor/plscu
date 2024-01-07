@@ -3,7 +3,7 @@
 	
  <table id="example" class="table table-hover  table-striped border">
    <thead>
-      <tr class="bg-light text-dark">
+      <tr class="bg-secnodary text-dark">
       <td>Full Name</td>
       <td>
         Gender
@@ -18,11 +18,6 @@
       <td>Delete</td>
     </tr>
    </thead>
-<div class="text-dark">
-<?php  //print_r($pending_member[0]); exit(); ?>
-  
-</div>
-
    <tbody>
      <?php if(isset($pending_member)): ?>
    
@@ -40,12 +35,10 @@
                 <td><?=$clb_mdm->saving_year ?></td>
                 <td><?=$clb_mdm->agentName?></td>
                 <td>
-                    <button class="btn btn-success btn-sm" type="button" disabled>
                       <span class="spinner-border spinner-border-sm" aria-hidden="true"></span>
                       <span role="status"><?=$clb_mdm->accountStatus?></span>
-                    </button>
                     </td>
-                     <td><a href="<?=base_url('/dashboard/profile/membership/'.$clb_mdm->memberSerialNo)?>"  class="btn btn-sm btn-success"><i class="bi bi-person"></i> Edit</a></td>
+                     <td><a href="<?=base_url('/dashboard/profile/membership/'.$clb_mdm->memberSerialNo)?>"  class="btn btn-sm btn-success"><i class="bi bi-person"></i> Profile</a></td>
                     <td><a href="#"  class="btn btn-sm btn-danger"><i class="bi bi-trash"></i> Delete</a></td>
         </tr>
         <?php endif; ?>

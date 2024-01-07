@@ -123,7 +123,14 @@ total_approved_loan_pending */ ?>
 				<div class="card-body">
 					<div class="tab-content" id="pills-tabContent">
 					  <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
-					  	<?php include('partials/loan_applicant_profile.php'); ?>
+					  	<div class="card">
+					  		<div class="card-header">
+								<h5 class="text-dark">Profile of <?=$applicant_data[0]->applicantName?> </h5>
+					  		</div>
+					  		<div class="card-body">
+							  	<?php include('partials/loan_applicant_profile.php'); ?>
+					  		</div>
+					  	</div>
 					  </div>
 					  <div class="tab-pane text-dark fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
 					  	<?php include('partials/forms/loan_approve_form.php'); ?>

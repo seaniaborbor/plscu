@@ -33,22 +33,36 @@
         .text-success{
             color:#008374!important;
         }
+
         .active{
             color:white !important;
         }
         .nav-pills .active{
             background-color: #008374!important;
         }
+       
         #hover_profile_img{
             border-radius: 50%;
         }
+
+        .list-group-item .bi{
+            color:#008374!important;
+            font-weight: bolder;
+            font-size: 25px !important;
+        }
         
         .activate {
-            background-color: #c1efde !important;
+            background-color: #c1efde!important;
             color:#000 !important;
+        }
+         .nav-pills .active .bi{
+            color:white !important;
         }
         tr:hover{
             cursor: pointer;
+        }
+        .second-text{
+            color: #424241 !important;
         }
     </style>
 </head>
@@ -64,43 +78,36 @@
 <body>
     <div class="d-flex" id="wrapper">
         <!-- Sidebar -->
-        <div class="bg-success" id="sidebar-wrapper">
-            <div class="sidebar-heading text-center py-4 text-white fs-4 fw-bold text-uppercase border-bottom"><i
-                    class=" me-2"></i>Diverse Media</div>
+        <div class="bg-white " id="sidebar-wrapper">
+            <div class="sidebar-heading  text-center p-0  fs-4 fw-bold text-white text-uppercase ">
+                <img src="<?=base_url('uploads/plscu_logo-removebg-preview.png')?>" class="img-fluid w-100">
+            </div>
             <div class="list-group list-group-flush my-3">
-                <a href="<?=base_url('/dashboard')?>" class="list-group-item list-group-item-action bg-transparent second-text active"><i
-                        class="bi bi-speedometer me-2"></i>Dashboard</a>
-                
-                <hr class="border-white">
-                <a  href="<?=base_url('/dashboard')?>" class="disabled  text-warning list-group-item list-group-item-action bg-transparent second-text fw-bold"><i class="bi  bi-currency-exchange me-2"></i>SAVING & LOANS</a>
+                <a href="<?=base_url('/dashboard')?>" class="<?=mark_active('dashboard', $passLink)?> bg-transparent list-group-item list-group-item-action  second-text fw-bold"><i class="bi bi-speedometer me-2"></i>Dashboard</a>
 
-                <a href="<?=base_url('/dashboard/membership')?>" class="<?=mark_active('clubmembership', $passLink)?> bg-transparent list-group-item list-group-item-action  second-text fw-bold"><i class="bi  bi-suit-club-fill me-2"></i>Club Membership</a>
+                <a href="<?=base_url('/dashboard/membership')?>" class="<?=mark_active('clubmembership', $passLink)?> bg-transparent list-group-item list-group-item-action  second-text "><i class="bi  bi-suit-club-fill me-2"></i>Club Membership</a>
 
-                <a href="<?=base_url('/dashboard/club_due_management')?>" class="<?=mark_active('club_due_management', $passLink)?> list-group-item list-group-item-action bg-transparent second-text fw-bold"><i class="bi  bi-bank me-2"></i>Club Dues/Payments</a>
+                <a href="<?=base_url('/dashboard/club_due_management')?>" class="<?=mark_active('club_due_management', $passLink)?> list-group-item list-group-item-action bg-transparent second-text "><i class="bi  bi-bank me-2"></i>Club Payments</a>
 
-                <a href="<?=base_url('/dashboard/loan_membership')?>" class="<?=mark_active('loanmanager', $passLink)?> list-group-item list-group-item-action bg-transparent second-text fw-bold"><i class="bi  bi-cash-coin me-2"></i>Loan Membership</a>
+                <a href="<?=base_url('/dashboard/loan_membership')?>" class="<?=mark_active('loanmanager', $passLink)?> list-group-item list-group-item-action bg-transparent second-text "><i class="bi  bi-cash-coin me-2"></i>Loan Membership</a>
 
-                 <a href="<?=base_url('/dashboard/loan_payments')?>" class="<?=mark_active('loan_payments', $passLink)?> list-group-item list-group-item-action bg-transparent second-text fw-bold"><i class="bi  bi-coin me-2"></i>Loans & Payments</a>
+                 <a href="<?=base_url('/dashboard/loan_payments')?>" class="<?=mark_active('loan_payments', $passLink)?> list-group-item list-group-item-action bg-transparent second-text "><i class="bi  bi-coin me-2"></i>Loans & Payments</a>
 
-                <a href="<?=base_url('/dashboard/portfolio')?>" class="list-group-item list-group-item-action bg-transparent second-text fw-bold"><i class="bi  bi-graph-up me-2"></i>Generate Report</a>
+                <a href="<?=base_url('/dashboard/portfolio')?>" class="list-group-item list-group-item-action bg-transparent second-text "><i class="bi  bi-graph-up me-2"></i>Generate Report</a>
 
-                <hr class="border-white">
-
-                <a  href="<?=base_url('/dashboard')?>" class="disabled  text-warning list-group-item list-group-item-action bg-transparent second-text fw-bold"><i
-                        class="bi  bi-browser-edge me-2"></i>WEBSITE RELATED</a>
-                 <a href="<?=base_url('/dashboard/portfolio')?>" class="list-group-item list-group-item-action bg-transparent second-text fw-bold"><i
+                 <a href="<?=base_url('/dashboard/portfolio')?>" class="list-group-item list-group-item-action bg-transparent second-text "><i
                         class="bi  bi-backpack3 me-2"></i>Portfolio</a>
-                <a href="<?=base_url('/dashboard/blog')?>" class="list-group-item list-group-item-action bg-transparent second-text fw-bold"><i
+                <a href="<?=base_url('/dashboard/blog')?>" class="list-group-item list-group-item-action bg-transparent second-text "><i
                         class="bi bi-pencil me-2"></i>Blog</a>
-                <a href="<?=base_url('/dashboard/team')?>" class="list-group-item list-group-item-action bg-transparent second-text fw-bold"><i
+                <a href="<?=base_url('/dashboard/team')?>" class="list-group-item list-group-item-action bg-transparent second-text "><i
                         class="bi bi-people me-2"></i>Team Members</a>
-                <a href="<?=base_url('/dashboard/services')?>" class="list-group-item list-group-item-action bg-transparent second-text fw-bold"><i class="bi bi-blockquote-left me-2"></i>Services</a>
-                <a href="<?=base_url('/dashboard/testimonials')?>" class="list-group-item list-group-item-action bg-transparent second-text fw-bold"><i class="bi bi-chat-square-quote me-2"></i>Testimonial</a>
-                <a href="<?=base_url('/dashboard/faq')?>" class="list-group-item list-group-item-action bg-transparent second-text fw-bold"><i
+                <a href="<?=base_url('/dashboard/services')?>" class="list-group-item list-group-item-action bg-transparent second-text "><i class="bi bi-blockquote-left me-2"></i>Services</a>
+                <a href="<?=base_url('/dashboard/testimonials')?>" class="list-group-item list-group-item-action bg-transparent second-text "><i class="bi bi-chat-square-quote me-2"></i>Testimonial</a>
+                <a href="<?=base_url('/dashboard/faq')?>" class="list-group-item list-group-item-action bg-transparent second-text "><i
                         class="bi bi-quora me-2"></i>FAQ</a>
-                <a href="<?=base_url('/dashboard/faq')?>" class="list-group-item list-group-item-action bg-transparent second-text fw-bold"><i
+                <a href="<?=base_url('/dashboard/faq')?>" class="list-group-item list-group-item-action bg-transparent second-text "><i
                         class="bi bi-clipboard-check me-2"></i>Certifications</a>
-                <a href="<?=base_url('/logout')?>" class="list-group-item list-group-item-action bg-transparent text-danger fw-bold"><i
+                <a href="<?=base_url('/logout')?>" class="list-group-item list-group-item-action bg-transparent text-danger "><i
                         class="fas fa-power-off me-2"></i>Logout</a>
             </div>
         </div>
@@ -110,8 +117,7 @@
         <div id="page-content-wrapper">
             <nav class="navbar shadow-sm navbar-expand-lg navbar-light bg-white py-2 mb-3 px-4">
                 <div class="d-flex align-items-center">
-                    <i class="bi bi-x display-4 me-3" id="menu-toggle"></i>
-                    <h2 class="fs-2 m-0">Dashboard</h2>
+                    <i class="bi bi-layout-text-sidebar  me-3" id="menu-toggle" style="font-size: 50px"></i>
                 </div>
 
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
