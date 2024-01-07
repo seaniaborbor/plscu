@@ -27,7 +27,7 @@
 						</div>
 						<div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
 							<?php 
-								//include('partials/tables/approve_due_log_table.php');
+								include('partials/tables/app_approved_loan_payments_log.php');
 							 ?>
 						</div>
 					</div>

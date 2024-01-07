@@ -99,16 +99,16 @@ class LoanPaymentController extends BaseController{
   }
 
 //============ EDIT A LOAN PAYMENT METHOD =============
-
+ 
 
   public function edit($id)
   {
     $data = [];
-    $data['passLink'] = "loanmanager";
+    $data['passLink'] = "loan_payments";
 
     // if id not correct
     if(empty($id) || !is_numeric($id)){
-      return redirect()->to('/dashboard/loanmanager')->with('error', 'Unknown Error. Just try again');
+      return redirect()->to('/dashboard/loan_payments')->with('error', 'Unknown Error. Just try again');
       exit();
     }
 
@@ -117,15 +117,19 @@ class LoanPaymentController extends BaseController{
       $LoanApplicantModel = new LoanApplicantModel();
       $LoanLogModel = new LoanLogModel();
 
+      
+      $data['all_pending_loan_payments'] = $LoanLogModel->all_pending_loan_payments('Pending');
+      $data['all_approved_loan_payments'] = $LoanLogModel->all_pending_loan_payments('Approved');
+
       // get the lone log to edit
       $data['data_to_edit'] = $LoanLogModel->find($id);
 
       if(!$data['data_to_edit']){
-        return redirect()->to('/dashboard/loanmanager')->with('error', 'Record no longer exists');
+        return redirect()->to('/dashboard/loan_payments')->with('error', 'Record no longer exists');
         exit();
       }
 
-      $data['payment_history'] = $LoanLogModel->get_single_loan_log($data['data_to_edit']['serial_no']);
+      $data['applicant_data'] =  $LoanApplicantModel->get_an_applicant_profile($data['data_to_edit']['serial_no']);
       $data['client_profile'] =  $LoanApplicantModel->get_an_applicant_profile($data['data_to_edit']['serial_no']);
 
 
@@ -170,27 +174,30 @@ class LoanPaymentController extends BaseController{
                                     ->find();
             // check if there's data 
             if(!$accountData){
-                return redirect()->to('/dashboard/loanmanager')->with('error', 'Invalid Loan Serial Number. Try Again');
+                return redirect()->to('/dashboard/loan_payments')->with('error', 'Invalid Loan Serial Number. Try Again');
                 
               }
 
             // check if the currenciesy match 
               if(!($accountData[0]['currency'] === $this->request->getPost('pmtCurrency'))){
-                return redirect()->to('/dashboard/loanmanager')->with('error', 'Invalid Loan currency. The loan was taken in '.$accountData[0]['currency']);
+                return redirect()->to('dashboard/loan_payments')->with('error', 'Invalid Loan currency. The loan was taken in '.$accountData[0]['currency']);
               }
 
-              //loggedBy    loggedDate  
+             
+             if(($data['userData']['id'] == $data['data_to_edit']['loggedBy']) || $data['userData']['userRole'] == 'SUDO'){
               
-                $data['data_to_edit']['loggedBy'] = 1;
-                $data['data_to_edit']['serial_no'] = $this->request->getPost('serial_no');
-                $data['data_to_edit']['amount'] = $this->request->getPost('mount');
-                $data['data_to_edit']['pmtCurrency'] = $this->request->getPost('pmtCurrency');
-              
+                  $data['data_to_edit']['loggedBy'] = $data['data_to_edit']['loggedBy'];
+                  $data['data_to_edit']['serial_no'] = $this->request->getPost('serial_no');
+                  $data['data_to_edit']['amount'] = $this->request->getPost('mount');
+                  $data['data_to_edit']['pmtCurrency'] = $this->request->getPost('pmtCurrency');
 
-              if($LoanLogModel->update($id, $data['data_to_edit'])){
-                return redirect()->to('/dashboard/loanmanager')->with('success', 'Loan payment updated successfully');
+                if($LoanLogModel->update($id, $data['data_to_edit'])){
+                  return redirect()->to('dashboard/loan_payments')->with('success', 'Loan payment updated successfully');
+                }else{
+                  return redirect()->to('dashboard/loan_payments')->with('error', 'Unknown Error... Just try again');
+                }
               }else{
-                return redirect()->to('/dashboard/loanmanager')->with('error', 'Unknown Error... Just try again');
+                return redirect()->to('dashboard/loan_payments')->with('error', 'You are trying to edit data you did not record... STOP');
               }
 
         }else{
@@ -199,6 +206,39 @@ class LoanPaymentController extends BaseController{
     }
 
       return view('dashboard/edit_loan_log', $data);
+  }
+
+
+  public function approve($id)
+  {
+    $data['userData'] = session()->get('userData');
+    // if id not correct
+    if(empty($id) || !is_numeric($id)){
+      return redirect()->to('/dashboard/loan_payments')->with('error', 'Unknown Error. Just try again');
+      exit();
+    }
+    // check if the previllage exist to approve payment 
+    if($data['userData']['userRole'] == 'SUDO'){
+      // find the data to edit
+       $LoanLogModel = new LoanLogModel();
+        $data['data_to_edit'] = $LoanLogModel->find($id);
+
+      if(!$data['data_to_edit']){
+        return redirect()->to('/dashboard/loan_payments')->with('error', 'Record no longer exists');
+        exit();
+      }
+      // set the isApproved to Approved from pending 
+      $data['data_to_edit']['isApproved'] = "Approved";
+      // check if it's saved
+      if($LoanLogModel->update($id, $data['data_to_edit'])){
+            return redirect()->to('dashboard/loan_payments')->with('success', 'Loan payment approved successfully');
+          }else{
+              return redirect()->to('dashboard/loan_payments')->with('error', 'Unknown Error... Just try again');
+              }
+      }else{
+         return redirect()->to('/dashboard/loan_payments')->with('error', 'You do not have to right to approve payments');
+          exit();
+      }
   }
 
 }

@@ -9,30 +9,6 @@ applicant_approved_loan_log
 
 <?=$this->section('main')?>
 	<div class="row">
-		<div class="col-md-4 pt-2">
-			<div class="card shadow-lg">
-				<div class="card-header">
-					<ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
-					  <li class="nav-item" role="presentation">
-					    <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Applicant Profile</button>
-					  </li>
-					  <li class="nav-item" role="presentation">
-					    <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Approve Applicant</button>
-					  </li>
-					</ul>
-				</div>
-				<div class="card-body">
-					<div class="tab-content" id="pills-tabContent">
-					  <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
-					  	<?php include('partials/loan_applicant_profile.php'); ?>
-					  </div>
-					  <div class="tab-pane text-dark fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
-					  	<?php include('partials/forms/loan_approve_form.php'); ?>
-					  </div>
-					</div>
-				</div>
-			</div>
-		</div>
 		<div class="col-md-8 pt-2">
 			<div class="row">
 				<div class="col-md-3">
@@ -102,6 +78,31 @@ total_approved_loan_pending */ ?>
 					</div>
 
 				<?php //include('partials/tables/single_loan_member_log.php'); ?>
+				</div>
+			</div>
+		</div>
+
+		<div class="col-md-4 pt-2">
+			<div class="card shadow-lg">
+				<div class="card-header">
+					<ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+					  <li class="nav-item" role="presentation">
+					    <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Applicant Profile</button>
+					  </li>
+					  <li class="nav-item" role="presentation">
+					    <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Approve Applicant</button>
+					  </li>
+					</ul>
+				</div>
+				<div class="card-body">
+					<div class="tab-content" id="pills-tabContent">
+					  <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+					  	<?php include('partials/loan_applicant_profile.php'); ?>
+					  </div>
+					  <div class="tab-pane text-dark fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+					  	<?php include('partials/forms/loan_approve_form.php'); ?>
+					  </div>
+					</div>
 				</div>
 			</div>
 		</div>

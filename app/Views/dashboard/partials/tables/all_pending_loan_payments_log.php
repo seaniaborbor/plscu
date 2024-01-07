@@ -36,9 +36,9 @@
             <?=$pdng_lonpmts->isApproved ?>
           </td>
           <?php if($userData['userRole'] == "SUDO"): ?>
-           <td><a href="<?=base_url('dashboard/loanmanager/view_profile/'.$pdng_lonpmts->payment_id)?>"  class="btn btn-sm btn-primary"><i class="bi bi-person"></i> Approve</a></td>
+           <td><a href="<?=base_url('/dashboard/approve/log_loan_payment/'.$pdng_lonpmts->payment_id)?>"  class="btn btn-sm btn-primary"><i class="bi bi-person"></i> Approve</a></td>
            <?php endif;?>
-           <td><a href="<?=base_url('/dashboard/profile/membership/'.$pdng_lonpmts->serial_no)?>"  class="btn btn-sm btn-success"><i class="bi bi-person"></i> Edit</a></td>
+           <td><a href="<?=base_url('/dashboard/edit/log_loan_payment/'.$pdng_lonpmts->payment_id)?>"  class="btn btn-sm btn-success"><i class="bi bi-person"></i> Edit</a></td>
                     <td><a href="#"  class="btn btn-sm btn-danger"><i class="bi bi-trash"></i> Delete</a></td>
         </tr>
       <?php endif; ?>

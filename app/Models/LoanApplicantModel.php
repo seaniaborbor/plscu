@@ -15,7 +15,6 @@ class LoanApplicantModel extends Model
         'phone',
         'email',
         'address',
-        'mem_serial',
         'loanAmount',
         'loanCategory',
         'currency',

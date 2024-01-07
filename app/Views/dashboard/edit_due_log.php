@@ -58,55 +58,12 @@
 				</div>
 			</div>
 
-				<div class="card shadow-lg mt-3">
-				<div class="card-header">
-					<ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
-					  <li class="nav-item" role="presentation">
-					    <button class="nav-link active" id="pills-home-tab1" data-bs-toggle="pill" data-bs-target="#pills-home1" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Pending Payments</button>
-					  </li>
-					  <li class="nav-item" role="presentation">
-					    <button class="nav-link" id="pills-profile-tab2" data-bs-toggle="pill" data-bs-target="#pills-profilek" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Approved Payments</button>
-					  </li>
-					</ul>
-				</div>
-				<div class="card-body">
-					<div class="tab-content" id="pills-tabContent">
-					  <div class="tab-pane fade show active" id="pills-home1" role="tabpanel" aria-labelledby="pills-home-tab1">
-					  	<?php include('partials/tables/single_club_member_pending_due_log.php')?>
-					  </div>
-					  <div class="tab-pane text-dark fade" id="pills-profilek" role="tabpanel" aria-labelledby="pills-profile-tab2">
-					  	<?php include('partials/tables/single_club_member_approved_due_log.php')?>
-					  </div>
-					</div>
-				</div>
-			</div>
-
 		</div>
 
 		<div class="col-md-4 pt-2">
-			<div class="card shadow-lg">
-				<div class="card-header">
-					<ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
-					  <li class="nav-item" role="presentation">
-					    <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Applicant Profile</button>
-					  </li>
-					  <li class="nav-item" role="presentation">
-					    <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Edit Application</button>
-					  </li>
-					</ul>
-				</div>
+			<div class="card">
 				<div class="card-body">
-					<div class="tab-content" id="pills-tabContent">
-					  <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
-					  	<?php include("partials/club_member_profile.php"); ?>
-					  </div>
-					  <div class="tab-pane text-dark fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
-					  	<?php //include('partials/forms/edit_club_member_form.php')?>
-					  	<div class="alert alert-warning">
-					  		<h1>Editing of Profile Functionality is not available in this version</h1>
-					  	</div>
-					  </div>
-					</div>
+					 <?php include("partials/club_member_profile.php"); ?>
 				</div>
 			</div>
 		</div>

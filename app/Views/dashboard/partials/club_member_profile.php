@@ -1,13 +1,12 @@
 
 <div class="row text-dark">
-	<h2 class="text-success">Club Member Profile</h2><hr>
+	<div class="card-header">
+		<h2 class="text-success shadow-sm">Club Member Profile</h2>
+	</div>
 <?php //print_r($member_profile); ?>
 
 	<div class="col-md-4 text-center">
 		<img src="<?=base_url('uploads/'.$member_profile[0]->profileImg)?>" class="w-100 rounded-circle img-thumbnail img-fluid">
-		 <?php if($userData['userRole'] == "SUDO") : ?>
-				<a href="<?=base_url('dashboard/approve/membership/'.$member_profile[0]->memberSerialNo)?>" class="btn btn-light shadow-lg w-100  border-secondary rounded-pill btn-lg mt-2 ">Approve Account</a>
-		 <?php endif; ?>
 	</div>
 	<div class="col-md-8">
 		<table class="table">
