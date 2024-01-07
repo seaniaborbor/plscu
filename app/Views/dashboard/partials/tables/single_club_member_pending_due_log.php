@@ -29,10 +29,8 @@
                         <td><?=$pending_lg->teamMemName?></td>
                         <td><?=$pending_lg->recordedDate?></td>
                         <td>
-                                <button class="btn btn-success btn-sm" type="button" disabled>
                                   <span class="spinner-border spinner-border-sm" aria-hidden="true"></span>
                                   <span role="status"><?=$pending_lg->approved_status?>...</span>
-                                </button>
                         </td>
                          <?php if($userData['userRole'] == "SUDO") : ?>
                 <td><a href="#"  class="btn btn-sm btn-success"><i class="bi bi-person"></i> Edit</a></td>

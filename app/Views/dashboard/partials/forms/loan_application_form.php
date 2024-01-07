@@ -1,4 +1,4 @@
-<form action="<?=base_url('/dashboard/loanmanager')?>" method="post" enctype="multipart/form-data">
+<form action="<?=base_url('/dashboard/loan_membership')?>" method="post" enctype="multipart/form-data">
 
 	<div class="form-group mb-3">
 		<label>Full Name</label>
@@ -53,13 +53,16 @@
         <?php endif; ?>
 	</div>
 
-
 	<div class="form-group mb-3">
-		<label>Membership Serial No<span class="text-primary">If the applicant is a member, provide his/her membership serial</span></label>
-		<input type="number" name="mem_serial" value="<?= set_value('mem_serial')?>"  class="form-control" >
-		<?php if(isset($validation) && $validation->hasError('mem_serial')) : ?>
-           <div class="text-danger"><?=$validation->getError('mem_serial')?></div>
-        <?php endif; ?>
+		<label>Loan Category</label>
+		<select class="form-control" name="currency" >
+			<option value="">Choose</option>
+			<option <?=set_select('loanCategory', 'LRD')?> value="Coliteral">Coliteral</option>
+			<option <?=set_select('loanCategory', 'USD')?> value="Agricultural">Agrocultural Loan</option>
+		</select>
+		<?php if(isset($validation) && $validation->hasError('loanCategory')) : ?>
+	       <div class="text-danger"><?=$validation->getError('loanCategory')?></div>
+	    <?php endif; ?>
 	</div>
 
 	<div class="form-group mb-3">
@@ -82,25 +85,6 @@
            <div class="text-danger"><?=$validation->getError('currency')?></div>
         <?php endif; ?>
 	</div>
-
-
-
-	<div class="form-group mb-3">
-	    <label>Date on which loan is given out</label>
-			<input type="date" name="loanStartDate" value="<?= set_value('loanStartDate')?>"  class="form-control" >
-	    <?php if (isset($validation) && $validation->hasError('loanStartDate')) : ?>
-	        <div class="text-danger"><?= $validation->getError('loanStartDate') ?></div>
-	    <?php endif; ?>
-	</div>
-
-	<div class="form-group mb-3">
-	    <label>Date on which loan ends</label>
-			<input type="date" name="loanEndDate" value="<?= set_value('loanEndDate')?>"  class="form-control" >
-	    <?php if (isset($validation) && $validation->hasError('loanEndDate')) : ?>
-	        <div class="text-danger"><?= $validation->getError('loanEndDate') ?></div>
-	    <?php endif; ?>
-	</div>
-
 
 	<div class="form-group mb-3">
 		<label>Interest rate enter 10, 15, 20 etc. <span class="text-danger">Don't enter the interenst in percent</span></label>

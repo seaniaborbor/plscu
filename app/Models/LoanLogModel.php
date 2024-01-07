@@ -59,11 +59,12 @@ class LoanLogModel extends Model
    }
 
 // get the lone log payment for single client 
-    public function total_loan_paid_by_applicant($serial){
+    public function total_loan_paid_by_applicant($serial, $approveStatus){
 
          $data = $this->db->table('loan_pmt_log')
         ->select('*, SUM(loan_pmt_log.amount) as total_paid')
         ->where('loan_pmt_log.serial_no', $serial)
+        ->where('loan_pmt_log.isApproved', $approveStatus)
         ->get()
         ->getRow();
     

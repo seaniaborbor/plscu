@@ -2,7 +2,7 @@
         <?php //print_r($applicant_pending_loan_log); exit(); ?>
 </div>
 <div class="table-responsive">
-    <table id="example2" class="table table-striped">
+    <table id="example" class="table table-striped">
     <thead>
         <tr>
             <th>Member Name</th>
@@ -11,7 +11,6 @@
             <th>Date</th>
             <th>Status</th>
             <?php if($userData['userRole'] == "SUDO") : ?>
-                <th>Approve</th>
                 <th>Delete</th>
             <?php endif; ?>
             
@@ -20,8 +19,9 @@
     <tbody>
 
        
-        <?php if(isset($applicant_pending_loan_log)) : ?>
-            <?php foreach ($applicant_pending_loan_log as $approve_lg) : ?>
+        <?php if(isset($applicant_approved_loan_log)) : ?>
+            <?php foreach ($applicant_approved_loan_log as $approve_lg) : ?>
+                <?php if($userData['id'] == $approve_lg->id || $userData['userRole'] == "SUDO") : ?>
                 <tr>
                     <!-- Add a data-bs-toggle attribute with value "popover" -->
                     <td ><?=$approve_lg->payBy?></td>
@@ -29,13 +29,14 @@
                     <td><?=$approve_lg->fullName?></td>
                     <td><?=$approve_lg->loggedDate?></td>
                     <td>
-                            <span class="spinner-border spinner-border-sm" aria-hidden="true"></span>
-                              <?=$approve_lg->isApproved?>...</span>
+                            <button class="btn btn-primary btn-sm" type="button" disabled>
+                              <i class="bi bi-check"></i> <?=$approve_lg->isApproved?>...</span>
+                            </button>
                     </td>
                     <?php if($userData['userRole'] == "SUDO") : ?>
-                        <td><a href="#"  class="btn btn-sm btn-success"><i class="bi bi-check-lg"></i> Approve</a></td>
                         <td><a href="#"  class="btn btn-sm btn-danger"><i class="bi bi-trash"></i> Delete</a></td>
                     <?php endif; ?>
+                <?php endif; ?>
                 </tr>
             <?php endforeach; ?>
         <?php endif; ?>

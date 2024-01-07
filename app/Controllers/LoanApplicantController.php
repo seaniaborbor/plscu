@@ -45,22 +45,30 @@ public function index()
                 ]
             ], 
 
-
-            'loanStartDate' => [
+             'loanCategory' => [
                 'rules' => 'required',
-                'label' => 'Date on which lone is given',
+                'label' => 'Loan Category',
                 'errors' => [
-                    'required' => 'Give the date on which the loan is given'
+                    'required' => 'Please Provide the loan category'
                 ]
             ], 
 
-              'loanEndDate' => [
-                'rules' => 'required',
-                'label' => 'Date on which lone payment ends',
-                'errors' => [
-                    'required' => 'Give the date on which loan should end'
-                ]
-            ], 
+
+            // 'loanStartDate' => [
+            //     'rules' => 'required',
+            //     'label' => 'Date on which lone is given',
+            //     'errors' => [
+            //         'required' => 'Give the date on which the loan is given'
+            //     ]
+            // ], 
+
+            //   'loanEndDate' => [
+            //     'rules' => 'required',
+            //     'label' => 'Date on which lone payment ends',
+            //     'errors' => [
+            //         'required' => 'Give the date on which loan should end'
+            //     ]
+            // ], 
 
              'loanAmount' => [
                 'rules' => 'required',
@@ -174,26 +182,27 @@ public function index()
             'phone' => $this->request->getPost('phone'),
             'address' => $this->request->getPost('address'),
             'deposite_unit' => $this->request->getPost('deposite_unit'),
-            'saving_year' => $this->request->getPost('saving_year'),
+            // 'saving_year' => $this->request->getPost('saving_year'),
             'currency' => $this->request->getPost('currency'),
             'email' => $this->request->getPost('email'),
-            'mem_serial' => $this->request->getPost('mem_serial'),
+            // 'mem_serial' => $this->request->getPost('mem_serial'),
             'serial_no' => $loanCode,
             'loan_aggrement_form' => $loan_aggrement_form,
             'interestRate' => $this->request->getPost('interestRate'),
             'loanAmount' => $this->request->getPost('loanAmount'),
-            'loanStartDate' => $this->request->getPost('loanStartDate'),
-            'loanEndDate' => $this->request->getPost('loanEndDate'),
-            'pmtStatus' => 'complete', // create thifield in the form pls
-            'regBy' => 1,
+            'loanCategory' => $this->request->getPost('loanCategory'),
+            // 'loanStartDate' => $this->request->getPost('loanStartDate'),
+            // 'loanEndDate' => $this->request->getPost('loanEndDate'),
+            'pmtStatus' => 'Incomplete', // create thifield in the form pls
+            'regBy' => session()->get('userData')->id,
             'profileImg' => $profileImg_newname,
         ];
 
         // Save data to the database
         if ($LoanApplicantModel->save($formData)) {
-            return redirect()->to('/dashboard/loanmanager')->with('success', 'Loan application for '.$this->request->getPost('fullName').' is recorded successfully<br> The loan code is: '.$loanCode);
+            return redirect()->to('/dashboard/loan_membership')->with('success', 'Loan application for '.$this->request->getPost('fullName').' is recorded successfully<br> The loan code is: '.$loanCode);
                 } else {
-                    return redirect()->to('/dashboard/loanmanager')->with('error', 'Failed to record loan application');
+                    return redirect()->to('/dashboard/loan_membership')->with('error', 'Failed to record loan application');
                 }
             } else {
                 $data['validation'] = $this->validator;
@@ -214,7 +223,7 @@ public function index()
 
 
         if(empty($serial)){
-          return redirect()->to('/dashboard/loanmanager')->with('error', 'Unknown Error. Just try again');
+          return redirect()->to('/dashboard/loan_membership')->with('error', 'Unknown Error. Just try again');
           exit();
         }
        // check if the id is null
@@ -343,11 +352,12 @@ public function view_profile($id)
         // print_r($data['applicant_data'][0]);
         // exit();
 
-        $serial = $data['applicant_data'][0]->mem_serial;
+        $serial = $data['applicant_data'][0]->serial_no;
 
-          $data['applicant_pending_loan_log'] = $LoanLogModel->get_loan_applicants_log($serial, 'Pending');
-          $data['applicant_approved_loan_log'] = $LoanLogModel->get_loan_applicants_log($serial, 'Approved');
-
+        $data['applicant_pending_loan_log'] = $LoanLogModel->get_loan_applicants_log($serial, 'Pending');
+        $data['applicant_approved_loan_log'] = $LoanLogModel->get_loan_applicants_log($serial, 'Approved');
+        $data['total_approved_loan_paid'] = $LoanLogModel->total_loan_paid_by_applicant($serial, 'Approved');
+        $data['total_approved_loan_pending'] = $LoanLogModel->total_loan_paid_by_applicant($serial, 'Pending');
 
         return view('dashboard/vies_loan_applicant_profile', $data);
 

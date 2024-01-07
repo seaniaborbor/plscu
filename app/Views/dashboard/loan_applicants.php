@@ -43,7 +43,7 @@
 		</div>
 
 		<div class="col-md-4 pt-2">
-			<div class="card shadow-lg">
+			<div class="card ">
 				<div class="card-header bg-success d-flex justify-content-between text-white">
 					<h4>Register Loan Applicant</h4>
 				</div>

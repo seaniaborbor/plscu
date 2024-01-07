@@ -21,9 +21,6 @@ applicant_approved_loan_log
 					  </li>
 					</ul>
 				</div>
-
-
-
 				<div class="card-body">
 					<div class="tab-content" id="pills-tabContent">
 					  <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
@@ -37,34 +34,53 @@ applicant_approved_loan_log
 			</div>
 		</div>
 		<div class="col-md-8 pt-2">
-			<div class="card mb-3">
-				<div class="card-body">
-					<div class="row">
-						<div class="col-md-4">
-							<div class="alert alert-primary">
-								<h1></h1>
-								<h3>Total Loan Owed</h3>
-							</div>
+			<div class="row">
+				<div class="col-md-3">
+					<div class="card border border-2 ">
+						<div class="card-body text-center ">
+							<h1><?=$applicant_data[0]->loanAmount?></h1>
 						</div>
-						<?php //print_r($total_loan_paid_by_applicant); exit(); ?>
-						<div class="col-md-4">
-							<div class="alert alert-success">
-								<h1></h1>
-								<h3>Total Loan Paid</h3>
-							</div>
+						<div class="card-footer text-secondary text-center ">
+							<h3>Total Loan Credited</h3>
 						</div>
-						<div class="col-md-4">
-							<div class="alert alert-warning">
-								<h1></h1>
-								<h3>Total To Paid</h3>
-							</div>
+					</div>
+				</div>
+				<?php /* total_approved_loan_paid
+total_approved_loan_pending */ ?>
+				<div class="col-md-3">
+					<div class="card">
+						<div class="card-body  text-center">
+							<h1><?=$applicant_data[0]->loanAmount+($applicant_data[0]->loanAmount*($applicant_data[0]->interestRate/100))?></h1>
+						</div>
+						<div class="card-footer text-secondary text-center ">
+							<h3>Total Amt to  Paid</h3>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-3">
+					<div class="card">
+						<div class="card-body text-center ">
+							<h1><?=$total_approved_loan_paid->total_paid?></h1>
+						</div>
+						<div class="card-footer text-secondary text-center ">
+							<h3>Total To Paid</h3>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-3">
+					<div class="card">
+						<div class="card-body text-center ">
+							<h1><?=($applicant_data[0]->loanAmount+($applicant_data[0]->loanAmount*($applicant_data[0]->interestRate/100)))-$total_approved_loan_paid->total_paid?></h1>
+						</div>
+						<div class="card-footer text-secondary text-center ">
+							<h3>Balance To Pay</h3>
 						</div>
 					</div>
 				</div>
 			</div>
-			<div class="card ">
+			<div class="card  mt-3">
 				<div class="card-header ">
-					<h2 class="text-success">Financial Log of <?=$applicant_data[0]->fullName?> </h2>
+					<h2 class="text-success">Financial Log of <?=$applicant_data[0]->applicantName?> </h2>
 				</div>
 
 				<div class="card-body">	
@@ -78,10 +94,10 @@ applicant_approved_loan_log
 					</ul>
 					<div class="tab-content" id="pills-tabContent">
 					  <div class="tab-pane fade show active" id="ppills-home" role="tabpanel" aria-labelledby="pills-home-tab">
-					  	
+					  	<?php include('partials/tables/loan_member_pmt_pending_log_table.php');?>
 					  </div>
 					  <div class="tab-pane text-dark fade" id="ppills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
-					  	<?php //include('partials/forms/edit_loan_applicant_form.php'); ?>
+					  	<?php include('partials/tables/loan_member_pmt_aporoved_log_table.php'); ?>
 					  </div>
 					</div>
 
