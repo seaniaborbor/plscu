@@ -182,17 +182,13 @@ public function index()
             'phone' => $this->request->getPost('phone'),
             'address' => $this->request->getPost('address'),
             'deposite_unit' => $this->request->getPost('deposite_unit'),
-            // 'saving_year' => $this->request->getPost('saving_year'),
             'currency' => $this->request->getPost('currency'),
             'email' => $this->request->getPost('email'),
-            // 'mem_serial' => $this->request->getPost('mem_serial'),
             'serial_no' => $loanCode,
             'loan_aggrement_form' => $loan_aggrement_form,
             'interestRate' => $this->request->getPost('interestRate'),
             'loanAmount' => $this->request->getPost('loanAmount'),
             'loanCategory' => $this->request->getPost('loanCategory'),
-            // 'loanStartDate' => $this->request->getPost('loanStartDate'),
-            // 'loanEndDate' => $this->request->getPost('loanEndDate'),
             'pmtStatus' => 'Incomplete', // create thifield in the form pls
             'regBy' => session()->get('userData')['id'],
             'approv_status' => 'Pending',
@@ -217,7 +213,7 @@ public function index()
 
     //============== UPDATE LOAN MEMBER PROFILE ================
 
-    public function edit($serial){
+    public function approved_loan_applicants($serial){
         $data = [];
          $data['passLink'] = "loanmanager";
         $data['userData'] = session()->get('userData');
@@ -234,40 +230,35 @@ public function index()
           $data['client_profile'] =  $LoanApplicantModel->where('serial_no', $serial)->find();
 
           if(!$data['client_profile']){
-            return redirect()->to('/dashboard/loanmanager')->with('error', 'Record no longer exists');
+            return redirect()->to('/dashboard/loan_membership')->with('error', 'Record no longer exists');
             exit();
           }
 
-
             $validationRules = [
 
-            'phone' => [
+                'loanStartDate' => [
                 'rules' => 'required',
-                'label' => 'Member Phone Number',
+                'label' => 'Loan Start Date',
                 'errors' => [
-                    'required' => 'Member phone number is required.'
+                    'required' => 'Date On which loan is given/approved is required '
                 ]
             ], 
 
-            'address' => [
+            'loanEndDate' => [
                 'rules' => 'required',
-                'label' => 'Member Residential Address',
+                'label' => 'Deadline Date ',
                 'errors' => [
-                    'required' => 'Please provide the current residential address of the member.'
+                    'required' => 'Date on which applicant should pay in full'
                 ]
             ], 
 
-
-
-            'email' => [
-                'rules' => 'required|min_length[10]',
-                'label' => 'Club Member Email',
+            'approv_status' => [
+                'rules' => 'required',
+                'label' => 'Approve Status',
                 'errors' => [
-                    'required' => 'The email field cannot be empty.',
-                    'min_length' => 'The email cannot be less than 10 characters.'
+                    'required' => 'Please Choose one of the following in the dropdown above'
                 ]
             ],
-
         ];
 
 
@@ -275,21 +266,22 @@ public function index()
         {
             if($this->validate($validationRules))
             {
-                $data['client_profile']['phone'] = $this->request->getPost('phone');
-                $data['client_profile']['address'] = $this->request->getPost('address');
-                $data['client_profile']['email'] = $this->request->getPost('email');
+                $data['client_profile']['loanStartDate'] = $this->request->getPost('loanStartDate');
+                $data['client_profile']['loanEndDate'] = $this->request->getPost('loanEndDate');
+                $data['client_profile']['approv_status'] = $this->request->getPost('approv_status');
+                $data['client_profile']['pmtStatus'] = "In-Progress";
 
                 if($LoanApplicantModel->update($data['client_profile'][0]['id'],$data['client_profile']))
                     {
-                        return redirect()->to('/dashboard/loanmanager')->with('success', 'You updated the profile of '.$data['client_profile'][0]['fullName']);
+                        return redirect()->to('/dashboard/loan_membership')->with('success', 'You approved the loan application of '.$data['client_profile'][0]['fullName']);
                     }
 
             }else{
-               return redirect()->to('/dashboard/loanmanager')->with('error', 'failed to update the profile of '.$data['client_profile'][0]['fullName']);
+               return redirect()->to('/dashboard/loan_membership')->with('error', 'failed to accept the application of '.$data['client_profile'][0]['fullName']);
             }
         }
 
-        return redirect()->to('/dashboard/loanmanager')->with('success', 'Welcome from an unknown location (:');
+        return redirect()->to('/dashboard/loan_applicants')->with('success', 'Welcome from an unknown location (:');
   }
 
 
@@ -317,15 +309,36 @@ public function index()
             exit();
         }
 
-        $data['client_profile']['pmtStatus'] = "Complete";
+         $validationRules = [
+                'pmtStatus' => [
+                'rules' => 'required',
+                'label' => 'Payment Status',
+                'errors' => [
+                    'required' => 'Required'
+                ]
+            ]
+        ];
 
-        if($LoanApplicantModel->update($data['client_profile'][0]['id'],$data['client_profile']))
-            {
-                return redirect()->to('/dashboard/loan_membership')->with('success', 'You marked '.$data['client_profile'][0]['fullName'].' as complete in term of lone payment.');
+        if($this->request->getMethod() == 'post'){
+
+            if($this->validate($validationRules)){
+                $data['client_profile']['pmtStatus'] = $this->request->getPost('pmtStatus');
+                 if($LoanApplicantModel->update($data['client_profile'][0]['id'],$data['client_profile']))
+                    {
+                        return redirect()->to('/dashboard/loan_membership')->with('success', 'You updated '.$data['client_profile'][0]['fullName'].' payment status ');
+                    }else{
+                        return redirect()->to('/dashboard/loan_membership')->with('error', 'Failed to update '.$data['client_profile'][0]['fullName'].' payment status');
+                    }
             }else{
-                return redirect()->to('/dashboard/loan_membership')->with('error', 'Failed to mark '.$data['client_profile'][0]['fullName'.' as complete']);
+                return redirect()->to('/dashboard/loan_membership')->with('error', 'failed to update the payment status of '.$data['client_profile'][0]['fullName']);
             }
-  }
+
+        }else{
+            return redirect()->to('/dashboard/loan_membership')->with('error', 'What are you doing here');
+        }
+
+       
+        }
 
 
 public function view_profile($id)

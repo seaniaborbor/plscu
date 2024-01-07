@@ -23,6 +23,10 @@
 				<td><?=$applicant_data[0]->interestRate?></td>
 			</tr>
 			<tr>
+				<td>Loan Category</td>
+				<td><?=$applicant_data[0]->loanCategory?></td>
+			</tr>
+			<tr>
 				<td>Loan Taken Date</td>
 				<td><?=$applicant_data[0]->loanStartDate?></td>
 			</tr>

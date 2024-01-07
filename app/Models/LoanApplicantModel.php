@@ -17,6 +17,7 @@ class LoanApplicantModel extends Model
         'address',
         'mem_serial',
         'loanAmount',
+        'loanCategory',
         'currency',
         'loanStartDate',
         'loanEndDate',

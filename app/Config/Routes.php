@@ -109,9 +109,8 @@ $routes->get('/dashboard/approve/membership/(:any)', 'ClubMembershipController::
 $routes->get('/dashboard/loan_membership', 'LoanApplicantController::index');
 $routes->post('/dashboard/loan_membership', 'LoanApplicantController::index');
 $routes->get('/dashboard/loanmanager/view_profile/(:any)', 'LoanApplicantController::view_profile/$1');
-$routes->post('/dashboard/edit/loanmanager/(:any)', 'LoanApplicantController::edit/$1');
-$routes->get('/dashboard/update_status/(:any)', 'LoanApplicantController::edit/$1');
-$routes->get('/dashboard/edit/update_status/(:any)', 'LoanApplicantController::update_applicant_status/$1');
+$routes->post('/dashboard/loanmanager/approve/(:any)', 'LoanApplicantController::approved_loan_applicants/$1');
+$routes->post('/dashboard/loanmanager/update_status/(:any)', 'LoanApplicantController::update_applicant_status/$1');
 
 
 // saving & editing a lone record 
