@@ -30,7 +30,7 @@
                         <td><?=$pending_lg->currency?></td>
                         <td><?=$pending_lg->interestRate?>%</td>
                         <td><?=$pending_lg->fullName?></td>
-                        <td><a href="<?=base_url('dashboard/loanmanager/view_profile/'.$pending_lg->applicant_id)?>"  class="btn btn-sm btn-primary"><i class="bi bi-person"></i> Applicant Profile</a></td>
+                        <td><a href="<?=base_url('dashboard/loanmanager/view_profile/'.$pending_lg->applicant_id)?>"  class="btn btn-sm btn-primary"><i class="bi bi-person"></i> Member Profile</a></td>
                                                 
                     </tr>
                 <?php endif; ?>

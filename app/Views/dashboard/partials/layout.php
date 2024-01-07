@@ -47,6 +47,9 @@
             background-color: #c1efde !important;
             color:#000 !important;
         }
+        tr:hover{
+            cursor: pointer;
+        }
     </style>
 </head>
 

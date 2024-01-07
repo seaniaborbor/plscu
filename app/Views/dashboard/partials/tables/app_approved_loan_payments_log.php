@@ -10,6 +10,7 @@
       <td>Logged At</td>
       <td>Logged By</td>
       <td>Status</td>
+      <td>Delete</td>
     </tr>
    </thead>
    <tbody>
@@ -28,6 +29,11 @@
           <td>
             <i class="bi bi-check-lg"></i>
             <?=$pdng_lonpmts->isApproved ?>
+          </td>
+          <td>
+            <button class="btn btn-danger">
+            <i class="bi bi-trash"></i> Delete
+          </button>
           </td>
         </tr>
       <?php endif; ?>

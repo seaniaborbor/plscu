@@ -27,9 +27,7 @@
                     <td><?=$pending_lg->teamMemName?></td>
                     <td><?=$pending_lg->recordedDate?></td>
                     <td>
-                            <button class="btn btn-success btn-sm" type="button" disabled>
-                              <i class="bi bi-check2-square"></i> <?=$pending_lg->approved_status?></span>
-                            </button>
+                              <i class="bi bi-check-lg"></i> <?=$pending_lg->approved_status?></span>
                     </td>
                      <?php if($userData['userRole'] == "SUDO") : ?>
                         <td><a href="#"  class="btn btn-sm btn-danger"><i class="bi bi-trash"></i> Delete</a></td>
