@@ -57,7 +57,7 @@
 				<?php if(isset($validation) && $validation->hasError('pmtStatus')) : ?>
 			       <div class="text-danger"><?=$validation->getError('pmtStatus')?></div>
 			    <?php endif; ?>
-			    <button>Update Payment Status</button>
+			    <button class="btn btn-success mt-3">Update Payment Status</button>
 			</form>
 		</div>
 	</div>

@@ -2,34 +2,8 @@
 
 <?=$this->section('main')?>
 	<div class="row">
-		<div class="col-md-5 pt-2">
-			<div class="card shadow-lg">
-				<div class="card-header">
-					<ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
-					  <li class="nav-item" role="presentation">
-					    <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Applicant Profile</button>
-					  </li>
-					  <li class="nav-item" role="presentation">
-					    <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Edit Application</button>
-					  </li>
-					</ul>
-				</div>
-				<div class="card-body">
-					<div class="tab-content" id="pills-tabContent">
-					  <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
-					  	<?php include("partials/club_member_profile.php"); ?>
-					  </div>
-					  <div class="tab-pane text-dark fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
-					  	<?php //include('partials/forms/edit_club_member_form.php')?>
-					  	<div class="alert alert-warning">
-					  		<h1>Editing of Profile Functionality is not available in this version</h1>
-					  	</div>
-					  </div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="col-md-7 pt-2">
+		
+		<div class="col-md-8 pt-2">
 
 			<?php if(isset($member_profile) && !empty($member_profile) && $member_profile[0]->accountStatus == 'Approved'){
 				?>
@@ -99,12 +73,18 @@
 			}else{
 				?>
 
-				<div class="card">
-					<div class="card-body">
-						<div class="alert alert-danger">
-						<h1>Registration is stail pending for approvial from Admin</h1>
-					</div>
-					</div>
+				<div class="alert alert-warning alert-dismissible fade show" role="alert">
+				  <h1>
+					<strong>Please Wait a while</strong>
+					<div class="spinner-grow text-danger" role="status">
+						  <span class="visually-hidden">Loading...</span>
+						</div>
+					<div class="spinner-grow text-warning" role="status">
+						  <span class="visually-hidden">Loading...</span>
+						</div>
+				</h1>
+					</strong> This account is under review by the CEO/Admin for approvial.
+				  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
 				</div>
 
 				<?php 
@@ -112,6 +92,34 @@
 			?>
 			
 
+		</div>
+
+		<div class="col-md-4 pt-2">
+			<div class="card shadow-lg">
+				<div class="card-header">
+					<ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+					  <li class="nav-item" role="presentation">
+					    <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Applicant Profile</button>
+					  </li>
+					  <li class="nav-item" role="presentation">
+					    <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Edit Application</button>
+					  </li>
+					</ul>
+				</div>
+				<div class="card-body">
+					<div class="tab-content" id="pills-tabContent">
+					  <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+					  	<?php include("partials/club_member_profile.php"); ?>
+					  </div>
+					  <div class="tab-pane text-dark fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+					  	<?php //include('partials/forms/edit_club_member_form.php')?>
+					  	<div class="alert alert-warning">
+					  		<h1>Editing of Profile Functionality is not available in this version</h1>
+					  	</div>
+					  </div>
+					</div>
+				</div>
+			</div>
 		</div>
 
 	</div>

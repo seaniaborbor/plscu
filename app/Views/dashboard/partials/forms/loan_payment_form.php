@@ -1,5 +1,5 @@
-<div class="card mb-3 border-3 border-success">
-		<div class="card-header bg-success text-white">
+<div class="card mb-3 border-3 ">
+		<div class="card-header">
 			<h3>Log a new loan payment</h3>
 		</div>
 		<div class="card-body">

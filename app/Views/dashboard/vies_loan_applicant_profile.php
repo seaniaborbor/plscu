@@ -9,7 +9,29 @@ applicant_approved_loan_log
 
 <?=$this->section('main')?>
 	<div class="row">
-		<div class="col-md-8 pt-2">
+		<?php if($applicant_data[0]->approv_status == "Pending"){
+			?>
+				<div class="col-md-8">
+					<div class="alert alert-warning alert-dismissible fade show" role="alert">
+				  <h1>
+					<strong>Please Wait a while</strong>
+					<div class="spinner-grow text-danger" role="status">
+						  <span class="visually-hidden">Loading...</span>
+						</div>
+					<div class="spinner-grow text-warning" role="status">
+						  <span class="visually-hidden">Loading...</span>
+						</div>
+				</h1>
+					</strong> This account is under review by the CEO/Admin for approvial.
+				  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+				</div>
+				</div>
+
+			<?php 
+			}else{
+				?>
+
+				<div class="col-md-8 pt-2">
 			<div class="row">
 				<div class="col-md-3">
 					<div class="card border border-2 ">
@@ -81,6 +103,10 @@ total_approved_loan_pending */ ?>
 				</div>
 			</div>
 		</div>
+
+				<?php 
+			}
+			?>
 
 		<div class="col-md-4 pt-2">
 			<div class="card shadow-lg">

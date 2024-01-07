@@ -37,7 +37,7 @@
 
 		<div class="col-md-4 pt-2">
 			<div class="card shadow-lg">
-				<div class="card-header bg-success d-flex justify-content-between text-white">
+				<div class="card-header">
 					<h4>Log a due/saving </h4>
 				</div>
 				<div class="card-body">
@@ -74,9 +74,9 @@
 						        <?php endif; ?>
 							</div>
 						</div>
-						<div class="col-3">
+						<div class="col-md-5">
 							<div class="form-group  pt-4">
-								<button class="btn pull-right w-100 btn-success ">Record Payment</button>
+								<button class="btn  btn-success ">Record Payment</button>
 							</div>
 						</div>
 					</div>
