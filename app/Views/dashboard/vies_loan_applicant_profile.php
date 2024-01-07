@@ -17,7 +17,7 @@ applicant_approved_loan_log
 					    <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Applicant Profile</button>
 					  </li>
 					  <li class="nav-item" role="presentation">
-					    <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Edit Application</button>
+					    <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Approve Applicant</button>
 					  </li>
 					</ul>
 				</div>
@@ -27,7 +27,7 @@ applicant_approved_loan_log
 					  	<?php include('partials/loan_applicant_profile.php'); ?>
 					  </div>
 					  <div class="tab-pane text-dark fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
-					  	<?php //include('partials/forms/edit_loan_applicant_form.php'); ?>
+					  	<?php include('partials/forms/loan_approve_form.php'); ?>
 					  </div>
 					</div>
 				</div>

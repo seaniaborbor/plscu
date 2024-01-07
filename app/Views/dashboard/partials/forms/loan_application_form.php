@@ -55,7 +55,7 @@
 
 	<div class="form-group mb-3">
 		<label>Loan Category</label>
-		<select class="form-control" name="currency" >
+		<select class="form-control" name="loanCategory" >
 			<option value="">Choose</option>
 			<option <?=set_select('loanCategory', 'LRD')?> value="Coliteral">Coliteral</option>
 			<option <?=set_select('loanCategory', 'USD')?> value="Agricultural">Agrocultural Loan</option>

@@ -2,7 +2,6 @@
 	<h2 class="text-success">Profile of <?=$applicant_data[0]->applicantName?> </h2><hr>
 	<div class="col-md-4">
 		<img src="<?=base_url('uploads/'.$applicant_data[0]->applicantImg)?>" class="img-fluid w-100">
-		<a href="<?=base_url('dashboard/edit/update_status/'.$applicant_data[0]->serial_no)?>" class="btn btn-success shadow-sm mt-2 ">Approve Application </a>
 
 	</div>
 	<div class="col-md-8">
@@ -41,16 +40,17 @@
 			</tr>
 
 		</table>
+		<div class="col-md-12 d-flex justify-content-between">
+			<a href="<?=base_url('uploads/'.$applicant_data[0]->loan_aggrement_form)?>" class="btn border-secondary rounded-pill">View Applicant Form</a>
+			<a href="#" class="btn border-secondary rounded-pill">Delete This Applicantion</a>
+		</div>
+		<div class="col-md-12 p-3">
+			<div class=" alert alert-danger rounded  shadow-sm">
+			<p>Deleting this user will hide and affect all the financial records associated with it. <span class="text-danger">This process is illrevertable</span></p>
+		</div>
+		</div>
 	</div>
-	<div class="col-md-12">
-		<a href="<?=base_url('uploads/'.$applicant_data[0]->loan_aggrement_form)?>" class="btn btn-outline-success  btn-sm">View Applicant Form</a>
-		<a href="#" class=" btn-sm btn btn-outline-danger rounded">Delete This Applicant</a>
-	</div>
-	<div class="col-md-12 p-3">
-		<div class=" alert alert-warning rounded  shadow-sm">
-		<p>Deleting this user will hide and affect all the financial records associated with it. <span class="text-danger">This process is illrevertable</span></p>
-	</div>
-	</div>
+	
 </div>
 
 <!-- 

@@ -194,7 +194,8 @@ public function index()
             // 'loanStartDate' => $this->request->getPost('loanStartDate'),
             // 'loanEndDate' => $this->request->getPost('loanEndDate'),
             'pmtStatus' => 'Incomplete', // create thifield in the form pls
-            'regBy' => session()->get('userData')->id,
+            'regBy' => session()->get('userData')['id'],
+            'approv_status' => 'Pending',
             'profileImg' => $profileImg_newname,
         ];
 
