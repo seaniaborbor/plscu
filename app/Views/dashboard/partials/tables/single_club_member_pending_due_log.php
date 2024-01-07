@@ -33,9 +33,13 @@
                                   <span role="status"><?=$pending_lg->approved_status?>...</span>
                         </td>
                          <?php if($userData['userRole'] == "SUDO") : ?>
-                <td><a href="#"  class="btn btn-sm btn-success"><i class="bi bi-person"></i> Edit</a></td>
-                        <td><a href="#"  class="btn btn-sm btn-danger"><i class="bi bi-trash"></i> Delete</a></td>
-            <?php endif; ?>
+                        <td>
+                            <a href="<?=base_url('dashboard/edit/club_due_management/'.$pending_lg->logId)?>"  class="btn btn-sm btn-success"><i class="bi bi-person"></i> Edit</a>
+                        </td>
+                        <td>
+                        <a href="<?=base_url('dashboard/delete/club_due_management/'.$pending_lg->logId)?>"  class="btn btn-sm btn-danger"><i class="bi bi-trash"></i> Delete</a>
+                    </td>
+                        <?php endif; ?>
                         
                     </tr>
                 <?php endif; ?>

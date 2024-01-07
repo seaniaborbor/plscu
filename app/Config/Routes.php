@@ -102,6 +102,7 @@ $routes->post('/dashboard/membership', 'ClubMembershipController::index');
 $routes->get('/dashboard/profile/membership/(:any)', 'ClubMembershipController::profile/$1');
 $routes->post('/dashboard/profile/membership/(:any)', 'ClubMembershipController::profile/$1');
 $routes->post('/dashboard/approve/membership/(:any)', 'ClubMembershipController::approve_mem_acc/$1');
+$routes->get('/dashboard/delete/membership/(:any)', 'ClubMembershipController::delete/$1');
 
 
 
@@ -111,6 +112,7 @@ $routes->post('/dashboard/loan_membership', 'LoanApplicantController::index');
 $routes->get('/dashboard/loanmanager/view_profile/(:any)', 'LoanApplicantController::view_profile/$1');
 $routes->post('/dashboard/loanmanager/approve/(:any)', 'LoanApplicantController::approved_loan_applicants/$1');
 $routes->post('/dashboard/loanmanager/update_status/(:any)', 'LoanApplicantController::update_applicant_status/$1');
+$routes->get('/dashboard/delete/loanmanager/(:any)', 'LoanApplicantController::delete/$1');
 
 
 // saving & editing a lone record 
@@ -125,7 +127,7 @@ $routes->get('/dashboard/club_due_management', 'DueController::index');
 $routes->post('/dashboard/club_due_management', 'DueController::index');
 $routes->get('/dashboard/edit/club_due_management/(:any)', 'DueController::edit/$1');
 $routes->post('/dashboard/edit/club_due_management/(:any)', 'DueController::edit/$1');
-$routes->get('/dashboard/del/club_due_management/(:any)', 'DueController::delete/$1');
+$routes->get('/dashboard/delete/club_due_management/(:any)', 'DueController::delete/$1');
 $routes->get('/dashboard/approve/club_due_management/(:any)', 'DueController::approve_payment/$1');
 
 $routes->get('/category/(:any)', 'Publiccontroller::category_search/$1');

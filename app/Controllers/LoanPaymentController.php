@@ -241,5 +241,39 @@ class LoanPaymentController extends BaseController{
       }
   }
 
+
+  public function delete($id){
+    $data['userData'] = session()->get('userData');
+    // if id not correct
+    if(empty($id) || !is_numeric($id)){
+      return redirect()->to('/dashboard/loan_payments')->with('error', 'Unknown Error. Just try again');
+      exit();
+    }
+
+      // find the data to edit
+      $LoanApplicantModel = new LoanApplicantModel();
+      $data['data_to_delete'] = $LoanApplicantModel->find($id);
+
+      if(!$data['data_to_delete']){
+        return redirect()->to('/dashboard/loan_payments')->with('error', 'Record no longer exists');
+        exit();
+      }      
+
+    // check if the previllage exist to approve payment 
+    if($data['userData']['userRole'] == 'SUDO' || !($data['data_to_delete']['regBy'] == $data['userData']['id'])){
+      // check if it's saved
+      if($LoanApplicantModel->delete($id)){
+            return redirect()->to('dashboard/loan_payments')->with('success', 'You successfully deleted a loan applicant successfully');
+          }else{
+              return redirect()->to('dashboard/loan_payments')->with('error', 'Unknown Error... Just try again');
+              }
+      }else{
+         return redirect()->to('/dashboard/loan_payments')->with('error', 'You do not have to right to to do this');
+          exit();
+      }
+  }
+
+
+
 }
 

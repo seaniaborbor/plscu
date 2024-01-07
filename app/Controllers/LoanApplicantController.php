@@ -378,5 +378,49 @@ public function view_profile($id)
 
     }
 
+
+     public function delete($id){
+    $data['userData'] = session()->get('userData');
+    // if id not correct
+    if(empty($id) || !is_numeric($id)){
+      return redirect()->to('/dashboard/loan_membership')->with('error', 'Unknown Error. Just try again');
+      exit();
+    }
+
+      // find the data to edit
+      $LoanApplicantModel = new LoanApplicantModel();
+      $data['data_to_delete'] = $LoanApplicantModel->find($id);
+
+      if(!$data['data_to_delete']){
+        return redirect()->to('/dashboard/loan_membership')->with('error', 'kkRecord no longer exists');
+        exit();
+      }      
+
+    // check if the previllage exist to delete payment 
+    if($data['userData']['userRole'] == 'SUDO' || !($data['data_to_delete']['regBy'] == $data['userData']['id'])){
+      // check if it's saved
+        $str1 = "";
+        $str2 = "";
+
+      if($LoanApplicantModel->delete($id)){
+            $str1 = "Lone Applicant";
+        }
+
+        $LoanLogModel = new LoanLogModel();
+
+        if($LoanLogModel->where('serial_no', $data['data_to_delete']['serial_no'])->delete()){
+            $str = " and payment log ";
+        }
+
+        return redirect()->to('/dashboard/loan_membership')->with('success', $str1." ".$str2." deleted successfully");
+          exit();
+
+      }else{
+         return redirect()->to('/dashboard/loan_membership')->with('error', 'You do not have to right to to do this');
+          exit();
+      }
+  }
+
+
 }
 

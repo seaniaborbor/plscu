@@ -30,7 +30,7 @@
                               <i class="bi bi-check-lg"></i> <?=$pending_lg->approved_status?></span>
                     </td>
                      <?php if($userData['userRole'] == "SUDO") : ?>
-                        <td><a href="#"  class="btn btn-sm btn-danger"><i class="bi bi-trash"></i> Delete</a></td>
+                        <td><a href="<?=base_url('dashboard/delete/club_due_management/'.$pending_lg->paymentId)?>"  class="btn btn-sm btn-danger"><i class="bi bi-trash"></i> Delete</a></td>
                     <?php endif; ?>
                 </tr>
                 <?php endif; ?>

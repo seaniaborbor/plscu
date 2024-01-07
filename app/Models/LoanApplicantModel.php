@@ -43,7 +43,7 @@ class LoanApplicantModel extends Model
     // get an applicant profile by serial 
     public function get_an_applicant_profile($serial){
         return $this->db->table('loan_application')
-                ->select('*, loan_application.fullName as applicantName')
+                ->select('*, loan_application.fullName as applicantName, team.id as teamId, loan_application.id as id')
                 ->where('loan_application.serial_no', $serial)
                 ->join('team', 'team.id = loan_application.regBy')
                 ->orderBy('loan_application.lstEdited', 'desc')
@@ -54,7 +54,7 @@ class LoanApplicantModel extends Model
     // get applicant profile by profile id
     public function get_an_applicant_profile_by_id($id){
         return $this->db->table('loan_application')
-                ->select('*, loan_application.fullName as applicantName')
+                ->select('*, loan_application.fullName as applicantName, loan_application.id as applicantIdNo')
                 ->where('loan_application.id', $id)
                 ->join('team', 'team.id = loan_application.regBy')
                 ->orderBy('loan_application.lstEdited', 'desc')

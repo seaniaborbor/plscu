@@ -280,10 +280,46 @@ class ClubMembershipController extends BaseController{
                         return redirect()->to('/dashboard/membership')->with('error', 'From somewhere unknown... Dude!');
 
               }
-          
+  }
 
-          
 
+  // this method deletes club member's applicant 
+
+  public function delete($id)
+  {
+        $data = [];
+        $data['passLink'] = "clubmembership";
+        $data['userData'] = session()->get('userData');
+
+        $ClubDueLogModel = new ClubDueLogModel();
+        $ClubMembershipModel = new ClubMembershipModel();
+
+
+        if(empty($id) || !is_numeric($id)){
+            return redirect()->to('/dashboard/membership')->with('error', 'Unknown Error');
+            exit();
+         }
+
+         $mem_to_delete = $ClubMembershipModel->find($id);
+
+         if(!$mem_to_delete){
+            return redirect()->to('/dashboard/membership')->with('error', 'Applicant no longer exist ');
+            exit();
+          }
+            $mesage = "";
+           if(($data['userData']['userRole'] == "SUDO") || ($mem_to_delete['registeredBy'] == $data['userData']['id'])){
+                if($ClubMembershipModel->delete($id)){
+                    $mesage."Member Account";
+                }
+                if($ClubDueLogModel->where('mem_serial_no', $mem_to_delete['memberSerialNo'])->delete()){
+                    $mesage.' and payment logs';
+                }
+                return redirect()->to('/dashboard/membership')->with('success', $mesage.' deleted successfully');
+                exit();
+          }else{
+            return redirect()->to('/dashboard/membership')->with('error', 'You dont have previllage to execute this action');
+            exit();
+          }
   }
 
 

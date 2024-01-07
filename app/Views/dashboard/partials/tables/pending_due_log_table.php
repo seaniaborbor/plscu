@@ -38,7 +38,7 @@
                          <td><a href="<?=base_url('dashboard/approve/club_due_management/'.$pending_lg->paymentId)?>"  class="btn btn-sm btn-primary"><i class="bi bi-person"></i> Approve</a></td>
                          <?php endif;?>
                          <td><a href="<?=base_url('dashboard/edit/club_due_management/'.$pending_lg->paymentId)?>"  class="btn btn-sm btn-success"><i class="bi bi-person"></i> Edit</a></td>
-                        <td><a href="<?=base_url('dashboard/del/club_due_management/'.$pending_lg->paymentId)?>"  class="btn btn-sm btn-danger"><i class="bi bi-trash"></i> Delete</a></td>
+                        <td><a href="<?=base_url('dashboard/delete/club_due_management/'.$pending_lg->paymentId)?>"  class="btn btn-sm btn-danger"><i class="bi bi-trash"></i> Delete</a></td>
                     </tr>
                 <?php endif; ?>
             <?php endforeach; ?>

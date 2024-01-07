@@ -37,7 +37,7 @@ class ClubDueLogModel extends Model
   public function a_member_payment_log($status, $serial){
 
     $data = $this->db->table('due_pmt_log')
-        ->select('team.*, due_pmt_log.*,membership_applicants.*, team.fullName as teamMemName, membership_applicants.fullName as memberFullName')
+        ->select('team.*, due_pmt_log.*,membership_applicants.*, team.fullName as teamMemName, membership_applicants.fullName as memberFullName, due_pmt_log.id as logId')
         ->join('team', 'team.id = due_pmt_log.recordedBy')
         ->join('membership_applicants', 'membership_applicants.memberSerialNo = due_pmt_log.mem_serial_no')
         ->where('due_pmt_log.approved_status', $status)

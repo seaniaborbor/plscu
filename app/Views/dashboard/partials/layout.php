@@ -78,7 +78,7 @@
 <body>
     <div class="d-flex" id="wrapper">
         <!-- Sidebar -->
-        <div class="bg-white " id="sidebar-wrapper">
+        <div class="bg-white shadow-lg" id="sidebar-wrapper">
             <div class="sidebar-heading  text-center p-0  fs-4 fw-bold text-white text-uppercase ">
                 <img src="<?=base_url('uploads/plscu_logo-removebg-preview.png')?>" class="img-fluid w-100">
             </div>
@@ -105,8 +105,6 @@
                 <a href="<?=base_url('/dashboard/testimonials')?>" class="list-group-item list-group-item-action bg-transparent second-text "><i class="bi bi-chat-square-quote me-2"></i>Testimonial</a>
                 <a href="<?=base_url('/dashboard/faq')?>" class="list-group-item list-group-item-action bg-transparent second-text "><i
                         class="bi bi-quora me-2"></i>FAQ</a>
-                <a href="<?=base_url('/dashboard/faq')?>" class="list-group-item list-group-item-action bg-transparent second-text "><i
-                        class="bi bi-clipboard-check me-2"></i>Certifications</a>
                 <a href="<?=base_url('/logout')?>" class="list-group-item list-group-item-action bg-transparent text-danger "><i
                         class="fas fa-power-off me-2"></i>Logout</a>
             </div>

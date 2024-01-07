@@ -15,7 +15,6 @@
       <td>Registered By</td>
       <td>Status</td>
       <td>Edit</td>
-      <td>Delete</td>
     </tr>
    </thead>
    <tbody>
@@ -39,7 +38,6 @@
                       <span role="status"><?=$clb_mdm->accountStatus?></span>
                     </td>
                      <td><a href="<?=base_url('/dashboard/profile/membership/'.$clb_mdm->memberSerialNo)?>"  class="btn btn-sm btn-success"><i class="bi bi-person"></i> Profile</a></td>
-                    <td><a href="#"  class="btn btn-sm btn-danger"><i class="bi bi-trash"></i> Delete</a></td>
         </tr>
         <?php endif; ?>
       <?php endforeach  ?>

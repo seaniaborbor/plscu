@@ -45,7 +45,7 @@
 		</table>
 		<div class="col-md-12 d-flex justify-content-between">
 			<a href="<?=base_url('uploads/'.$applicant_data[0]->loan_aggrement_form)?>" class="btn border-secondary rounded-pill">View Applicant Form</a>
-			<a href="#" class="btn border-secondary rounded-pill">Delete This Applicantion</a>
+			<a href="<?=base_url('/dashboard/delete/loanmanager/'.$applicant_data[0]->applicantIdNo)?>" class="btn border-secondary rounded-pill">Delete This Applicantion</a>
 		</div>
 		<div class="col-md-12 p-3">
 			<div class=" alert alert-danger rounded  shadow-sm">
