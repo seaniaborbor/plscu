@@ -30,11 +30,7 @@
             <i class="bi bi-check-lg"></i>
             <?=$pdng_lonpmts->isApproved ?>
           </td>
-          <td>
-            <button class="btn btn-danger">
-            <i class="bi bi-trash"></i> Delete
-          </button>
-          </td>
+          <td><a href="<?=base_url('/dashboard/delete/log_loan_payment/'.$pdng_lonpmts->payment_id)?>"  class="btn btn-sm btn-danger"><i class="bi bi-trash"></i> Delete</a></td>
         </tr>
       <?php endif; ?>
       <?php endforeach  ?>

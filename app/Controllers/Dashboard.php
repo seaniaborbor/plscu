@@ -6,8 +6,8 @@ class Dashboard extends BaseController{
 
     // home page route 
     public function index(){
-         $data['passLink'] = "clubmembership";
-        $data['userData'] = session()->get('userData');
+         $data['passLink'] = "dashboard";
+         $data['userData'] = session()->get('userData');
 
          
         return view("dashboard/index", $data);

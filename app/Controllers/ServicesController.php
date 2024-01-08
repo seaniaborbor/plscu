@@ -13,6 +13,8 @@ class ServicesController extends BaseController{
     public function index(){
 
       $data = [];
+      $data['passLink'] = "services";
+      $data['userData'] = session()->get('userData');
 
       $servicesModel = new servicesModel();
       $data['all_services'] = $servicesModel->findAll();
@@ -91,13 +93,16 @@ class ServicesController extends BaseController{
 
      public function edit($id){
 
-       	if(empty($id)){
+       	if(empty($id) || !is_numeric($id)){
             return redirect()->to('/dashboard/portfolio')->with('error', 'Unknown Error');
             exit();
         }
 
 
       $data = [];
+
+      $data['passLink'] = "services";
+      $data['userData'] = session()->get('userData');
 
       $servicesModel = new servicesModel();
       $data['a_service_data'] = $servicesModel->find($id);

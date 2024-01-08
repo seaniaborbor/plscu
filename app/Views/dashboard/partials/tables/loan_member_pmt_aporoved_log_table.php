@@ -34,7 +34,7 @@
                             </button>
                     </td>
                     <?php if($userData['userRole'] == "SUDO") : ?>
-                        <td><a href="#"  class="btn btn-sm btn-danger"><i class="bi bi-trash"></i> Delete</a></td>
+                       <td><a href="<?=base_url('/dashboard/delete/log_loan_payment/'.$approve_lg->payment_id)?>"  class="btn btn-sm btn-danger"><i class="bi bi-trash"></i> Delete</a></td>
                     <?php endif; ?>
                 <?php endif; ?>
                 </tr>

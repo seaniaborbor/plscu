@@ -11,7 +11,8 @@ class CategoryController extends BaseController{
    
     public function index(){
         $data = [];
-        $data['passLink'] = "clubmembership";
+        $data['passLink'] = "category";
+        $data['userData'] = session()->get('userData');
 
         $CategoryModel = new CategoryModel();
         $data['all_categories'] = $CategoryModel->findAll();

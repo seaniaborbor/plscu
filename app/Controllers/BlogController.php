@@ -17,7 +17,8 @@ class BlogController extends BaseController
     public function index()
     {
         $data = [];
-         $data['passLink'] = "clubmembership";
+         $data['passLink'] = "blog";
+        $data['userData'] = session()->get('userData');
         
         $BlogModel = new BlogModel();
         $data['all_blogs'] = $BlogModel->findAll();
@@ -113,14 +114,15 @@ class BlogController extends BaseController
 
     public function edit($id)
     {
-         if(empty($id))
+         if(empty($id) || !is_numeric($id))
          {
             return redirect()->to('/dashboard/blog')->with('error', 'Unknown Error');
             exit();
          }
 
         $data = [];
-         $data['passLink'] = "clubmembership";
+         $data['passLink'] = "blog";
+        $data['userData'] = session()->get('userData');
         
         $BlogModel = new BlogModel();
         $data['blog_data'] = $BlogModel->find($id);

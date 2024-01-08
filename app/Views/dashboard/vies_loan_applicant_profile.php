@@ -35,8 +35,9 @@ applicant_approved_loan_log
 			<div class="row">
 				<div class="col-md-3">
 					<div class="card border border-2 ">
-						<div class="card-body text-center ">
+						<div class="card-body text-center d-flex align-items-center">
 							<h1><?=$applicant_data[0]->loanAmount?></h1>
+							<span class="text-secondary"><?=$applicant_data[0]->currency?></span>
 						</div>
 						<div class="card-footer text-secondary text-center ">
 							<h3>Total Loan Credited</h3>
@@ -47,8 +48,9 @@ applicant_approved_loan_log
 total_approved_loan_pending */ ?>
 				<div class="col-md-3">
 					<div class="card">
-						<div class="card-body  text-center">
+						<div class="card-body  text-center text-center d-flex align-items-center">
 							<h1><?=$applicant_data[0]->loanAmount+($applicant_data[0]->loanAmount*($applicant_data[0]->interestRate/100))?></h1>
+							<span class="text-secondary"><?=$applicant_data[0]->currency?></span>
 						</div>
 						<div class="card-footer text-secondary text-center ">
 							<h3>Total Amt to  Paid</h3>
@@ -57,18 +59,20 @@ total_approved_loan_pending */ ?>
 				</div>
 				<div class="col-md-3">
 					<div class="card">
-						<div class="card-body text-center ">
+						<div class="card-body text-center text-center d-flex align-items-center ">
 							<h1><?=$total_approved_loan_paid->total_paid?></h1>
+							<span class="text-secondary"><?=$applicant_data[0]->currency?></span>
 						</div>
 						<div class="card-footer text-secondary text-center ">
-							<h3>Total To Paid</h3>
+							<h3>Total Paid</h3>
 						</div>
 					</div>
 				</div>
 				<div class="col-md-3">
 					<div class="card">
-						<div class="card-body text-center ">
+						<div class="card-body text-center text-center d-flex align-items-center">
 							<h1><?=($applicant_data[0]->loanAmount+($applicant_data[0]->loanAmount*($applicant_data[0]->interestRate/100)))-$total_approved_loan_paid->total_paid?></h1>
+							<span class="text-secondary"><?=$applicant_data[0]->currency?></span>
 						</div>
 						<div class="card-footer text-secondary text-center ">
 							<h3>Balance To Pay</h3>
@@ -77,7 +81,7 @@ total_approved_loan_pending */ ?>
 				</div>
 			</div>
 			<div class="card  mt-3">
-				<div class="card-header ">
+				<div class="card-header text-center d-flex align-items-center">
 					<h2 class="text-success">Financial Log of <?=$applicant_data[0]->applicantName?> </h2>
 				</div>
 

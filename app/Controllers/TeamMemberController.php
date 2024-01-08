@@ -14,6 +14,9 @@ class TeamMemberController extends BaseController{
 
         $data = [];
 
+        $data['passLink'] = "team";
+        $data['userData'] = session()->get('userData');
+
         $TeamModel = new TeamModel();
         $data['all_team'] = $TeamModel->findAll();
 
@@ -122,12 +125,20 @@ class TeamMemberController extends BaseController{
 
     public function edit($id){
        // check if the id is null
-        if(empty($id)){
+        if(empty($id) || !is_numeric($id)){
             return redirect()->to('/dashboard/team')->with('error', 'Unknown Error');
             exit();
         }
 
       $data = [];
+
+      $data['passLink'] = "team";
+        $data['userData'] = session()->get('userData');
+
+        if(!($id == $data['userData']['id'] || $data['userData']['userRole'] == 'SUDO')){
+          return redirect()->to('/dashboard/team')->with('error', 'You do not have the previllage to edit another team member profile.');
+            exit();
+        }
 
       $TeamModel = new TeamModel();
       $data['team_data'] = $TeamModel->find($id);

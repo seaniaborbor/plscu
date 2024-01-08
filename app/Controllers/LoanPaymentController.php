@@ -251,8 +251,8 @@ class LoanPaymentController extends BaseController{
     }
 
       // find the data to edit
-      $LoanApplicantModel = new LoanApplicantModel();
-      $data['data_to_delete'] = $LoanApplicantModel->find($id);
+      $LoanLogModel = new LoanLogModel();
+      $data['data_to_delete'] = $LoanLogModel->find($id);
 
       if(!$data['data_to_delete']){
         return redirect()->to('/dashboard/loan_payments')->with('error', 'Record no longer exists');
@@ -260,10 +260,10 @@ class LoanPaymentController extends BaseController{
       }      
 
     // check if the previllage exist to approve payment 
-    if($data['userData']['userRole'] == 'SUDO' || !($data['data_to_delete']['regBy'] == $data['userData']['id'])){
+    if($data['userData']['userRole'] == 'SUDO' || !($data['data_to_delete']['loggedBy'] == $data['userData']['id'])){
       // check if it's saved
-      if($LoanApplicantModel->delete($id)){
-            return redirect()->to('dashboard/loan_payments')->with('success', 'You successfully deleted a loan applicant successfully');
+      if($LoanLogModel->delete($id)){
+            return redirect()->to('dashboard/loan_payments')->with('success', 'You successfully deleted a loan log');
           }else{
               return redirect()->to('dashboard/loan_payments')->with('error', 'Unknown Error... Just try again');
               }

@@ -11,7 +11,7 @@ class FaqController extends BaseController{
    
     public function index(){
         $data = [];
-         $data['passLink'] = "clubmembership";
+         $data['passLink'] = "faq";
          
         $FaqModel = new FaqModel();
         $data['all_faq'] = $FaqModel->findAll();

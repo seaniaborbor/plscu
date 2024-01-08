@@ -95,15 +95,17 @@
 
                 <a href="<?=base_url('/dashboard/portfolio')?>" class="list-group-item list-group-item-action bg-transparent second-text "><i class="bi  bi-graph-up me-2"></i>Generate Report</a>
 
-                 <a href="<?=base_url('/dashboard/portfolio')?>" class="list-group-item list-group-item-action bg-transparent second-text "><i
+                 <a href="<?=base_url('/dashboard/portfolio')?>" class="<?=mark_active('portfolio', $passLink)?> list-group-item list-group-item-action bg-transparent second-text "><i
                         class="bi  bi-backpack3 me-2"></i>Portfolio</a>
-                <a href="<?=base_url('/dashboard/blog')?>" class="list-group-item list-group-item-action bg-transparent second-text "><i
+                <a href="<?=base_url('/dashboard/blog')?>" class="<?=mark_active('blog', $passLink)?> list-group-item list-group-item-action bg-transparent second-text "><i
                         class="bi bi-pencil me-2"></i>Blog</a>
-                <a href="<?=base_url('/dashboard/team')?>" class="list-group-item list-group-item-action bg-transparent second-text "><i
+                <a href="<?=base_url('/dashboard/team')?>" class="<?=mark_active('team', $passLink)?> list-group-item list-group-item-action bg-transparent second-text "><i
                         class="bi bi-people me-2"></i>Team Members</a>
-                <a href="<?=base_url('/dashboard/services')?>" class="list-group-item list-group-item-action bg-transparent second-text "><i class="bi bi-blockquote-left me-2"></i>Services</a>
-                <a href="<?=base_url('/dashboard/testimonials')?>" class="list-group-item list-group-item-action bg-transparent second-text "><i class="bi bi-chat-square-quote me-2"></i>Testimonial</a>
-                <a href="<?=base_url('/dashboard/faq')?>" class="list-group-item list-group-item-action bg-transparent second-text "><i
+                <a href="<?=base_url('/dashboard/services')?>" class="<?=mark_active('services', $passLink)?> list-group-item list-group-item-action bg-transparent second-text "><i class="bi bi-blockquote-left me-2"></i>Services</a>
+                
+                <a href="<?=base_url('/dashboard/testimonials')?>" class="<?=mark_active('testimonials', $passLink)?> list-group-item list-group-item-action bg-transparent second-text "><i class="bi bi-chat-square-quote me-2"></i>Testimonial</a>
+                
+                <a href="<?=base_url('/dashboard/faq')?>" class="<?=mark_active('faq', $passLink)?> list-group-item list-group-item-action bg-transparent second-text "><i
                         class="bi bi-quora me-2"></i>FAQ</a>
                 <a href="<?=base_url('/logout')?>" class="list-group-item list-group-item-action bg-transparent text-danger "><i
                         class="fas fa-power-off me-2"></i>Logout</a>

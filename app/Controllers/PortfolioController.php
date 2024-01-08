@@ -14,6 +14,8 @@ class PortfolioController extends BaseController{
     public function index(){
         $data = [];
 
+        
+
         $PortfolioModel = new PortfolioModel();
         $CategoryModel = new CategoryModel();
  
@@ -21,6 +23,9 @@ class PortfolioController extends BaseController{
                 'all_portfolio' => $PortfolioModel->orderBy('id', 'desc')->paginate(10),
                 'pager' => $PortfolioModel->pager,
             ];
+
+        $data['passLink'] = "portfolio";
+        $data['userData'] = session()->get('userData');
 
         $data['all_categories'] = $CategoryModel->findAll();
         //$data['all_portfolio'] = $PortfolioModel->findAll();
@@ -116,12 +121,15 @@ class PortfolioController extends BaseController{
 
      public function edit($id){
         // check if the id is null
-        if(empty($id)){
+        if(empty($id) || !is_numeric($id)){
             return redirect()->to('/dashboard/portfolio')->with('error', 'Unknown Error');
             exit();
         }
 
         $data = [];
+
+        $data['passLink'] = "portfolio";
+        $data['userData'] = session()->get('userData');
 
         $PortfolioModel = new PortfolioModel();
         $CategoryModel = new CategoryModel();

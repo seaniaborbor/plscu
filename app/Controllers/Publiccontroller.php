@@ -21,6 +21,7 @@ class Publiccontroller extends BaseController{
     // HOME PAGE METHOD 
     public function index(){
         $data = [];
+        
 
         // load services 
         $servicesModel = new servicesModel();

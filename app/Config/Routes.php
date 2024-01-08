@@ -121,6 +121,7 @@ $routes->post('/dashboard/loan_payments', 'LoanPaymentController::index');
 $routes->get('/dashboard/edit/log_loan_payment/(:any)', 'LoanPaymentController::edit/$1');
 $routes->post('/dashboard/edit/log_loan_payment/(:any)', 'LoanPaymentController::edit/$1');
 $routes->get('/dashboard/approve/log_loan_payment/(:any)', 'LoanPaymentController::approve/$1');
+$routes->get('/dashboard/delete/log_loan_payment/(:any)', 'LoanPaymentController::delete/$1');
 
 // due payment manager controllers 
 $routes->get('/dashboard/club_due_management', 'DueController::index');

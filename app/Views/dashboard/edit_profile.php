@@ -7,7 +7,7 @@
 			<div class="card">
 				<div class="card shadow-lg ">
 				<div class="card-header bg-success d-flex justify-content-between text-white">
-					<h4><span class="text-warning">EDIT: </span><?=$team_data['fullName']?> (blog post)</h4>
+					<h4><span class="text-warning">EDIT: </span><?=$team_data['fullName']?>'s Profile</h4>
 				</div>
 				<div class="card-body">
 					<?php include('partials/forms/edit_profile_form.php')?>

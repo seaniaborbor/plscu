@@ -14,6 +14,9 @@ class TestimonialsController extends BaseController{
 
       $data = [];
 
+      $data['passLink'] = "testimonials";
+        $data['userData'] = session()->get('userData');
+
       $testimonialModel = new TestimonialsModel();
       $data['all_testimonials'] = $testimonialModel->findAll();
 
@@ -103,6 +106,9 @@ class TestimonialsController extends BaseController{
     public function edit($id){
 
       $data = [];
+
+      $data['passLink'] = "testimonials";
+        $data['userData'] = session()->get('userData');
 
        // check if the id is null
         if(empty($id)){
