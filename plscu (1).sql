@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 05, 2024 at 02:12 AM
+-- Generation Time: Jan 08, 2024 at 08:16 AM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 7.4.29
 
@@ -71,7 +71,8 @@ INSERT INTO `blog_comments` (`id`, `name`, `email`, `comment`, `postId`, `posted
 (3, 'Prince Bunah', 'admin@gmail.com', 'it is so amazing and very much good. What a nice application to use in this kindo of eara. You\'re doing well&lt;script&gt;alert(\'ok\')&lt;/script&gt;', 2, '2023-12-25'),
 (4, 'Tarnue', 'mathematics104@gmail.com', 'Thank you for the comments and I lookforward to hearing from you', 2, '2023-12-25'),
 (5, 'Tarnue', 'mathematics104@gmail.com', 'Thank you for the comments and I lookforward to hearing from you', 2, '2023-12-25'),
-(6, 'Tarnue', 'garmai@gmail.com', 'it is so amazing and very much good. What a nice application to use in this kindo of eara. You\'re doing well&lt;script&gt;alert(\'ok\')&lt;/script&gt;', 2, '2023-12-25');
+(6, 'Tarnue', 'garmai@gmail.com', 'it is so amazing and very much good. What a nice application to use in this kindo of eara. You\'re doing well&lt;script&gt;alert(\'ok\')&lt;/script&gt;', 2, '2023-12-25'),
+(7, 'Tarnue', 'admin@gmail.com', 'This Article is very helpful and I look forward to getting more content like this. ', 4, '2024-01-06');
 
 -- --------------------------------------------------------
 
@@ -104,7 +105,7 @@ INSERT INTO `categories` (`id`, `post_category`, `description`, `createdAt`) VAL
 CREATE TABLE `due_pmt_log` (
   `id` int(11) NOT NULL,
   `mem_serial_no` varchar(10) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `due_amount` decimal(10,0) NOT NULL,
+  `due_amount` decimal(10,2) DEFAULT NULL,
   `due_currency` text NOT NULL,
   `recordedBy` int(10) NOT NULL,
   `recordedDate` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
@@ -112,19 +113,6 @@ CREATE TABLE `due_pmt_log` (
   `last_edited_by` text NOT NULL,
   `approved_status` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `due_pmt_log`
---
-
-INSERT INTO `due_pmt_log` (`id`, `mem_serial_no`, `due_amount`, `due_currency`, `recordedBy`, `recordedDate`, `last_edited_date`, `last_edited_by`, `approved_status`) VALUES
-(3, 'Z9k1BQ', '222', 'USD', 1, '2024-01-01 21:42:45', '2023-12-31 00:00:00', '3', 'Approved'),
-(4, 'Z9k1BQ', '334', 'USD', 1, '2023-12-31 22:48:55', '2023-12-31 00:00:00', '1', 'Pending'),
-(5, 'Z9k1BQ', '33', 'USD', 1, '2024-01-01 21:42:38', '2024-01-01 00:00:00', '1', 'Approved'),
-(6, 'fILXvR', '500', 'LRD', 1, '2024-01-01 10:53:58', '2024-01-04 00:00:00', '1', 'Pending'),
-(7, 'Z9k1BQ', '454', 'USD', 1, '2024-01-01 10:06:37', '2024-01-01 00:00:00', '1', 'Pending'),
-(8, 'EHPq30', '50', 'LRD', 1, '2024-01-01 12:27:13', '2024-01-01 00:00:00', '1', 'Approved'),
-(9, 'Z9k1BQ', '300', 'USD', 1, '2024-01-02 23:01:27', '2024-01-04 00:00:00', '1', 'Pending');
 
 -- --------------------------------------------------------
 
@@ -162,27 +150,26 @@ CREATE TABLE `loan_application` (
   `phone` text NOT NULL,
   `email` varchar(50) NOT NULL,
   `address` varchar(225) NOT NULL,
-  `mem_serial` varchar(225) NOT NULL,
-  `loanAmount` decimal(10,0) NOT NULL,
+  `loanAmount` decimal(10,2) DEFAULT NULL,
   `currency` text NOT NULL,
   `loanStartDate` date NOT NULL,
   `loanEndDate` date NOT NULL,
   `interestRate` int(3) NOT NULL,
   `serial_no` varchar(8) NOT NULL,
+  `loanCategory` text NOT NULL,
   `loan_aggrement_form` varchar(225) NOT NULL,
   `regBy` varchar(50) NOT NULL,
   `lstEdited` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
-  `pmtStatus` text NOT NULL
+  `pmtStatus` text NOT NULL,
+  `approv_status` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `loan_application`
 --
 
-INSERT INTO `loan_application` (`id`, `fullName`, `gender`, `applicantImg`, `phone`, `email`, `address`, `mem_serial`, `loanAmount`, `currency`, `loanStartDate`, `loanEndDate`, `interestRate`, `serial_no`, `loan_aggrement_form`, `regBy`, `lstEdited`, `pmtStatus`) VALUES
-(1, 'Princess Jackson', 'Female', '1703968242_69b8fcc09dd235248dd1.jpg', '0775577736', 'admin@gmail.com', 'new georgia gulf', '', '10000', 'LRD', '2023-12-30', '2024-07-30', 15, 'lYbZGv', '1703968242_283f272521e8a44ec789.pdf', '1', '2023-12-30 20:59:51', 'complete'),
-(2, 'Tarnue P. Borbor', 'Male', '1703978196_9737d9a502fca536315d.jpg', '08886102312', 'mathematics104@gmail.com', 'New Georgia Gulf, Township of New Georgia, Monrovia', '', '7000', 'USD', '2023-12-21', '2024-05-30', 16, '2Il23F', '1703978196_f0965d700c133f824084.pdf', '1', '2023-12-30 23:16:36', 'complete'),
-(3, 'Peter L Borbor', 'Male', '1703983221_4338dc845c91289b1543.jpg', '077777358', 'user@gmail.com', 'new georgia gulf', '', '45700', 'LRD', '2023-12-21', '2023-12-28', 12, 'cwzwCY', '1703983221_ca9cfafc70c60d1ef26c.pdf', '1', '2023-12-31 00:40:21', 'complete');
+INSERT INTO `loan_application` (`id`, `fullName`, `gender`, `applicantImg`, `phone`, `email`, `address`, `loanAmount`, `currency`, `loanStartDate`, `loanEndDate`, `interestRate`, `serial_no`, `loanCategory`, `loan_aggrement_form`, `regBy`, `lstEdited`, `pmtStatus`, `approv_status`) VALUES
+(6, 'James Kollie', 'Male', '1704666931_69a75a94705b8878abf6.png', '08886102312', 'admin@gmail.com', 'new georgia gulf', '5555.00', 'LRD', '2024-01-09', '2024-01-18', 6, 'kFUH4s', 'Agricultural', '1704666931_b824ff80ac2f886a27e0.pdf', '1', '2024-01-07 22:36:23', 'In-Progress', 'Approved');
 
 -- --------------------------------------------------------
 
@@ -193,9 +180,10 @@ INSERT INTO `loan_application` (`id`, `fullName`, `gender`, `applicantImg`, `pho
 CREATE TABLE `loan_pmt_log` (
   `id` int(11) NOT NULL,
   `serial_no` varchar(10) NOT NULL,
-  `amount` decimal(10,0) NOT NULL,
+  `amount` decimal(10,2) DEFAULT NULL,
   `pmtCurrency` text NOT NULL,
   `loggedBy` int(10) NOT NULL,
+  `isApproved` text NOT NULL,
   `loggedDate` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -203,12 +191,9 @@ CREATE TABLE `loan_pmt_log` (
 -- Dumping data for table `loan_pmt_log`
 --
 
-INSERT INTO `loan_pmt_log` (`id`, `serial_no`, `amount`, `pmtCurrency`, `loggedBy`, `loggedDate`) VALUES
-(1, 'lYbZGv', '7', 'LRD', 1, '2023-12-30 21:24:38'),
-(2, 'lYbZGv', '49', 'LRD', 1, '2023-12-30 22:29:37'),
-(3, '2Il23F', '300', 'USD', 1, '2023-12-30 23:56:13'),
-(4, 'cwzwCY', '3000', 'LRD', 1, '2023-12-31 00:41:53'),
-(5, 'cwzwCY', '450', 'LRD', 1, '2023-12-31 14:34:24');
+INSERT INTO `loan_pmt_log` (`id`, `serial_no`, `amount`, `pmtCurrency`, `loggedBy`, `isApproved`, `loggedDate`) VALUES
+(3, 'kFUH4s', '44.00', 'LRD', 1, 'Approved', '2024-01-08 00:21:39'),
+(4, 'kFUH4s', '55.00', 'LRD', 1, 'Approved', '2024-01-08 00:28:07');
 
 -- --------------------------------------------------------
 
@@ -236,15 +221,6 @@ CREATE TABLE `membership_applicants` (
   `updated_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
   `registeredBy` int(5) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Dumping data for table `membership_applicants`
---
-
-INSERT INTO `membership_applicants` (`id`, `fullName`, `gender`, `dob`, `membership_category`, `memberSerialNo`, `profileImg`, `phone`, `email`, `address`, `deposite_unit`, `currency`, `regFees`, `regFeesStatus`, `accountStatus`, `saving_year`, `updated_at`, `registeredBy`) VALUES
-(1, 'Princess Jackson', 'Female', '2023-12-27', 'FRM', 'fILXvR', '1704044135_fca0c22b04200724576f.jpg', '08886102312', 'user2@gmail.com', '2nd Junction, Paynesville, Monrovia - Liberia', '2000.00', 'LRD', '200.00', 'Incomplete', 'Pending', '2023-12-19', '2024-01-01 09:33:25', 1),
-(2, 'Tarnue Pythagoras Borb', 'Male', '2023-12-19', 'OSM', 'Z9k1BQ', '1704042479_0efe7fdc6b365ecdb146.jpg', '231229988667', 'borbor@gmail.com', 'New Georgia Gulf, Township of New Georgia, Monrovia', '4000.00', 'USD', '5000.00', 'Complete', 'Approved', '2023-12-19', '2024-01-01 09:47:53', 1),
-(3, 'Mark Angel', 'Male', '2024-01-18', 'OSM', 'EHPq30', '1704101935_228b8ba3f32acda05118.jpg', '0775588736', 'working@gmail.com', 'clara Town Monrovia Liberia', '40000.00', 'LRD', '45000.00', 'Incomplete', 'Pending', '2024-01-01', '2024-01-01 09:39:18', 1);
 
 -- --------------------------------------------------------
 
@@ -338,7 +314,7 @@ CREATE TABLE `team` (
 --
 
 INSERT INTO `team` (`id`, `fullName`, `email`, `passwd`, `userRole`, `profession`, `fbHandle`, `xHandle`, `linkinHandle`, `profileImg`, `createdAt`) VALUES
-(1, 'Tamba Bundor', 'marie@gmail.com', '$2y$10$hHnWv2QTGSFLkhTCvGfIduhsmyT30egxSeLZF6YfCPMi1D8lTZ7Vu', 'SUDO', 'Chairman, Board of Director', 'http://facebook.com/tarnuea', '', '', '1703992888_372fcc6a5ec5c481edac.png', '2023-12-24 15:36:34'),
+(1, 'Tamba Bundor', 'admin@gmail.com', '$2y$10$hHnWv2QTGSFLkhTCvGfIduhsmyT30egxSeLZF6YfCPMi1D8lTZ7Vu', 'SUDO', 'Chairman, Board of Director', 'http://facebook.com/tarnuea', '', '', '1703992888_372fcc6a5ec5c481edac.png', '2023-12-24 15:36:34'),
 (2, 'Kebbeh Sakui ', 'jane@gmail.com', '$2y$10$I9Zx2/lxqWjLeRTVcSNXjuC50uDcPOQA1YiuZzR8qamQXDpkV/4ru', 'USER', 'Vice Chair, Board of Directors', 'http://facebook.com/tarnuevv', '', '', '1703993013_d555799c4bd17a67e887.png', '2023-12-24 15:38:34'),
 (3, 'Fayiah A. Korkor Sr', 'tpb@gmail.com', '$2y$10$UwmKcL.VWxisRTH.cFswFOIJGaEY5HeazG60bsoPepiFwmx0iFmmW', 'USER', 'Secretary, Board of Directors', 'http://facebook.com/tarnueg', '', '', '1703993104_0f84e69f743b9cb588b6.png', '2023-12-24 15:40:21'),
 (4, 'Deddeh H. Kollie ', 'fake@gmail.com', '$2y$10$w6gXy41pYWIpiurglirfpebCtR86ahAUPPFvzwXrYLmUj2rlEfAYe', 'USER', 'Member, Board of Directors', 'http://facebook.com/tarnuevvefd', '', '', '1703993164_6a5e0959fbb2d83ca446.png', '2023-12-24 15:45:49');
@@ -464,7 +440,7 @@ ALTER TABLE `blog`
 -- AUTO_INCREMENT for table `blog_comments`
 --
 ALTER TABLE `blog_comments`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `categories`
@@ -476,7 +452,7 @@ ALTER TABLE `categories`
 -- AUTO_INCREMENT for table `due_pmt_log`
 --
 ALTER TABLE `due_pmt_log`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `faq`
@@ -488,19 +464,19 @@ ALTER TABLE `faq`
 -- AUTO_INCREMENT for table `loan_application`
 --
 ALTER TABLE `loan_application`
-  MODIFY `id` int(225) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(225) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `loan_pmt_log`
 --
 ALTER TABLE `loan_pmt_log`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `membership_applicants`
 --
 ALTER TABLE `membership_applicants`
-  MODIFY `id` int(5) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(5) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `pmt_log`
