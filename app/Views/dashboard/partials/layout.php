@@ -19,11 +19,19 @@
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.7/css/dataTables.bootstrap5.min.css">
  <script src="https://cdn.ckeditor.com/4.17.2/standard/ckeditor.js"></script>
     <!-- jQuery -->
- 
+ <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/owl.carousel@2.3.4/dist/assets/owl.carousel.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/owl.carousel@2.3.4/dist/assets/owl.theme.default.min.css">
+
+  <!-- Include jQuery from CDN (required by Owl Carousel) -->
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+  <!-- Include Owl Carousel JS from CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/owl.carousel@2.3.4/dist/owl.carousel.min.js"></script>
 
 
     <title>Diverse Media |  </title>
     <style type="text/css">
+
         .bg-success, .btn-success{
             background-color: #008374!important;
         }
@@ -64,6 +72,25 @@
         .second-text{
             color: #424241 !important;
         }
+
+         .owl-carousel {
+      display: flex;
+    }
+
+    .owl-item {
+      width: 100%;
+    }
+    .item{
+        overflow: hidden;
+    }
+
+    .owl-carousel img {
+      width: 100%;
+      height: auto;
+    }
+    .tab-pane{
+        color: #000 !important;
+    }
     </style>
 </head>
 
@@ -155,7 +182,6 @@
     </div>
 
 
-<script src="https://code.jquery.com/jquery-3.7.0.js"></script>
    
 
 
@@ -166,6 +192,30 @@
     <!-- DataTables JavaScript -->
     <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js"></script>
     <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.13.7/js/dataTables.bootstrap5.min.js"></script>
+
+
+
+  <!-- Initialize Owl Carousel -->
+  <script>
+    $(document).ready(function(){
+      $('.owl-carousel').owlCarousel({
+        loop: true,
+        margin: 10,
+        nav: true,
+        responsive: {
+          0: {
+            items: 1
+          },
+          600: {
+            items: 3
+          },
+          1000: {
+            items: 5
+          }
+        }
+      });
+    });
+  </script>
 
     <script>
         var el = document.getElementById("wrapper");
