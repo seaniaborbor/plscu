@@ -6,6 +6,8 @@ use App\Models\ClubDueLogModel;
 use App\Models\LoanApplicantModel;
 use App\Models\LoanLogModel;
 
+use App\Models\TeamModel;
+
 
 class Dashboard extends BaseController{    
    
@@ -20,6 +22,8 @@ class Dashboard extends BaseController{
 
          $LoanApplicantModel = new LoanApplicantModel();
          $LoanLogModel = new LoanLogModel();
+
+         $TeamModel = new TeamModel();
 
          //total club membership account 
          $data['total_club_members'] = $ClubMembershipModel->where('accountStatus', 'Approved')->countAllResults();
@@ -92,12 +96,25 @@ class Dashboard extends BaseController{
 
         // table containg club payment summary 
         $data['club_payments_summary_log'] = $ClubDueLogModel->table('due_pmt_log')
-                                                            ->selectSum('due_amount')
+                                                            ->select('due_pmt_log.*, membership_applicants.*, SUM(due_pmt_log.due_amount) as total_saved, membership_applicants.profileImg as memBerpic, membership_applicants.fullName as agentName')
                                                             ->join('membership_applicants', 'membership_applicants.memberSerialNo = due_pmt_log.mem_serial_no')
                                                             ->where('due_pmt_log.approved_status', 'Approved')
+                                                            ->groupBy('due_pmt_log.mem_serial_no')
+                                                            ->orderBy('due_pmt_log.id', 'desc')
                                                             ->get()
-                                                            ->getRow()
-                                                            ->due_amount;
+                                                            ->getResult();
+
+                // table containg loan payment summary 
+        $data['loan_payments_summary_log'] = $LoanLogModel->table('loan_pmt_log')
+                                                            ->select('loan_pmt_log.*, loan_application.*, SUM(loan_pmt_log.amount) as totalPaid, loan_application.applicantImg as memBerpic, loan_application.fullName as agentName, loan_application.id as applicantId')
+                                                            ->join('loan_application', 'loan_application.serial_no = loan_pmt_log.serial_no')
+                                                            ->where('loan_pmt_log.isApproved', 'Approved')
+                                                            ->groupBy('loan_pmt_log.serial_no')
+                                                            ->orderBy('loan_pmt_log.id', 'desc')
+                                                            ->get()
+                                                            ->getResult();
+        // get all team members
+        $data['users_table'] = $TeamModel->findAll();
 
          
         return view("dashboard/index", $data);
