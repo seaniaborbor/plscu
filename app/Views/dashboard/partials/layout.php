@@ -156,7 +156,7 @@ tr:hover {
         <!-- Sidebar -->
         <div class="bg-white shadow-lg" id="sidebar-wrapper">
             <div class="sidebar-heading  text-center p-0  fs-4 fw-bold text-white text-uppercase ">
-                <img src="https://www.bathtub2boardroom.com/wp-content/uploads/2017/04/Dashboard-R-Logo-header.png" class="img-fluid w-100">
+                <img src="https://www.bathtub2boardroom.com/wp-content/uploads/2017/04/Dashboard-R-Logo-header.png" class="img-fluid" style="max-width: 200px;">
             </div>
             <div class="list-group list-group-flush my-3">
                 <a href="<?=base_url('/dashboard')?>" class="<?=mark_active('dashboard', $passLink)?> bg-transparent list-group-item list-group-item-action  second-text fw-bold"><i class="bi bi-speedometer me-2"></i>Dashboard</a>
