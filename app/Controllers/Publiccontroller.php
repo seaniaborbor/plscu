@@ -64,6 +64,11 @@ class Publiccontroller extends BaseController{
         $PortfolioModel = new PortfolioModel();
         $data['portfolio_details'] = $PortfolioModel->find($id);
 
+        if(!$data['portfolio_details'])
+        {
+            return redirect()->to('/')->with('error', 'The document you requested couldnot be found');
+        }
+
         return view('public/portfolio-details', $data);
     }
 
@@ -72,6 +77,7 @@ class Publiccontroller extends BaseController{
     // ALL BLOG POSTS METHOD 
     public function blog()
     {
+
         $data = [];
 
         $BlogModel = new BlogModel();
@@ -94,6 +100,10 @@ class Publiccontroller extends BaseController{
         $BlogModel = new BlogModel();
         $data['blog_to_read'] = $BlogModel->blog_post_to_read($id); // get the blog to be read
 
+        if(!$data['blog_to_read'])
+        {
+            return redirect()->to('/')->with('error', 'The document you requested couldnot be found');
+        }
         $data['recent_blogs'] = $BlogModel->groupBy('id', 'desc')->findAll(4); // find the latest 4 recent posts
         $data['post_per_category'] = $BlogModel->post_per_category(); // get all the categories with num of post
 

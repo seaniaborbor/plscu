@@ -27,8 +27,8 @@
                     </td>
                     <td><?=$bp['title']?></td>
                     <td><?= substr($bp['createdAt'], 0,10) ?></td>
-                    <td><a href="#" class="btn btn-sm btn-secondary"><i class="bi bi-eye"></i> Preview</a></td>
-                    <td><a href="<?=base_url('/dashboard/edit/blog/'.$bp['id'])?>" class="btn btn-sm btn-success"><i class="bi bi-pencil"></i> Edit </a></td>
+                    <td><a href="<?=base_url('blog-details/'.$bp['id'])?>" class="btn w-100 btn-sm btn-success"><i class="bi bi-eye"></i> Preview</a></td>
+                    <td><a href="<?=base_url('/dashboard/edit/blog/'.$bp['id'])?>" class="btn btn-sm btn-success w-100"><i class="bi bi-pencil"></i> Edit </a></td>
                 </tr>
                 <?php $counter++?>
             <?php endforeach ?>

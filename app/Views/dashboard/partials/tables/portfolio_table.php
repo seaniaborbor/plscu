@@ -3,9 +3,6 @@
  <table id="example" class="table table-sm table-striped border" id="dTable">
     <thead>
       <tr class="bg-light text-dark">
-      <td width="25">
-       No
-      </td>
       <td></td>
       <td>
        Title
@@ -27,7 +24,6 @@
     <?php $counter = 1; ?>
       <?php foreach($all_portfolio as $port) : ?>
         <tr>
-          <td class="bg-light text-dark"><?=$counter?></td>
           <td>
             <img src="<?=base_url('uploads/'.$port['shceenshoti'])?>" style="width: 70px; height:50px">
           </td>
@@ -35,10 +31,10 @@
           <td><?= substr($port['createdAt'], 0,10) ?></td>
           
           <td>
-            <a href="<?=base_url('portfolio-details/'.$port['id'])?>" class="btn btn-sm btn-success"><i class="bi bi-eye"></i> View</a>
+            <a href="<?=base_url('portfolio-details/'.$port['id'])?>" class="btn w-100 btn-sm btn-success"><i class="bi bi-eye"></i> View</a>
         </td>
 
-          <td><a href="<?=base_url('/dashboard/edit/portfolio/'.$port['id'])?>" class="btn btn-sm btn-success "><i class="bi bi-pencil"></i> Edite</a></td>
+          <td><a href="<?=base_url('/dashboard/edit/portfolio/'.$port['id'])?>" class="btn w-100 btn-sm btn-success "><i class="bi bi-pencil"></i> Edite</a></td>
         </tr>
         <?php $counter++?>
       <?php endforeach  ?>
