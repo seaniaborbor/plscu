@@ -249,4 +249,18 @@ class PortfolioController extends BaseController{
         return view('dashboard/edit_portfolio_post', $data);
     }
 
+
+    public function delete($id){
+      if(!empty($id) && !is_numeric($id)){
+        return redirect()->to('/dashboard/portfolio/')->with('error', 'Invalid perimeter');
+      }
+
+      $db = new PortfolioModel();
+      if($db->find($id) && $db->delete($id)){
+        return redirect()->to('/dashboard/portfolio/')->with('success', 'Portfolio post deleted successfully');
+      }else{
+        return redirect()->to('/dashboard/portfolio/')->with('error', 'Failed to delete Portfolio');
+      }
+    }
+
 }

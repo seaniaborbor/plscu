@@ -54,6 +54,7 @@ $routes->get('/dashboard/portfolio', 'PortfolioController::index');
 $routes->post('/dashboard/portfolio', 'PortfolioController::index');
 $routes->get('/dashboard/edit/portfolio/(:any)', 'PortfolioController::edit/$1');
 $routes->post('/dashboard/edit/portfolio/(:any)', 'PortfolioController::edit/$1');
+$routes->get('/dashboard/delete/portfolio/(:any)', 'PortfolioController::delete/$1');
 
 
 // category routes 
@@ -65,6 +66,7 @@ $routes->get('/dashboard/blog', 'BlogController::index');
 $routes->post('/dashboard/blog', 'BlogController::index');
 $routes->get('/dashboard/edit/blog/(:any)', 'BlogController::edit/$1');
 $routes->post('/dashboard/edit/blog/(:any)', 'BlogController::edit/$1');
+$routes->get('/dashboard/delete/blog/(:any)', 'BlogController::delete/$1');
 
 
 // team members routes

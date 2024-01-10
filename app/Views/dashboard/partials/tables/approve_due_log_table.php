@@ -1,7 +1,7 @@
 
 
 <div class="table-responsive">
-    <table id="example2" class="table table-striped">
+    <table id="example3" class="table table-striped">
     <thead>
         <tr>
             <th>Member Name</th>

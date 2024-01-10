@@ -16,6 +16,9 @@
       <td width="100">
         Edit
       </td>
+       <td width="100">
+        Delete
+      </td>
     </tr>
     </thead>
 
@@ -35,6 +38,7 @@
         </td>
 
           <td><a href="<?=base_url('/dashboard/edit/portfolio/'.$port['id'])?>" class="btn w-100 btn-sm btn-success "><i class="bi bi-pencil"></i> Edite</a></td>
+          <td><a href="<?=base_url('/dashboard/delete/portfolio/'.$port['id'])?>" class="btn btn-sm btn-danger w-100"><i class="bi bi-trash"></i> Delete </a></td>
         </tr>
         <?php $counter++?>
       <?php endforeach  ?>

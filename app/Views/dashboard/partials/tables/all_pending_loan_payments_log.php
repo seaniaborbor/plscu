@@ -1,4 +1,4 @@
-<h5 class="text-dark mt-3"><i class="bi bi-card-checklist"></i> Pending Loan Payments</h5>
+<h5 class="text-dark mt-4"><i class="bi bi-card-checklist"></i> Pending Loan Payments</h5>
 <div class="table-responsive d-block">
 	<?php //print_r($all_pending_loan_payments); exit(); ?>
  <table id="example2" class="table table-hover table-striped w-100">

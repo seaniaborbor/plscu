@@ -227,4 +227,18 @@ class BlogController extends BaseController
        return view("dashboard/edit_blog", $data);
     }
 
+
+    public function delete($id){
+      if(!empty($id) && !is_numeric($id)){
+        return redirect()->to('/dashboard/blog/')->with('error', 'Invalid perimeter');
+      }
+
+      $db = new BlogModel();
+      if($db->find($id) && $db->delete($id)){
+        return redirect()->to('/dashboard/blog/')->with('success', 'Blog post deleted successfully');
+      }else{
+        return redirect()->to('/dashboard/blog/')->with('error', 'Failed to delete blog');
+      }
+    }
+
 }

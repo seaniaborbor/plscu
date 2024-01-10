@@ -1,5 +1,5 @@
 <div class="text-dark">
-    <h3>Approve Lone Applicants Log</h3>
+    <h3 class="mb-3">Approve Lone Applicants Log</h3>
         <?php //print_r($pending_loan_applicants); //exit(); ?>
 </div>
 <div class="table-responsive">

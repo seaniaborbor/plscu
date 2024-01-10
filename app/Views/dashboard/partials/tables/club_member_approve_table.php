@@ -1,4 +1,4 @@
-<h5 class="text-success mt-3">Approved Members</h5>
+<h5 class="text-success mt-4">Approved Members</h5>
 <div class="table-responsive d-block">
 	
  <table id="example2" class="table w-100">
