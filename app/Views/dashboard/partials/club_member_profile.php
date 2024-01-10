@@ -53,9 +53,11 @@
 			</tr>
 		</table>
 		<br>
-		<a href="<?=base_url('uploads/'.$member_profile[0]->application_form)?>" class="btn border-secondary ">View Applicant Form</a>
-		<a href="<?=base_url('/dashboard/delete/membership/'.$member_profile[0]->id)?>" class="btn border-secondary rounded-pill">Delete Application</a>
-		<div class=" mt-3 alert alert-warning rounded  shadow-sm">
+		<div class="d-flex">
+			<a href="<?=base_url('uploads/'.$member_profile[0]->application_form)?>" class="btn border-secondary rounded-pill btn-lg">View Applicant Form</a>
+		<a href="<?=base_url('/dashboard/delete/membership/'.$member_profile[0]->id)?>" class="btn btn-lg border-secondary rounded-pill">Delete Application</a>
+		</div>
+		<div class="btn-lg mt-3 alert alert-warning rounded  shadow-sm">
 			<p>Deleting this user will hide and affect all the financial records associated with it. <span class="text-danger">This process is illrevertable</span></p>
 		</div>
 	</div>

@@ -91,6 +91,68 @@
     .tab-pane{
         color: #000 !important;
     }
+
+    /* Reset some default styles */
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+/* Table header styles */
+th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+  text-align: left;
+  padding: 12px;
+  border: 1px solid #ddd;
+}
+
+/* Table cell styles */
+td {
+  padding: 12px;
+  border: 1px solid #ddd;
+}
+
+/* Alternating row colors */
+tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+/* Hover effect on rows */
+tr:hover {
+  background-color: #e5e5e5;
+}
+
+/* Responsive design for small screens */
+@media screen and (max-width: 600px) {
+  th, td {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  th {
+    text-align: center;
+  }
+}
+
+/* Apply styles to the item within the Owl Carousel */
+.owl-item {
+  /* Set initial styles */
+  border: 3px solid transparent;
+  box-shadow: 0 0 5px rgba(0, 128, 0, 0); /* Dark green shadow */
+  transition: all 0.15s, box-shadow 0.3s;
+}
+
+/* Change styles on hover */
+.owl-item:hover {
+  cursor: pointer;
+  border-color: #006400; /* Dark green border on hover */
+  box-shadow: 0 0 10px rgba(0, 128, 0, 0.5); /* Dark green shadow with more visibility on hover */
+}
+
+
     </style>
 </head>
 
@@ -144,7 +206,7 @@
         <div id="page-content-wrapper">
             <nav class="navbar shadow-sm navbar-expand-lg navbar-light bg-white py-2 mb-3 px-4">
                 <div class="d-flex align-items-center">
-                    <i class="bi bi-layout-text-sidebar  me-3" id="menu-toggle" style="font-size: 50px"></i>
+                    <i class="bi bi-bar-chart-steps  me-3" id="menu-toggle" style="font-size: 50px"></i>
                 </div>
 
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -202,6 +264,9 @@
         loop: true,
         margin: 10,
         nav: true,
+        autoplay: true, // Ensure autoplay is set to true
+      autoplayTimeout: 4000, // Adjust the autoplay timeout in milliseconds
+      autoplayHoverPause: true, // Pause on hover if needed
         responsive: {
           0: {
             items: 1

@@ -4,6 +4,7 @@
  <table id="example2" class="table table-hover  table-striped border">
    <thead>
       <tr class="bg-secnodary text-dark">
+        <td></td>
       <td>Full Name</td>
       <td>
         Gender
@@ -21,10 +22,11 @@
       <?php foreach($club_payments_summary_log as $clb_mdm) : ?>
     
         <tr>
-          <td data-bs-toggle="popover" data-bs-trigger="hover" data-bs-placement="top" data-bs-html="true" data-bs-content="<img  src='<?=base_url('uploads/'.$clb_mdm->memBerpic)?>' alt='Applicant Image' width='100'>">
-            <?=$clb_mdm->fullName?>
-              
-            </td>
+          <td class="p-0">
+            <img  src='<?=base_url('uploads/'.$clb_mdm->memBerpic)?>' style="height: 50px; width: 50px" class="rounded-pill m-0 img-thumbnail">
+          </td>
+          <td>
+            <?=$clb_mdm->fullName?></td>
                 <td><?=$clb_mdm->gender ?></td>
                 <td><?=$clb_mdm->phone ?></td>
                 <td><?=$clb_mdm->membership_category ?></td>

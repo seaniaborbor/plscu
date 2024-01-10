@@ -6,6 +6,7 @@
       <td width="25">
        No
       </td>
+      <td></td>
       <td>
        Title
       </td>
@@ -27,11 +28,14 @@
       <?php foreach($all_portfolio as $port) : ?>
         <tr>
           <td class="bg-light text-dark"><?=$counter?></td>
-          <td data-bs-toggle="popover" data-bs-trigger="hover" data-bs-placement="top" data-bs-html="true" data-bs-content="<img src='<?=base_url('uploads/'.$port['shceenshoti'])?>' alt='Applicant Image' width='100'><br> <?=$port['snippet']?>"><?=$port['title']?></td>
+          <td>
+            <img src="<?=base_url('uploads/'.$port['shceenshoti'])?>" style="width: 70px; height:50px">
+          </td>
+          <td><?=$port['title']?></td>
           <td><?= substr($port['createdAt'], 0,10) ?></td>
           
           <td>
-            <a href="#" class="btn btn-sm btn-success"><i class="bi bi-eye"></i> View</a>
+            <a href="<?=base_url('portfolio-details/'.$port['id'])?>" class="btn btn-sm btn-success"><i class="bi bi-eye"></i> View</a>
         </td>
 
           <td><a href="<?=base_url('/dashboard/edit/portfolio/'.$port['id'])?>" class="btn btn-sm btn-success "><i class="bi bi-pencil"></i> Edite</a></td>

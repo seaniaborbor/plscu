@@ -10,7 +10,9 @@
       <td>Logged At</td>
       <td>Logged By</td>
       <td>Status</td>
+      <?php if($userData['userRole'] == "SUDO") :?>
       <td>Delete</td>
+    <?php endif; ?>
     </tr>
    </thead>
    <tbody>
@@ -30,7 +32,9 @@
             <i class="bi bi-check-lg"></i>
             <?=$pdng_lonpmts->isApproved ?>
           </td>
-          <td><a href="<?=base_url('/dashboard/delete/log_loan_payment/'.$pdng_lonpmts->payment_id)?>"  class="btn btn-sm btn-danger"><i class="bi bi-trash"></i> Delete</a></td>
+          <?php if($userData['userRole'] == "SUDO"): ?>
+            <td><a href="<?=base_url('/dashboard/delete/log_loan_payment/'.$pdng_lonpmts->payment_id)?>"  class="btn btn-sm btn-danger"><i class="bi bi-trash"></i> Delete</a></td>
+          <?php endif; ?>
         </tr>
       <?php endif; ?>
       <?php endforeach  ?>

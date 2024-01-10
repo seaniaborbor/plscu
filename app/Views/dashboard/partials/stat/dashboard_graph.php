@@ -11,8 +11,8 @@
 
             'Total Due Payments LRD', 
             'Total Due Payments USD', 
-            'Total Loan Payment USD', 
-            'Total Loan Payments LRd'
+            'Total Loan Payment LRD', 
+            'Total Loan Payments USD'
       ],
       datasets: [{
         label: 'Monthly Sales',

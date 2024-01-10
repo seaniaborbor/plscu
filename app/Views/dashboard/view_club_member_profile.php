@@ -119,7 +119,23 @@
 					  	</div>
 					  </div>
 					  <div class="tab-pane text-dark fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
-					  	<?php include('partials/forms/approve_club_member_form.php')?>
+
+					  	<?php if($userData['userRole'] == 'SUDO'){
+					  		include('partials/forms/approve_club_member_form.php');
+					  	}else{
+					  		?>
+					  			<div class="card border bordered shadow-lg border-danger border-2">
+					  				<div class="card-header bg-danger text-center">
+					  					<h4 class="text-white"><i class="bi bi-exclimation "></i>Warning</h4>
+					  				</div>
+					  				<div class="card-body">
+					  					<p>Your account do not have the previllage to approve any applicant</p>
+					  				</div>
+					  			</div>
+					  		<?php 
+					  	}
+					  	 ?>
+
 					  </div>
 					</div>
 				</div>

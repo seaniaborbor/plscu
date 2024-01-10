@@ -2,7 +2,7 @@
 
 	<?php if(isset($all_team)) : ?>
 		<?php foreach($all_team as $tm) : ?>
-			<div class="col-md-4 mt-3">
+			<div class="col-md-3 mt-3">
 				<div class="card rounded">
 					<div class="card-body" 
 					style="height:250px; 

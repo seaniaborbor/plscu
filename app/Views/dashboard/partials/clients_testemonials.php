@@ -5,7 +5,7 @@
 		<?php if(isset($all_testimonials)): ?>
    	<?php $counter = 1; ?>
       <?php foreach($all_testimonials as $testi) : ?>
-        	<div class="col-md-4 mb-5">
+        	<div class="col-md-3 mb-5">
         		<div class="card">
 	        		<div class="card-body text-center">
 	        			<div class="p-5" 

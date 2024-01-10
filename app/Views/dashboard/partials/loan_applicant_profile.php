@@ -48,9 +48,14 @@
 			<a href="<?=base_url('/dashboard/delete/loanmanager/'.$applicant_data[0]->applicantIdNo)?>" class="btn border-secondary rounded-pill">Delete This Applicantion</a>
 		</div>
 		<div class="col-md-12 p-3">
-			<div class=" alert alert-danger rounded  shadow-sm">
-			<p>Deleting this user will hide and affect all the financial records associated with it. <span class="text-danger">This process is illrevertable</span></p>
-		</div>
+			<div class="card border bordered shadow-lg border-danger border-2">
+  				<div class="card-header bg-danger text-center">
+  					<h4 class="text-white"><i class="bi bi-exclimation "></i>Warning</h4>
+  				</div>
+  				<div class="card-body">
+  					<p>Deleting an account removes all financial logs associated with it and is illrevertable</p>
+  				</div>
+  			</div>
 		</div>
 	</div>
 	

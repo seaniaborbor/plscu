@@ -6,8 +6,10 @@
       <tr class="bg-secnodary text-dark">
       <td>Full Name</td>
       <td>Loan Total</td>
-      <td>Amount Paid</td>
       <td>Interest Rate</td>
+      <td>Total To Pay</td>
+      <td>Amount Paid</td>
+      <td>Balance</td>
       <td>Currency</td>
       <td>Profile</td>
     </tr>
@@ -18,12 +20,17 @@
       <?php foreach($loan_payments_summary_log as $clb_mdm) : ?>
     
         <tr>
-          <td data-bs-toggle="popover" data-bs-trigger="hover" data-bs-placement="top" data-bs-html="true" data-bs-content="<img  src='<?=base_url('uploads/'.$clb_mdm->memBerpic)?>' alt='Applicant Image' width='100'>">
+          <td>
+            <img  src='<?=base_url('uploads/'.$clb_mdm->memBerpic)?>' alt='Applicant Image' style="width:50px; height:50px;" class="rounded-circle img-thumbnail">
+          </td>
+          <td>
             <?=$clb_mdm->fullName?>
           </td>
           <td><?=$clb_mdm->loanAmount ?></td>
-          <td><?=$clb_mdm->totalPaid ?></td>
           <td><?=$clb_mdm->interestRate.'%'?></td>
+          <td><?=($clb_mdm->loanAmount*($clb_mdm->interestRate/100))+$clb_mdm->loanAmount?></td>
+          <td><?=$clb_mdm->totalPaid ?></td>
+          <td><?=(($clb_mdm->loanAmount*($clb_mdm->interestRate/100))+$clb_mdm->loanAmount)-$clb_mdm->totalPaid?></td>
           <td><?=$clb_mdm->currency?></td>
           <td><a href="<?=base_url('/dashboard/loanmanager/view_profile/'.$clb_mdm->applicantId)?>"  class="btn btn-sm btn-success"><i class="bi bi-person"></i> Profile</a>
           </td>
