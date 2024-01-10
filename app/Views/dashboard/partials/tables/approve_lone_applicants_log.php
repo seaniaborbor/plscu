@@ -21,7 +21,6 @@
        
         <?php if(isset($approved_loan_applicants)) : ?>
             <?php foreach ($approved_loan_applicants as $pending_lg) : ?>
-               <?php if($userData['id'] == $pending_lg->regBy || $userData['userRole'] == "SUDO") : ?>
                      <tr>
                         <!-- Add a data-bs-toggle attribute with value "popover" -->
                         <td ><?=$pending_lg->applicantName?></td>
@@ -33,7 +32,6 @@
                         <td><a href="<?=base_url('dashboard/loanmanager/view_profile/'.$pending_lg->applicant_id)?>"  class="btn btn-sm btn-primary"><i class="bi bi-person"></i> Member Profile</a></td>
                                                 
                     </tr>
-                <?php endif; ?>
             <?php endforeach; ?>
         <?php endif; ?>
     </tbody>

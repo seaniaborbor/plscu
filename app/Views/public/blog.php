@@ -10,7 +10,7 @@
           <div class="row d-flex justify-content-center">
             <div class="col-lg-6 text-center">
               <h2>Blog</h2>
-              <p>Odio et unde deleniti. Deserunt numquam exercitationem. Officiis quo odio sint voluptas consequatur ut a odio voluptatem. Sit dolorum debitis veritatis natus dolores. Quasi ratione sint. Sit quaerat ipsum dolorem.</p>
+              <p>"Explore the PLSCU Blog – Your Source for Financial Insights and Empowerment. Delve into practical tips, success stories, and expert advice tailored to guide you on your journey to prosperity. Whether it's smart saving strategies, entrepreneurship inspiration, or the latest trends in financial literacy, our blog is your go-to resource for valuable information to empower your financial life."</p>
             </div>
           </div>
         </div>

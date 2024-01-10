@@ -25,6 +25,7 @@ class ClubMembershipModel extends Model
         'accountStatus',
         'registeredBy',
     	'profileImg',
+        'application_form'
     ];
   
   // the list the member depending on their reg status 

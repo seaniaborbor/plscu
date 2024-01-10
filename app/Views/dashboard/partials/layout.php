@@ -120,7 +120,7 @@
 
                  <a href="<?=base_url('/dashboard/loan_payments')?>" class="<?=mark_active('loan_payments', $passLink)?> list-group-item list-group-item-action bg-transparent second-text "><i class="bi  bi-coin me-2"></i>Loans & Payments</a>
 
-                <a href="<?=base_url('/dashboard/portfolio')?>" class="list-group-item list-group-item-action bg-transparent second-text "><i class="bi  bi-graph-up me-2"></i>Generate Report</a>
+                
 
                  <a href="<?=base_url('/dashboard/portfolio')?>" class="<?=mark_active('portfolio', $passLink)?> list-group-item list-group-item-action bg-transparent second-text "><i
                         class="bi  bi-backpack3 me-2"></i>Portfolio</a>
@@ -134,7 +134,7 @@
                 
                 <a href="<?=base_url('/dashboard/faq')?>" class="<?=mark_active('faq', $passLink)?> list-group-item list-group-item-action bg-transparent second-text "><i
                         class="bi bi-quora me-2"></i>FAQ</a>
-                <a href="<?=base_url('/logout')?>" class="list-group-item list-group-item-action bg-transparent text-danger "><i
+                <a href="<?=base_url('/logout')?>" class="list-group-item btn list-group-item-action btn-dan "><i
                         class="fas fa-power-off me-2"></i>Logout</a>
             </div>
         </div>

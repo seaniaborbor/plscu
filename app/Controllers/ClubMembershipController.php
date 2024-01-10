@@ -121,6 +121,17 @@ class ClubMembershipController extends BaseController{
             'mime_in' => 'Only JPEG, JPG, and PNG file types are allowed.'
         ]
     ],
+
+    'application_form' => [
+                'rules' => 'uploaded[application_form]|max_size[application_form,1024]|ext_in[application_form,pdf]',
+                'label' => 'Application form',
+                'errors' => [
+                    'required' => 'Application form in pdf required',
+                    'max_size'  => 'The file size is too large. Maximum size is 6 MB.',
+                    'is_image' => 'Only pdf allowed',
+                    'ext_in' => 'Please choose pdf only'
+                ]
+            ],
 ];
 
 
@@ -133,6 +144,16 @@ class ClubMembershipController extends BaseController{
             $profileImg_newname = $profileImg->getRandomName(); // random image name
             if (!$profileImg->move('uploads/', $profileImg_newname)) {
                 return redirect()->to('/dashboard/membership')->with('error', 'Error uploading the profile image');
+            }
+        }
+
+        // Process and upload the application form
+        $applicationForm_newname = "";
+        if ($this->request->getFile('application_form')) {
+            $form = $this->request->getFile('application_form');
+            $applicationForm_newname = $form->getRandomName(); // random image name
+            if (!$form->move('uploads/', $applicationForm_newname)) {
+                return redirect()->to('/dashboard/membership')->with('error', 'Error uploading the application form');
             }
         }
 
@@ -151,6 +172,7 @@ class ClubMembershipController extends BaseController{
             'memberSerialNo' => random_string('alnum', 6),
             'regFees' => $this->request->getPost('regFees'),
             'regFeesStatus' => $this->request->getPost('regFeesStatus'),
+            'application_form' => $applicationForm_newname,
             'accountStatus' => 'Pending',
             'registeredBy' => $data['userData']['id'],
             'profileImg' => $profileImg_newname,

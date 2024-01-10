@@ -102,6 +102,14 @@
         <?php endif; ?>
 	</div>
 
+	<div class="form-group mb-3">
+		<label>Attach Application Form</label>
+		<input type="file" name="application_form" value="<?= set_value('application_form')?>"  class="form-control" >
+		<?php if(isset($validation) && $validation->hasError('application_form')) : ?>
+           <div class="text-danger"><?=$validation->getError('application_form')?></div>
+        <?php endif; ?>
+	</div>
+
 
 	<div class="form-group mb-3">
 		<button class="btn btn-success">Submit Form</button>

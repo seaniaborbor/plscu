@@ -3,7 +3,7 @@
 <?php //print_r($member_profile); ?>
 
 	<div class="col-md-4 text-center">
-		<img src="<?=base_url('uploads/'.$member_profile[0]->profileImg)?>" class="w-100 rounded-circle img-thumbnail img-fluid">
+		<img src="<?=base_url('uploads/'.$member_profile[0]->profileImg)?>" class="w-100  img-thumbnail img-fluid">
 	</div>
 	<div class="col-md-8">
 		<table class="table">
@@ -53,7 +53,7 @@
 			</tr>
 		</table>
 		<br>
-		<a href="" class="btn border-secondary rounded-pill ">View Applicant Form</a>
+		<a href="<?=base_url('uploads/'.$member_profile[0]->application_form)?>" class="btn border-secondary ">View Applicant Form</a>
 		<a href="<?=base_url('/dashboard/delete/membership/'.$member_profile[0]->id)?>" class="btn border-secondary rounded-pill">Delete Application</a>
 		<div class=" mt-3 alert alert-warning rounded  shadow-sm">
 			<p>Deleting this user will hide and affect all the financial records associated with it. <span class="text-danger">This process is illrevertable</span></p>

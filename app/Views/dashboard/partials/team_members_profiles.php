@@ -19,26 +19,11 @@
 							</div>
 						</div>
 						<div class="row">
-							<div class="col-3">
-								<a class="btn btn-primary rounded-circle" target="blank" href="<?=$tm['fbHandle']?>">
-									<i class="bi bi-facebook"></i>
-								</a>
-							</div>
-							<div class="col-3">
-								<a class="btn btn-success rounded-circle" target="blank" href="<?=$tm['xHandle']?>">
-									<i class="bi bi-twitter"></i>
-								</a>
-							</div>
-							<div class="col-3">
-								<a class="btn btn-info rounded-circle" target="blank" href="<?=$tm['linkinHandle']?>">
-									<i class="bi bi-linkedin"></i>
-								</a>
-							</div>
-							<div class="col-3">
-								<a class="btn btn-danger rounded-circle" href="<?=base_url('/dashboard/edit/team/'.$tm['id'])?>">
-									<i class="bi bi-pencil"></i>
-								</a>
-							</div>
+							
+						<a class="btn btn-success w-100" href="<?=base_url('/dashboard/edit/team/'.$tm['id'])?>">
+							<i class="bi bi-pencil"></i> View/Edit Profile
+						</a>
+							
 						</div>
 					</div>
 				</div>

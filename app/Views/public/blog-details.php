@@ -82,7 +82,7 @@ $blog_to_read =$blog_to_read[0];
                   <a href="https://instagram.com/#"><i class="biu bi-instagram"></i></a>
                 </div>
                 <p>
-                  Itaque quidem optio quia voluptatibus dolorem dolor. Modi eum sed possimus accusantium. Quas repellat voluptatem officia numquam sint aspernatur voluptas. Esse et accusantium ut unde voluptas.
+                  Hi, I'm <?=$blog_to_read->fullName?> and I'm the author of this article you've just read.  At PLSCU, I'm <?=$blog_to_read->profession?>. Please support our platform by sharing this article. 
                 </p>
               </div>
             </div><!-- End post author -->
