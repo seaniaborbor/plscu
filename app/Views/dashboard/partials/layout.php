@@ -193,7 +193,7 @@ tr:hover {
         <div id="page-content-wrapper">
             <nav class="navbar shadow-sm navbar-expand-lg navbar-light bg-white py-2 mb-3 px-4">
                 <div class="d-flex align-items-center">
-                    <i class="bi bi-bar-chart-steps  me-3" id="menu-toggle" style="font-size: 50px"></i>
+                    <i class="bi bi-bar-chart-steps  me-3" id="menu-toggle" style="font-size: 30px"></i>
                 </div>
 
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -207,7 +207,7 @@ tr:hover {
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle second-text fw-bold" href="#" id="navbarDropdown"
                                 role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                <span class="p-3 px-4 rounded-circle" 
+                                <span class="p-2 px-3 rounded-circle" 
                                 style="background-image: url(<?=base_url('/uploads/'.$userData['profileImg'])?>);
                                 background-size: cover; background-position: top;">
                                     </span><?=$userData['fullName']?>
