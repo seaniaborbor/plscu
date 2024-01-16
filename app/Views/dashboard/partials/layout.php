@@ -171,6 +171,8 @@ tr:hover {
 
                  <a href="<?=base_url('/dashboard/loan_payments')?>" class="<?=mark_active('loan_payments', $passLink)?> list-group-item list-group-item-action bg-transparent second-text "><i class="bi  bi-coin me-2"></i>Loans & Payments</a>
 
+                 <a href="<?=base_url('/dashboard/loan_payments')?>" class="<?=mark_active('loan_payments', $passLink)?> list-group-item list-group-item-action bg-transparent second-text "><i class="bi  bi-clipboard me-2"></i>Reports</a>
+
                 
 
                  <a href="<?=base_url('/dashboard/portfolio')?>" class="<?=mark_active('portfolio', $passLink)?> list-group-item list-group-item-action bg-transparent second-text "><i
@@ -180,6 +182,7 @@ tr:hover {
                 <a href="<?=base_url('/dashboard/team')?>" class="<?=mark_active('team', $passLink)?> list-group-item list-group-item-action bg-transparent second-text "><i
                         class="bi bi-people me-2"></i>Team Members</a>
                 <a href="<?=base_url('/dashboard/services')?>" class="<?=mark_active('services', $passLink)?> list-group-item list-group-item-action bg-transparent second-text "><i class="bi bi-blockquote-left me-2"></i>Services</a>
+
                 
                 <a href="<?=base_url('/dashboard/testimonials')?>" class="<?=mark_active('testimonials', $passLink)?> list-group-item list-group-item-action bg-transparent second-text "><i class="bi bi-chat-square-quote me-2"></i>Testimonial</a>
                 

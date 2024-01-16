@@ -44,11 +44,13 @@
 	</div>
 
 	<div class="col-md-4">
-		<div class="card-header">
-			<h3 class="text-success mb-3">Team Member</h3>
+		<div class="card  border border-3 border-success">
+			<div class="card-header bg-success">
+			<h3 class="text-white mb-3">Team Member</h3>
 		</div>
 		<div class="card-body">
 		   <?php include('partials/stat/team_members_table.php'); ?> 
+		</div>
 		</div>
 	</div>
 
