@@ -1,6 +1,6 @@
 
 <div class="table-responsive">
-	
+  
  <table id="example1" class="table table-hover  table-striped border">
    <thead>
       <tr class="bg-secnodary text-dark">
