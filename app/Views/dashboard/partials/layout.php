@@ -24,6 +24,7 @@
 
   <!-- Include jQuery from CDN (required by Owl Carousel) -->
   <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
   <!-- Include Owl Carousel JS from CDN -->
   <script src="https://cdn.jsdelivr.net/npm/owl.carousel@2.3.4/dist/owl.carousel.min.js"></script>
@@ -31,6 +32,10 @@
 
     <title>Diverse Media |  </title>
     <style type="text/css">
+       .second-text{
+            color: #fff !important;
+            font-weight: bolder;
+        }
 
         .bg-success, .btn-success{
             background-color: #008374!important;
@@ -54,13 +59,13 @@
         }
 
         .list-group-item .bi{
-            color:#008374!important;
+            color:#fff!important;
             font-weight: bolder;
             font-size: 25px !important;
         }
         
         .activate {
-            background-color: #c1efde!important;
+            background-color: #fff !important;
             color:#000 !important;
         }
          .nav-pills .active .bi{
@@ -69,9 +74,7 @@
         tr:hover{
             cursor: pointer;
         }
-        .second-text{
-            color: #424241 !important;
-        }
+
 
          .owl-carousel {
       display: flex;
@@ -127,16 +130,15 @@ tr:hover {
 /* Apply styles to the item within the Owl Carousel */
 .owl-item {
   /* Set initial styles */
-  border: 3px solid transparent;
+  border: 3px solid #E4E7DE;
   box-shadow: 0 0 5px rgba(0, 128, 0, 0); /* Dark green shadow */
   transition: all 0.15s, box-shadow 0.3s;
+  border-radius: 15px !important;
+  overflow: hidden;
 }
 
-/* Change styles on hover */
-.owl-item:hover {
-  cursor: pointer;
-  border-color: #006400; /* Dark green border on hover */
-  box-shadow: 0 0 10px rgba(0, 128, 0, 0.5); /* Dark green shadow with more visibility on hover */
+.bg-light{
+    background: #f8f9fa!;
 }
 
 
@@ -154,11 +156,11 @@ tr:hover {
 <body>
     <div class="d-flex" id="wrapper">
         <!-- Sidebar -->
-        <div class="bg-white shadow-lg" id="sidebar-wrapper">
-            <div class="sidebar-heading  text-center p-0  fs-4 fw-bold text-white text-uppercase ">
-                <img src="https://www.bathtub2boardroom.com/wp-content/uploads/2017/04/Dashboard-R-Logo-header.png" class="img-fluid" style="max-width: 200px;">
+        <div class=" shadow-lg bg-success" id="sidebar-wrapper" >
+            <div class="sidebar-heading  text-center bg-white p-0  mb-0 fs-4 fw-bold text-white text-uppercase ">
+                <img src="<?=base_url('uploads/plscu_logo-removebg-preview.png')?>" class="img-fluid" style="max-width: 200px;">
             </div>
-            <div class="list-group list-group-flush my-3">
+            <div class="list-group list-group-flush my-0">
                 <a href="<?=base_url('/dashboard')?>" class="<?=mark_active('dashboard', $passLink)?> bg-transparent list-group-item list-group-item-action  second-text fw-bold"><i class="bi bi-speedometer me-2"></i>Dashboard</a>
 
                 <a href="<?=base_url('/dashboard/membership')?>" class="<?=mark_active('clubmembership', $passLink)?> bg-transparent list-group-item list-group-item-action  second-text "><i class="bi  bi-suit-club-fill me-2"></i>Club Membership</a>
@@ -183,17 +185,15 @@ tr:hover {
                 
                 <a href="<?=base_url('/dashboard/faq')?>" class="<?=mark_active('faq', $passLink)?> list-group-item list-group-item-action bg-transparent second-text "><i
                         class="bi bi-quora me-2"></i>FAQ</a>
-                <a href="<?=base_url('/logout')?>" class="list-group-item btn list-group-item-action btn-dan "><i
-                        class="fas fa-power-off me-2"></i>Logout</a>
             </div>
         </div>
         <!-- /#sidebar-wrapper -->
 
         <!-- Page Content -->
-        <div id="page-content-wrapper">
-            <nav class="navbar shadow-sm navbar-expand-lg navbar-light bg-white py-2 mb-3 px-4">
+        <div id="page-content-wrapper" class="bg-light">
+            <nav class="navbar shadow-lg  navbar-expand-lg navbar-light bg-light py-3 mb-3 px-4">
                 <div class="d-flex align-items-center">
-                    <i class="bi bi-bar-chart-steps  me-3" id="menu-toggle" style="font-size: 30px"></i>
+                    <i class="bi bi-bar-chart-steps text-warning  me-3" id="menu-toggle" style="font-size: 30px"></i>
                 </div>
 
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -205,9 +205,9 @@ tr:hover {
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle second-text fw-bold" href="#" id="navbarDropdown"
+                            <a class="nav-link text-success dropdown-toggle second-text fw-bold" href="#" id="navbarDropdown"
                                 role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                <span class="p-2 px-3 rounded-circle" 
+                                <span class="p-2 px-3 img-thumbnail shadow-sm rounded-circle" 
                                 style="background-image: url(<?=base_url('/uploads/'.$userData['profileImg'])?>);
                                 background-size: cover; background-position: top;">
                                     </span><?=$userData['fullName']?>
@@ -222,7 +222,7 @@ tr:hover {
                 </div>
             </nav>
 
-            <div class="container-fluid px-4">
+            <div class="container-fluid bg-light px-4">
                 <?=$this->renderSection('main')?>
             </div>
         </div>

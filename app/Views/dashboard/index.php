@@ -5,27 +5,26 @@
 <?php include('partials/stat/dashboard_summary_cards.php'); ?>
 
 <div class="row">
-
-	<div class="col-md-4">
-		<div class="card">
-			<div class="card-body">
-				<?php include('partials/stat/dashboard_graph.php'); ?>
-			</div>
-		</div>
+	<div class="col-md-6">
+		<?php include('partials/stat/dashboard_graph.php'); ?>
+	</div>
+	<div class="col-md-3">
+		<?php include('partials/stat/daughnut_charts_male_females_finance.php'); ?>
+	</div>
+	<div class="col-md-3">
+		<?php include('partials/stat/daughnut_charts_male_females_loan.php'); ?>
 	</div>
 
-	<div class="col-md-8">
-		<div class="card">
+	<div class="col-md-8 mt-4">
+		<div class="card border border-2">
 			<div class="card-header">
+				<h3 class="text-success mb-4">Financial Summary Logs</h3>
 				 <ul class="nav nav-pills" id="myTabs">
 				    <li class="nav-item">
 				      <a class="nav-link active" id="home-tab" data-bs-toggle="tab" href="#home">Club Payments</a>
 				    </li>
 				    <li class="nav-item">
 				      <a class="nav-link" id="profile-tab" data-bs-toggle="tab" href="#profile">Loan Payment</a>
-				    </li>
-				    <li class="nav-item">
-				      <a class="nav-link" id="contact-tab" data-bs-toggle="tab" href="#contact">Team Members</a>
 				    </li>
 				  </ul>
 			</div>
@@ -39,14 +38,21 @@
 				      <h3>Loan Payment Summary Table</h3>
 				      <?php include('partials/stat/loan_payment_summary_table.php'); ?>
 				    </div>
-				    <div class="tab-pane fade text-dark" id="contact">
-				      <h3>Team Members - Agents</h3>
-				      <?php include('partials/stat/team_members_table.php'); ?> 
-				    </div>
 				  </div>
 			</div>
 		</div>
 	</div>
+
+	<div class="col-md-4">
+		<div class="card-header">
+			<h3 class="text-success mb-3">Team Member</h3>
+		</div>
+		<div class="card-body">
+		   <?php include('partials/stat/team_members_table.php'); ?> 
+		</div>
+	</div>
+
+
 
 </div>
 
