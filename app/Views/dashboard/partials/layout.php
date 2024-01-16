@@ -157,7 +157,7 @@ tr:hover {
     <div class="d-flex" id="wrapper">
         <!-- Sidebar -->
         <div class=" shadow-lg bg-success" id="sidebar-wrapper" >
-            <div class="sidebar-heading  text-center bg-white p-0  mb-0 fs-4 fw-bold text-white text-uppercase ">
+            <div class="sidebar-heading  text-center bg-success p-0  mb-0 fs-4 fw-bold text-white text-uppercase ">
                 <img src="<?=base_url('uploads/plscu_logo-removebg-preview.png')?>" class="img-fluid" style="max-width: 200px;">
             </div>
             <div class="list-group list-group-flush my-0">
@@ -171,7 +171,7 @@ tr:hover {
 
                  <a href="<?=base_url('/dashboard/loan_payments')?>" class="<?=mark_active('loan_payments', $passLink)?> list-group-item list-group-item-action bg-transparent second-text "><i class="bi  bi-coin me-2"></i>Loans & Payments</a>
 
-                 <a href="<?=base_url('/dashboard/loan_payments')?>" class="<?=mark_active('loan_payments', $passLink)?> list-group-item list-group-item-action bg-transparent second-text "><i class="bi  bi-clipboard me-2"></i>Reports</a>
+                 <a href="#" data-bs-toggle="modal" data-bs-target="#loanReport" class="<?=mark_active('loan_payments', $passLink)?> list-group-item list-group-item-action bg-transparent second-text "><i class="bi  bi-clipboard me-2"></i>Reports</a>
 
                 
 
@@ -234,6 +234,33 @@ tr:hover {
     </div>
 
 
+<!-- Modal -->
+<div class="modal fade" id="loanReport" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header bg-success">
+        <h3 class="modal-title text-white" id="exampleModalLabel">Generate Report </h3>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form method="post" action="/dashboard/generate/loan_report/">
+             <p class="mb-3 text-dark ">Please be aware that this wizard is used to generate financial report of lon and payments, and as well as registration or requirement fees only</p>
+            <p class="mb-3 text-dark ">Choose the date range of date below. The starting date should be less than the end date</p>
+            <div class="form-group mb-3">
+                <label>Starting Date</label>
+                <input type="date" name="startingDate" class="form-control-lg form-control">
+            </div>
+
+            <div class="form-group mb-3">
+                <label>Ending Date</label>
+                <input type="date" name="startingDate" class="form-control-lg form-control">
+            </div>
+            <button class="btn btn-lg btn-success">Generate Report </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
    
 
 
