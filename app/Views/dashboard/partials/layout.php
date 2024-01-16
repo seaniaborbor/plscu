@@ -243,20 +243,25 @@ tr:hover {
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        <form method="post" action="/dashboard/generate/loan_report/">
-             <p class="mb-3 text-dark ">Please be aware that this wizard is used to generate financial report of lon and payments, and as well as registration or requirement fees only</p>
-            <p class="mb-3 text-dark ">Choose the date range of date below. The starting date should be less than the end date</p>
-            <div class="form-group mb-3">
-                <label>Starting Date</label>
-                <input type="date" name="startingDate" class="form-control-lg form-control">
-            </div>
+     <form method="post" action="<?=base_url('dashboard/generate/loan_report')?>">
+    <input type="hidden" name="<?= csrf_token() ?>" value="<?= csrf_hash() ?>">
 
-            <div class="form-group mb-3">
-                <label>Ending Date</label>
-                <input type="date" name="startingDate" class="form-control-lg form-control">
-            </div>
-            <button class="btn btn-lg btn-success">Generate Report </button>
-        </form>
+    <p class="mb-3 text-dark">Please be aware that this wizard is used to generate financial reports of loan and payments, as well as registration or requirement fees only</p>
+    <p class="mb-3 text-dark">Choose the date range below. The starting date should be less than the end date</p>
+    
+    <div class="form-group mb-3">
+        <label for="startingDate">Starting Date</label>
+        <input type="date" id="startingDate" name="startingDate" class="form-control-lg form-control" required>
+    </div>
+
+    <div class="form-group mb-3">
+        <label for="endingDate">Ending Date</label>
+        <input type="date" id="endingDate" name="endingDate" class="form-control-lg form-control" required>
+    </div>
+    
+    <button type="submit" class="btn btn-lg btn-success">Generate Report</button>
+</form>
+
       </div>
     </div>
   </div>
