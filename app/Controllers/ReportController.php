@@ -30,7 +30,8 @@ public function loan_report()
       $startingDate = $this->request->getPost('startingDate');
       $endingDate = $this->request->getPost('endingDate');
 
-
+      $data['startingDate'] = $startingDate;
+      $data['endingDate'] = $endingDate;
       // get all the lone payments log 
       $data['all_loan_payment_table'] = $LoanReportModel->allpayments($startingDate, $endingDate);
 
