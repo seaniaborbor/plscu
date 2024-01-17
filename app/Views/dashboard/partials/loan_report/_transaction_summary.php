@@ -24,24 +24,34 @@ sumofUsdLoanOutPending
 				<thead>
 					<tr>
 						<td>Description</td>
+						<td>From</td>
+						<td>To</td>
 						<td>Value</td>
 					</tr>
 				</thead>
 				<tbody>
 					<tr>
-						<td>Total Liberian Dollars Pending</td>
+						<td>Total loan payment in Liberian Dollars Pending</td>
+						<td><?=$startingDate?></td>
+						<td><?=$endingDate?></td>
 						<td><?=$totalLRDpaid_pending?></td>
 					</tr>
 					<tr>
-						<td>Total Liberian Dollars Approved</td>
+						<td>Total loan payment in Liberian Dollars Approved</td>
+						<td><?=$startingDate?></td>
+						<td><?=$endingDate?></td>
 						<td><?=$totalLRDpaid_approved?></td>
 					</tr>
 					<tr>
-						<td>Total United States Dollars Pending</td>
+						<td>Total loan payment in United States Dollars Pending</td>
+						<td><?=$startingDate?></td>
+						<td><?=$endingDate?></td>
 						<td><?=$totalUSDpaid_pending?></td>
 					</tr>
 					<tr>
-						<td>Total United States Dollars Approved</td>
+						<td>Total loan payment in United States Dollars Approved</td>
+						<td><?=$startingDate?></td>
+						<td><?=$endingDate?></td>
 						<td><?=$totalUSDpaid_approved?></td>
 					</tr>
 				</tbody>
@@ -59,28 +69,53 @@ sumofUsdLoanOutPending
 				<thead>
 					<tr>
 						<td>Description</td>
+						<td>From</td>
+						<td>To</td>
 						<td>Value</td>
 					</tr>
 				</thead>
 				<tbody>
 					<tr>
 						<td>Total Loan amount applied for but pending (not yet approved) in LRD</td>
+						<td><?=$startingDate?></td>
+						<td><?=$endingDate?></td>
 						<td><?=$sumOfLrdLoanOutPending?></td>
 					</tr>
 					<tr>
 						<td>Total Loan amount given Out  (approved) In LRD</td>
-						<td><?=$totalLRDpaid_approved?></td>
+						<td><?=$startingDate?></td>
+						<td><?=$endingDate?></td>
+						<td><?=$sumOfLrdLoanOutApproved?></td>
 					</tr>
 					<tr>
 						<td>Total Loan amount applied for but pending (not yet approved) in USD</td>
+						<td><?=$startingDate?></td>
+						<td><?=$endingDate?></td>
 						<td><?=$sumofUsdLoanOutPApproved?></td>
 					</tr>
 					<tr>
 						<td>Total Loan amount given Out  (approved) In USD</td>
+						<td><?=$startingDate?></td>
+						<td><?=$endingDate?></td>
 						<td><?=$sumofUsdLoanOutPApproved?></td>
 					</tr>
 				</tbody>
 			</table>
+		</div>
+	</div>
+
+	<div class="col-md-4">
+		<div class="card">
+			<div class="card-body">
+				<div class="row">
+					<div class="col-6">
+						<h1 class="text-success"><?=$sumOfLrdLoanOutApproved-$totalLRDpaid_approved?></h1>
+						<h4>LRD Profit/Loss Statment</h4>
+						<p class="lead ">The Amount above is the difference between the total loan given out and the payment made by borrowers between <?=$startingDate?> to <?=$endingDate?>. Base on the figure above, you experience a
+						 <?php if($sumOfLrdLoanOutApproved < $totalLRDpaid_approved){ echo "loss of "; }else{ echo " profit of "; } echo $sumOfLrdLoanOutApproved-$totalLRDpaid_approved; ?>  </p>
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>
 </div>
