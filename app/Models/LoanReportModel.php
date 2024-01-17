@@ -37,13 +37,13 @@ class LoanReportModel extends Model
   public function get_payment_summary($startDate, $endDate){
 
       $data = $this->db->table('loan_pmt_log')
-          ->select('*, SUM(loan_pmt_log.amount) as total_pmt, loan_application.serial_no as applicantSerial')
-          ->where('loan_pmt_log.serial_no = loan_application.serial_no')
-          ->join('loan_application', 'loan_pmt_log.serial_no = loan_application.serial_no')
+          ->select('loan_pmt_log.*, loan_application.*, SUM(loan_pmt_log.amount) as totalPaid, loan_application.applicantImg as memBerpic, loan_application.fullName as agentName, loan_application.id as applicantId')
+          ->join('loan_application', 'loan_application.serial_no = loan_pmt_log.serial_no')
+          ->where('loan_pmt_log.isApproved', 'Approved')
           ->where('loan_pmt_log.loggedDate >=', $startDate)
           ->where('loan_pmt_log.loggedDate <=', $endDate)
-          ->groupBy('loan_application.serial_no')
-          ->orderBy('loan_application.loanStartDate')
+          ->groupBy('loan_pmt_log.serial_no')
+          ->orderBy('loan_pmt_log.id', 'desc')
           ->get()
           ->getResult();
       return $data;

@@ -50,3 +50,20 @@ INFO - 2024-01-17 18:10:57 --> Session: Class initialized using 'CodeIgniter\Ses
 INFO - 2024-01-17 18:21:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2024-01-17 18:23:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2024-01-17 18:23:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-17 18:31:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-01-17 18:31:19 --> Undefined property: stdClass::$memBerpic
+in APPPATH\Views\dashboard\partials\loan_report\_payment_by_individuals_summary.php on line 25.
+ 1 APPPATH\Views\dashboard\partials\loan_report\_payment_by_individuals_summary.php(25): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$memBerpic', 'C:\\xampp\\htdocs\\plscu\\app\\Views\\dashboard\\partials\\loan_report\\_payment_by_individuals_summary.php', 25)
+ 2 APPPATH\Views\dashboard\generate_loan_report.php(46): include('C:\\xampp\\htdocs\\plscu\\app\\Views\\dashboard\\partials\\loan_report\\_payment_by_individuals_summary.php')
+ 3 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\plscu\\app\\Views\\dashboard\\generate_loan_report.php')
+ 4 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('dashboard/generate_loan_report', [], true)
+ 6 APPPATH\Controllers\ReportController.php(61): view('dashboard/generate_loan_report', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ReportController->loan_report()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportController))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2024-01-17 18:37:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-17 18:41:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-17 18:43:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-17 18:43:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

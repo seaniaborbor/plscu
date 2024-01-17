@@ -41,7 +41,11 @@
 		  		</div>
 		  	</div>
 		  </div>
-		  <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">...</div>
+		  <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
+		  	<div class="col-12">
+		  		<?php include("partials/loan_report/_payment_by_individuals_summary.php"); ?>
+		  	</div>
+		  </div>
 		</div>
 	</div>
 </div>
