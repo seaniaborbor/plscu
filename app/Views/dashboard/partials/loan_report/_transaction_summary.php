@@ -12,7 +12,8 @@ sumofUsdLoanOutPending
 -->
 
 <div class="row">
-	<div class="col-md-8">
+	<div class="col-md-12">
+		<h3 class="mb-3 mt-3 text-success">Financial Statement - <?php echo $startingDate." to ". $endingDate ?> </h3>
 		<div class="table-responsive">
 			<div class="alert alert-success" role="alert">
 			  <h4 class="alert-heading">Important Note</h4>
@@ -31,25 +32,25 @@ sumofUsdLoanOutPending
 				</thead>
 				<tbody>
 					<tr>
-						<td>Total loan payment in Liberian Dollars Pending</td>
+						<td>Total loan payment in Liberian Dollars Pending (not yet approved)</td>
 						<td><?=$startingDate?></td>
 						<td><?=$endingDate?></td>
 						<td><?=$totalLRDpaid_pending?></td>
 					</tr>
 					<tr>
-						<td>Total loan payment in Liberian Dollars Approved</td>
+						<td>Total loan payment in Liberian Dollars Approved (approved)</td>
 						<td><?=$startingDate?></td>
 						<td><?=$endingDate?></td>
 						<td><?=$totalLRDpaid_approved?></td>
 					</tr>
 					<tr>
-						<td>Total loan payment in United States Dollars Pending</td>
+						<td>Total loan payment in United States Dollars Pending (Not yet approved)</td>
 						<td><?=$startingDate?></td>
 						<td><?=$endingDate?></td>
 						<td><?=$totalUSDpaid_pending?></td>
 					</tr>
 					<tr>
-						<td>Total loan payment in United States Dollars Approved</td>
+						<td>Total loan payment in United States Dollars Approved (approved)</td>
 						<td><?=$startingDate?></td>
 						<td><?=$endingDate?></td>
 						<td><?=$totalUSDpaid_approved?></td>
@@ -101,21 +102,6 @@ sumofUsdLoanOutPending
 					</tr>
 				</tbody>
 			</table>
-		</div>
-	</div>
-
-	<div class="col-md-4">
-		<div class="card">
-			<div class="card-body">
-				<div class="row">
-					<div class="col-6">
-						<h1 class="text-success"><?=$sumOfLrdLoanOutApproved-$totalLRDpaid_approved?></h1>
-						<h4>LRD Profit/Loss Statment</h4>
-						<p class="lead ">The Amount above is the difference between the total loan given out and the payment made by borrowers between <?=$startingDate?> to <?=$endingDate?>. Base on the figure above, you experience a
-						 <?php if($sumOfLrdLoanOutApproved < $totalLRDpaid_approved){ echo "loss of "; }else{ echo " profit of "; } echo $sumOfLrdLoanOutApproved-$totalLRDpaid_approved; ?>  </p>
-					</div>
-				</div>
-			</div>
 		</div>
 	</div>
 </div>

@@ -13,6 +13,9 @@
                             <li class="nav-item" role="presentation">
                                 <a class="nav-link" id="profile-tab" data-bs-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Approve Loan applicants</a>
                             </li>
+                             <li class="nav-item" role="presentation">
+                                <a class="nav-link btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#loanReport">Generate Loan Report</a>
+                            </li>
                         </ul>
                 </div>
 				<div class="card-body">

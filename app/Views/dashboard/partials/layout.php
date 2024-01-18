@@ -171,8 +171,6 @@ tr:hover {
 
                  <a href="<?=base_url('/dashboard/loan_payments')?>" class="<?=mark_active('loan_payments', $passLink)?> list-group-item list-group-item-action bg-transparent second-text "><i class="bi  bi-coin me-2"></i>Loans & Payments</a>
 
-                 <a href="#" data-bs-toggle="modal" data-bs-target="#loanReport" class="<?=mark_active('loan_payments', $passLink)?> list-group-item list-group-item-action bg-transparent second-text "><i class="bi  bi-clipboard me-2"></i>Reports</a>
-
                 
 
                  <a href="<?=base_url('/dashboard/portfolio')?>" class="<?=mark_active('portfolio', $passLink)?> list-group-item list-group-item-action bg-transparent second-text "><i
@@ -234,7 +232,7 @@ tr:hover {
     </div>
 
 
-<!-- Modal -->
+<!-- loan report form  -->
 <div class="modal fade" id="loanReport" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
@@ -246,7 +244,40 @@ tr:hover {
      <form method="post" action="<?=base_url('dashboard/generate/loan_report')?>">
     <input type="hidden" name="<?= csrf_token() ?>" value="<?= csrf_hash() ?>">
 
-    <p class="mb-3 text-dark">Please be aware that this wizard is used to generate financial reports of loan and payments, as well as registration or requirement fees only</p>
+    <p class="mb-3 text-dark">Please be aware that this wizard is used to generate financial reports of loan and payment</p>
+    <p class="mb-3 text-dark">Choose the date range below. The starting date should be less than the end date</p>
+    
+    <div class="form-group mb-3">
+        <label for="startingDate">Starting Date</label>
+        <input type="date" id="startingDate" name="startingDate" class="form-control-lg form-control" required>
+    </div>
+
+    <div class="form-group mb-3">
+        <label for="endingDate">Ending Date</label>
+        <input type="date" id="endingDate" name="endingDate" class="form-control-lg form-control" required>
+    </div>
+    
+    <button type="submit" class="btn btn-lg btn-success">Generate Report</button>
+</form>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- club payment report form -->
+<div class="modal fade" id="clubPayment" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header bg-success">
+        <h3 class="modal-title text-white" id="exampleModalLabel">Generate Club Report </h3>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+     <form method="post" action="<?=base_url('dashboard/generate/club_report')?>">
+    <input type="hidden" name="<?= csrf_token() ?>" value="<?= csrf_hash() ?>">
+
+    <p class="mb-3 text-dark">Please be aware that this wizard is used to generate financial reports of club payment</p>
     <p class="mb-3 text-dark">Choose the date range below. The starting date should be less than the end date</p>
     
     <div class="form-group mb-3">
