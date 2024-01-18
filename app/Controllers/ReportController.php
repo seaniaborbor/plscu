@@ -91,9 +91,11 @@ public function loan_report()
 
       $data['get_all_report_payment_log'] = $ClubReportModel->get_all_report_payment_log($startingDate, $endingDate);
       
-      $data['total_pending_rd'] = $ClubReportModel->get_report_payment_total("Pending", "LRD", $startingDate, $endingDate);
+      $data['total_pending_lrd'] = $ClubReportModel->get_report_payment_total("Pending", "LRD", $startingDate, $endingDate);
+      $data['total_pending_usd'] = $ClubReportModel->get_report_payment_total("Pending", "USD", $startingDate, $endingDate);
 
-      $data['total_pending_usd'] = $ClubReportModel->get_report_payment_total("Pending", "LRD", $startingDate, $endingDate);
+      $data['total_approved_lrd'] = $ClubReportModel->get_report_payment_total("Approved", "LRD", $startingDate, $endingDate);
+      $data['total_approved_usd'] = $ClubReportModel->get_report_payment_total("Approved", "LRD", $startingDate, $endingDate);
 
     }else{
         return redirect()->to('/dashboard')->with('error', 'invalid inputs');

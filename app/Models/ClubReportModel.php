@@ -39,7 +39,7 @@ class ClubReportModel extends Model
 
 public function get_report_payment_total($status, $currency, $startDate, $endDate)
 {
-     $data = $this->db->table('due_pmt_log')
+     $result = $this->db->table('due_pmt_log')
         ->select('*, SUM(due_pmt_log.due_amount) as total_paid')
         ->where('due_pmt_log.due_currency', $currency)
         ->where('due_pmt_log.approved_status', $status)
@@ -47,7 +47,7 @@ public function get_report_payment_total($status, $currency, $startDate, $endDat
         ->where('due_pmt_log.recordedDate <=', $endDate)
         ->get()
         ->getRow();
-        return $data;
+        return $result->total_paid ?? 0;
 }
 
 
