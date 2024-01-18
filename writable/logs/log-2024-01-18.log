@@ -81,3 +81,61 @@ INFO - 2024-01-18 14:39:47 --> Session: Class initialized using 'CodeIgniter\Ses
 INFO - 2024-01-18 14:40:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2024-01-18 14:40:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2024-01-18 14:49:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-18 15:27:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-01-18 15:27:45 --> Call to undefined function App\Controllers\get_all_report_payment_log()
+in APPPATH\Controllers\ReportController.php on line 92.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ReportController->club_report()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportController))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2024-01-18 15:28:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-01-18 15:28:41 --> mysqli_sql_exception: Unknown column 'loan_pmt_log.recordedDate' in 'where clause' in C:\xampp\htdocs\plscu\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\plscu\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `team`.*...', 0)
+#1 C:\xampp\htdocs\plscu\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `team`.*...')
+#2 C:\xampp\htdocs\plscu\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `team`.*...')
+#3 C:\xampp\htdocs\plscu\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `team`.*...', Array, false)
+#4 C:\xampp\htdocs\plscu\app\Models\ClubReportModel.php(32): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\plscu\app\Controllers\ReportController.php(92): App\Models\ClubReportModel->get_all_report_payment_log('2024-01-12', '2024-01-28')
+#6 C:\xampp\htdocs\plscu\system\CodeIgniter.php(934): App\Controllers\ReportController->club_report()
+#7 C:\xampp\htdocs\plscu\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportController))
+#8 C:\xampp\htdocs\plscu\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\plscu\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2024-01-18 15:28:41 --> Unknown column 'loan_pmt_log.recordedDate' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `team`.*, `due_pmt_log`.*, `due_pmt_log`.`id` as `paymentId`, `membership_applicants`.*, `team`.`fullName` as `teamMemName`, `membership_applicants`.`fullName` as `memberFullName`
+FROM `due_pmt_log`
+JOIN `team` ON `team`.`id` = `due_pmt_log`.`recordedBy`
+JOIN `membership_applicants` ON `membership_applicants`.`memberSerialNo` = `due_pmt_log`.`mem_serial_no`
+WHERE `loan_pmt_log`.`recordedDate` >= \'2024-01-12\'
+AND `loan_pmt_log`.`recordedDate` <= \'2024-01-28\'
+ORDER BY `due_pmt_log`.`id` DESC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `team`.*, `due_pmt_log`.*, `due_pmt_log`.`id` as `paymentId`, `membership_applicants`.*, `team`.`fullName` as `teamMemName`, `membership_applicants`.`fullName` as `memberFullName`
+FROM `due_pmt_log`
+JOIN `team` ON `team`.`id` = `due_pmt_log`.`recordedBy`
+JOIN `membership_applicants` ON `membership_applicants`.`memberSerialNo` = `due_pmt_log`.`mem_serial_no`
+WHERE `loan_pmt_log`.`recordedDate` >= \'2024-01-12\'
+AND `loan_pmt_log`.`recordedDate` <= \'2024-01-28\'
+ORDER BY `due_pmt_log`.`id` DESC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `team`.*, `due_pmt_log`.*, `due_pmt_log`.`id` as `paymentId`, `membership_applicants`.*, `team`.`fullName` as `teamMemName`, `membership_applicants`.`fullName` as `memberFullName`
+FROM `due_pmt_log`
+JOIN `team` ON `team`.`id` = `due_pmt_log`.`recordedBy`
+JOIN `membership_applicants` ON `membership_applicants`.`memberSerialNo` = `due_pmt_log`.`mem_serial_no`
+WHERE `loan_pmt_log`.`recordedDate` >= \'2024-01-12\'
+AND `loan_pmt_log`.`recordedDate` <= \'2024-01-28\'
+ORDER BY `due_pmt_log`.`id` DESC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `team`.*, `due_pmt_log`.*, `due_pmt_log`.`id` as `paymentId`, `membership_applicants`.*, `team`.`fullName` as `teamMemName`, `membership_applicants`.`fullName` as `memberFullName`
+FROM `due_pmt_log`
+JOIN `team` ON `team`.`id` = `due_pmt_log`.`recordedBy`
+JOIN `membership_applicants` ON `membership_applicants`.`memberSerialNo` = `due_pmt_log`.`mem_serial_no`
+WHERE `loan_pmt_log`.`recordedDate` >= :loan_pmt_log.recordedDate:
+AND `loan_pmt_log`.`recordedDate` <= :loan_pmt_log.recordedDate.1:
+ORDER BY `due_pmt_log`.`id` DESC', [...], false)
+ 5 APPPATH\Models\ClubReportModel.php(32): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\ReportController.php(92): App\Models\ClubReportModel->get_all_report_payment_log('2024-01-12', '2024-01-28')
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ReportController->club_report()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportController))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2024-01-18 15:30:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
