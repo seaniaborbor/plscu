@@ -1,6 +1,7 @@
 <?php namespace App\Controllers;
 
 use App\Models\LoanReportModel;
+use App\Models\ClubReportModel;
 
 
 class ReportController extends BaseController{
@@ -66,7 +67,7 @@ public function loan_report()
 
     public function club_report()
     {
-        $LoanReportModel = new LoanReportModel();
+        $ClubReportModel = new ClubReportModel();
 
         $data = [];
         $data['passLink'] = "loan_membership";
@@ -87,7 +88,9 @@ public function loan_report()
       $data['startingDate'] = $startingDate;
       $data['endingDate'] = $endingDate;
       // get all the lone payments log 
-      
+
+      $data['get_all_report_payment_log'] = $ClubReportModel->get_all_report_payment_log();
+      $data['get_a_mem_due_total'] = $ClubReportModel->get_a_mem_due_total();
 
 
 

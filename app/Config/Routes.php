@@ -138,6 +138,7 @@ $routes->get('/category/(:any)', 'Publiccontroller::category_search/$1');
 
 
 $routes->post('/dashboard/generate/loan_report', 'ReportController::loan_report');
+$routes->post('/dashboard/generate/club_report', 'ReportController::club_report');
 
 
 //4212935681 
